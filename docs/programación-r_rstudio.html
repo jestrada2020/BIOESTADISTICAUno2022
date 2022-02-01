@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 7 Programación R_Rstudio | Bioestadística Uno</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 7 Programación R_Rstudio | Bioestadística Uno" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 7 Programación R_Rstudio | Bioestadística Uno" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="John Jairo Estrada Álvarez" />
+
+
+<meta name="date" content="2021-08-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="temas-extras.html"/>
+<link rel="next" href="videos-de-clase.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Curso de Bioestadísca Uno</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerrequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#comportamentales"><i class="fa fa-check"></i><b>1.1</b> Comportamentales</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#evaluativos"><i class="fa fa-check"></i><b>1.2</b> Evaluativos</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#objetivos-específicos"><i class="fa fa-check"></i><b>1.3</b> Objetivos específicos</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#fechas-de-evaluación-segundo-semestre-2021"><i class="fa fa-check"></i><b>1.4</b> Fechas de Evaluación segundo semestre 2021</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#bibliografía-del-curso"><i class="fa fa-check"></i><b>1.5</b> Bibliografía del curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#conceptos-introductorios"><i class="fa fa-check"></i><b>2.1</b> Conceptos Introductorios</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#de-donde-viene-la-palabra-estadı́stica-y-que-significa"><i class="fa fa-check"></i><b>2.1.1</b> <strong>¿De donde viene la palabra estadı́stica y que significa?</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#qué-es-la-estadística"><i class="fa fa-check"></i><b>2.1.2</b> <strong>¿Qué es la estadística?</strong></a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#qué-es-una-variable"><i class="fa fa-check"></i><b>2.1.3</b> <strong>¿Qué es una variable?</strong></a></li>
+<li class="chapter" data-level="2.1.4" data-path="intro.html"><a href="intro.html#variable-categórica-ó-cualitativa"><i class="fa fa-check"></i><b>2.1.4</b> <strong>Variable categórica (ó cualitativa)</strong></a></li>
+<li class="chapter" data-level="2.1.5" data-path="intro.html"><a href="intro.html#variable-cuantitativa-si-sus-valores-son-numéricos-si-se-pueden-hacer-operaciones-aritméticas-con-ellos."><i class="fa fa-check"></i><b>2.1.5</b> <strong>Variable cuantitativa</strong>: Si sus valores son numéricos (si se pueden hacer operaciones aritméticas con ellos).</a></li>
+<li class="chapter" data-level="2.1.6" data-path="intro.html"><a href="intro.html#qué-es-un-dato"><i class="fa fa-check"></i><b>2.1.6</b> <strong>¿Qué es un dato?</strong></a></li>
+<li class="chapter" data-level="2.1.7" data-path="intro.html"><a href="intro.html#qué-es-una-unidad-de-observación"><i class="fa fa-check"></i><b>2.1.7</b> <strong>¿Qué es una unidad de observación?</strong></a></li>
+<li class="chapter" data-level="2.1.8" data-path="intro.html"><a href="intro.html#qué-es-una-población"><i class="fa fa-check"></i><b>2.1.8</b> <strong>¿Qué es una población?</strong></a></li>
+<li class="chapter" data-level="2.1.9" data-path="intro.html"><a href="intro.html#qué-es-una-muestra"><i class="fa fa-check"></i><b>2.1.9</b> <strong>¿Qué es una muestra?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html"><i class="fa fa-check"></i><b>3</b> Estadística descriptiva</a><ul>
+<li class="chapter" data-level="3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#qué-es-la-estradística-descriptiva"><i class="fa fa-check"></i><b>3.1</b> Qué es la Estradística descriptiva?</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-aspectos-importantes-de-los-datos"><i class="fa fa-check"></i><b>3.1.1</b> Los aspectos importantes de los datos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa"><i class="fa fa-check"></i><b>3.1.2</b> Frecuencia relativa</a></li>
+<li class="chapter" data-level="3.1.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa-y-acumulada"><i class="fa fa-check"></i><b>3.1.3</b> Frecuencia relativa y acumulada</a></li>
+<li class="chapter" data-level="3.1.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-de-barras-frecuencia-absoluta"><i class="fa fa-check"></i><b>3.1.4</b> Gráfica de barras (<strong>Frecuencia absoluta</strong>)</a></li>
+<li class="chapter" data-level="3.1.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-caja-y-bigotes"><i class="fa fa-check"></i><b>3.1.5</b> Gráfica caja y bigotes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#proceso-para-presentar-datos-en-forma-agrupada"><i class="fa fa-check"></i><b>3.2</b> Proceso para presentar datos en forma agrupada</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#críterio-datos-atípicos"><i class="fa fa-check"></i><b>3.2.1</b> Críterio datos <strong>atípicos</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-no-agrupados"><i class="fa fa-check"></i><b>3.3</b> Datos no agrupados</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-posición"><i class="fa fa-check"></i><b>3.3.1</b> Medidas de posición</a></li>
+<li class="chapter" data-level="3.3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-aritmética-para-datos-no-agrupados-barx"><i class="fa fa-check"></i><b>3.3.2</b> La media aritmética para datos no agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.3</b> La mediana para datos no agrupados</a></li>
+<li class="chapter" data-level="3.3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-m_0"><i class="fa fa-check"></i><b>3.3.4</b> La Moda <span class="math inline">\((M_{0})\)</span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-cuartiles-en-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.5</b> Cálculo de cuartiles en datos NO agrupados</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-agrupados"><i class="fa fa-check"></i><b>3.4</b> Datos agrupados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo1-datos-agrupados"><i class="fa fa-check"></i><b>3.4.1</b> Ejemplo1 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo2-datos-agrupados"><i class="fa fa-check"></i><b>3.4.2</b> Ejemplo2 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo3-datos-agrupados"><i class="fa fa-check"></i><b>3.4.3</b> Ejemplo3 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#dispersión"><i class="fa fa-check"></i><b>3.4.4</b> Dispersión</a></li>
+<li class="chapter" data-level="3.4.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-para-datos-agrupados-barx"><i class="fa fa-check"></i><b>3.4.5</b> La media para datos agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.4.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-agrupados-me"><i class="fa fa-check"></i><b>3.4.6</b> La mediana para datos agrupados <span class="math inline">\((Me)\)</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-cuartiles-para-datos-agrupados-q_c"><i class="fa fa-check"></i><b>3.4.7</b> Los cuartiles para datos agrupados <span class="math inline">\((Q_c)\)</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-para-datos-agrupados-mo"><i class="fa fa-check"></i><b>3.4.8</b> La moda para datos agrupados <span class="math inline">\((Mo)\)</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-deciles-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.9</b> Cálculo de Deciles para datos agrupados.</a></li>
+<li class="chapter" data-level="3.4.10" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#percentil-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.10</b> Percentil para datos agrupados.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-dispersión"><i class="fa fa-check"></i><b>3.5</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.1</b> <strong>Varianza para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.2</b> <strong>Varianza para datos agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.3</b> <strong>Desviación típica para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.4</b> <strong>Desviación típica para datos agrupados</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-para-variación-de-karl-pearson"><i class="fa fa-check"></i><b>3.6</b> Coeficiente para variación de Karl Pearson</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probabilidad.html"><a href="probabilidad.html"><i class="fa fa-check"></i><b>4</b> Probabilidad</a><ul>
+<li class="chapter" data-level="4.1" data-path="probabilidad.html"><a href="probabilidad.html#teoría-de-conjuntos"><i class="fa fa-check"></i><b>4.1</b> Teoría de conjuntos</a></li>
+<li class="chapter" data-level="4.2" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión"><i class="fa fa-check"></i><b>4.2</b> Propiedades de la Unión</a></li>
+<li class="chapter" data-level="4.3" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-intersección"><i class="fa fa-check"></i><b>4.3</b> Propiedades de la Intersección</a></li>
+<li class="chapter" data-level="4.4" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión-y-la-intersección"><i class="fa fa-check"></i><b>4.4</b> Propiedades de la unión y la intersección</a></li>
+<li class="chapter" data-level="4.5" data-path="probabilidad.html"><a href="probabilidad.html#diferencia-entre-dos-conjuntos"><i class="fa fa-check"></i><b>4.5</b> Diferencia entre dos conjuntos</a></li>
+<li class="chapter" data-level="4.6" data-path="probabilidad.html"><a href="probabilidad.html#complemento-de-un-conjunto"><i class="fa fa-check"></i><b>4.6</b> Complemento de un conjunto</a></li>
+<li class="chapter" data-level="4.7" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-del-algebra-de-conjuntos"><i class="fa fa-check"></i><b>4.7</b> Propiedades del algebra de conjuntos</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo1"><i class="fa fa-check"></i><b>4.7.1</b> Ejemplo1</a></li>
+<li class="chapter" data-level="4.7.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo2"><i class="fa fa-check"></i><b>4.7.2</b> Ejemplo2</a></li>
+<li class="chapter" data-level="4.7.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3"><i class="fa fa-check"></i><b>4.7.3</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="probabilidad.html"><a href="probabilidad.html#conjuntos-numéricos"><i class="fa fa-check"></i><b>4.8</b> Conjuntos numéricos</a></li>
+<li class="chapter" data-level="4.9" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-los-números-reales"><i class="fa fa-check"></i><b>4.9</b> Propiedades de los números Reales</a></li>
+<li class="chapter" data-level="4.10" data-path="probabilidad.html"><a href="probabilidad.html#conceptos-introductorios-de-probabilidad"><i class="fa fa-check"></i><b>4.10</b> Conceptos introductorios de probabilidad</a></li>
+<li class="chapter" data-level="4.11" data-path="probabilidad.html"><a href="probabilidad.html#definición1frecuentista"><i class="fa fa-check"></i><b>4.11</b> Definición1(Frecuentista)</a></li>
+<li class="chapter" data-level="4.12" data-path="probabilidad.html"><a href="probabilidad.html#definición2clásica"><i class="fa fa-check"></i><b>4.12</b> Definición2(Clásica)</a></li>
+<li class="chapter" data-level="4.13" data-path="probabilidad.html"><a href="probabilidad.html#simulaciones-básicas"><i class="fa fa-check"></i><b>4.13</b> Simulaciones básicas</a></li>
+<li class="chapter" data-level="4.14" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-un-dado"><i class="fa fa-check"></i><b>4.14</b> Lanzamiento de un dado</a></li>
+<li class="chapter" data-level="4.15" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-dos-dados"><i class="fa fa-check"></i><b>4.15</b> Lanzamiento de dos dados</a></li>
+<li class="chapter" data-level="4.16" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-una-moneda-tres-veces"><i class="fa fa-check"></i><b>4.16</b> Lanzamiento de una moneda tres veces</a></li>
+<li class="chapter" data-level="4.17" data-path="probabilidad.html"><a href="probabilidad.html#axioma-uno-de-la-probabilidad"><i class="fa fa-check"></i><b>4.17</b> Axioma Uno de la probabilidad</a></li>
+<li class="chapter" data-level="4.18" data-path="probabilidad.html"><a href="probabilidad.html#axioma-dos-de-la-probabilidad"><i class="fa fa-check"></i><b>4.18</b> Axioma Dos de la probabilidad</a></li>
+<li class="chapter" data-level="4.19" data-path="probabilidad.html"><a href="probabilidad.html#axioma-tres-de-la-probabilidad"><i class="fa fa-check"></i><b>4.19</b> Axioma Tres de la probabilidad</a></li>
+<li class="chapter" data-level="4.20" data-path="probabilidad.html"><a href="probabilidad.html#teoremas-básicos-de-probabilidad"><i class="fa fa-check"></i><b>4.20</b> Teoremas básicos de probabilidad</a></li>
+<li class="chapter" data-level="4.21" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-del-complemento"><i class="fa fa-check"></i><b>4.21</b> Demostración probabilidad del complemento</a></li>
+<li class="chapter" data-level="4.22" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-inclusión"><i class="fa fa-check"></i><b>4.22</b> Demostración probabilidad de la inclusión</a></li>
+<li class="chapter" data-level="4.23" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-unión"><i class="fa fa-check"></i><b>4.23</b> Demostración probabilidad de la unión</a><ul>
+<li class="chapter" data-level="4.23.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-1"><i class="fa fa-check"></i><b>4.23.1</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="4.23.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-2"><i class="fa fa-check"></i><b>4.23.2</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="4.23.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-3"><i class="fa fa-check"></i><b>4.23.3</b> Ejemplo 3</a></li>
+<li class="chapter" data-level="4.23.4" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-4"><i class="fa fa-check"></i><b>4.23.4</b> Ejemplo 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.24" data-path="probabilidad.html"><a href="probabilidad.html#regla-de-la-adición"><i class="fa fa-check"></i><b>4.24</b> Regla de la adición</a><ul>
+<li class="chapter" data-level="4.24.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3-1"><i class="fa fa-check"></i><b>4.24.1</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.25" data-path="probabilidad.html"><a href="probabilidad.html#ley-de-los-grandes-números"><i class="fa fa-check"></i><b>4.25</b> Ley de los grandes números</a></li>
+<li class="chapter" data-level="4.26" data-path="probabilidad.html"><a href="probabilidad.html#tabla-de-contingencia"><i class="fa fa-check"></i><b>4.26</b> Tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.26.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemploencuesta-de-ver-cine"><i class="fa fa-check"></i><b>4.26.1</b> Ejemplo(Encuesta de ver cine)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.27" data-path="probabilidad.html"><a href="probabilidad.html#probabilidad-condicional-y-tabla-de-contingencia"><i class="fa fa-check"></i><b>4.27</b> Probabilidad condicional y tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.27.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplocafé"><i class="fa fa-check"></i><b>4.27.1</b> Ejemplo(Café)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.28" data-path="probabilidad.html"><a href="probabilidad.html#regla-del-producto"><i class="fa fa-check"></i><b>4.28</b> Regla del producto</a></li>
+<li class="chapter" data-level="4.29" data-path="probabilidad.html"><a href="probabilidad.html#teorema-de-bayes"><i class="fa fa-check"></i><b>4.29</b> Teorema de Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html"><i class="fa fa-check"></i><b>5</b> Modelos de probabilidad</a><ul>
+<li class="chapter" data-level="5.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#variable-aleatoria-v.a."><i class="fa fa-check"></i><b>5.1</b> Variable Aleatoria (v.a.)</a></li>
+<li class="chapter" data-level="5.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribuciones-de-probabilidad"><i class="fa fa-check"></i><b>5.2</b> Distribuciones de Probabilidad</a></li>
+<li class="chapter" data-level="5.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#propiedades-que-debe-cumplir-una-distribución-de-probabilidad"><i class="fa fa-check"></i><b>5.3</b> Propiedades que debe cumplir una distribución de probabilidad</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo1-1"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplo1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#características-de-una-distribución-de-probabilidad-cualquiera."><i class="fa fa-check"></i><b>5.4</b> Características de una distribución de probabilidad cualquiera.</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejercicio1"><i class="fa fa-check"></i><b>5.4.1</b> Ejercicio1</a></li>
+<li class="chapter" data-level="5.4.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio1"><i class="fa fa-check"></i><b>5.4.2</b> Solución (ejercicio1)</a></li>
+<li class="chapter" data-level="5.4.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo3-2"><i class="fa fa-check"></i><b>5.4.3</b> Ejemplo3</a></li>
+<li class="chapter" data-level="5.4.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio2"><i class="fa fa-check"></i><b>5.4.4</b> Solución (ejercicio2)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-binomial"><i class="fa fa-check"></i><b>5.5</b> Distribución Binomial</a></li>
+<li class="chapter" data-level="5.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#experimento-de-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6</b> Experimento de probabilidad binomial</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6.1</b> <strong>Fórmula de la Probabilidad Binomial</strong></a></li>
+<li class="chapter" data-level="5.6.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo4"><i class="fa fa-check"></i><b>5.6.4</b> Ejemplo4</a></li>
+<li class="chapter" data-level="5.6.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo4"><i class="fa fa-check"></i><b>5.6.5</b> Solución (ejemplo4)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.7</b> Distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-hipergeométrica"><i class="fa fa-check"></i><b>5.7.1</b> <strong>Fórmula de la función de Probabilidad Hipergeométrica</strong></a></li>
+<li class="chapter" data-level="5.7.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+<li class="chapter" data-level="5.7.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#commandos-en-r-studio"><i class="fa fa-check"></i><b>5.8</b> Commandos en r-studio</a></li>
+<li class="chapter" data-level="5.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento"><i class="fa fa-check"></i><b>5.9</b> Condiciones del experimento</a></li>
+<li class="chapter" data-level="5.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#característica-de-la-distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.10</b> Característica de la distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.10.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo5"><i class="fa fa-check"></i><b>5.10.1</b> Ejemplo5</a></li>
+<li class="chapter" data-level="5.10.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo5"><i class="fa fa-check"></i><b>5.10.2</b> Solución (ejemplo5)</a></li>
+<li class="chapter" data-level="5.10.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo6"><i class="fa fa-check"></i><b>5.10.3</b> Ejemplo6</a></li>
+<li class="chapter" data-level="5.10.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo6"><i class="fa fa-check"></i><b>5.10.4</b> Solución (ejemplo6)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#función-de-distribución-de-probabilidad-de-variable-continua"><i class="fa fa-check"></i><b>5.11</b> Función de distribución de probabilidad de variable continua</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-y-varianza-para-una-función-de-distribución-de-probabilidad-con-variable-continua"><i class="fa fa-check"></i><b>5.11.1</b> Media y Varianza para una función de distribución de probabilidad con variable continua</a></li>
+<li class="chapter" data-level="5.11.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#definición"><i class="fa fa-check"></i><b>5.11.2</b> <strong>Definición</strong></a></li>
+<li class="chapter" data-level="5.11.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo"><i class="fa fa-check"></i><b>5.11.3</b> <strong>Ejemplo</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.12</b> Distribución de probabilidad de Poisson</a></li>
+<li class="chapter" data-level="5.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento-1"><i class="fa fa-check"></i><b>5.13</b> Condiciones del experimento</a><ul>
+<li class="chapter" data-level="5.13.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.13.1</b> <strong>Fórmula de la función de Probabilidad de Poisson</strong></a></li>
+<li class="chapter" data-level="5.13.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-de-poisson"><i class="fa fa-check"></i><b>5.13.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN DE POISSON</strong></a></li>
+<li class="chapter" data-level="5.13.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo7"><i class="fa fa-check"></i><b>5.13.3</b> Ejemplo7</a></li>
+<li class="chapter" data-level="5.13.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo7"><i class="fa fa-check"></i><b>5.13.4</b> Solución (ejemplo7)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#la-distribución-de-probabilidad-normal"><i class="fa fa-check"></i><b>5.14</b> La distribución de probabilidad normal</a></li>
+<li class="chapter" data-level="5.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#regla-empírica"><i class="fa fa-check"></i><b>5.15</b> Regla empírica</a><ul>
+<li class="chapter" data-level="5.15.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-donde-se-aplicacón-la-regla"><i class="fa fa-check"></i><b>5.15.1</b> <strong>Ejemplo donde se aplicacón la regla</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#cambios-de-sigma-para-la-distribución-normal"><i class="fa fa-check"></i><b>5.16</b> Cambios de <span class="math inline">\(\sigma\)</span> para la distribución normal</a></li>
+<li class="chapter" data-level="5.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-normal-estándar"><i class="fa fa-check"></i><b>5.17</b> Distribución de probabilidad normal estándar</a></li>
+<li class="chapter" data-level="5.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#tabla-normal-estándar"><i class="fa fa-check"></i><b>5.18</b> Tabla normal estándar</a></li>
+<li class="chapter" data-level="5.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#significado-del-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19</b> Significado del área bajo la curva normal</a><ul>
+<li class="chapter" data-level="5.19.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla"><i class="fa fa-check"></i><b>5.19.1</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-1"><i class="fa fa-check"></i><b>5.19.2</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-2"><i class="fa fa-check"></i><b>5.19.3</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19.4</b> Ejemplo (Área bajo la curva normal)</a></li>
+<li class="chapter" data-level="5.19.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo8"><i class="fa fa-check"></i><b>5.19.5</b> Ejemplo8</a></li>
+<li class="chapter" data-level="5.19.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo8"><i class="fa fa-check"></i><b>5.19.6</b> Solución (ejemplo8)</a></li>
+<li class="chapter" data-level="5.19.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo9"><i class="fa fa-check"></i><b>5.19.7</b> Ejemplo9</a></li>
+<li class="chapter" data-level="5.19.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo9"><i class="fa fa-check"></i><b>5.19.8</b> Solución (ejemplo9)</a></li>
+<li class="chapter" data-level="5.19.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo10"><i class="fa fa-check"></i><b>5.19.9</b> Ejemplo10</a></li>
+<li class="chapter" data-level="5.19.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo10"><i class="fa fa-check"></i><b>5.19.10</b> Solución (ejemplo10)</a></li>
+<li class="chapter" data-level="5.19.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo11"><i class="fa fa-check"></i><b>5.19.11</b> Ejemplo11</a></li>
+<li class="chapter" data-level="5.19.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo11"><i class="fa fa-check"></i><b>5.19.12</b> Solución (ejemplo11)</a></li>
+<li class="chapter" data-level="5.19.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo12"><i class="fa fa-check"></i><b>5.19.13</b> Ejemplo12</a></li>
+<li class="chapter" data-level="5.19.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo12"><i class="fa fa-check"></i><b>5.19.14</b> Solución (ejemplo12)</a></li>
+<li class="chapter" data-level="5.19.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo13"><i class="fa fa-check"></i><b>5.19.15</b> Ejemplo13</a></li>
+<li class="chapter" data-level="5.19.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo14"><i class="fa fa-check"></i><b>5.19.16</b> Ejemplo14</a></li>
+<li class="chapter" data-level="5.19.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo15"><i class="fa fa-check"></i><b>5.19.17</b> Ejemplo15</a></li>
+<li class="chapter" data-level="5.19.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo16"><i class="fa fa-check"></i><b>5.19.18</b> Ejemplo16</a></li>
+<li class="chapter" data-level="5.19.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo17"><i class="fa fa-check"></i><b>5.19.19</b> Ejemplo17</a></li>
+<li class="chapter" data-level="5.19.20" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo18"><i class="fa fa-check"></i><b>5.19.20</b> Ejemplo18</a></li>
+<li class="chapter" data-level="5.19.21" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo19"><i class="fa fa-check"></i><b>5.19.21</b> Ejemplo19</a></li>
+<li class="chapter" data-level="5.19.22" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo20"><i class="fa fa-check"></i><b>5.19.22</b> Ejemplo20</a></li>
+<li class="chapter" data-level="5.19.23" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo21"><i class="fa fa-check"></i><b>5.19.23</b> Ejemplo21</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="temas-extras.html"><a href="temas-extras.html"><i class="fa fa-check"></i><b>6</b> Temas Extras</a></li>
+<li class="chapter" data-level="7" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html"><i class="fa fa-check"></i><b>7</b> Programación R_Rstudio</a><ul>
+<li class="chapter" data-level="7.1" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>7.1</b> Repaso de R y Rstudio</a></li>
+<li class="chapter" data-level="7.2" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>7.2</b> Páginas donde se puede trabajar R en línea</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="videos-de-clase.html"><a href="videos-de-clase.html"><i class="fa fa-check"></i><b>8</b> Videos de Clase</a><ul>
+<li class="chapter" data-level="8.1" data-path="videos-de-clase.html"><a href="videos-de-clase.html#clases-semestre-02-2021"><i class="fa fa-check"></i><b>8.1</b> Clases semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html"><i class="fa fa-check"></i><b>9</b> Videos de Asesoría</a><ul>
+<li class="chapter" data-level="9.1" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html#asesorías-semestre-02-2021"><i class="fa fa-check"></i><b>9.1</b> Asesorías semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística Uno</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="programación-r_rstudio" class="section level1">
+<h1><span class="header-section-number">Capítulo 7</span> Programación R_Rstudio</h1>
+<div id="repaso-de-r-y-rstudio" class="section level2">
+<h2><span class="header-section-number">7.1</span> Repaso de R y Rstudio</h2>
+<!-- <center><font color='red'>Conceptos básicos de R</font></center> -->
+<p>Los <font color='red'>conceptos básicos para el manejo de R</font> los recorremos usando el documento elaborado por <font color='blue'>Vicente Coll y Pedro J Pérez (Junio 2017)</font> <a href="https://www.uv.es/pjperez/curso_R/tt_2_conceptos_basicos_R.html">Página web</a></p>
+<p>Ver también la página web <a href="https://r-coder.com/inicio/"><font color='blue'>Todo sobre programción en R</font></a></p>
+</div>
+<div id="páginas-donde-se-puede-trabajar-r-en-línea" class="section level2">
+<h2><span class="header-section-number">7.2</span> Páginas donde se puede trabajar R en línea</h2>
+<p>Una página donde se puede elaborar prácticas básicas para uso de comandos en R es: <a href="https://www.tutorialspoint.com/execute_r_online.php">Compile R online</a></p>
+<!-- [Compile R online](https://rextester.com/l/r_online_compiler). -->
+<p>También se puede trabajar en línea con las siguientes páginas.</p>
+<ul>
+<li><p><a href="https://rdrr.io/snippets/">R en línea Dos</a></p></li>
+<li><p><a href="https://paiza.io/es/projects/new">R en línea Tres</a></p></li>
+<li><p><a href="https://www.mycompiler.io/new/r">R en línea Cuatro</a></p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="temas-extras.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="videos-de-clase.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["BioestadisticaUnoUCES2021.pdf", "BioestadisticaUnoUCES2021.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

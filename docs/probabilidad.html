@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Probabilidad | Bioestadística Uno</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Probabilidad | Bioestadística Uno" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Probabilidad | Bioestadística Uno" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="John Jairo Estrada Álvarez" />
+
+
+<meta name="date" content="2021-09-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="estadística-descriptiva.html"/>
+<link rel="next" href="modelos-de-probabilidad.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Curso de Bioestadísca Uno</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerrequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#comportamentales"><i class="fa fa-check"></i><b>1.1</b> Comportamentales</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#evaluativos"><i class="fa fa-check"></i><b>1.2</b> Evaluativos</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#objetivos-específicos"><i class="fa fa-check"></i><b>1.3</b> Objetivos específicos</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#fechas-de-evaluación-segundo-semestre-2021"><i class="fa fa-check"></i><b>1.4</b> Fechas de Evaluación segundo semestre 2021</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#bibliografía-del-curso"><i class="fa fa-check"></i><b>1.5</b> Bibliografía del curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#conceptos-introductorios"><i class="fa fa-check"></i><b>2.1</b> Conceptos Introductorios</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#de-donde-viene-la-palabra-estadı́stica-y-que-significa"><i class="fa fa-check"></i><b>2.1.1</b> <strong>¿De donde viene la palabra estadı́stica y que significa?</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#qué-es-la-estadística"><i class="fa fa-check"></i><b>2.1.2</b> <strong>¿Qué es la estadística?</strong></a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#qué-es-una-variable"><i class="fa fa-check"></i><b>2.1.3</b> <strong>¿Qué es una variable?</strong></a></li>
+<li class="chapter" data-level="2.1.4" data-path="intro.html"><a href="intro.html#variable-categórica-ó-cualitativa"><i class="fa fa-check"></i><b>2.1.4</b> <strong>Variable categórica (ó cualitativa)</strong></a></li>
+<li class="chapter" data-level="2.1.5" data-path="intro.html"><a href="intro.html#variable-cuantitativa-si-sus-valores-son-numéricos-si-se-pueden-hacer-operaciones-aritméticas-con-ellos."><i class="fa fa-check"></i><b>2.1.5</b> <strong>Variable cuantitativa</strong>: Si sus valores son numéricos (si se pueden hacer operaciones aritméticas con ellos).</a></li>
+<li class="chapter" data-level="2.1.6" data-path="intro.html"><a href="intro.html#qué-es-un-dato"><i class="fa fa-check"></i><b>2.1.6</b> <strong>¿Qué es un dato?</strong></a></li>
+<li class="chapter" data-level="2.1.7" data-path="intro.html"><a href="intro.html#qué-es-una-unidad-de-observación"><i class="fa fa-check"></i><b>2.1.7</b> <strong>¿Qué es una unidad de observación?</strong></a></li>
+<li class="chapter" data-level="2.1.8" data-path="intro.html"><a href="intro.html#qué-es-una-población"><i class="fa fa-check"></i><b>2.1.8</b> <strong>¿Qué es una población?</strong></a></li>
+<li class="chapter" data-level="2.1.9" data-path="intro.html"><a href="intro.html#qué-es-una-muestra"><i class="fa fa-check"></i><b>2.1.9</b> <strong>¿Qué es una muestra?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html"><i class="fa fa-check"></i><b>3</b> Estadística descriptiva</a><ul>
+<li class="chapter" data-level="3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#qué-es-la-estradística-descriptiva"><i class="fa fa-check"></i><b>3.1</b> Qué es la Estradística descriptiva?</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-aspectos-importantes-de-los-datos"><i class="fa fa-check"></i><b>3.1.1</b> Los aspectos importantes de los datos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa"><i class="fa fa-check"></i><b>3.1.2</b> Frecuencia relativa</a></li>
+<li class="chapter" data-level="3.1.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa-y-acumulada"><i class="fa fa-check"></i><b>3.1.3</b> Frecuencia relativa y acumulada</a></li>
+<li class="chapter" data-level="3.1.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-de-barras-frecuencia-absoluta"><i class="fa fa-check"></i><b>3.1.4</b> Gráfica de barras (<strong>Frecuencia absoluta</strong>)</a></li>
+<li class="chapter" data-level="3.1.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-caja-y-bigotes"><i class="fa fa-check"></i><b>3.1.5</b> Gráfica caja y bigotes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#proceso-para-presentar-datos-en-forma-agrupada"><i class="fa fa-check"></i><b>3.2</b> Proceso para presentar datos en forma agrupada</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#críterio-datos-atípicos"><i class="fa fa-check"></i><b>3.2.1</b> Críterio datos <strong>atípicos</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-no-agrupados"><i class="fa fa-check"></i><b>3.3</b> Datos no agrupados</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-posición"><i class="fa fa-check"></i><b>3.3.1</b> Medidas de posición</a></li>
+<li class="chapter" data-level="3.3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-aritmética-para-datos-no-agrupados-barx"><i class="fa fa-check"></i><b>3.3.2</b> La media aritmética para datos no agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.3</b> La mediana para datos no agrupados</a></li>
+<li class="chapter" data-level="3.3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-m_0"><i class="fa fa-check"></i><b>3.3.4</b> La Moda <span class="math inline">\((M_{0})\)</span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-cuartiles-en-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.5</b> Cálculo de cuartiles en datos NO agrupados</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-agrupados"><i class="fa fa-check"></i><b>3.4</b> Datos agrupados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo1-datos-agrupados"><i class="fa fa-check"></i><b>3.4.1</b> Ejemplo1 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo2-datos-agrupados"><i class="fa fa-check"></i><b>3.4.2</b> Ejemplo2 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo3-datos-agrupados"><i class="fa fa-check"></i><b>3.4.3</b> Ejemplo3 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#dispersión"><i class="fa fa-check"></i><b>3.4.4</b> Dispersión</a></li>
+<li class="chapter" data-level="3.4.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#aplicación-shiny-para-dispersión"><i class="fa fa-check"></i><b>3.4.5</b> Aplicación Shiny para Dispersión</a></li>
+<li class="chapter" data-level="3.4.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-para-datos-agrupados-barx"><i class="fa fa-check"></i><b>3.4.6</b> La media para datos agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-agrupados-me"><i class="fa fa-check"></i><b>3.4.7</b> La mediana para datos agrupados <span class="math inline">\((Me)\)</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-cuartiles-para-datos-agrupados-q_c"><i class="fa fa-check"></i><b>3.4.8</b> Los cuartiles para datos agrupados <span class="math inline">\((Q_c)\)</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-para-datos-agrupados-mo"><i class="fa fa-check"></i><b>3.4.9</b> La moda para datos agrupados <span class="math inline">\((Mo)\)</span></a></li>
+<li class="chapter" data-level="3.4.10" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-deciles-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.10</b> Cálculo de Deciles para datos agrupados.</a></li>
+<li class="chapter" data-level="3.4.11" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#percentil-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.11</b> Percentil para datos agrupados.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-dispersión"><i class="fa fa-check"></i><b>3.5</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.1</b> <strong>Varianza para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.2</b> <strong>Varianza para datos agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.3</b> <strong>Desviación típica para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.4</b> <strong>Desviación típica para datos agrupados</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-para-variación-de-karl-pearson"><i class="fa fa-check"></i><b>3.6</b> Coeficiente para variación de Karl Pearson</a></li>
+<li class="chapter" data-level="3.7" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medida-cuartil-de-asimetría"><i class="fa fa-check"></i><b>3.7</b> Medida cuartil de asimetría</a></li>
+<li class="chapter" data-level="3.8" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-de-asimetría-de-fisher"><i class="fa fa-check"></i><b>3.8</b> Coeficiente de asimetría de Fisher</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probabilidad.html"><a href="probabilidad.html"><i class="fa fa-check"></i><b>4</b> Probabilidad</a><ul>
+<li class="chapter" data-level="4.1" data-path="probabilidad.html"><a href="probabilidad.html#teoría-de-conjuntos"><i class="fa fa-check"></i><b>4.1</b> Teoría de conjuntos</a></li>
+<li class="chapter" data-level="4.2" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión"><i class="fa fa-check"></i><b>4.2</b> Propiedades de la Unión</a></li>
+<li class="chapter" data-level="4.3" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-intersección"><i class="fa fa-check"></i><b>4.3</b> Propiedades de la Intersección</a></li>
+<li class="chapter" data-level="4.4" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión-y-la-intersección"><i class="fa fa-check"></i><b>4.4</b> Propiedades de la unión y la intersección</a></li>
+<li class="chapter" data-level="4.5" data-path="probabilidad.html"><a href="probabilidad.html#diferencia-entre-dos-conjuntos"><i class="fa fa-check"></i><b>4.5</b> Diferencia entre dos conjuntos</a></li>
+<li class="chapter" data-level="4.6" data-path="probabilidad.html"><a href="probabilidad.html#complemento-de-un-conjunto"><i class="fa fa-check"></i><b>4.6</b> Complemento de un conjunto</a></li>
+<li class="chapter" data-level="4.7" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-del-algebra-de-conjuntos"><i class="fa fa-check"></i><b>4.7</b> Propiedades del algebra de conjuntos</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo1"><i class="fa fa-check"></i><b>4.7.1</b> Ejemplo1</a></li>
+<li class="chapter" data-level="4.7.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo2"><i class="fa fa-check"></i><b>4.7.2</b> Ejemplo2</a></li>
+<li class="chapter" data-level="4.7.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3"><i class="fa fa-check"></i><b>4.7.3</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="probabilidad.html"><a href="probabilidad.html#conjuntos-numéricos"><i class="fa fa-check"></i><b>4.8</b> Conjuntos numéricos</a></li>
+<li class="chapter" data-level="4.9" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-los-números-reales"><i class="fa fa-check"></i><b>4.9</b> Propiedades de los números Reales</a></li>
+<li class="chapter" data-level="4.10" data-path="probabilidad.html"><a href="probabilidad.html#conceptos-introductorios-de-probabilidad"><i class="fa fa-check"></i><b>4.10</b> Conceptos introductorios de probabilidad</a></li>
+<li class="chapter" data-level="4.11" data-path="probabilidad.html"><a href="probabilidad.html#definición1frecuentista"><i class="fa fa-check"></i><b>4.11</b> Definición1(Frecuentista)</a></li>
+<li class="chapter" data-level="4.12" data-path="probabilidad.html"><a href="probabilidad.html#definición2clásica"><i class="fa fa-check"></i><b>4.12</b> Definición2(Clásica)</a></li>
+<li class="chapter" data-level="4.13" data-path="probabilidad.html"><a href="probabilidad.html#simulaciones-básicas"><i class="fa fa-check"></i><b>4.13</b> Simulaciones básicas</a></li>
+<li class="chapter" data-level="4.14" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-un-dado"><i class="fa fa-check"></i><b>4.14</b> Lanzamiento de un dado</a></li>
+<li class="chapter" data-level="4.15" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-dos-dados"><i class="fa fa-check"></i><b>4.15</b> Lanzamiento de dos dados</a></li>
+<li class="chapter" data-level="4.16" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-una-moneda-tres-veces"><i class="fa fa-check"></i><b>4.16</b> Lanzamiento de una moneda tres veces</a></li>
+<li class="chapter" data-level="4.17" data-path="probabilidad.html"><a href="probabilidad.html#axioma-uno-de-la-probabilidad"><i class="fa fa-check"></i><b>4.17</b> Axioma Uno de la probabilidad</a></li>
+<li class="chapter" data-level="4.18" data-path="probabilidad.html"><a href="probabilidad.html#axioma-dos-de-la-probabilidad"><i class="fa fa-check"></i><b>4.18</b> Axioma Dos de la probabilidad</a></li>
+<li class="chapter" data-level="4.19" data-path="probabilidad.html"><a href="probabilidad.html#axioma-tres-de-la-probabilidad"><i class="fa fa-check"></i><b>4.19</b> Axioma Tres de la probabilidad</a></li>
+<li class="chapter" data-level="4.20" data-path="probabilidad.html"><a href="probabilidad.html#teoremas-básicos-de-probabilidad"><i class="fa fa-check"></i><b>4.20</b> Teoremas básicos de probabilidad</a></li>
+<li class="chapter" data-level="4.21" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-del-complemento"><i class="fa fa-check"></i><b>4.21</b> Demostración probabilidad del complemento</a></li>
+<li class="chapter" data-level="4.22" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-inclusión"><i class="fa fa-check"></i><b>4.22</b> Demostración probabilidad de la inclusión</a></li>
+<li class="chapter" data-level="4.23" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-unión"><i class="fa fa-check"></i><b>4.23</b> Demostración probabilidad de la unión</a><ul>
+<li class="chapter" data-level="4.23.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-1"><i class="fa fa-check"></i><b>4.23.1</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="4.23.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-2"><i class="fa fa-check"></i><b>4.23.2</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="4.23.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-3"><i class="fa fa-check"></i><b>4.23.3</b> Ejemplo 3</a></li>
+<li class="chapter" data-level="4.23.4" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-4"><i class="fa fa-check"></i><b>4.23.4</b> Ejemplo 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.24" data-path="probabilidad.html"><a href="probabilidad.html#regla-de-la-adición"><i class="fa fa-check"></i><b>4.24</b> Regla de la adición</a><ul>
+<li class="chapter" data-level="4.24.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3-1"><i class="fa fa-check"></i><b>4.24.1</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.25" data-path="probabilidad.html"><a href="probabilidad.html#ley-de-los-grandes-números"><i class="fa fa-check"></i><b>4.25</b> Ley de los grandes números</a></li>
+<li class="chapter" data-level="4.26" data-path="probabilidad.html"><a href="probabilidad.html#tabla-de-contingencia"><i class="fa fa-check"></i><b>4.26</b> Tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.26.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemploencuesta-de-ver-cine"><i class="fa fa-check"></i><b>4.26.1</b> Ejemplo(Encuesta de ver cine)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.27" data-path="probabilidad.html"><a href="probabilidad.html#probabilidad-condicional-y-tabla-de-contingencia"><i class="fa fa-check"></i><b>4.27</b> Probabilidad condicional y tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.27.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplocafé"><i class="fa fa-check"></i><b>4.27.1</b> Ejemplo(Café)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.28" data-path="probabilidad.html"><a href="probabilidad.html#regla-del-producto"><i class="fa fa-check"></i><b>4.28</b> Regla del producto</a></li>
+<li class="chapter" data-level="4.29" data-path="probabilidad.html"><a href="probabilidad.html#teorema-de-bayes"><i class="fa fa-check"></i><b>4.29</b> Teorema de Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html"><i class="fa fa-check"></i><b>5</b> Modelos de probabilidad</a><ul>
+<li class="chapter" data-level="5.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#variable-aleatoria-v.a."><i class="fa fa-check"></i><b>5.1</b> Variable Aleatoria (v.a.)</a></li>
+<li class="chapter" data-level="5.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribuciones-de-probabilidad"><i class="fa fa-check"></i><b>5.2</b> Distribuciones de Probabilidad</a></li>
+<li class="chapter" data-level="5.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#propiedades-que-debe-cumplir-una-distribución-de-probabilidad"><i class="fa fa-check"></i><b>5.3</b> Propiedades que debe cumplir una distribución de probabilidad</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo1-1"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplo1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#características-de-una-distribución-de-probabilidad-cualquiera."><i class="fa fa-check"></i><b>5.4</b> Características de una distribución de probabilidad cualquiera.</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejercicio1"><i class="fa fa-check"></i><b>5.4.1</b> Ejercicio1</a></li>
+<li class="chapter" data-level="5.4.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio1"><i class="fa fa-check"></i><b>5.4.2</b> Solución (ejercicio1)</a></li>
+<li class="chapter" data-level="5.4.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo3-2"><i class="fa fa-check"></i><b>5.4.3</b> Ejemplo3</a></li>
+<li class="chapter" data-level="5.4.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio2"><i class="fa fa-check"></i><b>5.4.4</b> Solución (ejercicio2)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-binomial"><i class="fa fa-check"></i><b>5.5</b> Distribución Binomial</a></li>
+<li class="chapter" data-level="5.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#experimento-de-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6</b> Experimento de probabilidad binomial</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6.1</b> <strong>Fórmula de la Probabilidad Binomial</strong></a></li>
+<li class="chapter" data-level="5.6.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo4"><i class="fa fa-check"></i><b>5.6.4</b> Ejemplo4</a></li>
+<li class="chapter" data-level="5.6.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo4"><i class="fa fa-check"></i><b>5.6.5</b> Solución (ejemplo4)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.7</b> Distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-hipergeométrica"><i class="fa fa-check"></i><b>5.7.1</b> <strong>Fórmula de la función de Probabilidad Hipergeométrica</strong></a></li>
+<li class="chapter" data-level="5.7.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+<li class="chapter" data-level="5.7.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#commandos-en-r-studio"><i class="fa fa-check"></i><b>5.8</b> Commandos en r-studio</a></li>
+<li class="chapter" data-level="5.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento"><i class="fa fa-check"></i><b>5.9</b> Condiciones del experimento</a></li>
+<li class="chapter" data-level="5.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#característica-de-la-distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.10</b> Característica de la distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.10.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo5"><i class="fa fa-check"></i><b>5.10.1</b> Ejemplo5</a></li>
+<li class="chapter" data-level="5.10.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo5"><i class="fa fa-check"></i><b>5.10.2</b> Solución (ejemplo5)</a></li>
+<li class="chapter" data-level="5.10.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo6"><i class="fa fa-check"></i><b>5.10.3</b> Ejemplo6</a></li>
+<li class="chapter" data-level="5.10.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo6"><i class="fa fa-check"></i><b>5.10.4</b> Solución (ejemplo6)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#función-de-distribución-de-probabilidad-de-variable-continua"><i class="fa fa-check"></i><b>5.11</b> Función de distribución de probabilidad de variable continua</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-y-varianza-para-una-función-de-distribución-de-probabilidad-con-variable-continua"><i class="fa fa-check"></i><b>5.11.1</b> Media y Varianza para una función de distribución de probabilidad con variable continua</a></li>
+<li class="chapter" data-level="5.11.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#definición"><i class="fa fa-check"></i><b>5.11.2</b> <strong>Definición</strong></a></li>
+<li class="chapter" data-level="5.11.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo"><i class="fa fa-check"></i><b>5.11.3</b> <strong>Ejemplo</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.12</b> Distribución de probabilidad de Poisson</a></li>
+<li class="chapter" data-level="5.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento-1"><i class="fa fa-check"></i><b>5.13</b> Condiciones del experimento</a><ul>
+<li class="chapter" data-level="5.13.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.13.1</b> <strong>Fórmula de la función de Probabilidad de Poisson</strong></a></li>
+<li class="chapter" data-level="5.13.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-de-poisson"><i class="fa fa-check"></i><b>5.13.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN DE POISSON</strong></a></li>
+<li class="chapter" data-level="5.13.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo7"><i class="fa fa-check"></i><b>5.13.3</b> Ejemplo7</a></li>
+<li class="chapter" data-level="5.13.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo7"><i class="fa fa-check"></i><b>5.13.4</b> Solución (ejemplo7)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#la-distribución-de-probabilidad-normal"><i class="fa fa-check"></i><b>5.14</b> La distribución de probabilidad normal</a></li>
+<li class="chapter" data-level="5.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#regla-empírica"><i class="fa fa-check"></i><b>5.15</b> Regla empírica</a><ul>
+<li class="chapter" data-level="5.15.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-donde-se-aplicacón-la-regla"><i class="fa fa-check"></i><b>5.15.1</b> <strong>Ejemplo donde se aplicacón la regla</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#cambios-de-sigma-para-la-distribución-normal"><i class="fa fa-check"></i><b>5.16</b> Cambios de <span class="math inline">\(\sigma\)</span> para la distribución normal</a></li>
+<li class="chapter" data-level="5.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-normal-estándar"><i class="fa fa-check"></i><b>5.17</b> Distribución de probabilidad normal estándar</a></li>
+<li class="chapter" data-level="5.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#tabla-normal-estándar"><i class="fa fa-check"></i><b>5.18</b> Tabla normal estándar</a></li>
+<li class="chapter" data-level="5.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#significado-del-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19</b> Significado del área bajo la curva normal</a><ul>
+<li class="chapter" data-level="5.19.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla"><i class="fa fa-check"></i><b>5.19.1</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-1"><i class="fa fa-check"></i><b>5.19.2</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-2"><i class="fa fa-check"></i><b>5.19.3</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19.4</b> Ejemplo (Área bajo la curva normal)</a></li>
+<li class="chapter" data-level="5.19.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo8"><i class="fa fa-check"></i><b>5.19.5</b> Ejemplo8</a></li>
+<li class="chapter" data-level="5.19.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo8"><i class="fa fa-check"></i><b>5.19.6</b> Solución (ejemplo8)</a></li>
+<li class="chapter" data-level="5.19.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo9"><i class="fa fa-check"></i><b>5.19.7</b> Ejemplo9</a></li>
+<li class="chapter" data-level="5.19.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo9"><i class="fa fa-check"></i><b>5.19.8</b> Solución (ejemplo9)</a></li>
+<li class="chapter" data-level="5.19.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo10"><i class="fa fa-check"></i><b>5.19.9</b> Ejemplo10</a></li>
+<li class="chapter" data-level="5.19.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo10"><i class="fa fa-check"></i><b>5.19.10</b> Solución (ejemplo10)</a></li>
+<li class="chapter" data-level="5.19.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo11"><i class="fa fa-check"></i><b>5.19.11</b> Ejemplo11</a></li>
+<li class="chapter" data-level="5.19.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo11"><i class="fa fa-check"></i><b>5.19.12</b> Solución (ejemplo11)</a></li>
+<li class="chapter" data-level="5.19.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo12"><i class="fa fa-check"></i><b>5.19.13</b> Ejemplo12</a></li>
+<li class="chapter" data-level="5.19.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo12"><i class="fa fa-check"></i><b>5.19.14</b> Solución (ejemplo12)</a></li>
+<li class="chapter" data-level="5.19.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo13"><i class="fa fa-check"></i><b>5.19.15</b> Ejemplo13</a></li>
+<li class="chapter" data-level="5.19.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo14"><i class="fa fa-check"></i><b>5.19.16</b> Ejemplo14</a></li>
+<li class="chapter" data-level="5.19.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo15"><i class="fa fa-check"></i><b>5.19.17</b> Ejemplo15</a></li>
+<li class="chapter" data-level="5.19.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo16"><i class="fa fa-check"></i><b>5.19.18</b> Ejemplo16</a></li>
+<li class="chapter" data-level="5.19.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo17"><i class="fa fa-check"></i><b>5.19.19</b> Ejemplo17</a></li>
+<li class="chapter" data-level="5.19.20" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo18"><i class="fa fa-check"></i><b>5.19.20</b> Ejemplo18</a></li>
+<li class="chapter" data-level="5.19.21" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo19"><i class="fa fa-check"></i><b>5.19.21</b> Ejemplo19</a></li>
+<li class="chapter" data-level="5.19.22" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo20"><i class="fa fa-check"></i><b>5.19.22</b> Ejemplo20</a></li>
+<li class="chapter" data-level="5.19.23" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo21"><i class="fa fa-check"></i><b>5.19.23</b> Ejemplo21</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="temas-extras.html"><a href="temas-extras.html"><i class="fa fa-check"></i><b>6</b> Temas Extras</a></li>
+<li class="chapter" data-level="7" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html"><i class="fa fa-check"></i><b>7</b> Programación R_Rstudio</a><ul>
+<li class="chapter" data-level="7.1" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>7.1</b> Repaso de R y Rstudio</a></li>
+<li class="chapter" data-level="7.2" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>7.2</b> Páginas donde se puede trabajar R en línea</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="videos-de-clase.html"><a href="videos-de-clase.html"><i class="fa fa-check"></i><b>8</b> Videos de Clase</a><ul>
+<li class="chapter" data-level="8.1" data-path="videos-de-clase.html"><a href="videos-de-clase.html#clases-semestre-02-2021"><i class="fa fa-check"></i><b>8.1</b> Clases semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html"><i class="fa fa-check"></i><b>9</b> Videos de Asesoría</a><ul>
+<li class="chapter" data-level="9.1" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html#asesorías-semestre-02-2021"><i class="fa fa-check"></i><b>9.1</b> Asesorías semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística Uno</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probabilidad" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Probabilidad</h1>
+<div id="teoría-de-conjuntos" class="section level2">
+<h2><span class="header-section-number">4.1</span> Teoría de conjuntos</h2>
+
+<div class="definition">
+<span id="def:unnamed-chunk-2" class="definition"><strong>Definición4.1  </strong></span>Un <strong>conjunto</strong> es una colección bien definida de objetos, llamados sus elementos. Los conjuntos se simbolizan con letras minúsculas <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(...\)</span> Los objetos que componen el conjunto se denominan elementos y se denotan con letras minúsculas <span class="math inline">\(a, b, ...\)</span> [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(21\)</span>]
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-3" class="definition"><strong>Definición4.2  </strong></span>Para definir un <strong>conjunto por extensión</strong>, se enumeran todos sus elementos separándolos por comas y luego se encierran entre llaves.</p>
+Para escribir un <strong>conjunto por comprensión</strong> se elige un elemento arbitrario <span class="math inline">\(x\)</span> y se señala que cumple la propiedad <span class="math inline">\(P(x)\)</span>. Finalmente, se encierra toda la expresión entre llaves. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(22\)</span>]
+</div>
+
+<p><span class="math display">\[
+A=\{ x | x \ \ \text{cumple la propiedad} \ \ P(x)   \}
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-4" class="definition"><strong>Definición4.3  </strong></span>Diremos que dos conjutnos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales si tienen los mismos elementos. Para indicar que <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales se escribe:[Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(22\)</span>]
+</div>
+
+<p><span class="math display">\[
+A=B
+\]</span></p>
+
+<div class="remark">
+<p> <span class="remark"><em>Nota:</em></span> Un conjunto que posee un número finito de elementos; se llaman <strong>conjuntos finitos</strong>.</p>
+<p>Un conjunto que no tiene un número finito de elemenos se llaman <strong>conjunto infinito</strong>.</p>
+<p>[Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(23\)</span>]</p>
+</div>
+
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-6" class="definition"><strong>Definición4.4  </strong></span>El número de elementos de un conjunto finito es lo que se llama la <strong>cardinalidad</strong> de dicho conjunto. La cardinalidad de un conjunto finito <span class="math inline">\(A\)</span> se denota por: [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(24\)</span>]</p>
+</div>
+
+<p><span class="math display">\[
+Card(A) \ \ \ \text{ó}  \ \ \ |A|
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-7" class="definition"><strong>Definición4.5  </strong></span>Dos conjuntos finitos <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> se dicen ser <strong>equipotentes</strong> si tienen exactamente el mismo número de elementos. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(24\)</span>]
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-8" class="definition"><strong>Definición4.6  </strong></span>Un conjunto se dice <strong>vacío</strong> si no posee elementos. El conjunto vacío se denota como:
+</div>
+
+<p><span class="math display">\[
+\{ \} \ \ \ \text{ó}  \ \ \ \Phi
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-9" class="definition"><strong>Definición4.7  </strong></span>El conjunto <strong>universal</strong> se define como el conjunto que posee todos los elementos de todos los conjuntos, y se denota como:[Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(25\)</span>]
+</div>
+
+<p><span class="math display">\[
+\text{Conjunto universal:} \ \ \ U
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-10" class="definition"><strong>Definición4.8  </strong></span>Si cada elemento de un conjunto <span class="math inline">\(A\)</span> es también elemento de un conjunto <span class="math inline">\(B\)</span>, entonces se dice que <span class="math inline">\(A\)</span> es un subconjunto de <span class="math inline">\(B\)</span>. Se dice también que <span class="math inline">\(A\)</span> está contenido en <span class="math inline">\(B\)</span> o que <span class="math inline">\(B\)</span> contiene a <span class="math inline">\(A\)</span>. La relación de subconjunto se denota como: [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(25\)</span>]
+</div>
+
+<p><span class="math display">\[
+A \subset B  \ \ \ \text{ó}  \ \ \ B \supset A
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Figconjunto1"></span>
+<img src="images/Figconjunto1.png" alt="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $26$]" width="60%" />
+<p class="caption">
+Figura 4.1: Relación de subconjunto [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(26\)</span>]
+</p>
+</div>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-11" class="definition"><strong>Definición4.9  </strong></span>La unión de dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> consta de todos los elementos que pertenecen a <span class="math inline">\(A\)</span> o a <span class="math inline">\(B\)</span>. La unión de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se denota por <span class="math inline">\(A \cup B\)</span>. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(31\)</span>]</p>
+</div>
+
+<p><span class="math display">\[
+A \cup B = \{ x | x \in A \ \text{o} \ x \in B\}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigUnionA-1"></span>
+<img src="images/FigUniona1.png" alt="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $32$]" width="60%" />
+<p class="caption">
+Figura 4.2: Relación de subconjunto [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(32\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigUnionA-2"></span>
+<img src="images/FigUniona2.png" alt="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $32$]" width="60%" />
+<p class="caption">
+Figura 4.3: Relación de subconjunto [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(32\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigUnionA-3"></span>
+<img src="images/FigUniona3.png" alt="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $32$]" width="60%" />
+<p class="caption">
+Figura 4.4: Relación de subconjunto [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(32\)</span>]
+</p>
+</div>
+</div>
+<div id="propiedades-de-la-unión" class="section level2">
+<h2><span class="header-section-number">4.2</span> Propiedades de la Unión</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PropiedadesUnion"></span>
+<img src="images/PropiedadesUnion.png" alt="Propiedades de la unión [Imagen tomada de [@zill2012algebra] pág $32$]" width="60%" />
+<p class="caption">
+Figura 4.5: Propiedades de la unión [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(32\)</span>]
+</p>
+</div>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-12" class="definition"><strong>Definición4.10  </strong></span>La intersección de dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> consta de todos los elementos que pertenecen a <span class="math inline">\(A\)</span> y a <span class="math inline">\(B\)</span>. La intersección de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se denota por <span class="math inline">\(A \cap B\)</span>. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(30\)</span>]</p>
+</div>
+
+<p><span class="math display">\[
+A \cap B = \{ x | x \in A \ \text{y} \ x \in B\}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigInterseccion"></span>
+<img src="images/FigInterseccion1.png" alt="Intersección de conjuntos [Imagen tomada de [@zill2012algebra] pág $30$]" width="60%" />
+<p class="caption">
+Figura 4.6: Intersección de conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(30\)</span>]
+</p>
+</div>
+</div>
+<div id="propiedades-de-la-intersección" class="section level2">
+<h2><span class="header-section-number">4.3</span> Propiedades de la Intersección</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PropiedadesInterseccion"></span>
+<img src="images/PropiedadesInterseccion.png" alt="Propiedades de la intersección [Imagen tomada de [@zill2012algebra] pág $30$]" width="60%" />
+<p class="caption">
+Figura 4.7: Propiedades de la intersección [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(30\)</span>]
+</p>
+</div>
+</div>
+<div id="propiedades-de-la-unión-y-la-intersección" class="section level2">
+<h2><span class="header-section-number">4.4</span> Propiedades de la unión y la intersección</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigUI"></span>
+<img src="images/FigUI.png" alt="Propiedades de la unión y la intersección [Imagen tomada de [@zill2012algebra] pág $33$]" width="60%" />
+<p class="caption">
+Figura 4.8: Propiedades de la unión y la intersección [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(33\)</span>]
+</p>
+</div>
+</div>
+<div id="diferencia-entre-dos-conjuntos" class="section level2">
+<h2><span class="header-section-number">4.5</span> Diferencia entre dos conjuntos</h2>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-13" class="definition"><strong>Definición4.11  </strong></span>La diferencia de dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> consta de todos los elementos que pertenecen a <span class="math inline">\(A\)</span> y no pertenecen a <span class="math inline">\(B\)</span>. La diferencia de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> se denota por <span class="math inline">\(A - B\)</span>. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(34\)</span>]</p>
+</div>
+
+<p><span class="math display">\[
+A - B = \{ x | x \in A \ \text{y} \ x \notin B\}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigDif"></span>
+<img src="images/FigDif.png" alt="Diferencia entre conjuntos [Imagen tomada de [@zill2012algebra] pág $34$]" width="60%" />
+<p class="caption">
+Figura 4.9: Diferencia entre conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(34\)</span>]
+</p>
+</div>
+</div>
+<div id="complemento-de-un-conjunto" class="section level2">
+<h2><span class="header-section-number">4.6</span> Complemento de un conjunto</h2>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-14" class="definition"><strong>Definición4.12  </strong></span>El complemento de un conjunto <span class="math inline">\(A\)</span> consta de todos los elementos del universo <span class="math inline">\(U\)</span>, y que no pertenecen a <span class="math inline">\(A\)</span>. El complemento de <span class="math inline">\(A\)</span> se denota por <span class="math inline">\(A^{c}\)</span>. [Tomado de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(34\)</span>]</p>
+</div>
+
+<p><span class="math display">\[
+A&#39;=A^{c} = \{ x | x \notin A \}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigComplemento"></span>
+<img src="images/FigComplemento.png" alt="Complemento de un conjunto [Imagen tomada de [@zill2012algebra] pág $34$]" width="60%" />
+<p class="caption">
+Figura 4.10: Complemento de un conjunto [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(34\)</span>]
+</p>
+</div>
+</div>
+<div id="propiedades-del-algebra-de-conjuntos" class="section level2">
+<h2><span class="header-section-number">4.7</span> Propiedades del algebra de conjuntos</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesGeneral"></span>
+<img src="images/FigPropiedadesGeneral.png" alt="Leyes del algebra de Conjuntos [Imagen tomada de [@zill2012algebra] pág $36$]" width="60%" />
+<p class="caption">
+Figura 4.11: Leyes del algebra de Conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(36\)</span>]
+</p>
+</div>
+<div id="ejemplo1" class="section level3">
+<h3><span class="header-section-number">4.7.1</span> Ejemplo1</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigEjConjunto1"></span>
+<img src="images/EjemploConjuntos1.jpg" alt="Ejemplo 1 de conjuntos [Imagen tomada de [@zill2012algebra] pág $33$]" width="60%" />
+<p class="caption">
+Figura 4.12: Ejemplo 1 de conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(33\)</span>]
+</p>
+</div>
+<p>A partir de la figura <a href="probabilidad.html#fig:FigEjConjunto1">4.12</a>, obtener la solución a los enunciados de conjuntos</p>
+<ul>
+<li><p>Obtener <span class="math inline">\(A \cup B=\{0, 2, 1, 3, 5, 7\}\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A \cup C=\{0,2,6,8,1,3,5\}\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(C \cup B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A \cap B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A \cap C=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(C \cap B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A - B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(B - A=\{7\}\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A - C=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(C - B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(B - C=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\((A\cap B) - C=\{1,3,5\}\)</span></p></li>
+<li><p>Obtener <span class="math inline">\((C\cap B) - A=?\)</span></p></li>
+</ul>
+</div>
+<div id="ejemplo2" class="section level3">
+<h3><span class="header-section-number">4.7.2</span> Ejemplo2</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigEjConjunto2"></span>
+<img src="images/EjemploConjuntos2.jpg" alt="Ejemplo 2 de conjuntos [Imagen tomada de [@zill2012algebra] pág $35$]" width="60%" />
+<p class="caption">
+Figura 4.13: Ejemplo 2 de conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(35\)</span>]
+</p>
+</div>
+<p>A partir de la figura <a href="probabilidad.html#fig:FigEjConjunto2">4.13</a>, obtener la solución a los enunciados de conjuntos</p>
+<ul>
+<li><p>Obtener <span class="math inline">\(A \cup B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A \cap B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A - B=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(B - A=?\)</span></p></li>
+</ul>
+</div>
+<div id="ejemplo3" class="section level3">
+<h3><span class="header-section-number">4.7.3</span> Ejemplo3</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigEjConjunto3"></span>
+<img src="images/EjemploConjuntos3.jpg" alt="Ejemplo 3 de conjuntos [Imagen tomada de [@zill2012algebra] pág $33$]" width="60%" />
+<p class="caption">
+Figura 4.14: Ejemplo 3 de conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(33\)</span>]
+</p>
+</div>
+<p>A partir de la figura <a href="probabilidad.html#fig:FigEjConjunto3">4.14</a>, obtener la solución a los enunciados de conjuntos</p>
+<ul>
+<li><p>Obtener <span class="math inline">\({\bigcup}_{i=1}^{2}A_{i} =A_1 \cup A_2=\{8,6,4,2,1,3,5,7 \}\)</span></p></li>
+<li><p>Obtener <span class="math inline">\({\bigcap}_{i=2}^{3}A_{i} =?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\({\bigcup}_{i=1}^{3}A_{i} =?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\({\bigcap}_{i=1}^{2}A_{i} =?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\({\bigcap}_{i=2}^{3}A_{i} =?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\({\bigcap}_{i=1}^{3}A_{i} =?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(\left({\bigcup}_{i=1}^{2}A_{i}\right) - A_3=?\)</span></p></li>
+<li><p>Obtener <span class="math inline">\(A_1-\left({\bigcup}_{i=2}^{3}A_{i}\right)=?\)</span></p></li>
+</ul>
+</div>
+</div>
+<div id="conjuntos-numéricos" class="section level2">
+<h2><span class="header-section-number">4.8</span> Conjuntos numéricos</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPinumero"></span>
+<img src="images/FigPinumero.png" alt="Número Irracional [Imagen tomada de [@zill2012algebra] pág $50$]" width="166" />
+<p class="caption">
+Figura 4.15: Número Irracional [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(50\)</span>]
+</p>
+</div>
+
+<div class="definition">
+<span id="def:unnamed-chunk-15" class="definition"><strong>Definición4.13  </strong></span>El conjunto de los números naturales consta de:
+</div>
+
+<p><span class="math display">\[
+N=\{ 1,2,3,4,...\}
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-16" class="definition"><strong>Definición4.14  </strong></span>El conjunto de los números enteros consta de:
+</div>
+
+<p><span class="math display">\[
+Z=\{...,-3,-2,-1,0,1,2,3,4,...\}
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-17" class="definition"><strong>Definición4.15  </strong></span>El conjunto de los números racionales consta de todos los números que son cociente de dos enteros, siempre que el denominador sea diferente de cero. Es decir:
+</div>
+
+<span class="math display">\[
+Q=\{ \dfrac{p}{q} | p \ \text{y} \ q \ \ \text{son números enteros,} \ \ q \ \neq \ 0\}
+\]</span>
+
+<div class="definition">
+<span id="def:unnamed-chunk-18" class="definition"><strong>Definición4.16  </strong></span>El conjunto de los números irracionales consta de todos los números que no son el cociente de dos enteros, siempre que el denominador sea diferente de cero. Es decir:
+</div>
+
+<span class="math display">\[
+Q^{*}=\{x |   \ x \neq \ \dfrac{p}{q}, \ \ q \ \neq \ 0\   \}
+\]</span>
+
+<div class="definition">
+<span id="def:unnamed-chunk-19" class="definition"><strong>Definición4.17  </strong></span>El conjunto de los números reales consta de la unión entre el conjunto de los racionales y los irracionales. Es decir:
+</div>
+
+<p><span class="math display">\[
+R=\{x |   \ x \in Q \ \text{o} \ x \in Q^{*} \}=Q \cup Q^{*}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigConjuntoN"></span>
+<img src="images/EsquemaConjuntosReales1.jpg" alt="Diagrama de los conjuntos numéricos [Imagen tomada de [@swokowski1996algebra] pág $3$]" width="60%" />
+<p class="caption">
+Figura 4.16: Diagrama de los conjuntos numéricos [Imagen tomada de <span class="citation">(Swokowski and COLE <a href="#ref-swokowski1996algebra" role="doc-biblioref">1996</a>)</span> pág <span class="math inline">\(3\)</span>]
+</p>
+</div>
+</div>
+<div id="propiedades-de-los-números-reales" class="section level2">
+<h2><span class="header-section-number">4.9</span> Propiedades de los números Reales</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesReales"></span>
+<img src="images/FigPropiedadesReales.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $51$]" width="60%" />
+<p class="caption">
+Figura 4.17: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesB"></span>
+<img src="images/FigPropiedadesRealesB.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $51$]" width="60%" />
+<p class="caption">
+Figura 4.18: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesC"></span>
+<img src="images/FigPropiedadesRealesC.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $53$]" width="60%" />
+<p class="caption">
+Figura 4.19: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(53\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesD"></span>
+<img src="images/FigPropiedadesRealesD.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $53$]" width="60%" />
+<p class="caption">
+Figura 4.20: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(53\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesE"></span>
+<img src="images/FigPropiedadesRealesE.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $54$]" width="60%" />
+<p class="caption">
+Figura 4.21: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(54\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesF1"></span>
+<img src="images/PropiedadesFraccionarios1.jpg" alt="Propiedades de los números reales [Imagen tomada de [@swokowski1996algebra] pág $8$]" width="60%" />
+<p class="caption">
+Figura 4.22: Propiedades de los números reales [Imagen tomada de <span class="citation">(Swokowski and COLE <a href="#ref-swokowski1996algebra" role="doc-biblioref">1996</a>)</span> pág <span class="math inline">\(8\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigPropiedadesRealesF"></span>
+<img src="images/FigPropiedadesRealesF.png" alt="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $55$]" width="60%" />
+<p class="caption">
+Figura 4.23: Propiedades de los números reales [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(55\)</span>]
+</p>
+</div>
+<p><strong>Podcast</strong>
+<!-- [Introducción](https://soundcloud.com/john-estrada-920356121/introduccion1) --></p>
+</div>
+<div id="conceptos-introductorios-de-probabilidad" class="section level2">
+<h2><span class="header-section-number">4.10</span> Conceptos introductorios de probabilidad</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigConjuntosT1"></span>
+<img src="images/ConjuntosT1.jpg" alt="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]" width="60%" />
+<p class="caption">
+Figura 4.24: Esquema de probabilidad y conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(55\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigConjuntosT2"></span>
+<img src="images/ConjuntosT2.jpg" alt="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]" width="60%" />
+<p class="caption">
+Figura 4.25: Esquema de probabilidad y conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(55\)</span>]
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigConjuntosT3"></span>
+<img src="images/ConjuntosT3.jpg" alt="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]" width="60%" />
+<p class="caption">
+Figura 4.26: Esquema de probabilidad y conjuntos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(55\)</span>]
+</p>
+</div>
+
+<div class="definition">
+<span id="def:unnamed-chunk-20" class="definition"><strong>Definición4.18  </strong></span>Se dice que un espacio muestral <span class="math inline">\(S\)</span> es discreto si su resultado puede ponerse en una correspondencia uno a uno con el conjunto de los enteros positivos.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-21" class="definition"><strong>Definición4.19  </strong></span>Un conjunto <span class="math inline">\(S\)</span> que consta de todos los resultados posibles de un experimento aleatorio se llama espacio muestral, y cada resultado se denomina punto muestral. Con frecuencia habrá más de un espacio muestral que puede describir los resultados de un experimento, pero generalmente habrá uno que provee la mayor información.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-22" class="definition"><strong>Definición4.20  </strong></span>Se dice que un espacio muestral <span class="math inline">\(S\)</span> es continuo si sus resultados consisten de un intervalo de números reales.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-23" class="definition"><strong>Definición4.21  </strong></span>Un evento <span class="math inline">\(A\)</span> del espacio muestral <span class="math inline">\(S\)</span> es un grupo (ó subconjunto) de resultados contenidos en éste, cuyos miembros tiene una caracteríscita común.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-24" class="definition"><strong>Definición4.22  </strong></span>Un evento es un subconjunto <span class="math inline">\(A\)</span> del espacio muestral <span class="math inline">\(S\)</span>, es decir, un conjunto de resultados posibles. Si el resultado de un experimento es un elemento de <span class="math inline">\(A\)</span>, decimos que el evento <span class="math inline">\(A\)</span> ocurrió. Un evento que consta de un punto sencillo de <span class="math inline">\(S\)</span> se denomina con frecuencia un evento simple o elemental.
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-25" class="definition"><strong>Definición4.23  </strong></span>Sean <span class="math inline">\(S\)</span> cualquier espacion muestral y <span class="math inline">\(A\)</span> cualquier evento de éste. Se llamará función de probabilidad sobre el espacio muestral <span class="math inline">\(S\)</span> a <span class="math inline">\(P(A)\)</span> si satisface los siguientes axiomas:
+</div>
+
+</div>
+<div id="definición1frecuentista" class="section level2">
+<h2><span class="header-section-number">4.11</span> Definición1(Frecuentista)</h2>
+<p><font color='black'>Probabilidad empírica</font> La probabilidad de que un evento ocurra representa una fracción de los eventos similares que sucedieron en el pasado.</p>
+<p>Fórmula</p>
+<p><span class="math display">\[
+\text{Probabilidad empírica}=\dfrac{\text{Número de veces en que el evento ha ocurrido en el pasado}}{\text{Número total de observaciones}}
+\]</span></p>
+</div>
+<div id="definición2clásica" class="section level2">
+<h2><span class="header-section-number">4.12</span> Definición2(Clásica)</h2>
+<p><font color='black'>Probabilidad clasica</font> La probabilidad clásica de un evento <span class="math inline">\(E\)</span> se determina mediante la</p>
+<p>Fórmula</p>
+<p><span class="math display">\[
+\text{Probabilidad clásica}=\dfrac{\text{Número de formas en las que puede ocurrir un evento}}{\text{Número total de posibles resultados}}
+\]</span></p>
+<p>La probabilidad clásica implica la determinación de la probabilidad de algún evento a priori (<strong>antes del hecho</strong>)</p>
+</div>
+<div id="simulaciones-básicas" class="section level2">
+<h2><span class="header-section-number">4.13</span> Simulaciones básicas</h2>
+<p><a href="https://www.geogebra.org/m/cSfwCRkM">Lanzamiento de un dado</a></p>
+<p><a href="https://www.geogebra.org/m/TwPXt2eD">Lanzamiento de dos dados</a></p>
+<p><a href="https://www.geogebra.org/m/ZDNUEEwW">Lanzamiento de una moneda</a></p>
+<p><a href="https://www.geogebra.org/m/nUZQCReV">Lanzamiento de dos monedas</a></p>
+<p><a href="https://www.geogebra.org/m/z2cKzMwJ">Lanzamiento de tres monedas</a></p>
+<p><a href="https://www.geogebra.org/m/pmxXRa55">Lanzamiento de cuatro monedas</a></p>
+<p><a href="https://www.geogebra.org/m/MDXS6gVX">Lanzamiento de un dado y una moneda</a></p>
+<p><a href="https://www.geogebra.org/m/kh2hSxsm">Ley de los grandes números</a></p>
+</div>
+<div id="lanzamiento-de-un-dado" class="section level2">
+<h2><span class="header-section-number">4.14</span> Lanzamiento de un dado</h2>
+<p>Lanzamiento de un dado</p>
+<p>Espacio muestral</p>
+<p><span class="math display">\[
+S=\{1,2,3,4,5,6\}
+\]</span></p>
+<p>Evento : Subconjunto del espacio <span class="math inline">\(S\)</span></p>
+<p><span class="math display">\[
+A=\{2,4,6\}
+\]</span></p>
+<p><span class="math display">\[
+B=\{1,3,5\}
+\]</span></p>
+</div>
+<div id="lanzamiento-de-dos-dados" class="section level2">
+<h2><span class="header-section-number">4.15</span> Lanzamiento de dos dados</h2>
+<p>Espacio muestral al lanzar dos dados</p>
+<p><span class="math display">\[
+S=\{(R1D=2,R2D=2);...\}
+\]</span></p>
+<p>Primera componente resultados del primer dado
+Segunda componente resultados del segundo dado</p>
+<p><span class="math display">\[
+S=\{(2,2);(1,6);(1,3);(4,4);...\}
+\]</span></p>
+<p>Generar todas las posibles parejas al lanzar dos dados en forma inst.</p>
+<p>Posibles Resultados de un dado (1):</p>
+<p><span class="math display">\[
+D1=\{1,2,3,4,5,6\}
+\]</span></p>
+<p>Posibles Resultados de un dado (2):</p>
+<p><span class="math display">\[
+D2=\{1,2,3,4,5,6\}
+\]</span></p>
+<p>las posibles parejas se realizan con el producto cartesiano</p>
+<p>X=D1</p>
+<p>Y=D2</p>
+<p><span class="math display">\[
+S=D1 \times D2=\{(1,1);(1,2);(1,3);(1,4);(1,5);(1,6);
+(2,1);(2,2);(2,3);(2,4);(2,5);(2,6);...\}
+\]</span></p>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Evento de los dados que al caer suman siete</p>
+<p><span class="math display">\[
+A=\{(1,6);(6,1);(2,5);(5,2);(3,4);(4,3)\}
+\]</span></p>
+</div>
+<div id="lanzamiento-de-una-moneda-tres-veces" class="section level2">
+<h2><span class="header-section-number">4.16</span> Lanzamiento de una moneda tres veces</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTablaMoneda1"></span>
+<img src="images/Lanzamiento4veceUnaMoneda1.jpg" alt="Tabla del lanzamiento de una moneda tres veces [Imagen tomada de [@zill2012algebra] pág $188$]" width="60%" />
+<p class="caption">
+Figura 4.27: Tabla del lanzamiento de una moneda tres veces [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+</div>
+<div id="axioma-uno-de-la-probabilidad" class="section level2">
+<h2><span class="header-section-number">4.17</span> Axioma Uno de la probabilidad</h2>
+<p>Para cualquier evento <span class="math inline">\(A\)</span> contenido en el espacio de los resultados <span class="math inline">\(S\)</span>, se cumple que</p>
+<p><span class="math display">\[P(A)\geq 0\]</span></p>
+</div>
+<div id="axioma-dos-de-la-probabilidad" class="section level2">
+<h2><span class="header-section-number">4.18</span> Axioma Dos de la probabilidad</h2>
+<p>Si <span class="math inline">\(S\)</span> es el conjunto que representa el espacio muestral de los resultados, entonces</p>
+<p><span class="math display">\[P(S)=1\]</span></p>
+</div>
+<div id="axioma-tres-de-la-probabilidad" class="section level2">
+<h2><span class="header-section-number">4.19</span> Axioma Tres de la probabilidad</h2>
+<p>Si para los eventos <span class="math inline">\(A_1,A_2,...,\)</span> y <span class="math inline">\(A_i \cap A_j=\phi\)</span> para toda <span class="math inline">\(i \neq j\)</span>, entonces</p>
+<p><span class="math display">\[\begin{equation}
+P(A_1 \cup A_2 \cup A_3 \cup...\cup A_k\cup...)=\\P(A_1)+P(A_2)+...+P(A_k)+...=\sum_{i=1}^{\propto}P(A_i)
+\end{equation}\]</span></p>
+</div>
+<div id="teoremas-básicos-de-probabilidad" class="section level2">
+<h2><span class="header-section-number">4.20</span> Teoremas básicos de probabilidad</h2>
+
+<div class="theorem">
+<span id="thm:TMA1-1" class="theorem"><strong>Teorema 4.1  </strong></span>Si <span class="math inline">\(A_1 \subset A_2\)</span>, entonces <span class="math inline">\(P(A_1) \leq P(A_2)\)</span>, y <span class="math inline">\(P(A_2-A_1)=P(A_2)-P(A_1)\)</span>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-2" class="theorem"><strong>Teorema 4.2  </strong></span>Para todo evento <span class="math inline">\(A\)</span></p>
+<p><span class="math display">\[0 \leq P(A) \leq 1\]</span></p>
+o sea, la probabilidad está entre <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-3" class="theorem"><strong>Teorema 4.3  </strong></span><span class="math display">\[ P(\Phi)=0 \]</span></p>
+es decir, el evento imposible tiene probabilidad cero.
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-4" class="theorem"><strong>Teorema 4.4  </strong></span>Si <span class="math inline">\(A^{c}\)</span> es el complemento de <span class="math inline">\(A\)</span>, entonces</p>
+<span class="math display">\[P(A^{c})=1-P(A)\]</span>
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-27" class="definition"><strong>Definición4.24  </strong></span>Se dice que dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son mutumente excluyentes si no tienen resultados, o elementos comunes. En otras palabras los eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> no pueden ocurrir al mismo tiempo.
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-5" class="theorem"><strong>Teorema 4.5  </strong></span>Si <span class="math inline">\(A=A_1\cup A_2... \cup A_n\)</span>, donde <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(...\)</span>, <span class="math inline">\(A_n\)</span> son mutuamente excluyentes, entonces</p>
+<p><span class="math display">\[P(A)=P(A_1)+P(A_2)+...+P(A_n)=\sum_{i=1}^{n}P(A_i)\]</span></p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-6" class="theorem"><strong>Teorema 4.6  </strong></span>Si <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son dos eventos cualesquiera, entonces</p>
+<p><span class="math display">\[P(A \cup B)= P(A)+P(B)- P(A \cap B)\]</span></p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-7" class="theorem"><strong>Teorema 4.7  </strong></span>Para cualquier par de eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>,</p>
+<p><span class="math display">\[P(A)=P(A \cap B)+P(A \cap B^{c})\]</span></p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-8" class="theorem"><strong>Teorema 4.8  </strong></span>Si un evento <span class="math inline">\(A\)</span> debe dar como resultado la ocurrencia de uno de los eventos mutuamente excluyentes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>,…,<span class="math inline">\(A_n\)</span>, entonces</p>
+<p><span class="math display">\[P(A)=P(A \cap A_1)+P(A \cap A_2) +...+ P(A \cap A_n)\]</span></p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-9" class="theorem"><strong>Teorema 4.9  </strong></span>Sean <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> dos eventos tales que <span class="math inline">\(P(A)&gt;0\)</span>. Denótese por <span class="math inline">\(P(B|A)\)</span> la probabilidad de <span class="math inline">\(B\)</span> dado que ocurrió <span class="math inline">\(A\)</span>. Puesto que sabemos que ocurrió <span class="math inline">\(A\)</span>, éste se convierte en el nuevo espacio muestral reemplazando al original <span class="math inline">\(S\)</span>. A partir de esto llegamos a la definción</p>
+<p><span class="math display">\[P(B|A)=\dfrac{P(A\cap B)}{P(A)}\]</span></p>
+<p><span class="math display">\[P(A\cap B)=P(B|A)P(A)\]</span></p>
+</div>
+
+<p><strong>NOTA:</strong> Para tres eventos cualesquiera <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(A_3\)</span>, tenemos</p>
+<p><span class="math display">\[P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2|A_1)P(A_3| A_1 \cap A_2)\]</span></p>
+
+<div class="theorem">
+<p><span id="thm:TMA1-10" class="theorem"><strong>Teorema 4.10  </strong></span>Si un evento <span class="math inline">\(A\)</span> debe originar uno de los eventos mutuamente excluyentes <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(...\)</span>, <span class="math inline">\(A_n\)</span>, entonces</p>
+<p><span class="math display">\[P(A)=P(A_1)P(A|A_1)+P(A_2)P(A|A_2)+P(A_3)P(A|A_3)+...+P(A_n)P(A|A_n)\]</span></p>
+</div>
+
+
+<div class="theorem">
+<p><span id="thm:TMA1-11" class="theorem"><strong>Teorema 4.11  </strong></span>Suponga que <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(...\)</span>, <span class="math inline">\(A_n\)</span>, son eventos mutuamente excluyentes cuya unión es el espacio muestral <span class="math inline">\(S\)</span>, es decir, que debe ocurrir uno de los eventos. Entonces si <span class="math inline">\(B\)</span> es un evento cualquiera, tenemos</p>
+<p><span class="math display">\[P(A_k|B)=\dfrac{P(A_k)P(B|A_k)}{\sum_{j=1}^{n}P(A_j)P(B|A_j)}\]</span></p>
+<p>Esto nos permite encontrar las probabilidades de diferentes eventos <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, <span class="math inline">\(...\)</span>, <span class="math inline">\(A_n\)</span> que pueden hacer que ocurra <span class="math inline">\(B\)</span>.</p>
+<p>Este teorema se conoce como el <strong>teorema de Bayes</strong> (ó el teorema de la probabilidad de las causas)</p>
+</div>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTeoremaBayes"></span>
+<img src="images/TeoremaBayesUno.jpg" alt="Teorema de Bayes [Imagen tomada de [@zill2012algebra] pág $51$]" width="40%" />
+<p class="caption">
+Figura 4.28: Teorema de Bayes [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>]
+</p>
+</div>
+</div>
+<div id="demostración-probabilidad-del-complemento" class="section level2">
+<h2><span class="header-section-number">4.21</span> Demostración probabilidad del complemento</h2>
+<p>Demostrar que <span class="math inline">\(P(A^{c})=1-P(A)\)</span></p>
+<p>Justificación (ó argumentación)</p>
+<p><span class="math display">\[
+\begin{split}
+S &amp;= A^{c} \cup A \\
+P(S) &amp;= P(A^{c} \cup A) \\
+&amp;= P(A^{c})+P(A), \ \ \ \ \ \text{ya que } A^{c} \cap A = \Phi\\
+1 &amp;= P(A^{c})+P(A), \ \ \ \ \ \text{ya que } P(S)=1\\
+1-P(A) &amp;= P(A^{c}), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+\]</span></p>
+</div>
+<div id="demostración-probabilidad-de-la-inclusión" class="section level2">
+<h2><span class="header-section-number">4.22</span> Demostración probabilidad de la inclusión</h2>
+<p>Demostrar que si <span class="math inline">\(A \subseteq B\)</span>, entonces <span class="math inline">\(P(A) \leq P(B)\)</span></p>
+<p>Justificación (ó argumentación)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigDMtma2"></span>
+<img src="images/DMtma2.jpg" alt="Justificación teorema 3.1 [Imagen tomada de [@zill2012algebra] pág $188$]" width="30%" />
+<p class="caption">
+Figura 4.29: Justificación teorema 3.1 [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p><span class="math display">\[
+\begin{split}
+B &amp;= A \cup (B-A) \\
+P(B) &amp;= P(A \cup (B-A)) \\
+&amp;= P(A)+P(B-A), \ \ \ \ \ \text{ya que } A \cap(B-A) = \Phi\\
+\text{Luego, } P(A) &amp;\leq  P(B), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+\]</span></p>
+</div>
+<div id="demostración-probabilidad-de-la-unión" class="section level2">
+<h2><span class="header-section-number">4.23</span> Demostración probabilidad de la unión</h2>
+<p>Demostrar que <span class="math inline">\(P(A \cup B)=P(A)+P(B)-P(A \cap B)\)</span></p>
+<p>Justificación (ó argumentación)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigDMtma3"></span>
+<img src="images/DMtma3.jpg" alt="Justificación teorema 3.6 [Imagen tomada de [@zill2012algebra] pág $188$]" width="30%" />
+<p class="caption">
+Figura 4.30: Justificación teorema 3.6 [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p><span class="math display">\[
+\begin{split}
+A \cup B &amp;= A \cup (B-A) \\
+P(A \cup B) &amp;= P\left( A \cup (B-A) \right) \\
+P(A \cup B) &amp;= P(A)+P(B-A), \ \ \ \ \ \text{ya que } A \cap(B-A) = \Phi\\
+P(A \cup B) - P(A) &amp;= P(B-A) \ \ \ \   (1)
+\end{split}
+\]</span></p>
+<p>De otro lado</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigDMtma3b"></span>
+<img src="images/DMtma3b.jpg" alt="Justificación teorema 3.6 [Imagen tomada de [@zill2012algebra] pág $188$]" width="30%" />
+<p class="caption">
+Figura 4.31: Justificación teorema 3.6 [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p><span class="math display">\[
+\begin{split}
+B  &amp;= (A \cap B)\cup (B-A)  \\
+P(B)  &amp;= P(A \cap B)+P(B-A), \ \ \ \ \ \text{ya que } A\cap B) \cap(B-A) = \Phi\\  \\
+P(B) - P(A \cap B)   &amp;= P(B-A) \ \ \ \ (2)
+\end{split}
+\]</span></p>
+<p>de <span class="math inline">\((1)\)</span> y <span class="math inline">\((2)\)</span></p>
+<p><span class="math display">\[
+\begin{split}
+P(A \cup B) - P(A) &amp;= P(B-A) \\
+P(B) - P(A \cap B)   &amp;= P(B-A) 
+\end{split}
+\]</span>
+Igualamos los lados izquierdos, así</p>
+<p><span class="math display">\[
+\begin{split}
+P(A \cup B) - P(A) &amp;= P(B) - P(A \cap B) \\
+P(A \cup B) &amp;= P(A)+P(B) - P(A \cap B), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+\]</span></p>
+<div id="ejemplo-1" class="section level3">
+<h3><span class="header-section-number">4.23.1</span> Ejemplo 1</h3>
+<p>Suponga que lanzamos un dado justo una vez.</p>
+<p>¿Qué probabilidad hay de obtener <span class="math inline">\(7\)</span>?</p>
+<p><strong>Respuesta</strong></p>
+<p>Como el número <span class="math inline">\(7\)</span> no está incluido en el conjunto <span class="math inline">\(S\)</span> de todos los posibles resultados, el evento <span class="math inline">\(A\)</span> de <strong>obtener un <span class="math inline">\(7\)</span></strong> es un evento imposible, es decir <span class="math inline">\(A=\Phi\)</span>. Entonces</p>
+<p><span class="math display">\[
+P(A)=P(\text{Obtener un 7})=\dfrac{0}{6}=0
+\]</span></p>
+</div>
+<div id="ejemplo-2" class="section level3">
+<h3><span class="header-section-number">4.23.2</span> Ejemplo 2</h3>
+<p>Suponga que lanzamos un dado justo una vez.</p>
+<p>¿Qué probabilidad hay de obtener un número menor que <span class="math inline">\(7\)</span>?</p>
+<p><strong>Respuesta</strong></p>
+<p>Ya que el resultado de lanzar un dado son todos enteros positivos menores que <span class="math inline">\(7\)</span>, entonces el evento <span class="math inline">\(A\)</span>: <strong>obtener un número menor que <span class="math inline">\(7\)</span></strong> es</p>
+<p><span class="math display">\[
+A=\{1,2,3,4,5,6\}=S
+\]</span></p>
+<p>de donde</p>
+<p><span class="math display">\[
+P(A)=\dfrac{6}{6}=1
+\]</span></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><span class="header-section-number">4.23.3</span> Ejemplo 3</h3>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_2XCNdJhKgsgRyn4eNLqOmEr0eabeUTQRw&usqp=CAU" width="300" height="150"></p>
+<p>El 1 de febrero de 2003 explotó el transbordador espacial Columbia. Este fue el segundo desastre en 113 misiones espaciales de la NASA. Con base en esta información, cuál es la probabilidad de que una futura misión concluya con éxito?</p>
+<p><span class="math display">\[
+\text{Probabilidad de un vuelo exitoso}=\dfrac{111}{113}=0.98
+\]</span></p>
+</div>
+<div id="ejemplo-4" class="section level3">
+<h3><span class="header-section-number">4.23.4</span> Ejemplo 4</h3>
+<p>Una encuesta de 34 estudiantes en una Universidad mostró que éstos tiene las siguientes especialidades:</p>
+<ol style="list-style-type: decimal">
+<li><p>Contabilidad 10</p></li>
+<li><p>Finanzas 5</p></li>
+<li><p>Economía 3</p></li>
+<li><p>Administración 6</p></li>
+<li><p>Marketing 10</p></li>
+</ol>
+<p>Suponga que elige a un estudiante y observa su especialidad.</p>
+<p>Cuál es la probabilidad de que el estudiante tenga una especialidad en Administración?</p>
+<p>Solución:</p>
+<p><span class="math display">\[
+\text{Probabilidad de que sea especialista en Administración}=\dfrac{6}{34}=\dfrac{3}{17}=0.18
+\]</span></p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-28" class="definition"><strong>Definición4.25  </strong></span>Se dice que dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son mutumente excluyentes si no tienen resultados, o elementos comunes. En otras palabras los eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> no pueden ocurrir al mismo tiempo.
+</div>
+
+<p>En términos de conjuntos, <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son conjuntos <strong>disjuntos</strong> o <strong>ajenos</strong>; es decir,</p>
+<p><span class="math display">\[
+A \cap B=\Phi
+\]</span></p>
+</div>
+</div>
+<div id="regla-de-la-adición" class="section level2">
+<h2><span class="header-section-number">4.24</span> Regla de la adición</h2>
+<p>Para aplicar la regla de la adición, los eventos deben ser mutuamente excluyentes. Es decir si tenemos dos eventos son <span class="math inline">\(A\)</span>, y <span class="math inline">\(B\)</span>, estos son mutuamente excluyentes si su intersección es el vacío. Es decir</p>
+<p><span class="math display">\[
+A\cap B =\Phi
+\]</span></p>
+<div id="ejemplo3-1" class="section level3">
+<h3><span class="header-section-number">4.24.1</span> Ejemplo3</h3>
+<p>Una máquina automática llena bolsas de plástico con una combinación de frijoles, brócoli y otras verduras. La mayoría de las bolsas contiene el peso correcto, aunque, como consecuencia de la variación del tamaño del frijol y de otras verduras, un paquete podría pesar menos o más. Una versión de <span class="math inline">\(4000\)</span> paquetes que se llenaron el mes pasado arrojó los siguientes datos:</p>
+<p>Cuál es la probabilidad de que un paquete en particular pese menos o pese más?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="probabilidad.html#cb1-1"></a>Peso &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Menos peso&quot;</span>,<span class="st">&quot;Peso satisfactorio&quot;</span>,<span class="st">&quot;Más peso&quot;</span>)</span>
+<span id="cb1-2"><a href="probabilidad.html#cb1-2"></a>Evento &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>)</span>
+<span id="cb1-3"><a href="probabilidad.html#cb1-3"></a>Numero_Paquetes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">3600</span>,<span class="dv">300</span>)</span>
+<span id="cb1-4"><a href="probabilidad.html#cb1-4"></a>Probabilidad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.025</span>,<span class="fl">0.900</span>,<span class="fl">0.075</span>)</span>
+<span id="cb1-5"><a href="probabilidad.html#cb1-5"></a></span>
+<span id="cb1-6"><a href="probabilidad.html#cb1-6"></a>Ejemplo &lt;-<span class="st"> </span><span class="kw">data.frame</span>(Peso, Evento, Numero_Paquetes, Probabilidad)</span>
+<span id="cb1-7"><a href="probabilidad.html#cb1-7"></a></span>
+<span id="cb1-8"><a href="probabilidad.html#cb1-8"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb1-9"><a href="probabilidad.html#cb1-9"></a>Ejemplo , <span class="dt">caption =</span> <span class="st">&#39;Tabla en Frecuencia para Datos Agrupados&#39;</span>,</span>
+<span id="cb1-10"><a href="probabilidad.html#cb1-10"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb1-11"><a href="probabilidad.html#cb1-11"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla10">Tabla4.1: </span>Tabla en Frecuencia para Datos Agrupados</caption>
+<thead>
+<tr class="header">
+<th align="left">Peso</th>
+<th align="left">Evento</th>
+<th align="right">Numero_Paquetes</th>
+<th align="right">Probabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Menos peso</td>
+<td align="left">A</td>
+<td align="right">10</td>
+<td align="right">0.025</td>
+</tr>
+<tr class="even">
+<td align="left">Peso satisfactorio</td>
+<td align="left">B</td>
+<td align="right">3600</td>
+<td align="right">0.900</td>
+</tr>
+<tr class="odd">
+<td align="left">Más peso</td>
+<td align="left">C</td>
+<td align="right">300</td>
+<td align="right">0.075</td>
+</tr>
+</tbody>
+</table>
+<p>Solución: Como <span class="math inline">\(A\)</span> y <span class="math inline">\(C\)</span> son eventos excluyentes, entonces <span class="math inline">\(A\cap C=\Phi\)</span>, ya que un paquete de verduras mixtas no puede pesar menos, tener el peso satisfactorio y pesar más al mismo tiempo.</p>
+<p><span class="math display">\[
+P(A \ \text{ó} \ C)=P(A\cup C)=P(A)+P(C)
+\]</span></p>
+<p><span class="math display">\[
+P(A\cup C)=P(A)+P(C)=0.025+0.075=0.10
+\]</span></p>
+
+<div class="definition">
+<p><span id="def:unnamed-chunk-29" class="definition"><strong>Definición4.26  </strong></span>Se dice que dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son independientes, si <span class="math inline">\(P(B|A)=P(B)\)</span>. Es decir, la probabilidad de que ocurra <span class="math inline">\(B\)</span> no está afectada por la ocurrencia o no de <span class="math inline">\(A\)</span>. Además esto equivale a:</p>
+<span class="math display">\[P(A \cap B)=P(A)P(B)\]</span>
+</div>
+
+
+<div class="definition">
+<span id="def:unnamed-chunk-30" class="definition"><strong>Definición4.27  </strong></span>Una tabla de contingencia es cuadro que se utiliza para clasificar observaciones de una muestraa de acuerdo con dos o más características identificables.
+</div>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigEsquema2"></span>
+<img src="images/EsquemaProbabilidad2.jpg" alt="Esquema de probabilidad conjunta [Imagen tomada de [@zill2012algebra] pág $188$]" width="80%" />
+<p class="caption">
+Figura 4.32: Esquema de probabilidad conjunta [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+</div>
+</div>
+<div id="ley-de-los-grandes-números" class="section level2">
+<h2><span class="header-section-number">4.25</span> Ley de los grandes números</h2>
+<p>En una gran cantidad de intentos, la probabilidad empírica de un evento se aproxima a su probabilidad real.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLALeyGn1"></span>
+<img src="images/TABLALeyGrandesN1.jpg" alt="Tabla ley de los grandes números [Imagen tomada de [@zill2012algebra] pág $188$]" width="60%" />
+<p class="caption">
+Figura 4.33: Tabla ley de los grandes números [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+</div>
+<div id="tabla-de-contingencia" class="section level2">
+<h2><span class="header-section-number">4.26</span> Tabla de contingencia</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA3P"></span>
+<img src="images/TABLA3P.jpg" alt="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]" width="40%" />
+<p class="caption">
+Figura 4.34: Tabla de contingencia definiciones básicas [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p>La tabla describe la relación entre dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Para obtener <span class="math inline">\(P(A_{j})\)</span> se debe proceder como:</p>
+<p><span class="math display">\[
+    P(A_{j})=\sum_{i=1}^{2}\frac{n_{ij}}{n}
+\]</span></p>
+<p>Ejemplo</p>
+<p>La tabla de contingencia muestra la relación entre el color de cabello del pelo y el color de ojos de un grupo de <span class="math inline">\(1770\)</span> hombres alemanes.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA2P"></span>
+<img src="images/TABLA2P.jpg" alt="Tabla de contingencia realción del color de cabello y color de ojos [Imagen tomada de [@zill2012algebra] pág $188$]" width="60%" />
+<p class="caption">
+Figura 4.35: Tabla de contingencia realción del color de cabello y color de ojos [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p><span class="math display">\[
+j=1,j=2 \\
+p(A_j)=\sum_{i=1}^2\dfrac{n_{ij}}{n}=\dfrac{n_{1j}}{n}+\dfrac{n_{2j}}{n}=\dfrac{n_{1j}+n_{2j}}{n}\\
+p(A_1)=\sum_{i=1}^2\dfrac{n_{i1}}{n}=\dfrac{n_{11}}{n}+\dfrac{n_{21}}{n}=\dfrac{n_{11}+n_{21}}{n}\\
+p(A_2)=\sum_{i=1}^2\dfrac{n_{i2}}{n}=\dfrac{n_{12}}{n}+\dfrac{n_{22}}{n}=\dfrac{n_{12}+n_{22}}{n}\\
+p(A_3)=\sum_{i=1}^2\dfrac{n_{i3}}{n}=\dfrac{n_{13}}{n}+\dfrac{n_{23}}{n}=\dfrac{n_{13}+n_{23}}{n}
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA3Pa"></span>
+<img src="images/TABLA3P.jpg" alt="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]" width="40%" />
+<p class="caption">
+Figura 4.36: Tabla de contingencia definiciones básicas [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p>La tabla describe la relación entre dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Para obtener <span class="math inline">\(P(B_{i})\)</span> se debe proceder como:</p>
+<p><span class="math display">\[
+    P(B_{i})=\sum_{j=1}^{2}\frac{n_{ij}}{n}
+\]</span></p>
+<p><span class="math display">\[
+i=1,i=2\\
+p(B_i)=\sum_{j=1}^2\dfrac{n_{ij}}{n}=\dfrac{n_{i1}}{n}+\dfrac{n_{i2}}{n}=\dfrac{n_{i1}+n_{i2}}{n}\\
+p(B_1)=\sum_{j=1}^2\dfrac{n_{1j}}{n}=\dfrac{n_{11}}{n}+\dfrac{n_{12}}{n}=\dfrac{n_{11}+n_{12}}{n}\\
+p(B_2)=\sum_{j=1}^2\dfrac{n_{2j}}{n}=\dfrac{n_{21}}{n}+\dfrac{n_{22}}{n}=\dfrac{n_{21}+n_{22}}{n}\\
+p(B_3)=\sum_{j=1}^2\dfrac{n_{3j}}{n}=\dfrac{n_{31}}{n}+\dfrac{n_{32}}{n}=\dfrac{n_{31}+n_{32}}{n}\\
+\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA3Pb"></span>
+<img src="images/TABLA3P.jpg" alt="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]" width="40%" />
+<p class="caption">
+Figura 4.37: Tabla de contingencia definiciones básicas [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p>La tabla describe la relación entre dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Para obtener <span class="math inline">\(P(A_{j}\cap B_{i})\)</span> se debe proceder como:</p>
+<p><span class="math display">\[
+    P(A_{j}\cap B_{i})=\frac{n_{ij}}{n}
+\]</span></p>
+<p><span class="math display">\[\begin{equation}
+P(A_j\cap B_i)=\dfrac{n_{ij}}{n}\\
+i=1,j=1\\
+P(A_1\cap B_1)=\dfrac{n_{11}}{n}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+P(A_2\cap B_2)=\dfrac{n_{22}}{n}
+\end{equation}\]</span></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="probabilidad.html#cb2-1"></a>nal &lt;-<span class="st"> </span><span class="dv">400</span><span class="op">/</span><span class="dv">1770</span></span>
+<span id="cb2-2"><a href="probabilidad.html#cb2-2"></a><span class="kw">round</span>(nal,<span class="dv">2</span>)<span class="op">*</span><span class="dv">100</span></span></code></pre></div>
+<pre><code>## [1] 23</code></pre>
+<p>La tabla describe la relación entre dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. Para obtener <span class="math inline">\(P(B_{i} | A_{j})\)</span> se debe proceder como:</p>
+<p><span class="math display">\[
+    \dfrac{P(B_{i}\cap A_{j})}{P(A_{j})}=P(B_{i} | A_{j})=\dfrac{n_{ij}}{\sum_{i=1}^{2}n_{ij}}
+\]</span></p>
+<p><span class="math display">\[
+    \dfrac{P(B_{i=1}\cap A_{j=2})}{P(A_{j=2})}=P(B_{1} | A_{2})=\dfrac{n_{ij}}{\sum_{i=1}^{2}n_{ij}}=\dfrac{n_{12}}{n_{12}+n_{22}}
+\]</span></p>
+<p><span class="math display">\[\begin{equation}
+i=1,2\\
+j=1,2,3\\
+P(A_j\cap B_i)=\dfrac{n_{ij}}{n}\\
+i=1;j=1\\
+P(A_1\cap B_1)=\dfrac{n_{11}}{n}\\
+P(\text{ojos castaños y cabello castaño})=P(A_1\cap B_1)=\dfrac{n_{11}}{n}=\dfrac{400}{1770}\\
+P(\text{ojos castaños y cabello rojo})=P(A_3\cap B_1)=\dfrac{n_{13}}{n}=\dfrac{20}{1770}\\
+\end{equation}\]</span></p>
+<div id="ejemploencuesta-de-ver-cine" class="section level3">
+<h3><span class="header-section-number">4.26.1</span> Ejemplo(Encuesta de ver cine)</h3>
+<p>Ejemplo</p>
+<p>Una encuesta de <span class="math inline">\(150\)</span> adultos clasificados según su género y la cantidad de películas que vieron cine el mes pasado.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA1P"></span>
+<img src="images/TABLA1P.jpg" alt="Tabla de contingencia de películas según el genero [Imagen tomada de [@zill2012algebra] pág $188$]" width="60%" />
+<p class="caption">
+Figura 4.38: Tabla de contingencia de películas según el genero [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p>Cúal es la probabilidad de que no se vió ninguna película</p>
+<p>donde:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(B_1\)</span>: Cero películas</p></li>
+<li><p><span class="math inline">\(B_2\)</span>: Una sola película</p></li>
+<li><p><span class="math inline">\(B_3\)</span>: Dos o más películas</p></li>
+<li><p><span class="math inline">\(n\)</span>: Tamaño de la muestra es de <span class="math inline">\(150\)</span> personas</p></li>
+<li><p><span class="math inline">\(A_1\)</span>: Hombres</p></li>
+<li><p><span class="math inline">\(A_2\)</span>: Mujeres</p></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="probabilidad.html#cb4-1"></a>n&lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb4-2"><a href="probabilidad.html#cb4-2"></a>numB1 &lt;-<span class="st"> </span><span class="dv">60</span></span>
+<span id="cb4-3"><a href="probabilidad.html#cb4-3"></a>rd1 &lt;-<span class="st"> </span><span class="kw">round</span>(numB1<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[P(B_1)=\dfrac{60}{150}=0.4\]</span></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="probabilidad.html#cb5-1"></a>n&lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb5-2"><a href="probabilidad.html#cb5-2"></a>numB2 &lt;-<span class="st"> </span><span class="dv">70</span></span>
+<span id="cb5-3"><a href="probabilidad.html#cb5-3"></a>rd2 &lt;-<span class="st"> </span><span class="kw">round</span>(numB2<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[P(B_2)=\dfrac{70}{150}=0.47\]</span></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="probabilidad.html#cb6-1"></a>n&lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb6-2"><a href="probabilidad.html#cb6-2"></a>numB3 &lt;-<span class="st"> </span><span class="dv">70</span></span>
+<span id="cb6-3"><a href="probabilidad.html#cb6-3"></a>rd3 &lt;-<span class="st"> </span><span class="kw">round</span>(numB3<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[P(B_3)=\dfrac{70}{150}=0.47\]</span></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="probabilidad.html#cb7-1"></a>n &lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb7-2"><a href="probabilidad.html#cb7-2"></a>numA1 &lt;-<span class="st"> </span><span class="dv">70</span></span>
+<span id="cb7-3"><a href="probabilidad.html#cb7-3"></a>rd4 &lt;-<span class="st"> </span><span class="kw">round</span>(numA1<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[
+P(A_1)=\dfrac{70}{150}= 0.47
+\]</span></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="probabilidad.html#cb8-1"></a>n &lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb8-2"><a href="probabilidad.html#cb8-2"></a>numA2 &lt;-<span class="st"> </span><span class="dv">80</span></span>
+<span id="cb8-3"><a href="probabilidad.html#cb8-3"></a>rd5 &lt;-<span class="st"> </span><span class="kw">round</span>(numA2<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[
+P(A_2)=\dfrac{80}{150}= 0.53
+\]</span></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="probabilidad.html#cb9-1"></a>n &lt;-<span class="st"> </span><span class="dv">150</span></span>
+<span id="cb9-2"><a href="probabilidad.html#cb9-2"></a>numB3A2 &lt;-<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb9-3"><a href="probabilidad.html#cb9-3"></a>rd6 &lt;-<span class="st"> </span><span class="kw">round</span>(numB3A2<span class="op">/</span>n,<span class="dv">2</span>)</span></code></pre></div>
+<p><span class="math display">\[
+P(A_2\cap B_3)=\dfrac{10}{150}= 0.07
+\]</span></p>
+</div>
+</div>
+<div id="probabilidad-condicional-y-tabla-de-contingencia" class="section level2">
+<h2><span class="header-section-number">4.27</span> Probabilidad condicional y tabla de contingencia</h2>
+<p>Probabilidad condicional</p>
+<p>Si tenermos dos eventos <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span></p>
+<p>siempre que <span class="math inline">\(P(A)&gt;0\)</span> y <span class="math inline">\(P(B)&gt;0\)</span>, entonces</p>
+<p><span class="math display">\[\begin{equation}
+P(A|B)=\dfrac{P(A\cap B)}{P(B)}\\
+P(B|A)=\dfrac{P(A\cap B)}{P(A)}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+P(A\cap B)=P(A).P(A|B)
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+P(A\cap B)=P(B).P(B|A)
+\end{equation}\]</span></p>
+<div id="ejemplocafé" class="section level3">
+<h3><span class="header-section-number">4.27.1</span> Ejemplo(Café)</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTABLA4P"></span>
+<img src="images/GRAFICAtabladeContingencia3.jpg" alt="Tabla de contingencia de películas segun el genero [Imagen tomada de [@zill2012algebra] pág $188$]" width="60%" />
+<p class="caption">
+Figura 4.39: Tabla de contingencia de películas segun el genero [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(188\)</span>]
+</p>
+</div>
+<p>GRAFICAtabladeContingencia3</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(B_1\)</span>: Menos de 30</p></li>
+<li><p><span class="math inline">\(B_2\)</span>: Entre 30 a 40</p></li>
+<li><p><span class="math inline">\(B_3\)</span>: Entre 40 a 50</p></li>
+<li><p><span class="math inline">\(B_4\)</span>: 50 ó más</p></li>
+<li><p><span class="math inline">\(n\)</span>: Tamaño de la muestra es de <span class="math inline">\(150\)</span> personas</p></li>
+<li><p><span class="math inline">\(A_1\)</span>: Bajo</p></li>
+<li><p><span class="math inline">\(A_2\)</span>: Moderado</p></li>
+<li><p><span class="math inline">\(A_3\)</span>: Alto</p></li>
+</ol>
+<p><span class="math display">\[
+P(B_3|A_2)=\dfrac{P(B_3\cap A_2)}{P(A_2)}=\dfrac{\dfrac{24}{300}}{\dfrac{110}{300}}=\dfrac{24}{110}
+\]</span></p>
+</div>
+</div>
+<div id="regla-del-producto" class="section level2">
+<h2><span class="header-section-number">4.28</span> Regla del producto</h2>
+<p>Dados dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>, diremos que son independientes uno del otro si cumplen que</p>
+<p><span class="math display">\[
+P(A|B)=P(A) \ \ \ \text{ó} \ \ \ P(B|A)=P(B)
+\]</span>
+Entonces se puede deducir la <strong>regla del producto</strong> para la probabilidad de la intersección entre dos eventos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>.</p>
+<p><span class="math display">\[
+P(A\cap B)=P(A).P(B|A)\\
+P(A\cap B)=P(A).P(B)
+\]</span></p>
+</div>
+<div id="teorema-de-bayes" class="section level2">
+<h2><span class="header-section-number">4.29</span> Teorema de Bayes</h2>
+<p>Dado su interés en las matemáticas, intentó crear una fórmula para llegar a la probabilidad de que Dios existiera sobre la base de la evidencia de la que, se disponía en la Tierra. Más tarde, Pierre-Simon Laplace perfeccionó el trabajo de Bayes y le dio el nombre de teorema de Bayes. De una forma entendible.</p>
+<p>Ejemplo(Urnas)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTeoremaBayes2"></span>
+<img src="images/Problema3UrnasV1.jpg" alt="Teorema de Bayes problema de las Urnas [Imagen tomada de [@zill2012algebra] pág $51$]" width="60%" />
+<p class="caption">
+Figura 4.40: Teorema de Bayes problema de las Urnas [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>]
+</p>
+</div>
+<p>Tenemos tres urnas:</p>
+<p>La urna <span class="math inline">\(A\)</span> con 3 bolas rojas y 5 negras, la urna <span class="math inline">\(B\)</span> con 2 bolas rojas y 1 negra, y la urna <span class="math inline">\(C\)</span> con 2 bolas rojas y 3 negras. Escoger una urna al azar y extraemos una bola. Si la bola ha sido roja, ¿cual es la probabilidad de haber sido extraída de la urna <span class="math inline">\(A\)</span>?</p>
+<p><span class="math display">\[
+    P(A|R)=\dfrac{P(A)P(R|A)}{P(A)P(R|A)+P(B)P(R|B)+P(C)P(R|C)}
+\]</span></p>
+<p><span class="math display">\[
+    P(A|R)=\dfrac{(\frac{1}{3})(\frac{3}{8})}{(\frac{1}{3})(\frac{3}{8})+(\frac{1}{3})(\frac{2}{3})+(\frac{1}{3})(\frac{2}{5})}=\dfrac{45}{173}=0.260
+\]</span></p>
+<p>Ejemplo(CIRUGIAS)</p>
+<p>Un médico cirujano se especializa en cirugías estéticas. Entre sus pacientes, el 20 por ciento se realizan correcciones faciales, un 35 por ciento implantes mamarios y el restante en otras cirugías correctivas. Se sabe además, que son de genero masculino el 25 por ciento de los que se realizan correcciones faciales, 15 por ciento implantes mamarios y 40 por ciento otras cirugías correctivas. Si se selecciona un paciente al azar, determine:</p>
+<ul>
+<li>La probabilidad de que sea de género masculino.</li>
+</ul>
+<p>*Si resulta que es de genero masculino, determine la probabilidad que se haya realizado una cirugía de implantes mamarios.</p>
+<ul>
+<li><p><span class="math inline">\(F\)</span>: Pacientes que realizan cirugías faciales</p></li>
+<li><p><span class="math inline">\(M\)</span>: Pacientes que se realizan implantes mamarios</p></li>
+<li><p><span class="math inline">\(O\)</span>: Pacientes que se realizan otras cirugías correctivas</p></li>
+<li><p><span class="math inline">\(H\)</span>: pacientes de género masculino</p></li>
+</ul>
+<p><span class="math display">\[
+S=F\cup M \cup O
+\]</span>
+<span class="math display">\[H=(H\cap F)\cup (H\cap M) \cup (H\cap O)\]</span></p>
+<p><span class="math display">\[
+P(H)=?\\
+P(H)=P((H\cap F)\cup (H\cap M) \cup (H\cap O))\\
+\]</span></p>
+<p><span class="math display">\[
+    P(H)=P(F)P(H|F)+P(M)P(H|M)+P(O)P(H|O)
+\]</span></p>
+<p><span class="math display">\[
+    P(H)=(0.2)(0.25)+(0.35)(0.15)+(0.45)(0.40)=0.28
+\]</span></p>
+<p><span class="math display">\[
+P(H)=P(H\cap F)+ P(H\cap M)+ P(H\cap O)=0.28\\
+P(H\cap F)=P(F)P(H|F)\\
+P(Mujer)=1-P(H)=1-0.28
+\]</span></p>
+<p><span class="math display">\[
+    P(M|H)=\dfrac{P(M)P(H|M)}{P(M)P(H|M)+P(F)P(H|F)+P(O)P(H|O)}
+\]</span></p>
+<p><span class="math display">\[
+    P(M|H)=\dfrac{(0.35)(0.15)}{(0.35)(0.15)+(0.2)(0.25)+(0.45)(0.40)}=\dfrac{0.0525}{0.2825}=0.19
+\]</span></p>
+<p>Ejemplo(Máquinas de productos)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigTeoremaBayes3"></span>
+<img src="images/Problema3MaquinasV1.jpg" alt="Teorema de Bayes problema de las máquinas [Imagen tomada de [@zill2012algebra] pág $51$]" width="60%" />
+<p class="caption">
+Figura 4.41: Teorema de Bayes problema de las máquinas [Imagen tomada de <span class="citation">(Zill and Dewar <a href="#ref-zill2012algebra" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>]
+</p>
+</div>
+<p>Tres máquinas, <span class="math inline">\(A\)</span>,<span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span>, producen el <span class="math inline">\(45\)</span> porciento, <span class="math inline">\(30\)</span> porciento y <span class="math inline">\(25\)</span> porciento, respectivamente, del total de las piezas producidas en una fábrica. Los porcentajes de producción defectuosas de estas máquinas son del <span class="math inline">\(3\)</span> porciento, <span class="math inline">\(4\)</span> porciento y <span class="math inline">\(5\)</span> porciento. Tomamos, al azar, una pieza y resulta ser defectuosa; calcular la probabilidad de haber sido producida por al máquina <span class="math inline">\(B\)</span>.</p>
+<p><span class="math display">\[
+    P(B|D)=\dfrac{P(B)P(D|B)}{P(A)P(D|A)+P(B)P(D|B)+P(C)P(D|C)}
+\]</span></p>
+<p><span class="math display">\[
+    P(B|D)=\dfrac{(0.30)(0.04)}{(0.30)(0.04)+(0.45)(0.03)+(0.25)(0.05)}=\dfrac{12}{38}=0.316
+\]</span></p>
+<p><strong>Enunciado Cero</strong></p>
+<p>En las elecciones de un país hay 2 candidatos a la presidencia, el candidato A y el candidato B, y en los resultados de las selecciones de este pais se sabe que un 75% de la población es de clase media o baja y un 25% es de clase alta, si por el candidato A votó un 90% de la clase alta y un 5% de la clase media y baja, y se elige una persona al azar de los que votaron por el candidato A ¿Cuál es la probabilidad que este sea de la clase media o baja?</p>
+<p><strong>Enunciado Uno</strong></p>
+<p>En cierto país donde la enfermedad X es endémica, se sabe que un 12% de la población padece dicha enfermedad. Se dispone de una prueba para detectar la enfermedad, pero no es totalmente fiable, ya que , da positiva en el 90% de los casos de personas realmente enfermas; y da positiva en el 5% de personas sanas. ¿Cuál es la probabilidad de que esté sana una persona a la que la prueba le ha dado positiva?</p>
+<p><strong>Enunciado Dos</strong></p>
+<p>Un moderno edificio tiene dos ascensores para uso de los vecinos. El primero de los ascensores es usado el 45% de las ocasiones, mientras que el segundo es usado el resto de las ocasiones. El uso continuado de los ascensores provoca un 5% de fallos en el primero de los ascensores y un 8% en el segundo. Un día suena la alarma de uno de los ascensores porque ha fallado. Calcula la probabilidad de que haya sido el primero de los ascensores.</p>
+<p><strong>Enunciado Tres</strong></p>
+<p>Un envío de frutas a un supermercado consta de naranjas y manzanas que se agrupan en cajones de 500 piezas: 300 naranjas y 200 manzanas. Por experiencias anteriores se sabe que en cada envío están estropeadas un 15% de las naranjas y un 5% de las manzanas. Se extrae una pieza al azar de un cajón cualquiera. a) ¿Cuál es la probabilidad de que esté estropeada? b) Si la pieza elegida está en buenas condiciones, ¿qué es más probable, que sea naranja o que sea manzana?</p>
+<p><strong>Enunciado Cuatro</strong></p>
+<p>Para ir a clase, un estudiante utiliza su coche el 70 % de los días, mientras que va en autobús el resto de los días. Cuando utiliza su coche, llega tarde el 20 % de los días, mientras que si va en autobús llega a tiempo el 10 % de los días. Elegido un día al azar: a) Calcular la probabilidad de que el estudiante llegue tarde. b) Sabiendo que ha llegado a tiempo, ¿cuál es la probabilidad de que haya venido en autobús? c) Sabiendo que ha llegado tarde ¿cuál es la probabilidad de que haya venido en coche?</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-swokowski1996algebra">
+<p>Swokowski, Earl, and Jeffery COLE. 1996. “Álgebra Y Trigonometrı́a.” <em>Grupo Editorial Iberoamérica. México</em>.</p>
+</div>
+<div id="ref-zill2012algebra">
+<p>Zill, Dennis G, and Jacqueline M Dewar. 2012. <em>Algebra, Trigonometria Y Geometria Analitica.</em> McGraw Hill.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="estadística-descriptiva.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modelos-de-probabilidad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["BioestadisticaUnoUCES2021.pdf", "BioestadisticaUnoUCES2021.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

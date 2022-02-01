@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Estadística descriptiva | Bioestadística Uno</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Estadística descriptiva | Bioestadística Uno" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Estadística descriptiva | Bioestadística Uno" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="John Jairo Estrada Álvarez" />
+
+
+<meta name="date" content="2021-09-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="probabilidad.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Curso de Bioestadísca Uno</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerrequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#comportamentales"><i class="fa fa-check"></i><b>1.1</b> Comportamentales</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#evaluativos"><i class="fa fa-check"></i><b>1.2</b> Evaluativos</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#objetivos-específicos"><i class="fa fa-check"></i><b>1.3</b> Objetivos específicos</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#fechas-de-evaluación-segundo-semestre-2021"><i class="fa fa-check"></i><b>1.4</b> Fechas de Evaluación segundo semestre 2021</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#bibliografía-del-curso"><i class="fa fa-check"></i><b>1.5</b> Bibliografía del curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#conceptos-introductorios"><i class="fa fa-check"></i><b>2.1</b> Conceptos Introductorios</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#de-donde-viene-la-palabra-estadı́stica-y-que-significa"><i class="fa fa-check"></i><b>2.1.1</b> <strong>¿De donde viene la palabra estadı́stica y que significa?</strong></a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#qué-es-la-estadística"><i class="fa fa-check"></i><b>2.1.2</b> <strong>¿Qué es la estadística?</strong></a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#qué-es-una-variable"><i class="fa fa-check"></i><b>2.1.3</b> <strong>¿Qué es una variable?</strong></a></li>
+<li class="chapter" data-level="2.1.4" data-path="intro.html"><a href="intro.html#variable-categórica-ó-cualitativa"><i class="fa fa-check"></i><b>2.1.4</b> <strong>Variable categórica (ó cualitativa)</strong></a></li>
+<li class="chapter" data-level="2.1.5" data-path="intro.html"><a href="intro.html#variable-cuantitativa-si-sus-valores-son-numéricos-si-se-pueden-hacer-operaciones-aritméticas-con-ellos."><i class="fa fa-check"></i><b>2.1.5</b> <strong>Variable cuantitativa</strong>: Si sus valores son numéricos (si se pueden hacer operaciones aritméticas con ellos).</a></li>
+<li class="chapter" data-level="2.1.6" data-path="intro.html"><a href="intro.html#qué-es-un-dato"><i class="fa fa-check"></i><b>2.1.6</b> <strong>¿Qué es un dato?</strong></a></li>
+<li class="chapter" data-level="2.1.7" data-path="intro.html"><a href="intro.html#qué-es-una-unidad-de-observación"><i class="fa fa-check"></i><b>2.1.7</b> <strong>¿Qué es una unidad de observación?</strong></a></li>
+<li class="chapter" data-level="2.1.8" data-path="intro.html"><a href="intro.html#qué-es-una-población"><i class="fa fa-check"></i><b>2.1.8</b> <strong>¿Qué es una población?</strong></a></li>
+<li class="chapter" data-level="2.1.9" data-path="intro.html"><a href="intro.html#qué-es-una-muestra"><i class="fa fa-check"></i><b>2.1.9</b> <strong>¿Qué es una muestra?</strong></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html"><i class="fa fa-check"></i><b>3</b> Estadística descriptiva</a><ul>
+<li class="chapter" data-level="3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#qué-es-la-estradística-descriptiva"><i class="fa fa-check"></i><b>3.1</b> Qué es la Estradística descriptiva?</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-aspectos-importantes-de-los-datos"><i class="fa fa-check"></i><b>3.1.1</b> Los aspectos importantes de los datos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa"><i class="fa fa-check"></i><b>3.1.2</b> Frecuencia relativa</a></li>
+<li class="chapter" data-level="3.1.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#frecuencia-relativa-y-acumulada"><i class="fa fa-check"></i><b>3.1.3</b> Frecuencia relativa y acumulada</a></li>
+<li class="chapter" data-level="3.1.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-de-barras-frecuencia-absoluta"><i class="fa fa-check"></i><b>3.1.4</b> Gráfica de barras (<strong>Frecuencia absoluta</strong>)</a></li>
+<li class="chapter" data-level="3.1.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-caja-y-bigotes"><i class="fa fa-check"></i><b>3.1.5</b> Gráfica caja y bigotes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#proceso-para-presentar-datos-en-forma-agrupada"><i class="fa fa-check"></i><b>3.2</b> Proceso para presentar datos en forma agrupada</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#críterio-datos-atípicos"><i class="fa fa-check"></i><b>3.2.1</b> Críterio datos <strong>atípicos</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-no-agrupados"><i class="fa fa-check"></i><b>3.3</b> Datos no agrupados</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-posición"><i class="fa fa-check"></i><b>3.3.1</b> Medidas de posición</a></li>
+<li class="chapter" data-level="3.3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-aritmética-para-datos-no-agrupados-barx"><i class="fa fa-check"></i><b>3.3.2</b> La media aritmética para datos no agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.3</b> La mediana para datos no agrupados</a></li>
+<li class="chapter" data-level="3.3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-m_0"><i class="fa fa-check"></i><b>3.3.4</b> La Moda <span class="math inline">\((M_{0})\)</span></a></li>
+<li class="chapter" data-level="3.3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-cuartiles-en-datos-no-agrupados"><i class="fa fa-check"></i><b>3.3.5</b> Cálculo de cuartiles en datos NO agrupados</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#datos-agrupados"><i class="fa fa-check"></i><b>3.4</b> Datos agrupados</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo1-datos-agrupados"><i class="fa fa-check"></i><b>3.4.1</b> Ejemplo1 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo2-datos-agrupados"><i class="fa fa-check"></i><b>3.4.2</b> Ejemplo2 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo3-datos-agrupados"><i class="fa fa-check"></i><b>3.4.3</b> Ejemplo3 Datos agrupados</a></li>
+<li class="chapter" data-level="3.4.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#dispersión"><i class="fa fa-check"></i><b>3.4.4</b> Dispersión</a></li>
+<li class="chapter" data-level="3.4.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#aplicación-shiny-para-dispersión"><i class="fa fa-check"></i><b>3.4.5</b> Aplicación Shiny para Dispersión</a></li>
+<li class="chapter" data-level="3.4.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-media-para-datos-agrupados-barx"><i class="fa fa-check"></i><b>3.4.6</b> La media para datos agrupados <span class="math inline">\((\bar{x})\)</span></a></li>
+<li class="chapter" data-level="3.4.7" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-mediana-para-datos-agrupados-me"><i class="fa fa-check"></i><b>3.4.7</b> La mediana para datos agrupados <span class="math inline">\((Me)\)</span></a></li>
+<li class="chapter" data-level="3.4.8" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#los-cuartiles-para-datos-agrupados-q_c"><i class="fa fa-check"></i><b>3.4.8</b> Los cuartiles para datos agrupados <span class="math inline">\((Q_c)\)</span></a></li>
+<li class="chapter" data-level="3.4.9" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#la-moda-para-datos-agrupados-mo"><i class="fa fa-check"></i><b>3.4.9</b> La moda para datos agrupados <span class="math inline">\((Mo)\)</span></a></li>
+<li class="chapter" data-level="3.4.10" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cálculo-de-deciles-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.10</b> Cálculo de Deciles para datos agrupados.</a></li>
+<li class="chapter" data-level="3.4.11" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#percentil-para-datos-agrupados."><i class="fa fa-check"></i><b>3.4.11</b> Percentil para datos agrupados.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medidas-de-dispersión"><i class="fa fa-check"></i><b>3.5</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.1</b> <strong>Varianza para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#varianza-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.2</b> <strong>Varianza para datos agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-no-agrupados"><i class="fa fa-check"></i><b>3.5.3</b> <strong>Desviación típica para datos no agrupados</strong></a></li>
+<li class="chapter" data-level="3.5.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#desviación-típica-para-datos-agrupados"><i class="fa fa-check"></i><b>3.5.4</b> <strong>Desviación típica para datos agrupados</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-para-variación-de-karl-pearson"><i class="fa fa-check"></i><b>3.6</b> Coeficiente para variación de Karl Pearson</a></li>
+<li class="chapter" data-level="3.7" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medida-cuartil-de-asimetría"><i class="fa fa-check"></i><b>3.7</b> Medida cuartil de asimetría</a></li>
+<li class="chapter" data-level="3.8" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-de-asimetría-de-fisher"><i class="fa fa-check"></i><b>3.8</b> Coeficiente de asimetría de Fisher</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probabilidad.html"><a href="probabilidad.html"><i class="fa fa-check"></i><b>4</b> Probabilidad</a><ul>
+<li class="chapter" data-level="4.1" data-path="probabilidad.html"><a href="probabilidad.html#teoría-de-conjuntos"><i class="fa fa-check"></i><b>4.1</b> Teoría de conjuntos</a></li>
+<li class="chapter" data-level="4.2" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión"><i class="fa fa-check"></i><b>4.2</b> Propiedades de la Unión</a></li>
+<li class="chapter" data-level="4.3" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-intersección"><i class="fa fa-check"></i><b>4.3</b> Propiedades de la Intersección</a></li>
+<li class="chapter" data-level="4.4" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-la-unión-y-la-intersección"><i class="fa fa-check"></i><b>4.4</b> Propiedades de la unión y la intersección</a></li>
+<li class="chapter" data-level="4.5" data-path="probabilidad.html"><a href="probabilidad.html#diferencia-entre-dos-conjuntos"><i class="fa fa-check"></i><b>4.5</b> Diferencia entre dos conjuntos</a></li>
+<li class="chapter" data-level="4.6" data-path="probabilidad.html"><a href="probabilidad.html#complemento-de-un-conjunto"><i class="fa fa-check"></i><b>4.6</b> Complemento de un conjunto</a></li>
+<li class="chapter" data-level="4.7" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-del-algebra-de-conjuntos"><i class="fa fa-check"></i><b>4.7</b> Propiedades del algebra de conjuntos</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo1"><i class="fa fa-check"></i><b>4.7.1</b> Ejemplo1</a></li>
+<li class="chapter" data-level="4.7.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo2"><i class="fa fa-check"></i><b>4.7.2</b> Ejemplo2</a></li>
+<li class="chapter" data-level="4.7.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3"><i class="fa fa-check"></i><b>4.7.3</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="probabilidad.html"><a href="probabilidad.html#conjuntos-numéricos"><i class="fa fa-check"></i><b>4.8</b> Conjuntos numéricos</a></li>
+<li class="chapter" data-level="4.9" data-path="probabilidad.html"><a href="probabilidad.html#propiedades-de-los-números-reales"><i class="fa fa-check"></i><b>4.9</b> Propiedades de los números Reales</a></li>
+<li class="chapter" data-level="4.10" data-path="probabilidad.html"><a href="probabilidad.html#conceptos-introductorios-de-probabilidad"><i class="fa fa-check"></i><b>4.10</b> Conceptos introductorios de probabilidad</a></li>
+<li class="chapter" data-level="4.11" data-path="probabilidad.html"><a href="probabilidad.html#definición1frecuentista"><i class="fa fa-check"></i><b>4.11</b> Definición1(Frecuentista)</a></li>
+<li class="chapter" data-level="4.12" data-path="probabilidad.html"><a href="probabilidad.html#definición2clásica"><i class="fa fa-check"></i><b>4.12</b> Definición2(Clásica)</a></li>
+<li class="chapter" data-level="4.13" data-path="probabilidad.html"><a href="probabilidad.html#simulaciones-básicas"><i class="fa fa-check"></i><b>4.13</b> Simulaciones básicas</a></li>
+<li class="chapter" data-level="4.14" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-un-dado"><i class="fa fa-check"></i><b>4.14</b> Lanzamiento de un dado</a></li>
+<li class="chapter" data-level="4.15" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-dos-dados"><i class="fa fa-check"></i><b>4.15</b> Lanzamiento de dos dados</a></li>
+<li class="chapter" data-level="4.16" data-path="probabilidad.html"><a href="probabilidad.html#lanzamiento-de-una-moneda-tres-veces"><i class="fa fa-check"></i><b>4.16</b> Lanzamiento de una moneda tres veces</a></li>
+<li class="chapter" data-level="4.17" data-path="probabilidad.html"><a href="probabilidad.html#axioma-uno-de-la-probabilidad"><i class="fa fa-check"></i><b>4.17</b> Axioma Uno de la probabilidad</a></li>
+<li class="chapter" data-level="4.18" data-path="probabilidad.html"><a href="probabilidad.html#axioma-dos-de-la-probabilidad"><i class="fa fa-check"></i><b>4.18</b> Axioma Dos de la probabilidad</a></li>
+<li class="chapter" data-level="4.19" data-path="probabilidad.html"><a href="probabilidad.html#axioma-tres-de-la-probabilidad"><i class="fa fa-check"></i><b>4.19</b> Axioma Tres de la probabilidad</a></li>
+<li class="chapter" data-level="4.20" data-path="probabilidad.html"><a href="probabilidad.html#teoremas-básicos-de-probabilidad"><i class="fa fa-check"></i><b>4.20</b> Teoremas básicos de probabilidad</a></li>
+<li class="chapter" data-level="4.21" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-del-complemento"><i class="fa fa-check"></i><b>4.21</b> Demostración probabilidad del complemento</a></li>
+<li class="chapter" data-level="4.22" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-inclusión"><i class="fa fa-check"></i><b>4.22</b> Demostración probabilidad de la inclusión</a></li>
+<li class="chapter" data-level="4.23" data-path="probabilidad.html"><a href="probabilidad.html#demostración-probabilidad-de-la-unión"><i class="fa fa-check"></i><b>4.23</b> Demostración probabilidad de la unión</a><ul>
+<li class="chapter" data-level="4.23.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-1"><i class="fa fa-check"></i><b>4.23.1</b> Ejemplo 1</a></li>
+<li class="chapter" data-level="4.23.2" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-2"><i class="fa fa-check"></i><b>4.23.2</b> Ejemplo 2</a></li>
+<li class="chapter" data-level="4.23.3" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-3"><i class="fa fa-check"></i><b>4.23.3</b> Ejemplo 3</a></li>
+<li class="chapter" data-level="4.23.4" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo-4"><i class="fa fa-check"></i><b>4.23.4</b> Ejemplo 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.24" data-path="probabilidad.html"><a href="probabilidad.html#regla-de-la-adición"><i class="fa fa-check"></i><b>4.24</b> Regla de la adición</a><ul>
+<li class="chapter" data-level="4.24.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplo3-1"><i class="fa fa-check"></i><b>4.24.1</b> Ejemplo3</a></li>
+</ul></li>
+<li class="chapter" data-level="4.25" data-path="probabilidad.html"><a href="probabilidad.html#ley-de-los-grandes-números"><i class="fa fa-check"></i><b>4.25</b> Ley de los grandes números</a></li>
+<li class="chapter" data-level="4.26" data-path="probabilidad.html"><a href="probabilidad.html#tabla-de-contingencia"><i class="fa fa-check"></i><b>4.26</b> Tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.26.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemploencuesta-de-ver-cine"><i class="fa fa-check"></i><b>4.26.1</b> Ejemplo(Encuesta de ver cine)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.27" data-path="probabilidad.html"><a href="probabilidad.html#probabilidad-condicional-y-tabla-de-contingencia"><i class="fa fa-check"></i><b>4.27</b> Probabilidad condicional y tabla de contingencia</a><ul>
+<li class="chapter" data-level="4.27.1" data-path="probabilidad.html"><a href="probabilidad.html#ejemplocafé"><i class="fa fa-check"></i><b>4.27.1</b> Ejemplo(Café)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.28" data-path="probabilidad.html"><a href="probabilidad.html#regla-del-producto"><i class="fa fa-check"></i><b>4.28</b> Regla del producto</a></li>
+<li class="chapter" data-level="4.29" data-path="probabilidad.html"><a href="probabilidad.html#teorema-de-bayes"><i class="fa fa-check"></i><b>4.29</b> Teorema de Bayes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html"><i class="fa fa-check"></i><b>5</b> Modelos de probabilidad</a><ul>
+<li class="chapter" data-level="5.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#variable-aleatoria-v.a."><i class="fa fa-check"></i><b>5.1</b> Variable Aleatoria (v.a.)</a></li>
+<li class="chapter" data-level="5.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribuciones-de-probabilidad"><i class="fa fa-check"></i><b>5.2</b> Distribuciones de Probabilidad</a></li>
+<li class="chapter" data-level="5.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#propiedades-que-debe-cumplir-una-distribución-de-probabilidad"><i class="fa fa-check"></i><b>5.3</b> Propiedades que debe cumplir una distribución de probabilidad</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo1-1"><i class="fa fa-check"></i><b>5.3.1</b> Ejemplo1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#características-de-una-distribución-de-probabilidad-cualquiera."><i class="fa fa-check"></i><b>5.4</b> Características de una distribución de probabilidad cualquiera.</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejercicio1"><i class="fa fa-check"></i><b>5.4.1</b> Ejercicio1</a></li>
+<li class="chapter" data-level="5.4.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio1"><i class="fa fa-check"></i><b>5.4.2</b> Solución (ejercicio1)</a></li>
+<li class="chapter" data-level="5.4.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo3-2"><i class="fa fa-check"></i><b>5.4.3</b> Ejemplo3</a></li>
+<li class="chapter" data-level="5.4.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejercicio2"><i class="fa fa-check"></i><b>5.4.4</b> Solución (ejercicio2)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-binomial"><i class="fa fa-check"></i><b>5.5</b> Distribución Binomial</a></li>
+<li class="chapter" data-level="5.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#experimento-de-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6</b> Experimento de probabilidad binomial</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-probabilidad-binomial"><i class="fa fa-check"></i><b>5.6.1</b> <strong>Fórmula de la Probabilidad Binomial</strong></a></li>
+<li class="chapter" data-level="5.6.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-binomial"><i class="fa fa-check"></i><b>5.6.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN BINOMIAL</strong></a></li>
+<li class="chapter" data-level="5.6.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo4"><i class="fa fa-check"></i><b>5.6.4</b> Ejemplo4</a></li>
+<li class="chapter" data-level="5.6.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo4"><i class="fa fa-check"></i><b>5.6.5</b> Solución (ejemplo4)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.7</b> Distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-hipergeométrica"><i class="fa fa-check"></i><b>5.7.1</b> <strong>Fórmula de la función de Probabilidad Hipergeométrica</strong></a></li>
+<li class="chapter" data-level="5.7.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+<li class="chapter" data-level="5.7.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#varianza-de-una-distribución-hipergeometrica"><i class="fa fa-check"></i><b>5.7.3</b> <strong>VARIANZA DE UNA DISTRIBUCIÓN HIPERGEOMETRICA</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#commandos-en-r-studio"><i class="fa fa-check"></i><b>5.8</b> Commandos en r-studio</a></li>
+<li class="chapter" data-level="5.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento"><i class="fa fa-check"></i><b>5.9</b> Condiciones del experimento</a></li>
+<li class="chapter" data-level="5.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#característica-de-la-distribución-hipergeométrica"><i class="fa fa-check"></i><b>5.10</b> Característica de la distribución Hipergeométrica</a><ul>
+<li class="chapter" data-level="5.10.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo5"><i class="fa fa-check"></i><b>5.10.1</b> Ejemplo5</a></li>
+<li class="chapter" data-level="5.10.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo5"><i class="fa fa-check"></i><b>5.10.2</b> Solución (ejemplo5)</a></li>
+<li class="chapter" data-level="5.10.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo6"><i class="fa fa-check"></i><b>5.10.3</b> Ejemplo6</a></li>
+<li class="chapter" data-level="5.10.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo6"><i class="fa fa-check"></i><b>5.10.4</b> Solución (ejemplo6)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#función-de-distribución-de-probabilidad-de-variable-continua"><i class="fa fa-check"></i><b>5.11</b> Función de distribución de probabilidad de variable continua</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-y-varianza-para-una-función-de-distribución-de-probabilidad-con-variable-continua"><i class="fa fa-check"></i><b>5.11.1</b> Media y Varianza para una función de distribución de probabilidad con variable continua</a></li>
+<li class="chapter" data-level="5.11.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#definición"><i class="fa fa-check"></i><b>5.11.2</b> <strong>Definición</strong></a></li>
+<li class="chapter" data-level="5.11.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo"><i class="fa fa-check"></i><b>5.11.3</b> <strong>Ejemplo</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.12</b> Distribución de probabilidad de Poisson</a></li>
+<li class="chapter" data-level="5.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#condiciones-del-experimento-1"><i class="fa fa-check"></i><b>5.13</b> Condiciones del experimento</a><ul>
+<li class="chapter" data-level="5.13.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#fórmula-de-la-función-de-probabilidad-de-poisson"><i class="fa fa-check"></i><b>5.13.1</b> <strong>Fórmula de la función de Probabilidad de Poisson</strong></a></li>
+<li class="chapter" data-level="5.13.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#media-de-una-distribución-de-poisson"><i class="fa fa-check"></i><b>5.13.2</b> <strong>MEDIA DE UNA DISTRIBUCIÓN DE POISSON</strong></a></li>
+<li class="chapter" data-level="5.13.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo7"><i class="fa fa-check"></i><b>5.13.3</b> Ejemplo7</a></li>
+<li class="chapter" data-level="5.13.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo7"><i class="fa fa-check"></i><b>5.13.4</b> Solución (ejemplo7)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#la-distribución-de-probabilidad-normal"><i class="fa fa-check"></i><b>5.14</b> La distribución de probabilidad normal</a></li>
+<li class="chapter" data-level="5.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#regla-empírica"><i class="fa fa-check"></i><b>5.15</b> Regla empírica</a><ul>
+<li class="chapter" data-level="5.15.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-donde-se-aplicacón-la-regla"><i class="fa fa-check"></i><b>5.15.1</b> <strong>Ejemplo donde se aplicacón la regla</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="5.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#cambios-de-sigma-para-la-distribución-normal"><i class="fa fa-check"></i><b>5.16</b> Cambios de <span class="math inline">\(\sigma\)</span> para la distribución normal</a></li>
+<li class="chapter" data-level="5.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#distribución-de-probabilidad-normal-estándar"><i class="fa fa-check"></i><b>5.17</b> Distribución de probabilidad normal estándar</a></li>
+<li class="chapter" data-level="5.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#tabla-normal-estándar"><i class="fa fa-check"></i><b>5.18</b> Tabla normal estándar</a></li>
+<li class="chapter" data-level="5.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#significado-del-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19</b> Significado del área bajo la curva normal</a><ul>
+<li class="chapter" data-level="5.19.1" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla"><i class="fa fa-check"></i><b>5.19.1</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.2" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-1"><i class="fa fa-check"></i><b>5.19.2</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.3" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal-y-su-tabla-2"><i class="fa fa-check"></i><b>5.19.3</b> Ejemplo (Área bajo la curva normal y su tabla)</a></li>
+<li class="chapter" data-level="5.19.4" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo-área-bajo-la-curva-normal"><i class="fa fa-check"></i><b>5.19.4</b> Ejemplo (Área bajo la curva normal)</a></li>
+<li class="chapter" data-level="5.19.5" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo8"><i class="fa fa-check"></i><b>5.19.5</b> Ejemplo8</a></li>
+<li class="chapter" data-level="5.19.6" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo8"><i class="fa fa-check"></i><b>5.19.6</b> Solución (ejemplo8)</a></li>
+<li class="chapter" data-level="5.19.7" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo9"><i class="fa fa-check"></i><b>5.19.7</b> Ejemplo9</a></li>
+<li class="chapter" data-level="5.19.8" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo9"><i class="fa fa-check"></i><b>5.19.8</b> Solución (ejemplo9)</a></li>
+<li class="chapter" data-level="5.19.9" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo10"><i class="fa fa-check"></i><b>5.19.9</b> Ejemplo10</a></li>
+<li class="chapter" data-level="5.19.10" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo10"><i class="fa fa-check"></i><b>5.19.10</b> Solución (ejemplo10)</a></li>
+<li class="chapter" data-level="5.19.11" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo11"><i class="fa fa-check"></i><b>5.19.11</b> Ejemplo11</a></li>
+<li class="chapter" data-level="5.19.12" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo11"><i class="fa fa-check"></i><b>5.19.12</b> Solución (ejemplo11)</a></li>
+<li class="chapter" data-level="5.19.13" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo12"><i class="fa fa-check"></i><b>5.19.13</b> Ejemplo12</a></li>
+<li class="chapter" data-level="5.19.14" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#solución-ejemplo12"><i class="fa fa-check"></i><b>5.19.14</b> Solución (ejemplo12)</a></li>
+<li class="chapter" data-level="5.19.15" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo13"><i class="fa fa-check"></i><b>5.19.15</b> Ejemplo13</a></li>
+<li class="chapter" data-level="5.19.16" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo14"><i class="fa fa-check"></i><b>5.19.16</b> Ejemplo14</a></li>
+<li class="chapter" data-level="5.19.17" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo15"><i class="fa fa-check"></i><b>5.19.17</b> Ejemplo15</a></li>
+<li class="chapter" data-level="5.19.18" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo16"><i class="fa fa-check"></i><b>5.19.18</b> Ejemplo16</a></li>
+<li class="chapter" data-level="5.19.19" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo17"><i class="fa fa-check"></i><b>5.19.19</b> Ejemplo17</a></li>
+<li class="chapter" data-level="5.19.20" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo18"><i class="fa fa-check"></i><b>5.19.20</b> Ejemplo18</a></li>
+<li class="chapter" data-level="5.19.21" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo19"><i class="fa fa-check"></i><b>5.19.21</b> Ejemplo19</a></li>
+<li class="chapter" data-level="5.19.22" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo20"><i class="fa fa-check"></i><b>5.19.22</b> Ejemplo20</a></li>
+<li class="chapter" data-level="5.19.23" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo21"><i class="fa fa-check"></i><b>5.19.23</b> Ejemplo21</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="temas-extras.html"><a href="temas-extras.html"><i class="fa fa-check"></i><b>6</b> Temas Extras</a></li>
+<li class="chapter" data-level="7" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html"><i class="fa fa-check"></i><b>7</b> Programación R_Rstudio</a><ul>
+<li class="chapter" data-level="7.1" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>7.1</b> Repaso de R y Rstudio</a></li>
+<li class="chapter" data-level="7.2" data-path="programación-r_rstudio.html"><a href="programación-r_rstudio.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>7.2</b> Páginas donde se puede trabajar R en línea</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="videos-de-clase.html"><a href="videos-de-clase.html"><i class="fa fa-check"></i><b>8</b> Videos de Clase</a><ul>
+<li class="chapter" data-level="8.1" data-path="videos-de-clase.html"><a href="videos-de-clase.html#clases-semestre-02-2021"><i class="fa fa-check"></i><b>8.1</b> Clases semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html"><i class="fa fa-check"></i><b>9</b> Videos de Asesoría</a><ul>
+<li class="chapter" data-level="9.1" data-path="videos-de-asesoría.html"><a href="videos-de-asesoría.html#asesorías-semestre-02-2021"><i class="fa fa-check"></i><b>9.1</b> Asesorías semestre 02-2021</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Bioestadística Uno</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estadística-descriptiva" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Estadística descriptiva</h1>
+<div id="qué-es-la-estradística-descriptiva" class="section level2">
+<h2><span class="header-section-number">3.1</span> Qué es la Estradística descriptiva?</h2>
+<p>Es el conjunto de técnicas para organizar y describir un conjunto de datos (muestra)
+utilizando métodos numéricos y gráficos que resumen y presentan la información contenida
+en ellos.</p>
+<center>
+<span style="color:blue"><strong>Ejercicios para entrenar el manejo datos</strong>
+</center>
+<ul>
+<li>Ejemplo3</li>
+</ul>
+<div id="los-aspectos-importantes-de-los-datos" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Los aspectos importantes de los datos</h3>
+<ol style="list-style-type: decimal">
+<li><strong>Destribución de frecuencias</strong></li>
+</ol>
+<p>Cómo están repartidos o distribuidos los datos en el rango de valores de la variable evaluada?</p>
+<ul>
+<li>Ejemplo1</li>
+</ul>
+<p>Se entrevistó 20 jóvenes para conocer el número de refrescos de cola que beben al día. Las respuestas obtenidas son los siguientes:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{matrix}
+5 &amp; 2 &amp; 2 &amp; 4 &amp; 5\\
+1 &amp; 1 &amp; 4 &amp; 2 &amp; 1\\
+3 &amp; 5 &amp; 1 &amp; 0 &amp; 5\\ 
+0 &amp; 3 &amp; 2 &amp; 3 &amp; 4
+\end{matrix}
+\end{equation}\]</span></p>
+</div>
+<div id="frecuencia-relativa" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Frecuencia relativa</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="estadística-descriptiva.html#cb1-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb1-2"><a href="estadística-descriptiva.html#cb1-2"></a>Tabla1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">sort</span>(<span class="kw">table</span>(<span class="dt">TC3 =</span>Pc),<span class="dt">decreasing =</span> T))</span>
+<span id="cb1-3"><a href="estadística-descriptiva.html#cb1-3"></a>Tabla2 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla1, <span class="dt">FreAc =</span> <span class="kw">cumsum</span>(Freq))</span>
+<span id="cb1-4"><a href="estadística-descriptiva.html#cb1-4"></a>Tabla3 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla2,<span class="dt">Rel =</span> <span class="kw">round</span>(<span class="kw">prop.table</span>(Freq),<span class="dv">3</span>))</span>
+<span id="cb1-5"><a href="estadística-descriptiva.html#cb1-5"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb1-6"><a href="estadística-descriptiva.html#cb1-6"></a>Tabla3,</span>
+<span id="cb1-7"><a href="estadística-descriptiva.html#cb1-7"></a><span class="dt">caption =</span> <span class="st">&#39;Frecuencia Relativa&#39;</span>,</span>
+<span id="cb1-8"><a href="estadística-descriptiva.html#cb1-8"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb1-9"><a href="estadística-descriptiva.html#cb1-9"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla1">Tabla3.1: </span>Frecuencia Relativa</caption>
+<thead>
+<tr class="header">
+<th align="left">TC3</th>
+<th align="right">Freq</th>
+<th align="right">FreAc</th>
+<th align="right">Rel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0.20</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4</td>
+<td align="right">8</td>
+<td align="right">0.20</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">4</td>
+<td align="right">12</td>
+<td align="right">0.20</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">3</td>
+<td align="right">15</td>
+<td align="right">0.15</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">3</td>
+<td align="right">18</td>
+<td align="right">0.15</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="right">2</td>
+<td align="right">20</td>
+<td align="right">0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="frecuencia-relativa-y-acumulada" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Frecuencia relativa y acumulada</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="estadística-descriptiva.html#cb2-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb2-2"><a href="estadística-descriptiva.html#cb2-2"></a>Tabla1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">sort</span>(<span class="kw">table</span>(<span class="dt">TC3 =</span>Pc),<span class="dt">decreasing =</span> T))</span>
+<span id="cb2-3"><a href="estadística-descriptiva.html#cb2-3"></a>Tabla2 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla1, <span class="dt">FreAc =</span> <span class="kw">cumsum</span>(Freq))</span>
+<span id="cb2-4"><a href="estadística-descriptiva.html#cb2-4"></a>Tabla3 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla2,<span class="dt">Rel =</span> <span class="kw">round</span>(<span class="kw">prop.table</span>(Freq),<span class="dv">3</span>))</span>
+<span id="cb2-5"><a href="estadística-descriptiva.html#cb2-5"></a>Tabla4 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla3,<span class="dt">RelAc =</span> <span class="kw">round</span>(<span class="kw">cumsum</span>(<span class="kw">prop.table</span>(Freq)),<span class="dv">3</span>))</span>
+<span id="cb2-6"><a href="estadística-descriptiva.html#cb2-6"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb2-7"><a href="estadística-descriptiva.html#cb2-7"></a>Tabla4 , <span class="dt">caption =</span> <span class="st">&#39;Frecuencia relativa y acumulada&#39;</span>,</span>
+<span id="cb2-8"><a href="estadística-descriptiva.html#cb2-8"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb2-9"><a href="estadística-descriptiva.html#cb2-9"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla2">Tabla3.2: </span>Frecuencia relativa y acumulada</caption>
+<thead>
+<tr class="header">
+<th align="left">TC3</th>
+<th align="right">Freq</th>
+<th align="right">FreAc</th>
+<th align="right">Rel</th>
+<th align="right">RelAc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0.20</td>
+<td align="right">0.20</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4</td>
+<td align="right">8</td>
+<td align="right">0.20</td>
+<td align="right">0.40</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">4</td>
+<td align="right">12</td>
+<td align="right">0.20</td>
+<td align="right">0.60</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">3</td>
+<td align="right">15</td>
+<td align="right">0.15</td>
+<td align="right">0.75</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">3</td>
+<td align="right">18</td>
+<td align="right">0.15</td>
+<td align="right">0.90</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="right">2</td>
+<td align="right">20</td>
+<td align="right">0.10</td>
+<td align="right">1.00</td>
+</tr>
+</tbody>
+</table>
+<p>Comando para obtener el Rango de una variable: Ej obtener el rango de la variable EDAD</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="estadística-descriptiva.html#cb3-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb3-2"><a href="estadística-descriptiva.html#cb3-2"></a><span class="kw">range</span>(Pc, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0 5</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="estadística-descriptiva.html#cb5-1"></a><span class="co"># El parámetro na.rm=TRUE se usa para que ingore la presencia de valores perdidos</span></span></code></pre></div>
+<p>Comando para obtener el número de clases para la variable EDAD:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="estadística-descriptiva.html#cb6-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb6-2"><a href="estadística-descriptiva.html#cb6-2"></a><span class="kw">nclass.Sturges</span>(Pc)  <span class="co"># Número de intervalos</span></span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>Comando para obtener el límites extremo derecho; extremo derecho en cada una de las clases:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="estadística-descriptiva.html#cb8-1"></a><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dt">length=</span><span class="kw">nclass.Sturges</span>(Pc))  <span class="co"># Límites de los intervalos</span></span></code></pre></div>
+<pre><code>## [1] 0 1 2 3 4 5</code></pre>
+<p>Comando para obtener la Tabla de frecuencias absolutas para la variable EDAD</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="estadística-descriptiva.html#cb10-1"></a>intervalosEDAD=<span class="kw">cut</span>(Pc,<span class="dt">breaks=</span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dt">length=</span><span class="kw">nclass.Sturges</span>(Pc)),<span class="dt">include.lowest=</span><span class="ot">TRUE</span>)</span>
+<span id="cb10-2"><a href="estadística-descriptiva.html#cb10-2"></a>intervalosEDAD <span class="co"># Se muestran los intervalos de edad, uno correspondiente a cada edad observada</span></span></code></pre></div>
+<pre><code>##  [1] (4,5] [0,1] (2,3] [0,1] (1,2] [0,1] (4,5] (2,3] (1,2] (3,4] [0,1] (1,2]
+## [13] (3,4] (1,2] [0,1] (2,3] (4,5] [0,1] (4,5] (3,4]
+## Levels: [0,1] (1,2] (2,3] (3,4] (4,5]</code></pre>
+<p>Comando para obtener la Tabla de frecuencias absolutas para la variable EDAD</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="estadística-descriptiva.html#cb12-1"></a><span class="kw">table</span>(intervalosEDAD)</span></code></pre></div>
+<pre><code>## intervalosEDAD
+## [0,1] (1,2] (2,3] (3,4] (4,5] 
+##     6     4     3     3     4</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="estadística-descriptiva.html#cb14-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb14-2"><a href="estadística-descriptiva.html#cb14-2"></a>Tabla1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">sort</span>(<span class="kw">table</span>(<span class="dt">TC3 =</span>Pc),<span class="dt">decreasing =</span> T))</span>
+<span id="cb14-3"><a href="estadística-descriptiva.html#cb14-3"></a>Tabla2 &lt;-<span class="st"> </span><span class="kw">transform</span>(Tabla1, <span class="dt">FreAc =</span> <span class="kw">cumsum</span>(Freq))</span>
+<span id="cb14-4"><a href="estadística-descriptiva.html#cb14-4"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb14-5"><a href="estadística-descriptiva.html#cb14-5"></a>Tabla2 , <span class="dt">caption =</span> <span class="st">&#39;Frecuencia acumulada&#39;</span>,</span>
+<span id="cb14-6"><a href="estadística-descriptiva.html#cb14-6"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb14-7"><a href="estadística-descriptiva.html#cb14-7"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla3">Tabla3.3: </span>Frecuencia acumulada</caption>
+<thead>
+<tr class="header">
+<th align="left">TC3</th>
+<th align="right">Freq</th>
+<th align="right">FreAc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">4</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">3</td>
+<td align="right">15</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">3</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="right">2</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+<p>Comando para generar la GRAFICA DE BARRAS de frecuencias absolutas relacionada a la variable Pc</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="estadística-descriptiva.html#cb15-1"></a><span class="co"># klippy::klippy()</span></span>
+<span id="cb15-2"><a href="estadística-descriptiva.html#cb15-2"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb15-3"><a href="estadística-descriptiva.html#cb15-3"></a>Tabla1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">sort</span>(<span class="kw">table</span>(<span class="dt">TC3 =</span>Pc),<span class="dt">decreasing =</span> T))</span>
+<span id="cb15-4"><a href="estadística-descriptiva.html#cb15-4"></a></span>
+<span id="cb15-5"><a href="estadística-descriptiva.html#cb15-5"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb15-6"><a href="estadística-descriptiva.html#cb15-6"></a>Tabla1 , <span class="dt">caption =</span> <span class="st">&#39;Frecuencia Absoluta&#39;</span>,</span>
+<span id="cb15-7"><a href="estadística-descriptiva.html#cb15-7"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb15-8"><a href="estadística-descriptiva.html#cb15-8"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla4">Tabla3.4: </span>Frecuencia Absoluta</caption>
+<thead>
+<tr class="header">
+<th align="left">TC3</th>
+<th align="right">Freq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="right">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="gráfica-de-barras-frecuencia-absoluta" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Gráfica de barras (<strong>Frecuencia absoluta</strong>)</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="estadística-descriptiva.html#cb16-1"></a>tb &lt;-<span class="st"> </span><span class="kw">table</span>(Pc)</span>
+<span id="cb16-2"><a href="estadística-descriptiva.html#cb16-2"></a>barras &lt;-<span class="st"> </span><span class="kw">barplot</span>(tb,<span class="dt">col=</span><span class="st">&#39;skyblue&#39;</span>, <span class="dt">ylab =</span><span class="st">&quot;Frecuencias Absolutas&quot;</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">5</span>))</span>
+<span id="cb16-3"><a href="estadística-descriptiva.html#cb16-3"></a><span class="kw">text</span>(barras,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>),tb)</span>
+<span id="cb16-4"><a href="estadística-descriptiva.html#cb16-4"></a><span class="kw">grid</span>()</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Comando para generar la GRAFICA DE BARRAS de frecuencias relativas relacionada a la variable Pc</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="estadística-descriptiva.html#cb17-1"></a>tbp &lt;-<span class="st"> </span><span class="kw">prop.table</span>(<span class="kw">table</span>(Pc))</span>
+<span id="cb17-2"><a href="estadística-descriptiva.html#cb17-2"></a>barras2 &lt;-<span class="st"> </span><span class="kw">barplot</span>(tbp,<span class="dt">col=</span><span class="st">&#39;skyblue&#39;</span>, <span class="dt">ylab =</span><span class="st">&quot;Frecuencias Relativas&quot;</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.25</span>))</span>
+<span id="cb17-3"><a href="estadística-descriptiva.html#cb17-3"></a><span class="kw">text</span>(barras2,<span class="kw">c</span>(<span class="fl">0.05</span>,<span class="fl">0.05</span>),tbp<span class="op">*</span><span class="dv">100</span>)</span>
+<span id="cb17-4"><a href="estadística-descriptiva.html#cb17-4"></a><span class="kw">grid</span>()</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="estadística-descriptiva.html#cb18-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb18-2"><a href="estadística-descriptiva.html#cb18-2"></a>k12 &lt;-<span class="kw">ncol</span>(<span class="kw">matrix</span>(Pc,<span class="dv">1</span>,<span class="dv">20</span>))</span>
+<span id="cb18-3"><a href="estadística-descriptiva.html#cb18-3"></a>k11&lt;-<span class="kw">round</span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>(<span class="fl">3.322</span><span class="op">*</span><span class="kw">log10</span>(k12)),<span class="dt">digits =</span> <span class="dv">0</span>)</span>
+<span id="cb18-4"><a href="estadística-descriptiva.html#cb18-4"></a>k11</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="estadística-descriptiva.html#cb20-1"></a>Px &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">table</span>(<span class="dt">x=</span><span class="kw">factor</span>(<span class="kw">cut</span>(Pc,<span class="dt">breaks=</span>k11))))</span>
+<span id="cb20-2"><a href="estadística-descriptiva.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="estadística-descriptiva.html#cb20-3"></a>PPx &lt;-<span class="st"> </span><span class="kw">transform</span>(Px,</span>
+<span id="cb20-4"><a href="estadística-descriptiva.html#cb20-4"></a>               <span class="dt">FreAc =</span><span class="kw">cumsum</span>(Freq),</span>
+<span id="cb20-5"><a href="estadística-descriptiva.html#cb20-5"></a>               <span class="dt">Rel=</span><span class="kw">round</span>(<span class="kw">prop.table</span>(Freq),<span class="dv">4</span>),</span>
+<span id="cb20-6"><a href="estadística-descriptiva.html#cb20-6"></a>               <span class="dt">RelAc=</span><span class="kw">round</span>(<span class="kw">cumsum</span>(<span class="kw">prop.table</span>(Freq)),<span class="dv">4</span>))</span>
+<span id="cb20-7"><a href="estadística-descriptiva.html#cb20-7"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
+<span id="cb20-8"><a href="estadística-descriptiva.html#cb20-8"></a>PPx , <span class="dt">caption =</span> <span class="st">&#39;Tabla en Frecuencia para Datos Agrupados&#39;</span>,</span>
+<span id="cb20-9"><a href="estadística-descriptiva.html#cb20-9"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
+<span id="cb20-10"><a href="estadística-descriptiva.html#cb20-10"></a>)</span></code></pre></div>
+<table>
+<caption><span id="tab:Tabla5">Tabla3.5: </span>Tabla en Frecuencia para Datos Agrupados</caption>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="right">Freq</th>
+<th align="right">FreAc</th>
+<th align="right">Rel</th>
+<th align="right">RelAc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(-0.005,1]</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">0.30</td>
+<td align="right">0.30</td>
+</tr>
+<tr class="even">
+<td align="left">(1,2]</td>
+<td align="right">4</td>
+<td align="right">10</td>
+<td align="right">0.20</td>
+<td align="right">0.50</td>
+</tr>
+<tr class="odd">
+<td align="left">(2,3]</td>
+<td align="right">3</td>
+<td align="right">13</td>
+<td align="right">0.15</td>
+<td align="right">0.65</td>
+</tr>
+<tr class="even">
+<td align="left">(3,4]</td>
+<td align="right">3</td>
+<td align="right">16</td>
+<td align="right">0.15</td>
+<td align="right">0.80</td>
+</tr>
+<tr class="odd">
+<td align="left">(4,5]</td>
+<td align="right">4</td>
+<td align="right">20</td>
+<td align="right">0.20</td>
+<td align="right">1.00</td>
+</tr>
+</tbody>
+</table>
+<p>Comando para obtener el histograma (ó GRAFICO) asociado a la tabla de frecuencias absolutas</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="estadística-descriptiva.html#cb21-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb21-2"><a href="estadística-descriptiva.html#cb21-2"></a><span class="co"># table(intervalosEDAD)</span></span>
+<span id="cb21-3"><a href="estadística-descriptiva.html#cb21-3"></a>tbp1 &lt;-<span class="st"> </span><span class="kw">table</span>(Pc)</span>
+<span id="cb21-4"><a href="estadística-descriptiva.html#cb21-4"></a>grahis &lt;-<span class="kw">hist</span>(Pc, <span class="dt">ylab =</span><span class="st">&quot;Frecuencias Absoluta&quot;</span>, <span class="dt">main =</span><span class="st">&quot;Histograma de clases asociados a una frecuencia absoluta &quot;</span>, <span class="dt">col=</span><span class="st">&quot;skyblue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Variable Pc&quot;</span>)</span>
+<span id="cb21-5"><a href="estadística-descriptiva.html#cb21-5"></a><span class="co"># text(grahis,c(1,1),tbp1)</span></span>
+<span id="cb21-6"><a href="estadística-descriptiva.html#cb21-6"></a><span class="kw">grid</span>()</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD</p>
+</div>
+<div id="gráfica-caja-y-bigotes" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> Gráfica caja y bigotes</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="estadística-descriptiva.html#cb22-1"></a><span class="kw">boxplot</span>(Pc,</span>
+<span id="cb22-2"><a href="estadística-descriptiva.html#cb22-2"></a>        <span class="dt">main=</span><span class="st">&quot;Caja de bigotes Horizontal variable numéricas Pc&quot;</span>,</span>
+<span id="cb22-3"><a href="estadística-descriptiva.html#cb22-3"></a>        <span class="dt">col=</span><span class="st">&quot;skyblue&quot;</span>,<span class="dt">horizontal=</span>T)</span>
+<span id="cb22-4"><a href="estadística-descriptiva.html#cb22-4"></a>values &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">round</span>(<span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>conf, <span class="dv">1</span>), <span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>stats)</span>
+<span id="cb22-5"><a href="estadística-descriptiva.html#cb22-5"></a><span class="kw">text</span>(<span class="dt">x =</span> values, <span class="dt">labels =</span> values, <span class="dt">y =</span> <span class="fl">1.25</span>)</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="estadística-descriptiva.html#cb23-1"></a><span class="kw">boxplot</span>(Pc,</span>
+<span id="cb23-2"><a href="estadística-descriptiva.html#cb23-2"></a>        <span class="dt">main=</span><span class="st">&quot;Caja de bigotes Vertical variable numéricas Pc&quot;</span>,</span>
+<span id="cb23-3"><a href="estadística-descriptiva.html#cb23-3"></a>        <span class="dt">col=</span><span class="st">&quot;skyblue&quot;</span>,<span class="dt">horizontal=</span>F)</span>
+<span id="cb23-4"><a href="estadística-descriptiva.html#cb23-4"></a>values &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">round</span>(<span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>conf, <span class="dv">1</span>), <span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>stats)</span>
+<span id="cb23-5"><a href="estadística-descriptiva.html#cb23-5"></a><span class="kw">text</span>(<span class="dt">y =</span> values, <span class="dt">labels =</span> values, <span class="dt">x =</span> <span class="fl">1.25</span>)</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="estadística-descriptiva.html#cb24-1"></a>Pc &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>)</span>
+<span id="cb24-2"><a href="estadística-descriptiva.html#cb24-2"></a><span class="kw">summary</span>(Pc)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    0.00    1.00    2.50    2.65    4.00    5.00</code></pre>
+<ul>
+<li>Ejemplo2</li>
+</ul>
+<p><strong>Tecnología</strong>: Se pregunto a 30 jóvenes cuántas horas didicaban cada día a navegar en internet (el tiempo que dedican a sesiones de chat y a las redes sociales quedan incluido). Los resultados son los siguientes:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{matrix}
+2.5 &amp; 4.5 &amp; 5.8 &amp; 2.2 &amp; 5.7\\
+5.3 &amp; 4.0 &amp; 0.9 &amp; 2.5 &amp; 2.3\\
+3.2 &amp; 4.9 &amp; 2.7 &amp; 3.7 &amp; 3.8\\
+4.9 &amp; 2.8 &amp; 3.6 &amp; 4.2 &amp; 3.1\\
+7.2 &amp; 1.9 &amp; 5.9 &amp; 3.3 &amp; 2.9\\
+1.1 &amp; 1.7 &amp; 2.6 &amp; 3.1 &amp; 4.4
+\end{matrix}
+\end{equation}\]</span></p>
+<p><br></br></p>
+</div>
+</div>
+<div id="proceso-para-presentar-datos-en-forma-agrupada" class="section level2">
+<h2><span class="header-section-number">3.2</span> Proceso para presentar datos en forma agrupada</h2>
+<ul>
+<li>Obtener el tamaño de la muestra <span class="math inline">\((n)\)</span>.</li>
+<li>Hallar el m'inimo y el m'aximo de los datos</li>
+<li>Obtener el recorrido de la variable (o rango) el cual se define como:</li>
+</ul>
+<p><span class="math display">\[
+R=x_{max}-x_{min}
+\]</span></p>
+<ul>
+<li>Calcular el número de intervalos (o clases) a utilizar.</li>
+</ul>
+<p>Estos intervalos tambión se llaman <strong>intervalos de clase</strong>. La <strong>regla de Sturges</strong> indica que el número de intervalos de clase recomendado, es:
+<span class="math display">\[
+        k=1+3,322log_{10}(n)
+        \]</span>
+donde <span class="math inline">\(n\)</span> es el tamaño de la muestra.</p>
+<ul>
+<li><p>Obtener la amplitud de clase. La amplitud de cada celda se calcula con la fórmula.</p>
+<p><span class="math display">\[
+  a=\dfrac{R}{k}=\dfrac{x_{max}-x_{min}}{k}
+  \]</span></p></li>
+<li><p>Los intervalos seleccionados no pueden solaparse.</p></li>
+<li><p>Contar el número de datos que caen en cada intervalo de clase. Dicho conteo se llama la <strong>frecuencia absoluta</strong> de clase.</p></li>
+<li><p>Calcular la <strong>frecuencia relativa de clase</strong> dividiendo la <strong>frecuencia absoluta de clase</strong> por el número total de datos en la muestra.</p></li>
+<li><p>El diagrama ubica la variable evaluada en el eje <span class="math inline">\(x\)</span>, y sobre este eje, levanta rectángulos cuyas áreas son iguales o proporcionales a la frecuencia absoluta <span class="math inline">\((n_i)\)</span> o relativa <span class="math inline">\((f_i)\)</span> de cada intervalo de clase.</p></li>
+</ul>
+<p><br></br></p>
+<ul>
+<li>Ejemplo3</li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="estadística-descriptiva.html#cb26-1"></a>edad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">22</span>, <span class="dv">34</span>, <span class="dv">29</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">33</span>, <span class="dv">31</span>, <span class="dv">27</span>, <span class="dv">25</span>, <span class="dv">25</span>)</span>
+<span id="cb26-2"><a href="estadística-descriptiva.html#cb26-2"></a>tiempo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">14.21</span>, <span class="fl">10.36</span>, <span class="fl">11.89</span>, <span class="fl">13.81</span>, <span class="fl">12.03</span>, <span class="fl">10.99</span>, <span class="fl">12.48</span>, <span class="fl">13.37</span>, <span class="fl">12.29</span>, <span class="fl">11.92</span>)</span>
+<span id="cb26-3"><a href="estadística-descriptiva.html#cb26-3"></a>sexo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>)</span>
+<span id="cb26-4"><a href="estadística-descriptiva.html#cb26-4"></a>misdeClase &lt;-<span class="st"> </span><span class="kw">data.frame</span>(edad,tiempo,sexo)</span>
+<span id="cb26-5"><a href="estadística-descriptiva.html#cb26-5"></a><span class="kw">boxplot</span>(misdeClase<span class="op">$</span>edad<span class="op">~</span>misdeClase<span class="op">$</span>sexo,<span class="dt">horizontal =</span> T)</span>
+<span id="cb26-6"><a href="estadística-descriptiva.html#cb26-6"></a>Pc &lt;-<span class="st"> </span>misdeClase<span class="op">$</span>edad</span>
+<span id="cb26-7"><a href="estadística-descriptiva.html#cb26-7"></a>values &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">round</span>(<span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>conf, <span class="dv">1</span>), <span class="kw">boxplot.stats</span>(Pc)<span class="op">$</span>stats)</span>
+<span id="cb26-8"><a href="estadística-descriptiva.html#cb26-8"></a><span class="kw">text</span>(<span class="dt">x =</span> values, <span class="dt">labels =</span> values, <span class="dt">y =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="estadística-descriptiva.html#cb27-1"></a>edad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">22</span>, <span class="dv">34</span>, <span class="dv">29</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">33</span>, <span class="dv">31</span>, <span class="dv">27</span>, <span class="dv">25</span>, <span class="dv">25</span>)</span>
+<span id="cb27-2"><a href="estadística-descriptiva.html#cb27-2"></a>tiempo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">14.21</span>, <span class="fl">10.36</span>, <span class="fl">11.89</span>, <span class="fl">13.81</span>, <span class="fl">12.03</span>, <span class="fl">10.99</span>, <span class="fl">12.48</span>, <span class="fl">13.37</span>, <span class="fl">12.29</span>, <span class="fl">11.92</span>)</span>
+<span id="cb27-3"><a href="estadística-descriptiva.html#cb27-3"></a>sexo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>)</span>
+<span id="cb27-4"><a href="estadística-descriptiva.html#cb27-4"></a>misdeClase &lt;-<span class="st"> </span><span class="kw">data.frame</span>(edad,tiempo,sexo)</span>
+<span id="cb27-5"><a href="estadística-descriptiva.html#cb27-5"></a><span class="kw">boxplot</span>(misdeClase<span class="op">$</span>tiempo<span class="op">~</span>misdeClase<span class="op">$</span>sexo,<span class="dt">horizontal =</span> T)</span>
+<span id="cb27-6"><a href="estadística-descriptiva.html#cb27-6"></a>P1c &lt;-<span class="st"> </span>misdeClase<span class="op">$</span>tiempo</span>
+<span id="cb27-7"><a href="estadística-descriptiva.html#cb27-7"></a>values &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">round</span>(<span class="kw">boxplot.stats</span>(P1c)<span class="op">$</span>conf, <span class="dv">1</span>), <span class="kw">boxplot.stats</span>(P1c)<span class="op">$</span>stats)</span>
+<span id="cb27-8"><a href="estadística-descriptiva.html#cb27-8"></a><span class="kw">text</span>(<span class="dt">x =</span> values, <span class="dt">labels =</span> values, <span class="dt">y =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="estadística-descriptiva.html#cb28-1"></a>edad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">22</span>, <span class="dv">34</span>, <span class="dv">29</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">33</span>, <span class="dv">31</span>, <span class="dv">27</span>, <span class="dv">25</span>, <span class="dv">25</span>)</span>
+<span id="cb28-2"><a href="estadística-descriptiva.html#cb28-2"></a>tiempo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">14.21</span>, <span class="fl">10.36</span>, <span class="fl">11.89</span>, <span class="fl">13.81</span>, <span class="fl">12.03</span>, <span class="fl">10.99</span>, <span class="fl">12.48</span>, <span class="fl">13.37</span>, <span class="fl">12.29</span>, <span class="fl">11.92</span>)</span>
+<span id="cb28-3"><a href="estadística-descriptiva.html#cb28-3"></a>sexo &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;M&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;H&quot;</span>)</span>
+<span id="cb28-4"><a href="estadística-descriptiva.html#cb28-4"></a>misdeClase &lt;-<span class="st"> </span><span class="kw">data.frame</span>(edad,tiempo,sexo)</span>
+<span id="cb28-5"><a href="estadística-descriptiva.html#cb28-5"></a><span class="kw">boxplot</span>(misdeClase<span class="op">$</span>tiempo<span class="op">~</span>misdeClase<span class="op">$</span>sexo,<span class="dt">horizontal =</span> F)</span>
+<span id="cb28-6"><a href="estadística-descriptiva.html#cb28-6"></a>P1c &lt;-<span class="st"> </span>misdeClase<span class="op">$</span>tiempo</span>
+<span id="cb28-7"><a href="estadística-descriptiva.html#cb28-7"></a>values &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">round</span>(<span class="kw">boxplot.stats</span>(P1c)<span class="op">$</span>conf, <span class="dv">1</span>), <span class="kw">boxplot.stats</span>(P1c)<span class="op">$</span>stats)</span>
+<span id="cb28-8"><a href="estadística-descriptiva.html#cb28-8"></a><span class="kw">text</span>(<span class="dt">y =</span> values, <span class="dt">labels =</span> values, <span class="dt">x =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<p><img src="BioestadisticaUnoUCES2021_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<center>
+<img src="images/GRAFICAdatosAGRUPADOS8.jpg" style="width:55.0%" />
+</center>
+<div id="críterio-datos-atípicos" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Críterio datos <strong>atípicos</strong></h3>
+<p><span class="math display">\[
+\text{Dato atípico}&gt;Q_{3}+1.5(Q_{3}-Q_{1})
+\]</span>
+<span class="math display">\[
+\text{Dato atípico}&lt;Q_{1}-1.5(Q_{3}-Q_{1})
+\]</span></p>
+<center>
+<img src="images/GRAFICAcajaybigotes12.jpg" style="width:85.0%" />
+</center>
+</div>
+</div>
+<div id="datos-no-agrupados" class="section level2">
+<h2><span class="header-section-number">3.3</span> Datos no agrupados</h2>
+<p>Las siguientes son recomendaciones en el tratamiento de datos no agrupados.</p>
+<ul>
+<li>Ordenar los datos de menor a mayor.</li>
+<li>Colocar una etiqueta numérica para tener clara la posición que tiene el datos en el ordenamiento.</li>
+</ul>
+<div id="medidas-de-posición" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Medidas de posición</h3>
+<p>Todas ellas a su manera tratan de dar una idea del número alrededor del cual se centra a todo el conjunto de datos.</p>
+</div>
+<div id="la-media-aritmética-para-datos-no-agrupados-barx" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> La media aritmética para datos no agrupados <span class="math inline">\((\bar{x})\)</span></h3>
+<p><span class="math display">\[
+        \bar{x}=\dfrac{\sum^{n}_{i=1}x_{i}}{n}
+\]</span></p>
+<center>
+<img src="images/GRAFICAlamedia12.jpg" style="width:55.0%" />
+</center>
+</div>
+<div id="la-mediana-para-datos-no-agrupados" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> La mediana para datos no agrupados</h3>
+<p>El número <span class="math inline">\(n\)</span> es impar</p>
+<p><span class="math display">\[Me=X_{\frac{n+1}{2}}\]</span>
+El número <span class="math inline">\(n\)</span> es par</p>
+<p><span class="math display">\[Me=\dfrac{X_{\frac{n}{2}}+X_{\frac{n+2}{2}}}{2}\]</span></p>
+</div>
+<div id="la-moda-m_0" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> La Moda <span class="math inline">\((M_{0})\)</span></h3>
+<p>Es la medida de posición que indica la magnitud del valor que se presenta con más frecuencia en una serie de datos.</p>
+</div>
+<div id="cálculo-de-cuartiles-en-datos-no-agrupados" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> Cálculo de cuartiles en datos NO agrupados</h3>
+<p>Sea el conjunto de datos no agrupados:</p>
+<p><span class="math display">\[
+    20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+\]</span>
+* Proceso <span class="math inline">\(Q_{1}:\)</span>
+El primer cuartil es el valor mayor que el <span class="math inline">\(25 \%\)</span> de los valores de la distribuci'on. como N=20 resulta que</p>
+<p><span class="math display">\[
+\dfrac{n}{4}=5
+\]</span>
+el primer cuartil es la media aritm'etica de dicho valor y el siguiente:</p>
+<p><span class="math display">\[
+Q_{1}=\dfrac{24+25}{2}=24.5
+\]</span>
+Sea el conjunto de datos no agrupados:</p>
+<p><span class="math display">\[
+    20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+\]</span></p>
+<ul>
+<li>Proceso <span class="math inline">\(Q_{2}:\)</span></li>
+</ul>
+<p>El segundo cuartil es, evidentemente, la medianan de la distribución, es el valor de la variable que ocupa el lugar central en un conjunto de datos ordenados. Ccomo N=20 resulta que</p>
+<p><span class="math display">\[
+\dfrac{n}{2}=10
+\]</span></p>
+<p>la mediana es la media aritm'etica de dicho valor y el siguiente:</p>
+<p><span class="math display">\[
+M_{e}=Q_{2}=\dfrac{33+34}{2}=33.5
+\]</span>
+Sea el conjunto de datos no agrupados:</p>
+<p><span class="math display">\[
+    20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+\]</span></p>
+<ul>
+<li>Proceso <span class="math inline">\(Q_{3}:\)</span></li>
+</ul>
+<p>El tercer cuartil es, el valor que sobrepasa al <span class="math inline">\(75 \%\)</span> de los valores de la distribución. En nuestro caso, como <span class="math inline">\(N=20\)</span> resulta que</p>
+<p><span class="math display">\[
+\dfrac{3n}{4}=15
+\]</span></p>
+<p>resulta:</p>
+<p><span class="math display">\[
+Q_{3}=\dfrac{39+39}{2}=39
+\]</span></p>
+</div>
+</div>
+<div id="datos-agrupados" class="section level2">
+<h2><span class="header-section-number">3.4</span> Datos agrupados</h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Estadistica2"></span>
+<img src="images/MedidasDeTendenciaCentralYDispersion1.jpg" alt="Medidas de tendencia central, imagen tomada de [@gutierrez2012probabilidad] pág $46$" width="60%" />
+<p class="caption">
+Figura 3.1: Medidas de tendencia central, imagen tomada de <span class="citation">(Gutierrez Banegas, Leon, and others <a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(46\)</span>
+</p>
+</div>
+<div id="ejemplo1-datos-agrupados" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Ejemplo1 Datos agrupados</h3>
+<p>Dada la siguiente distribución correspondiente al salario samanal en dòlares para un grupo de obreros en una empresa petrolera tradicional</p>
+<center>
+<img src="images/GRAFICAdatosAGRUPADOS7.jpg" style="width:75.0%" />
+</center>
+<p>Obtener:</p>
+<ul>
+<li><p>La media <span class="math inline">\((\bar{x}=?)\)</span></p></li>
+<li><p>La mediana <span class="math inline">\((Me=?)\)</span></p></li>
+<li><p>La moda <span class="math inline">\((Mo=?)\)</span></p></li>
+<li><p>El primer cuartil <span class="math inline">\((Q_1=?)\)</span></p></li>
+<li><p>El segundo cuartil <span class="math inline">\((Q_2=?)\)</span></p></li>
+<li><p>El tercer cuartil <span class="math inline">\((Q_3=?)\)</span></p></li>
+<li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
+<li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
+</ul>
+<p><strong>CODIGO PARA HALLAR LA MEDIA</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="estadística-descriptiva.html#cb29-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>,<span class="dv">500</span>,<span class="dv">600</span>,<span class="dv">700</span>)</span>
+<span id="cb29-2"><a href="estadística-descriptiva.html#cb29-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">300</span>,<span class="dv">400</span>,<span class="dv">500</span>,<span class="dv">600</span>,<span class="dv">700</span>,<span class="dv">800</span>)</span>
+<span id="cb29-3"><a href="estadística-descriptiva.html#cb29-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">85</span>,<span class="dv">90</span>,<span class="dv">120</span>,<span class="dv">70</span>,<span class="dv">62</span>,<span class="dv">36</span>)</span>
+<span id="cb29-4"><a href="estadística-descriptiva.html#cb29-4"></a>Fi &lt;-<span class="st"> </span><span class="kw">cumsum</span>(fi)</span>
+<span id="cb29-5"><a href="estadística-descriptiva.html#cb29-5"></a>Sumavfi &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
+<span id="cb29-6"><a href="estadística-descriptiva.html#cb29-6"></a>    y &lt;-<span class="st"> </span><span class="kw">sum</span>(x)</span>
+<span id="cb29-7"><a href="estadística-descriptiva.html#cb29-7"></a>    <span class="kw">return</span>(y)</span>
+<span id="cb29-8"><a href="estadística-descriptiva.html#cb29-8"></a>}</span>
+<span id="cb29-9"><a href="estadística-descriptiva.html#cb29-9"></a><span class="co"># Sumavfi(vfi)</span></span>
+<span id="cb29-10"><a href="estadística-descriptiva.html#cb29-10"></a>MarcaC &lt;-<span class="st"> </span><span class="cf">function</span>(a,b){</span>
+<span id="cb29-11"><a href="estadística-descriptiva.html#cb29-11"></a>    yr &lt;-<span class="st"> </span>(a<span class="op">+</span>b)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb29-12"><a href="estadística-descriptiva.html#cb29-12"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb29-13"><a href="estadística-descriptiva.html#cb29-13"></a>}</span>
+<span id="cb29-14"><a href="estadística-descriptiva.html#cb29-14"></a><span class="co">#MarcaC(300,400)</span></span>
+<span id="cb29-15"><a href="estadística-descriptiva.html#cb29-15"></a>TDAG &lt;-<span class="st"> </span><span class="kw">data.frame</span>(a,b,fi,Fi)</span>
+<span id="cb29-16"><a href="estadística-descriptiva.html#cb29-16"></a>TDAG</span></code></pre></div>
+<pre><code>##     a   b  fi  Fi
+## 1 200 300  85  85
+## 2 300 400  90 175
+## 3 400 500 120 295
+## 4 500 600  70 365
+## 5 600 700  62 427
+## 6 700 800  36 463</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="estadística-descriptiva.html#cb31-1"></a>TDAG<span class="op">$</span>a</span></code></pre></div>
+<pre><code>## [1] 200 300 400 500 600 700</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="estadística-descriptiva.html#cb33-1"></a>TDAG<span class="op">$</span>b</span></code></pre></div>
+<pre><code>## [1] 300 400 500 600 700 800</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="estadística-descriptiva.html#cb35-1"></a><span class="kw">MarcaC</span>(TDAG<span class="op">$</span>a,TDAG<span class="op">$</span>b)</span></code></pre></div>
+<pre><code>## [1] 250 350 450 550 650 750</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="estadística-descriptiva.html#cb37-1"></a>TDAG2 &lt;-<span class="st"> </span><span class="kw">transform</span>(TDAG,<span class="dt">xi =</span><span class="kw">MarcaC</span>(a,b))</span>
+<span id="cb37-2"><a href="estadística-descriptiva.html#cb37-2"></a>TDAG2</span></code></pre></div>
+<pre><code>##     a   b  fi  Fi  xi
+## 1 200 300  85  85 250
+## 2 300 400  90 175 350
+## 3 400 500 120 295 450
+## 4 500 600  70 365 550
+## 5 600 700  62 427 650
+## 6 700 800  36 463 750</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="estadística-descriptiva.html#cb39-1"></a>Media_DatosAgrupados &lt;-<span class="st"> </span><span class="cf">function</span>(x,y){</span>
+<span id="cb39-2"><a href="estadística-descriptiva.html#cb39-2"></a>    n &lt;-<span class="st"> </span><span class="kw">sum</span>(x)</span>
+<span id="cb39-3"><a href="estadística-descriptiva.html#cb39-3"></a>    p &lt;-<span class="st"> </span><span class="kw">sum</span>(x<span class="op">*</span>y)</span>
+<span id="cb39-4"><a href="estadística-descriptiva.html#cb39-4"></a>    yr &lt;-<span class="st"> </span>p<span class="op">/</span>n</span>
+<span id="cb39-5"><a href="estadística-descriptiva.html#cb39-5"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb39-6"><a href="estadística-descriptiva.html#cb39-6"></a>}</span>
+<span id="cb39-7"><a href="estadística-descriptiva.html#cb39-7"></a><span class="kw">Media_DatosAgrupados</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi)</span></code></pre></div>
+<pre><code>## [1] 459.0713</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="estadística-descriptiva.html#cb41-1"></a><span class="kw">round</span>(<span class="kw">Media_DatosAgrupados</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi),<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 459.07</code></pre>
+</div>
+<div id="ejemplo2-datos-agrupados" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Ejemplo2 Datos agrupados</h3>
+<p>En la distribución de frecuencias correspondiente al peso en <span class="math inline">\(Kg\)</span> para un grupo de obreros.</p>
+<center>
+<img src="images/GRAFICAdatosAGRUPADOS5.jpg" style="width:65.0%" />
+</center>
+<p>Calcule:</p>
+<ul>
+<li><p>La media <span class="math inline">\((\bar{x}=?)\)</span></p></li>
+<li><p>La mediana <span class="math inline">\((Me=?)\)</span></p></li>
+<li><p>La moda <span class="math inline">\((Mo=?)\)</span></p></li>
+<li><p>El primer cuartil <span class="math inline">\((Q_1=?)\)</span></p></li>
+<li><p>El segundo cuartil <span class="math inline">\((Q_2=?)\)</span></p></li>
+<li><p>El tercer cuartil <span class="math inline">\((Q_3=?)\)</span></p></li>
+<li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
+<li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
+</ul>
+<p><strong>Proceso Mediana</strong></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="estadística-descriptiva.html#cb43-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>) </span>
+<span id="cb43-2"><a href="estadística-descriptiva.html#cb43-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>,<span class="dv">100</span>) </span>
+<span id="cb43-3"><a href="estadística-descriptiva.html#cb43-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">12</span>,<span class="dv">16</span>,<span class="dv">2</span>) </span>
+<span id="cb43-4"><a href="estadística-descriptiva.html#cb43-4"></a>tabla &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span>a, <span class="dt">b=</span>b, <span class="dt">fi=</span>fi, <span class="dt">Fi=</span><span class="kw">cumsum</span>(fi)) </span>
+<span id="cb43-5"><a href="estadística-descriptiva.html#cb43-5"></a>tabla</span></code></pre></div>
+<pre><code>##    a   b fi Fi
+## 1 30  40  2  2
+## 2 40  50  2  4
+## 3 50  60  7 11
+## 4 60  70 11 22
+## 5 70  80 12 34
+## 6 80  90 16 50
+## 7 90 100  2 52</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="estadística-descriptiva.html#cb45-1"></a>n &lt;-<span class="st"> </span><span class="kw">sum</span>(fi)</span>
+<span id="cb45-2"><a href="estadística-descriptiva.html#cb45-2"></a>Nmedios &lt;-<span class="st"> </span>n<span class="op">/</span><span class="dv">2</span> <span class="co"># posición de la clase para la Mediana</span></span>
+<span id="cb45-3"><a href="estadística-descriptiva.html#cb45-3"></a>Li &lt;-<span class="st"> </span><span class="dv">70</span></span>
+<span id="cb45-4"><a href="estadística-descriptiva.html#cb45-4"></a>f_act &lt;-<span class="st"> </span><span class="dv">12</span></span>
+<span id="cb45-5"><a href="estadística-descriptiva.html#cb45-5"></a>F_ant &lt;-<span class="st"> </span><span class="dv">22</span></span>
+<span id="cb45-6"><a href="estadística-descriptiva.html#cb45-6"></a>Ic &lt;-<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb45-7"><a href="estadística-descriptiva.html#cb45-7"></a>Mediana &lt;-<span class="st"> </span><span class="cf">function</span>(n,Nmedios,Li,f_act,F_ant,Ic){</span>
+<span id="cb45-8"><a href="estadística-descriptiva.html#cb45-8"></a>    num &lt;-<span class="st"> </span>Nmedios<span class="op">-</span>F_ant</span>
+<span id="cb45-9"><a href="estadística-descriptiva.html#cb45-9"></a>    den &lt;-<span class="st"> </span>f_act</span>
+<span id="cb45-10"><a href="estadística-descriptiva.html#cb45-10"></a>    yr &lt;-<span class="st"> </span>Li<span class="op">+</span>(num<span class="op">/</span>den)<span class="op">*</span>Ic</span>
+<span id="cb45-11"><a href="estadística-descriptiva.html#cb45-11"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb45-12"><a href="estadística-descriptiva.html#cb45-12"></a>}</span>
+<span id="cb45-13"><a href="estadística-descriptiva.html#cb45-13"></a><span class="kw">Mediana</span>(n,Nmedios,Li,f_act,F_ant,Ic)</span></code></pre></div>
+<pre><code>## [1] 73.33333</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="estadística-descriptiva.html#cb47-1"></a><span class="kw">round</span>(<span class="kw">Mediana</span>(n,Nmedios,Li,f_act,F_ant,Ic),<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 73.33</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="estadística-descriptiva.html#cb49-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">55</span>,<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>) </span>
+<span id="cb49-2"><a href="estadística-descriptiva.html#cb49-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>,<span class="dv">90</span>) </span>
+<span id="cb49-3"><a href="estadística-descriptiva.html#cb49-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">20</span>,<span class="dv">18</span>,<span class="dv">50</span>,<span class="dv">17</span>,<span class="dv">16</span>,<span class="dv">5</span>) </span>
+<span id="cb49-4"><a href="estadística-descriptiva.html#cb49-4"></a>tabla &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span>a, <span class="dt">b=</span>b, <span class="dt">fi=</span>fi, <span class="dt">Fi=</span><span class="kw">cumsum</span>(fi)) </span>
+<span id="cb49-5"><a href="estadística-descriptiva.html#cb49-5"></a>tabla </span></code></pre></div>
+<pre><code>##    a  b fi  Fi
+## 1 55 60  6   6
+## 2 60 65 20  26
+## 3 65 70 18  44
+## 4 70 75 50  94
+## 5 75 80 17 111
+## 6 80 85 16 127
+## 7 85 90  5 132</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="estadística-descriptiva.html#cb51-1"></a>n &lt;-<span class="st"> </span><span class="kw">sum</span>(fi) </span>
+<span id="cb51-2"><a href="estadística-descriptiva.html#cb51-2"></a>Nmedios &lt;-<span class="st"> </span>n<span class="op">/</span><span class="dv">2</span> <span class="co">#posicion de la clase para la</span></span>
+<span id="cb51-3"><a href="estadística-descriptiva.html#cb51-3"></a>Nmedios </span></code></pre></div>
+<pre><code>## [1] 66</code></pre>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="estadística-descriptiva.html#cb53-1"></a>Li &lt;-<span class="dv">70</span> </span>
+<span id="cb53-2"><a href="estadística-descriptiva.html#cb53-2"></a>f_act &lt;-<span class="st"> </span><span class="dv">50</span> <span class="co"># es el fi de la clase donde esta la mediana, osea la actual </span></span>
+<span id="cb53-3"><a href="estadística-descriptiva.html#cb53-3"></a>F_ant &lt;-<span class="st"> </span><span class="dv">44</span> <span class="co">#es el Fi aanterior (22) </span></span>
+<span id="cb53-4"><a href="estadística-descriptiva.html#cb53-4"></a>Ic =<span class="dv">5</span> <span class="co">#es la amplitud de la clase </span></span>
+<span id="cb53-5"><a href="estadística-descriptiva.html#cb53-5"></a>Mediana &lt;-<span class="st"> </span><span class="cf">function</span>(n,Nmedios,Li,f_act,F_ant,Ic){ </span>
+<span id="cb53-6"><a href="estadística-descriptiva.html#cb53-6"></a>num &lt;-<span class="st"> </span>Nmedios<span class="op">-</span>F_ant </span>
+<span id="cb53-7"><a href="estadística-descriptiva.html#cb53-7"></a>den &lt;-<span class="st"> </span>f_act </span>
+<span id="cb53-8"><a href="estadística-descriptiva.html#cb53-8"></a>yr &lt;-Li <span class="op">+</span><span class="st"> </span>(num<span class="op">/</span>den) <span class="op">*</span><span class="st"> </span>Ic </span>
+<span id="cb53-9"><a href="estadística-descriptiva.html#cb53-9"></a><span class="kw">return</span>(yr) </span>
+<span id="cb53-10"><a href="estadística-descriptiva.html#cb53-10"></a>} </span>
+<span id="cb53-11"><a href="estadística-descriptiva.html#cb53-11"></a><span class="kw">Mediana</span>(n,Nmedios,Li,f_act,F_ant,Ic) </span></code></pre></div>
+<pre><code>## [1] 72.2</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="estadística-descriptiva.html#cb55-1"></a><span class="kw">round</span>(<span class="kw">Mediana</span>(n,Nmedios,Li,f_act,F_ant,Ic),<span class="dv">2</span>) </span></code></pre></div>
+<pre><code>## [1] 72.2</code></pre>
+<p><strong>Proceso Moda</strong></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="estadística-descriptiva.html#cb57-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>) </span>
+<span id="cb57-2"><a href="estadística-descriptiva.html#cb57-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>,<span class="dv">100</span>) </span>
+<span id="cb57-3"><a href="estadística-descriptiva.html#cb57-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">12</span>,<span class="dv">16</span>,<span class="dv">2</span>) </span>
+<span id="cb57-4"><a href="estadística-descriptiva.html#cb57-4"></a>tabla &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span>a, <span class="dt">b=</span>b, <span class="dt">fi=</span>fi, <span class="dt">Fi=</span><span class="kw">cumsum</span>(fi)) </span>
+<span id="cb57-5"><a href="estadística-descriptiva.html#cb57-5"></a>tabla</span></code></pre></div>
+<pre><code>##    a   b fi Fi
+## 1 30  40  2  2
+## 2 40  50  2  4
+## 3 50  60  7 11
+## 4 60  70 11 22
+## 5 70  80 12 34
+## 6 80  90 16 50
+## 7 90 100  2 52</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="estadística-descriptiva.html#cb59-1"></a>n &lt;-<span class="st"> </span><span class="kw">sum</span>(fi)</span>
+<span id="cb59-2"><a href="estadística-descriptiva.html#cb59-2"></a>Li &lt;-<span class="st"> </span><span class="dv">80</span></span>
+<span id="cb59-3"><a href="estadística-descriptiva.html#cb59-3"></a>Ic &lt;-<span class="st"> </span><span class="dv">10</span></span>
+<span id="cb59-4"><a href="estadística-descriptiva.html#cb59-4"></a>delta1 &lt;-<span class="st"> </span><span class="dv">4</span></span>
+<span id="cb59-5"><a href="estadística-descriptiva.html#cb59-5"></a>delta2 &lt;-<span class="st"> </span><span class="dv">14</span></span>
+<span id="cb59-6"><a href="estadística-descriptiva.html#cb59-6"></a>Moda &lt;-<span class="st"> </span><span class="cf">function</span>(Li,delta1,delta2,Ic){</span>
+<span id="cb59-7"><a href="estadística-descriptiva.html#cb59-7"></a>    num &lt;-<span class="st"> </span>delta1</span>
+<span id="cb59-8"><a href="estadística-descriptiva.html#cb59-8"></a>    den &lt;-<span class="st"> </span>delta1<span class="op">+</span>delta2</span>
+<span id="cb59-9"><a href="estadística-descriptiva.html#cb59-9"></a>    yr &lt;-<span class="st"> </span>Li<span class="op">+</span>(num<span class="op">/</span>den)<span class="op">*</span>Ic</span>
+<span id="cb59-10"><a href="estadística-descriptiva.html#cb59-10"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb59-11"><a href="estadística-descriptiva.html#cb59-11"></a>}</span>
+<span id="cb59-12"><a href="estadística-descriptiva.html#cb59-12"></a><span class="kw">Moda</span>(Li,delta1,delta2,Ic)</span></code></pre></div>
+<pre><code>## [1] 82.22222</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="estadística-descriptiva.html#cb61-1"></a><span class="kw">round</span>(<span class="kw">Moda</span>(Li,delta1,delta2,Ic),<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 82.22</code></pre>
+</div>
+<div id="ejemplo3-datos-agrupados" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Ejemplo3 Datos agrupados</h3>
+<p>Para la tabla de distribución en frecuencias correspondiente a las horas extras laboradas por un grupo de obreros</p>
+<center>
+<img src="images/GRAFICAdatosAGRUPADOS3.jpg" style="width:55.0%" />
+</center>
+<p>Realice el cálculo de:</p>
+<ul>
+<li><p>La media <span class="math inline">\((\bar{x}=?)\)</span></p></li>
+<li><p>La mediana <span class="math inline">\((Me=?)\)</span></p></li>
+<li><p>La moda <span class="math inline">\((Mo=?)\)</span></p></li>
+<li><p>El primer cuartil <span class="math inline">\((Q_1=?)\)</span></p></li>
+<li><p>El segundo cuartil <span class="math inline">\((Q_2=?)\)</span></p></li>
+<li><p>El tercer cuartil <span class="math inline">\((Q_3=?)\)</span></p></li>
+<li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
+<li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
+</ul>
+<p><strong>Proceso para la varianza</strong></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="estadística-descriptiva.html#cb63-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">55</span>,<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>)</span>
+<span id="cb63-2"><a href="estadística-descriptiva.html#cb63-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>,<span class="dv">90</span>)</span>
+<span id="cb63-3"><a href="estadística-descriptiva.html#cb63-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">20</span>,<span class="dv">18</span>,<span class="dv">50</span>,<span class="dv">17</span>,<span class="dv">16</span>,<span class="dv">5</span>)</span>
+<span id="cb63-4"><a href="estadística-descriptiva.html#cb63-4"></a>Fi &lt;-<span class="st"> </span><span class="kw">cumsum</span>(fi)</span>
+<span id="cb63-5"><a href="estadística-descriptiva.html#cb63-5"></a>TDAG &lt;-<span class="st"> </span><span class="kw">data.frame</span>(a,b,fi,Fi)</span>
+<span id="cb63-6"><a href="estadística-descriptiva.html#cb63-6"></a>MarcaC &lt;-<span class="st"> </span><span class="cf">function</span>(a,b){</span>
+<span id="cb63-7"><a href="estadística-descriptiva.html#cb63-7"></a>    yr &lt;-<span class="st"> </span>(a<span class="op">+</span>b)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb63-8"><a href="estadística-descriptiva.html#cb63-8"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb63-9"><a href="estadística-descriptiva.html#cb63-9"></a>}</span>
+<span id="cb63-10"><a href="estadística-descriptiva.html#cb63-10"></a>TDAG2 &lt;-<span class="st"> </span><span class="kw">transform</span>(TDAG,<span class="dt">xi =</span><span class="kw">MarcaC</span>(a,b))</span>
+<span id="cb63-11"><a href="estadística-descriptiva.html#cb63-11"></a>TDAG2</span></code></pre></div>
+<pre><code>##    a  b fi  Fi   xi
+## 1 55 60  6   6 57.5
+## 2 60 65 20  26 62.5
+## 3 65 70 18  44 67.5
+## 4 70 75 50  94 72.5
+## 5 75 80 17 111 77.5
+## 6 80 85 16 127 82.5
+## 7 85 90  5 132 87.5</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="estadística-descriptiva.html#cb65-1"></a>Xm &lt;-<span class="st"> </span><span class="cf">function</span>(x,y){</span>
+<span id="cb65-2"><a href="estadística-descriptiva.html#cb65-2"></a>    n &lt;-<span class="st"> </span><span class="kw">sum</span>(x)</span>
+<span id="cb65-3"><a href="estadística-descriptiva.html#cb65-3"></a>    p &lt;-<span class="st"> </span><span class="kw">sum</span>(x<span class="op">*</span>y)</span>
+<span id="cb65-4"><a href="estadística-descriptiva.html#cb65-4"></a>    yr &lt;-<span class="st"> </span>p<span class="op">/</span>n</span>
+<span id="cb65-5"><a href="estadística-descriptiva.html#cb65-5"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb65-6"><a href="estadística-descriptiva.html#cb65-6"></a>}</span>
+<span id="cb65-7"><a href="estadística-descriptiva.html#cb65-7"></a>n &lt;-<span class="st"> </span><span class="kw">sum</span>(fi)</span>
+<span id="cb65-8"><a href="estadística-descriptiva.html#cb65-8"></a>Varianza &lt;-<span class="st"> </span><span class="cf">function</span>(n,fi,M,Media){</span>
+<span id="cb65-9"><a href="estadística-descriptiva.html#cb65-9"></a>    p1 &lt;-<span class="st"> </span>(M<span class="op">-</span>Media)<span class="op">^</span><span class="dv">2</span></span>
+<span id="cb65-10"><a href="estadística-descriptiva.html#cb65-10"></a>    p2 &lt;-<span class="st"> </span>fi<span class="op">*</span>p1</span>
+<span id="cb65-11"><a href="estadística-descriptiva.html#cb65-11"></a>    suma &lt;-<span class="st"> </span><span class="kw">sum</span>(p2)</span>
+<span id="cb65-12"><a href="estadística-descriptiva.html#cb65-12"></a>    yr &lt;-<span class="st"> </span>suma<span class="op">/</span>(n<span class="dv">-1</span>)</span>
+<span id="cb65-13"><a href="estadística-descriptiva.html#cb65-13"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb65-14"><a href="estadística-descriptiva.html#cb65-14"></a>}</span>
+<span id="cb65-15"><a href="estadística-descriptiva.html#cb65-15"></a><span class="kw">Xm</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi)</span></code></pre></div>
+<pre><code>## [1] 72.04545</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="estadística-descriptiva.html#cb67-1"></a><span class="kw">Varianza</span>(n,fi,<span class="dt">M=</span>TDAG2<span class="op">$</span>xi,<span class="dt">Media=</span><span class="kw">Xm</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi))</span></code></pre></div>
+<pre><code>## [1] 52.84525</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="estadística-descriptiva.html#cb69-1"></a>desvs &lt;-<span class="st"> </span>(<span class="kw">Varianza</span>(n,fi,<span class="dt">M=</span>TDAG2<span class="op">$</span>xi,<span class="dt">Media=</span><span class="kw">Xm</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi)))<span class="op">^</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb69-2"><a href="estadística-descriptiva.html#cb69-2"></a>desvs</span></code></pre></div>
+<pre><code>## [1] 7.269474</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="estadística-descriptiva.html#cb71-1"></a><span class="co"># Desviación media (Dispersión)</span></span>
+<span id="cb71-2"><a href="estadística-descriptiva.html#cb71-2"></a></span>
+<span id="cb71-3"><a href="estadística-descriptiva.html#cb71-3"></a>DM &lt;-<span class="st"> </span><span class="cf">function</span>(n,M,Media){</span>
+<span id="cb71-4"><a href="estadística-descriptiva.html#cb71-4"></a>    d &lt;-<span class="st"> </span><span class="kw">abs</span>(M<span class="op">-</span>Media)</span>
+<span id="cb71-5"><a href="estadística-descriptiva.html#cb71-5"></a>    suma &lt;-<span class="st"> </span><span class="kw">sum</span>(d)</span>
+<span id="cb71-6"><a href="estadística-descriptiva.html#cb71-6"></a>    yr &lt;-<span class="st"> </span>suma<span class="op">/</span>n</span>
+<span id="cb71-7"><a href="estadística-descriptiva.html#cb71-7"></a>    <span class="kw">return</span>(yr)</span>
+<span id="cb71-8"><a href="estadística-descriptiva.html#cb71-8"></a>}</span>
+<span id="cb71-9"><a href="estadística-descriptiva.html#cb71-9"></a><span class="kw">DM</span>(n,<span class="dt">M=</span>TDAG2<span class="op">$</span>xi,<span class="dt">Media=</span><span class="kw">Xm</span>(<span class="dt">x=</span>TDAG2<span class="op">$</span>fi,<span class="dt">y=</span>TDAG2<span class="op">$</span>xi))</span></code></pre></div>
+<pre><code>## [1] 0.457989</code></pre>
+<p><strong>Proceso para el <span class="math inline">\(Q_3\)</span></strong></p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="estadística-descriptiva.html#cb73-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">55</span>,<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>) </span>
+<span id="cb73-2"><a href="estadística-descriptiva.html#cb73-2"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>,<span class="dv">90</span>) </span>
+<span id="cb73-3"><a href="estadística-descriptiva.html#cb73-3"></a>fi &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">6</span>,<span class="dv">20</span>,<span class="dv">18</span>,<span class="dv">50</span>,<span class="dv">17</span>,<span class="dv">16</span>,<span class="dv">5</span>) </span>
+<span id="cb73-4"><a href="estadística-descriptiva.html#cb73-4"></a>tabla &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">a=</span>a, <span class="dt">b=</span>b, <span class="dt">fi=</span>fi, <span class="dt">Fi=</span><span class="kw">cumsum</span>(fi)) </span>
+<span id="cb73-5"><a href="estadística-descriptiva.html#cb73-5"></a>tabla </span></code></pre></div>
+<pre><code>##    a  b fi  Fi
+## 1 55 60  6   6
+## 2 60 65 20  26
+## 3 65 70 18  44
+## 4 70 75 50  94
+## 5 75 80 17 111
+## 6 80 85 16 127
+## 7 85 90  5 132</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="estadística-descriptiva.html#cb75-1"></a>n &lt;-<span class="st"> </span><span class="kw">sum</span>(fi)</span>
+<span id="cb75-2"><a href="estadística-descriptiva.html#cb75-2"></a>c &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb75-3"><a href="estadística-descriptiva.html#cb75-3"></a>P &lt;-<span class="st"> </span>(c<span class="op">*</span>n)<span class="op">/</span><span class="dv">4</span></span>
+<span id="cb75-4"><a href="estadística-descriptiva.html#cb75-4"></a>P</span></code></pre></div>
+<pre><code>## [1] 99</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="estadística-descriptiva.html#cb77-1"></a>Li &lt;-<span class="st"> </span><span class="dv">75</span></span>
+<span id="cb77-2"><a href="estadística-descriptiva.html#cb77-2"></a>fq &lt;-<span class="st"> </span><span class="dv">17</span></span>
+<span id="cb77-3"><a href="estadística-descriptiva.html#cb77-3"></a>Fant &lt;-<span class="st"> </span><span class="dv">94</span></span>
+<span id="cb77-4"><a href="estadística-descriptiva.html#cb77-4"></a>Ic &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb77-5"><a href="estadística-descriptiva.html#cb77-5"></a>Q3 &lt;-<span class="st"> </span><span class="cf">function</span>(P,Li,fq,Fant,Ic){</span>
+<span id="cb77-6"><a href="estadística-descriptiva.html#cb77-6"></a>           NUM &lt;-<span class="st"> </span>P<span class="op">-</span>Fant</span>
+<span id="cb77-7"><a href="estadística-descriptiva.html#cb77-7"></a>           DEN &lt;-<span class="st"> </span>fq</span>
+<span id="cb77-8"><a href="estadística-descriptiva.html#cb77-8"></a>           yr &lt;-<span class="st"> </span>Li <span class="op">+</span><span class="st"> </span>(NUM<span class="op">/</span>DEN)<span class="op">*</span>Ic</span>
+<span id="cb77-9"><a href="estadística-descriptiva.html#cb77-9"></a>         <span class="kw">return</span>(yr)</span>
+<span id="cb77-10"><a href="estadística-descriptiva.html#cb77-10"></a>        }</span>
+<span id="cb77-11"><a href="estadística-descriptiva.html#cb77-11"></a><span class="kw">Q3</span>(P,Li,fq,Fant,Ic) </span></code></pre></div>
+<pre><code>## [1] 76.47059</code></pre>
+</div>
+<div id="dispersión" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Dispersión</h3>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Sesgo1"></span>
+<img src="images/Sesgo1.jpg" alt="Dispersión, imagen tomada de [@gutierrez2012probabilidad] pág $51$" width="70%" />
+<p class="caption">
+Figura 3.2: Dispersión, imagen tomada de <span class="citation">(Gutierrez Banegas, Leon, and others <a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">2012</a>)</span> pág <span class="math inline">\(51\)</span>
+</p>
+</div>
+</div>
+<div id="aplicación-shiny-para-dispersión" class="section level3">
+<h3><span class="header-section-number">3.4.5</span> Aplicación Shiny para Dispersión</h3>
+<p>Esta aplicación genera de manera aleatoria datos y
+compara la función de densidad con la gráfica de caja y bigotes.</p>
+<p><a href="https://septiembreestradajohnjairo2021uces.shinyapps.io/DistribucionDensity_A1/">Densidad - Caja y bigotes para obtener la conclusión de asimetría</a></p>
+<ul>
+<li><p><strong>Simétrica</strong>, si la mayor concentración de datos se localiza en el centro de la distribución</p></li>
+<li><p><strong>Sesgada a derecha</strong>, si la mayor concentración de datos se localiza a la izquierda de la distribución</p></li>
+<li><p><strong>Sesgada a izquierda</strong>, si la mayor concentración de datos se localiza a la derecha de la distribución</p></li>
+</ul>
+</div>
+<div id="la-media-para-datos-agrupados-barx" class="section level3">
+<h3><span class="header-section-number">3.4.6</span> La media para datos agrupados <span class="math inline">\((\bar{x})\)</span></h3>
+<p><span class="math display">\[
+\bar{x}=\dfrac{\sum_{i=1}^{n}f_{i}x_{i}}{n}
+\]</span></p>
+</div>
+<div id="la-mediana-para-datos-agrupados-me" class="section level3">
+<h3><span class="header-section-number">3.4.7</span> La mediana para datos agrupados <span class="math inline">\((Me)\)</span></h3>
+<p>Proceso:</p>
+<ul>
+<li><p>Se elabora la tabla de frecuencias de datos con diferentes intervalos de clases, se ubican las frecuencias absolutas <span class="math inline">\(n_{i}\)</span> y se calculan las frecuencias acumuladas <span class="math inline">\(F_{i}\)</span> de la distribución.</p></li>
+<li><p>Se determina la ubicación o posición de la mediana en el intervalo de la distribución de frecuencia, mediante la fórmula <span class="math inline">\(\frac{n}{2}\)</span>. Esta clase se llamará clase de la mediana. El resultado obtenido determinarí la clase donde se encuentra ubicada <span class="math inline">\(f_{i}\)</span> sea igual o superior a este resultado. Luego se aplica la fórmula:</p></li>
+</ul>
+<p><span class="math display">\[Me=L_{i}+\left( \dfrac{\frac{n}{2}-F_{i-1}}{f_{i}}\right) I_c\]</span></p>
+<ul>
+<li><span class="math inline">\(\frac{n}{2}\)</span>: Posición de la mediana.<strong>()</strong></li>
+</ul>
+<p>Este valor de posición se comparó con las datos que se tienen en la columna (<strong><span class="math inline">\(F_i\)</span></strong>), y posteriormente se selecciona el valor más proximo pero mayor que <span class="math inline">\(\frac{n}{2}\)</span>. El intervalo donde se encontro dicho valor se denomina “<strong>Intervalo de la mediana</strong>”</p>
+<ul>
+<li><p><span class="math inline">\(L_{i}\)</span>: Es el limite inferior de la clase donde se ubicada la mediana.</p></li>
+<li><p><span class="math inline">\(F_{(i-1)}\)</span>: Es el valor de la frecuencia acumulada anterior a la clase mediana.</p></li>
+<li><p><span class="math inline">\(f_{i}\)</span>: Es el valor de la frecuencia de clase donde se encuentra la mediana.</p></li>
+<li><p><span class="math inline">\(I_{c}\)</span>: Es el tamaño del intervalo de clase.</p></li>
+<li><p><span class="math inline">\(n\)</span>: Es el número total de datos de la distribuación en estudio.</p></li>
+</ul>
+</div>
+<div id="los-cuartiles-para-datos-agrupados-q_c" class="section level3">
+<h3><span class="header-section-number">3.4.8</span> Los cuartiles para datos agrupados <span class="math inline">\((Q_c)\)</span></h3>
+<p><span class="math display">\[Q_c=L_{i}+\left( \dfrac{\frac{cn}{4}-F_{(i-1)}}{f_{i}}\right) I_c\]</span></p>
+<p>Se inicia determinando la posición que ocupa el cuartil solicitado mediante la fórmula</p>
+<p>Posición de clase para el cuartil <span class="math inline">\(c\)</span>;</p>
+<p><span class="math display">\[
+P_{c}=\dfrac{cn}{4}
+\]</span>
+<span class="math inline">\(\frac{cn}{4}\)</span>: Posición que ocupa el cuartil en la distribución de frecuencia.</p>
+<p>Este valor de posición se comparó con las datos que se tienen en la columna (<strong><span class="math inline">\(F_i\)</span></strong>), y posteriormente se selecciona el valor más proximo pero mayor que <span class="math inline">\(\frac{n}{2}\)</span>. El intervalo donde se encontro dicho valor se denomina “<strong>Intervalo intercuartílico <span class="math inline">\(Q_c\)</span></strong>”</p>
+<p><span class="math inline">\(c\)</span>: Corresponde al número del cuartil solicitado: <span class="math inline">\(1,2,3\)</span>.</p>
+<p><span class="math inline">\(L_{i}\)</span>: Es el limite inferior de la clase donde se encuentra ubicado el cuartil deseado.</p>
+</div>
+<div id="la-moda-para-datos-agrupados-mo" class="section level3">
+<h3><span class="header-section-number">3.4.9</span> La moda para datos agrupados <span class="math inline">\((Mo)\)</span></h3>
+<p><span class="math display">\[
+M_{o}=L_{i}+\left( \dfrac{\vartriangle_{1}}{\vartriangle_{1}+\vartriangle_{2}}\right) I_c
+\]</span></p>
+<p><span class="math inline">\(L_{i}\)</span>: Es el limite inferior de la clase modal.</p>
+<p><span class="math inline">\(\vartriangle_{1}\)</span>:Es la diferencia entre la frecuencia absoluta de la clase modal y la frecuencia de la clase anterior a la modal.</p>
+<p><span class="math inline">\(\vartriangle_{2}\)</span>:Es la diferencia entre la frecuencia absoluta de la clase modal y la frecuencia de la clase siguiente a la modal.</p>
+<p><span class="math inline">\(I_{c}\)</span>: Es el tamaño del intervalo de clase.</p>
+</div>
+<div id="cálculo-de-deciles-para-datos-agrupados." class="section level3">
+<h3><span class="header-section-number">3.4.10</span> Cálculo de Deciles para datos agrupados.</h3>
+<p><span class="math display">\[
+D_k=L_{i}+\left( \dfrac{\frac{kn}{10}-F_{(i-1)}}{f_{i}}\right) I_c
+\]</span></p>
+</div>
+<div id="percentil-para-datos-agrupados." class="section level3">
+<h3><span class="header-section-number">3.4.11</span> Percentil para datos agrupados.</h3>
+<p><span class="math display">\[
+P_k=L_{i}+\left( \dfrac{\frac{kn}{100}-F_{(i-1)}}{f_{i}}\right) I_c
+\]</span></p>
+</div>
+</div>
+<div id="medidas-de-dispersión" class="section level2">
+<h2><span class="header-section-number">3.5</span> Medidas de dispersión</h2>
+<p>La medida de dispersión es un número que nos indica el grado de separación en un conjunto de datos. Si el valor de la dispersión es pequeño (respecto de la unidad de medida)
+entonces hay una gran uniformidad entre los datos (homogénea)</p>
+<p>Por el contrario, un gran valor en la dispersión nos indica poca uniformidad
+(heterogénea). Cuando es cero quiere decir que todos los datos son iguales. Las medidas
+de dispersión se clasifican en dos grupos</p>
+<ul>
+<li><strong>Dispersión absoluta</strong></li>
+</ul>
+<p>Entre ellas el rango, el rango intercuartilico, la desviación media, la varianza y la desviación típica.</p>
+<p><span class="math display">\[
+\text{Para datos no agrupados}: \ \text{DM}=\dfrac{\sum\left| x_{i}-\bar{x} \right| }{n}=\dfrac{\sum\left| d_{i} \right|}{n} 
+\]</span>
+<span class="math display">\[
+\text{Para datos agrupados}: \ \text{DM}=\dfrac{\sum\left| x_{PM}-\bar{x} \right|f_{i} }{n}=\dfrac{\sum x_{i}\left| d_{i} \right|}{n} 
+\]</span></p>
+<ul>
+<li><strong>Dispersión relativa</strong></li>
+</ul>
+<p>La que tiene mayor importancia es el coeficiente de variación.</p>
+<p>El valor numérico de la varianza es mayor cuando más dispersión tienen los valores de la
+variable en estudio, y por tanto, cuanto menos representativa es la media.</p>
+<p>El coeficiente de variación (ó coeficiente de Pearson) <span class="math inline">\(CV\)</span>, se define por el cociente
+entre la desviación típica (ó estándar) y la media aritmética de la variable e indica,
+por tanto, el número de veces que la desviación típica contiene a la media.</p>
+<p><span class="math display">\[
+CV=\dfrac{S}{\bar{x}}\times 100 \%
+\]</span>
+El inconveniente de esta medida es que si es igual a cero el denominador de la fracción;
+es decir, la media de la variable, carece de significado.</p>
+<p>El valor mínimo del coeficiente de variación es cero, que es el valor que toma cuando es
+igual a cero el numerador de la fracción; es decir, la variación típica. En tal caso,
+todos los valores de la variable son iguales a la media, de manera que la dispersión de
+los valores en torno a la media es nula y la media es la representación perfecta de la
+serie de datos.</p>
+<p>La media es tanto más representativa cuando más próximo a cero está el coeficiente de
+variación , y cuanto más elevado es el coeficiente de variación, menos representativa es
+la media.</p>
+<p><strong>NOTA:</strong></p>
+<p>La varianza es más significativa cuando se comparan dos o más conjuntos de
+observaciones.</p>
+<div id="varianza-para-datos-no-agrupados" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> <strong>Varianza para datos no agrupados</strong></h3>
+<p><span class="math display">\[
+S^{2}=\dfrac{\sum ( x_{i}-\bar{x})^{2}}{n}
+\]</span></p>
+</div>
+<div id="varianza-para-datos-agrupados" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> <strong>Varianza para datos agrupados</strong></h3>
+<p><span class="math display">\[
+S^{2}=\dfrac{\sum f_{i}( x_{i}-\bar{x})^{2}}{n-1}
+\]</span></p>
+</div>
+<div id="desviación-típica-para-datos-no-agrupados" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> <strong>Desviación típica para datos no agrupados</strong></h3>
+<p><span class="math display">\[
+S=\sqrt{\dfrac{\sum ( x_{i}-\bar{x})^{2}}{n}}
+\]</span></p>
+</div>
+<div id="desviación-típica-para-datos-agrupados" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> <strong>Desviación típica para datos agrupados</strong></h3>
+<p><span class="math display">\[
+S=\sqrt{\dfrac{\sum f_{i}( x_{i}-\bar{x})^{2}}{n-1}}
+\]</span></p>
+</div>
+</div>
+<div id="coeficiente-para-variación-de-karl-pearson" class="section level2">
+<h2><span class="header-section-number">3.6</span> Coeficiente para variación de Karl Pearson</h2>
+<p>Este es un criterio numérico para determinar la simetría (ó sesgo) en un histograma o en
+una gráfica poligonal continua</p>
+<p><span class="math display">\[
+A_{p}=\dfrac{\bar{x}-M_{0}}{S}
+\]</span></p>
+<ul>
+<li><p>Asimétria por la derecha (ó distribuación es asimétrica positiva) <span class="math inline">\((M_{0}&lt;\bar{x})\)</span>, y <span class="math inline">\(A_{p}&gt;0\)</span></p></li>
+<li><p>Asimétria por la izquierda (ó distribución es asimétrica negativa) <span class="math inline">\((\bar{x}&lt;M_{0})\)</span> y <span class="math inline">\(A_{p}&lt;0\)</span></p></li>
+<li><p>Asimétria <span class="math inline">\(A_{p}=0\)</span></p></li>
+</ul>
+<p>Para cuando la moda no se encuentra bien definida se puede sustituir por la mediana</p>
+<p><span class="math display">\[
+A_{p}=\dfrac{\bar{x}-M_{e}}{S}
+\]</span></p>
+</div>
+<div id="medida-cuartil-de-asimetría" class="section level2">
+<h2><span class="header-section-number">3.7</span> Medida cuartil de asimetría</h2>
+<p>En una distribución simétrica los cuartiles quedan simétricamente colocados respecto a la mediana, pero si es asimétrica un cuartil se separa más de otro. La medida cuartil de asimetría esta dada por</p>
+<p><span class="math display">\[
+S_{k}=\dfrac{(Q_3-M_{e})-(M_{e}-Q_{1})}{Q_{3}-Q_{1}}=\dfrac{Q_{3}+Q_{1}-2M_{e}}{RI}
+\]</span></p>
+<ul>
+<li><p>Si la asimetría es a la derecha <span class="math inline">\(Q_{3}\)</span> está más lejos de la mediana que <span class="math inline">\(Q_{1}\)</span>.</p></li>
+<li><p>Si la asimétria es a la izquierda <span class="math inline">\(Q_{1}\)</span> está más alejada de la mediana que <span class="math inline">\(Q_{3}\)</span>.</p></li>
+</ul>
+</div>
+<div id="coeficiente-de-asimetría-de-fisher" class="section level2">
+<h2><span class="header-section-number">3.8</span> Coeficiente de asimetría de Fisher</h2>
+<p>Permite interpretar la forma de la distribución, respecto a ser o no simétrica.</p>
+<p><span class="math display">\[
+A_{s}=\dfrac{\dfrac{\sum{f_{i}(x_{i}-{\bar{x}})^3}}{n}}{\sigma^3}
+\]</span></p>
+<ul>
+<li><p>Si <span class="math inline">\(A_{s}&lt;0\)</span> es asimétrica a izquierda.</p></li>
+<li><p>Si <span class="math inline">\(A_{s}=0\)</span> es simétrica.</p></li>
+<li><p>Si <span class="math inline">\(A_{s}&gt;0\)</span> es asimétrica a derecha</p></li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-gutierrez2012probabilidad">
+<p>Gutierrez Banegas, AL, Sabaria Leon, and others. 2012. “Probabilidad Y Estadística: Enfoque Por Competencias.”</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probabilidad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["BioestadisticaUnoUCES2021.pdf", "BioestadisticaUnoUCES2021.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
