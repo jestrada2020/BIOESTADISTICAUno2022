@@ -191,6 +191,40 @@ grid()
 ```
 
 
+
+## Gráfica círcular
+
+### Ejemplo presentación de datos en forma de torta
+
+Fórmula para obtener el ángulo:
+
+$$
+\alpha=\dfrac{{360}^º}{N}.f_i
+$$
+
+#### Ejemplo1
+
+En una clase de $30$ estudiantes, $12$ juegan baloncesto, $3$ practican natación, $9$ juegan al fútbol y el resto no practican ningun deporte.
+
+
+$\alpha_1=\dfrac{{360}^º}{30}(12)={144}^º$
+
+$\alpha_2=\dfrac{{360}^º}{30}(3)={36}^º$
+
+$\alpha_3=\dfrac{{360}^º}{30}(9)={108}^º$
+
+$\alpha_4=\dfrac{{360}^º}{30}(6)={72}^º$
+
+
+#### Ejemplo2
+
+
+Un estudio hecho al conjunto de $20$ estudiantes de una clase en la universidad determino su grupo sanguíneo. tipo A $6$, tipo B $4$, tipo AB $1$, y tipo O $9$.
+
+Realizar una gráfica de torta para el resultado del estudio.
+
+<br></br>
+
 Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD
 
 ### Gráfica caja y bigotes

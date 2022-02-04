@@ -300,3 +300,8 @@ aplicación-shiny-para-dispersión
 solución-del-ejemplo
 de-donde-viene-la-palabra-estadıstica-y-que-significa
 fechas-de-evaluación-primer-semestre-2022
+gráfica-círcular
+ejemplo-presentación-de-datos-en-torta
+ejemplo-presentación-de-datos-en-forma-de-torta
+ejemplo1-2
+ejemplo2-1
