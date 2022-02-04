@@ -1,0 +1,130 @@
+# Introduction {#intro}
+
+## Conceptos Introductorios
+
+### **¿De donde viene la palabra estadı́stica y que significa?**
+  + **Respuesta**:
+    Viene del latı́n status.
+    Significa estado.
+    La estadı́stica comenzó colectando  
+    y resumiendo información (o datos) sobre el estado.
+    Aún hoy dı́a, un segmento grande del
+    público en general piensa en la
+    estadı́stica como un sinónimo de datos,
+    tablas y gráficas.
+
+
+A comienzos del siglo XX algunos matemáticos como Karl Pearson
+y Ronald A Fisher realizaron avances matemáticos importantes que
+posicionaron la Estadı́stica como una ciencia independiente para
+ser usada en el análisis e interpretación de los datos en la
+investigación cientı́fica.
+
+
+
+```{r Estadistica1, fig.cap="Fundamentos de la estadística, imagen tomada de [@gutierrez2012probabilidad] pág $4$", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, out.width = "85%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EstadisticaColeccion1.jpg")
+```
+
+
+### **¿Qué es la estadística?**
+  + **Respuesta**:
+  Es el arte de la decisión frente a la
+incertidumbre.
+Milton (2001,pág. 1)
+Es la disciplina que ofrece un conjunto
+de técnicas para diseñar el proceso de
+colectar, resumir e interpretar datos, ası́
+como también, obtener conclusiones o
+generalidades a partir de ellos.
+Johnnson & Bahttachaaryya (1996,
+pág. 3)
+
+   + **Respuesta**:(@lind2012estadistica)
+ Ciencia que recoge, organiza, presenta, analiza e interpreta datos con el find e proporcionar una toma
+ de decisiones más eficaz.
+
+
+   + **Respuesta**:(@martinez2012estadistica)
+ Sistema o método usado en la recolección, organización, análisis y descripción numérica de la información. También se puede decir que la estadística estudia el comportamiento de hechos o fenómenos de grupo.
+
+```{r TipoVariable1, fig.cap="Tipos de variables imagen tomada de [@lind2012estadistica] pág $9$", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, out.width = "65%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TIPOSDEVARIABLE1.jpg")
+```
+
+### **¿Qué es una variable?**
+  + **Respuesta**:
+     Una variable representa una
+caracterı́stica o rasgo compartido por un
+grupo de elementos (objetos o
+entidades), que toma más de un posible
+valor (numérico o de texto) entre los
+elementos del grupo.
+
+
+
+
+
+### **Variable categórica (ó cualitativa)**
+  + Si sus valores no se pueden asociar naturalmente a un número
+(no se puede hacer operaciones aritméticas con ellos)
+
+    1. **Nominales**: Si sus valores no tiene un orden natural
+        a. Ejemplos: Sexo, rasgos fenotípicos y genotípicos, Fumar Si/No, Color, Nacionalidad, etc
+
+    2. **Ordinales**: Si sus valores se pueden ordenar de forma natural
+        b. Ejemplos: Mejora de un tratamiento, resistencia al dolor, grado de felicidad, etc
+
+### **Variable cuantitativa**: Si sus valores son numéricos (si se pueden hacer operaciones aritméticas con ellos).
+  + **Continuos**: Si toma valores en una escala continua en los números reales.
+  + **Discretos**: Si toma valores enteros. Por lo general resultan del proceso de contar.
+
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFIACAtipodeVariables2.jpg){width=75%}</center>
+
+
+### **¿Qué es un dato?**
+  + **Respuesta**:
+  Un dato es el resultado de realizar una
+observación o medición sobre un
+elemento del grupo de interés. Se puede
+tener un dato en una sola variable o en
+más de una variable.
+
+El término en plural datos o conjuntos
+de datos hace referencia al conjunto de
+observaciones realizadas sobre cada uno
+de los elementos del grupo de interés
+
+
+### **¿Qué es una unidad de observación?**
+  + **Respuesta**: Es un elemento ó persona a la cual se le miden una (ó más) variables sobre ella.
+
+
+### **¿Qué es una población?**
+  + **Respuesta**: Una población es la colección entera de
+unidades de observación que se desea
+estudiar.
+Por lo general, tal colección esta
+definida por ciertas condiciones fı́sicas,
+biológicas, espaciales o temporales
+establecidas por los objetivos de la
+investigación.
+En muchas ocasiones, las poblaciones
+son demasiado grandes o incluso
+infinitas
+
+### **¿Qué es una muestra?**
+  + **Respuesta**: Una muestra es un subconjunto de
+elementos de la población. La muestra
+se obtiene para generalizar a toda la
+población lo observado en la muestra.
+Cualidades de la muestra
+
+      a. Representativa de toda la población
+      b. Tomada al azar (es decir todos los elementos de la población tienen la misma probabilidad)
+
+
+```{r TipoDatos1, fig.cap="Presentación de datos, imagen tomada de [@gutierrez2012probabilidad] pág $9$", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, out.width = "65%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICOresumenPresentacionDatos.jpg")
+```

@@ -1,0 +1,1536 @@
+# Probabilidad
+
+```{r echo=FALSE}
+colFmt = function(x,color,outputFormat = 'html' ){
+  # Funcion para colorear texto a discrecion en Rmarkdown
+  # tomada de: https://stackoverflow.com/questions/29067541/how-to-change-the-font-color
+  
+  # outputFormat = knitr::opts_knit$get("rmarkdown.pandoc.to")
+  if(outputFormat == 'latex')
+    paste("\\textcolor{",color,"}{",x,"}",sep="")
+  else if(outputFormat == 'html')
+    paste("<font color='",color,"'>",x,"</font>",sep="")
+  else
+    x
+}
+```
+
+
+
+
+## Teoría de conjuntos
+
+```{definition}
+Un **conjunto** es una colección bien definida de objetos, llamados sus elementos. Los conjuntos se simbolizan con letras minúsculas $A$, $B$, $...$ Los objetos que componen el conjunto se denominan elementos y se denotan con letras minúsculas $a, b, ...$  [Tomado de [@zill2012algebra] pág $21$]
+```
+
+
+
+```{definition, caption="Descripción por extensión y por comprensión"}
+Para definir un **conjunto por extensión**, se enumeran todos sus elementos separándolos por comas y luego se encierran entre llaves. 
+
+Para escribir un **conjunto por comprensión** se elige un elemento arbitrario $x$ y se señala que cumple la propiedad $P(x)$. Finalmente, se encierra toda la expresión entre llaves. [Tomado de [@zill2012algebra] pág $22$]
+```
+
+$$
+A=\{ x | x \ \ \text{cumple la propiedad} \ \ P(x)   \}
+$$
+
+```{definition}
+Diremos que dos conjutnos $A$ y $B$ son iguales si tienen los mismos elementos. Para indicar que $A$ y $B$ son iguales se escribe:[Tomado de [@zill2012algebra] pág $22$]
+```
+
+$$
+A=B
+$$
+
+```{remark}
+Un conjunto que posee un número finito de elementos; se llaman **conjuntos finitos**.
+  
+Un conjunto que no tiene un número finito de elemenos se llaman **conjunto infinito**.
+
+[Tomado de [@zill2012algebra] pág $23$]
+
+```
+
+
+```{definition}
+El número de elementos de un conjunto finito es lo que se llama la **cardinalidad** de dicho conjunto. La cardinalidad de un conjunto finito $A$ se denota por: [Tomado de [@zill2012algebra] pág $24$]
+
+```
+
+
+$$
+Card(A) \ \ \ \text{ó}  \ \ \ |A|
+$$
+
+```{definition}
+Dos conjuntos finitos $X$ y $Y$ se dicen ser **equipotentes** si tienen exactamente el mismo número de elementos. [Tomado de [@zill2012algebra] pág $24$]
+```
+
+
+
+```{definition}
+Un conjunto se dice **vacío** si no posee elementos. El conjunto vacío se denota como:
+```
+
+$$
+\{ \} \ \ \ \text{ó}  \ \ \ \Phi
+$$
+
+```{definition}
+El conjunto **universal** se define como el conjunto que posee todos los elementos de todos los conjuntos, y se denota como:[Tomado de [@zill2012algebra] pág $25$]
+```
+
+$$
+\text{Conjunto universal:} \ \ \ U
+$$
+
+```{definition}
+Si cada elemento de un conjunto $A$ es también elemento de un conjunto $B$, entonces se dice que $A$ es un subconjunto de $B$. Se dice también que $A$ está contenido en $B$ o que $B$ contiene a $A$. La relación de subconjunto se denota como: [Tomado de [@zill2012algebra] pág $25$]
+```
+
+$$
+A \subset B  \ \ \ \text{ó}  \ \ \ B \supset A
+$$
+
+```{r Figconjunto1, fig.cap="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $26$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Figconjunto1.png")
+```
+
+
+```{definition}
+La unión de dos conjuntos $A$ y $B$ consta de todos los elementos que pertenecen a $A$ o a $B$. La unión de $A$ y $B$ se denota por $A \cup B$. [Tomado de [@zill2012algebra] pág $31$]
+
+```
+
+
+$$
+A \cup B = \{ x | x \in A \ \text{o} \ x \in B\}
+$$
+
+```{r FigUnionA, fig.cap="Relación de subconjunto [Imagen tomada de [@zill2012algebra] pág $32$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigUniona1.png")
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigUniona2.png")
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigUniona3.png")
+```
+
+## Propiedades de la Unión
+
+
+```{r PropiedadesUnion, fig.cap="Propiedades de la unión [Imagen tomada de [@zill2012algebra] pág $32$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/PropiedadesUnion.png")
+```
+
+
+
+```{definition}
+La intersección de dos conjuntos $A$ y $B$ consta de todos los elementos que pertenecen a $A$ y a $B$. La intersección de $A$ y $B$ se denota por $A \cap B$. [Tomado de [@zill2012algebra] pág $30$]
+
+```
+
+
+$$
+A \cap B = \{ x | x \in A \ \text{y} \ x \in B\}
+$$
+
+
+```{r FigInterseccion, fig.cap="Intersección de conjuntos [Imagen tomada de [@zill2012algebra] pág $30$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigInterseccion1.png")
+```
+
+
+## Propiedades de la Intersección
+
+
+```{r PropiedadesInterseccion, fig.cap="Propiedades de la intersección [Imagen tomada de [@zill2012algebra] pág $30$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/PropiedadesInterseccion.png")
+```
+
+
+## Propiedades de la unión y la intersección
+
+
+```{r FigUI, fig.cap="Propiedades de la unión y la intersección [Imagen tomada de [@zill2012algebra] pág $33$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigUI.png")
+```
+
+
+## Diferencia entre dos conjuntos
+
+```{definition}
+La diferencia de dos conjuntos $A$ y $B$ consta de todos los elementos que pertenecen a $A$ y no pertenecen a $B$. La diferencia de $A$ y $B$ se denota por $A - B$. [Tomado de [@zill2012algebra] pág $34$]
+
+```
+
+
+$$
+A - B = \{ x | x \in A \ \text{y} \ x \notin B\}
+$$
+
+```{r FigDif, fig.cap="Diferencia entre conjuntos [Imagen tomada de [@zill2012algebra] pág $34$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigDif.png")
+```
+
+
+## Complemento de un conjunto
+
+```{definition}
+El complemento de un conjunto $A$ consta de todos los elementos del universo $U$, y que no pertenecen a $A$. El complemento de $A$ se denota por $A^{c}$. [Tomado de [@zill2012algebra] pág $34$]
+
+```
+
+
+$$
+A'=A^{c} = \{ x | x \notin A \}
+$$
+
+
+```{r FigComplemento, fig.cap="Complemento de un conjunto [Imagen tomada de [@zill2012algebra] pág $34$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigComplemento.png")
+```
+
+
+## Propiedades del algebra de conjuntos
+
+```{r FigPropiedadesGeneral, fig.cap="Leyes del algebra de Conjuntos [Imagen tomada de [@zill2012algebra] pág $36$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesGeneral.png")
+```
+
+
+### Ejemplo1 
+
+```{r FigEjConjunto1, fig.cap="Ejemplo 1 de conjuntos [Imagen tomada de [@zill2012algebra] pág $33$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EjemploConjuntos1.jpg")
+```
+
+A partir de la figura \@ref(fig:FigEjConjunto1), obtener la solución a los enunciados de conjuntos
+
+* Obtener $A \cup B=\{0, 2, 1, 3, 5, 7\}$
+
+* Obtener $A \cup C=\{0,2,6,8,1,3,5\}$
+
+* Obtener $C \cup B=?$
+
+* Obtener $A \cap B=?$
+
+* Obtener $A \cap C=?$
+
+* Obtener $C \cap B=?$
+
+* Obtener $A - B=?$
+
+* Obtener $B - A=\{7\}$
+
+* Obtener $A - C=?$
+
+* Obtener $C - B=?$
+
+* Obtener $B - C=?$
+
+* Obtener $(A\cap B) - C=\{1,3,5\}$
+
+* Obtener $(C\cap B) - A=?$
+
+
+
+### Ejemplo2 
+
+```{r FigEjConjunto2, fig.cap="Ejemplo 2 de conjuntos [Imagen tomada de [@zill2012algebra] pág $35$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EjemploConjuntos2.jpg")
+```
+
+A partir de la figura \@ref(fig:FigEjConjunto2), obtener la solución a los enunciados de conjuntos
+
+* Obtener $A \cup B=?$
+
+* Obtener $A \cap B=?$
+
+* Obtener $A - B=?$
+
+* Obtener $B - A=?$
+
+
+
+
+### Ejemplo3 
+
+```{r FigEjConjunto3, fig.cap="Ejemplo 3 de conjuntos [Imagen tomada de [@zill2012algebra] pág $33$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EjemploConjuntos3.jpg")
+```
+
+
+A partir de la figura \@ref(fig:FigEjConjunto3), obtener la solución a los enunciados de conjuntos
+
+* Obtener ${\bigcup}_{i=1}^{2}A_{i} =A_1 \cup A_2=\{8,6,4,2,1,3,5,7 \}$
+
+* Obtener ${\bigcap}_{i=2}^{3}A_{i} =?$
+
+* Obtener ${\bigcup}_{i=1}^{3}A_{i} =?$
+
+* Obtener ${\bigcap}_{i=1}^{2}A_{i} =?$
+
+* Obtener ${\bigcap}_{i=2}^{3}A_{i} =?$
+
+* Obtener ${\bigcap}_{i=1}^{3}A_{i} =?$
+
+* Obtener $\left({\bigcup}_{i=1}^{2}A_{i}\right) - A_3=?$
+
+* Obtener $A_1-\left({\bigcup}_{i=2}^{3}A_{i}\right)=?$
+
+## Conjuntos numéricos
+
+```{r FigPinumero, fig.cap="Número Irracional [Imagen tomada de [@zill2012algebra] pág $50$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPinumero.png")
+```
+
+
+
+
+```{definition}
+El conjunto de los números naturales consta de:
+```
+
+
+$$
+N=\{ 1,2,3,4,...\}
+$$
+
+
+```{definition}
+El conjunto de los números enteros consta de:
+```
+
+
+$$
+Z=\{...,-3,-2,-1,0,1,2,3,4,...\}
+$$
+
+```{definition}
+El conjunto de los números racionales consta de todos los números que son cociente de dos enteros, siempre que el denominador sea diferente de cero. Es decir:
+```
+
+
+$$
+Q=\{ \dfrac{p}{q} | p \ \text{y} \ q \ \ \text{son números enteros,} \ \ q \ \neq \ 0\}
+$$
+```{definition}
+El conjunto de los números irracionales consta de todos los números que no son el cociente de dos enteros, siempre que el denominador sea diferente de cero. Es decir:
+```
+
+
+$$
+Q^{*}=\{x |   \ x \neq \ \dfrac{p}{q}, \ \ q \ \neq \ 0\   \}
+$$
+```{definition}
+El conjunto de los números reales consta de la unión entre el conjunto de los racionales y los irracionales. Es decir:
+```
+
+
+$$
+R=\{x |   \ x \in Q \ \text{o} \ x \in Q^{*} \}=Q \cup Q^{*}
+$$
+
+
+```{r FigConjuntoN, fig.cap="Diagrama de los conjuntos numéricos [Imagen tomada de [@swokowski1996algebra] pág $3$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EsquemaConjuntosReales1.jpg")
+```
+
+
+
+## Propiedades de los números Reales
+
+
+```{r FigPropiedadesReales, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $51$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesReales.png")
+```
+
+
+```{r FigPropiedadesRealesB, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $51$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesRealesB.png")
+```
+
+
+```{r FigPropiedadesRealesC, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $53$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesRealesC.png")
+```
+
+
+```{r FigPropiedadesRealesD, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $53$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesRealesD.png")
+```
+
+
+```{r FigPropiedadesRealesE, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $54$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesRealesE.png")
+```
+
+
+```{r FigPropiedadesRealesF1, fig.cap="Propiedades de los números reales [Imagen tomada de [@swokowski1996algebra] pág $8$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/PropiedadesFraccionarios1.jpg")
+```
+
+
+
+
+```{r FigPropiedadesRealesF, fig.cap="Propiedades de los números reales [Imagen tomada de [@zill2012algebra] pág $55$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/FigPropiedadesRealesF.png")
+```
+
+
+**Podcast**
+<!-- [Introducción](https://soundcloud.com/john-estrada-920356121/introduccion1) -->
+
+
+
+
+## Conceptos introductorios de probabilidad
+
+
+
+```{r FigConjuntosT1, fig.cap="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/ConjuntosT1.jpg")
+```
+
+
+
+```{r FigConjuntosT2, fig.cap="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/ConjuntosT2.jpg")
+```
+
+
+
+```{r FigConjuntosT3, fig.cap="Esquema de probabilidad y conjuntos [Imagen tomada de [@zill2012algebra] pág $55$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/ConjuntosT3.jpg")
+```
+
+
+
+
+
+```{definition}
+Se dice que un espacio muestral $S$  es discreto si su resultado puede ponerse en una correspondencia uno a uno con el conjunto de los enteros positivos.
+```
+
+
+
+```{definition}
+Un conjunto $S$ que consta de todos los resultados posibles de un experimento aleatorio se llama espacio muestral, y cada resultado se denomina punto muestral. Con frecuencia habrá más de un espacio muestral que puede describir los resultados de un experimento, pero generalmente habrá uno que provee la mayor información.
+```
+
+
+
+
+
+```{definition}
+Se dice que un espacio muestral $S$ es continuo si sus resultados consisten de un intervalo de números reales.
+```
+
+
+
+
+
+
+
+
+
+```{definition}
+Un evento $A$ del espacio muestral $S$ es un grupo (ó subconjunto) de resultados contenidos en éste, cuyos miembros tiene una caracteríscita común.
+```
+
+
+
+```{definition}
+Un evento es un subconjunto $A$ del espacio muestral $S$, es decir, un conjunto de resultados posibles. Si el resultado de un experimento es un elemento de $A$, decimos que el evento $A$ ocurrió. Un evento que consta de un punto sencillo de $S$ se denomina con frecuencia un evento simple o elemental.
+```
+
+
+
+
+
+
+```{definition}
+Sean $S$ cualquier espacion muestral y $A$ cualquier evento de éste. Se llamará función de probabilidad sobre el espacio muestral $S$ a $P(A)$ si satisface los siguientes axiomas:
+```
+
+
+
+
+## Definición1(Frecuentista)
+
+`r colFmt('Probabilidad empírica','black',outputFormat = 'html')` La probabilidad de que un evento ocurra representa una fracción de los eventos similares que sucedieron en el pasado.
+
+Fórmula
+
+$$
+\text{Probabilidad empírica}=\dfrac{\text{Número de veces en que el evento ha ocurrido en el pasado}}{\text{Número total de observaciones}}
+$$
+
+
+## Definición2(Clásica)
+
+`r colFmt('Probabilidad clasica','black',outputFormat = 'html')` La probabilidad clásica de un evento $E$ se determina mediante la
+
+Fórmula
+
+$$
+\text{Probabilidad clásica}=\dfrac{\text{Número de formas en las que puede ocurrir un evento}}{\text{Número total de posibles resultados}}
+$$
+
+La probabilidad clásica implica la determinación de la probabilidad de algún evento a priori (**antes del hecho**)
+
+
+
+
+
+
+## Simulaciones básicas
+
+[Lanzamiento de un dado](https://www.geogebra.org/m/cSfwCRkM)
+
+[Lanzamiento de dos dados](https://www.geogebra.org/m/TwPXt2eD)
+
+[Lanzamiento de una moneda](https://www.geogebra.org/m/ZDNUEEwW)
+
+[Lanzamiento de dos monedas](https://www.geogebra.org/m/nUZQCReV)
+
+[Lanzamiento de tres monedas](https://www.geogebra.org/m/z2cKzMwJ)
+
+[Lanzamiento de cuatro monedas](https://www.geogebra.org/m/pmxXRa55)
+
+[Lanzamiento de un dado y una moneda](https://www.geogebra.org/m/MDXS6gVX)
+
+[Ley de los grandes números](https://www.geogebra.org/m/kh2hSxsm)
+
+
+## Lanzamiento de un dado
+
+Lanzamiento de un dado
+
+Espacio muestral
+
+$$
+S=\{1,2,3,4,5,6\}
+$$
+
+Evento : Subconjunto del espacio $S$
+
+
+
+$$
+A=\{2,4,6\}
+$$
+
+$$
+B=\{1,3,5\}
+$$
+
+
+
+## Lanzamiento de dos dados
+
+
+
+Espacio muestral al  lanzar dos dados
+
+
+$$
+S=\{(R1D=2,R2D=2);...\}
+$$
+
+Primera componente resultados del primer dado
+Segunda componente resultados del segundo dado
+
+$$
+S=\{(2,2);(1,6);(1,3);(4,4);...\}
+$$
+
+Generar todas las posibles parejas al lanzar dos dados en forma inst.
+
+Posibles Resultados de un dado (1):
+
+$$
+D1=\{1,2,3,4,5,6\}
+$$
+
+
+Posibles Resultados de un dado (2):
+
+$$
+D2=\{1,2,3,4,5,6\}
+$$
+
+las posibles parejas se realizan con el producto cartesiano
+
+X=D1
+
+Y=D2
+
+$$
+S=D1 \times D2=\{(1,1);(1,2);(1,3);(1,4);(1,5);(1,6);
+(2,1);(2,2);(2,3);(2,4);(2,5);(2,6);...\}
+$$
+
+```{r echo=FALSE}
+D1<- c(1,2,3,4,5,6)
+D2 <-c(1,2,3,4,5,6)
+plot(D1,D2,type="p")
+
+points(1,2)
+points(1,3)
+points(1,4)
+points(1,5)
+points(1,6)
+points(2,1)
+points(2,3)
+points(2,4)
+points(2,5)
+points(2,6)
+
+points(3,2)
+points(3,1)
+points(3,4)
+points(3,5)
+points(3,6)
+
+points(4,2)
+points(4,1)
+points(4,3)
+points(4,5)
+points(4,6)
+
+points(5,2)
+points(5,1)
+points(5,3)
+points(5,4)
+points(5,6)
+
+points(6,2)
+points(6,1)
+points(6,3)
+points(6,5)
+points(6,4)
+
+points(1,6,pch=19,col="red")
+points(6,1,pch=19,col="red")
+points(2,5,pch=19,col="red")
+points(5,2,pch=19,col="red")
+points(3,4,pch=19,col="red")
+points(4,3,pch=19,col="red")
+```
+
+Evento de los dados que al caer suman siete
+
+$$
+A=\{(1,6);(6,1);(2,5);(5,2);(3,4);(4,3)\}
+$$
+
+
+
+## Lanzamiento de una moneda tres veces
+
+
+```{r FigTablaMoneda1, fig.cap="Tabla del lanzamiento de una moneda tres veces [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Lanzamiento4veceUnaMoneda1.jpg")
+```
+
+
+
+
+
+
+## Axioma Uno de la probabilidad
+
+Para cualquier evento $A$ contenido en el espacio de los resultados $S$, se cumple que
+
+$$P(A)\geq 0$$
+
+
+## Axioma Dos de la probabilidad
+
+Si $S$ es el conjunto que representa el espacio muestral de los resultados, entonces 
+
+$$P(S)=1$$
+
+
+## Axioma Tres de la probabilidad
+
+
+Si para los eventos $A_1,A_2,...,$ y $A_i \cap A_j=\phi$ para toda $i \neq j$, entonces 
+
+\begin{equation}
+P(A_1 \cup A_2 \cup A_3 \cup...\cup A_k\cup...)=\\P(A_1)+P(A_2)+...+P(A_k)+...=\sum_{i=1}^{\propto}P(A_i)
+\end{equation}
+
+
+## Teoremas básicos de probabilidad
+
+
+```{theorem ,TMA1-1}
+Si $A_1 \subset A_2$, entonces $P(A_1) \leq P(A_2)$, y $P(A_2-A_1)=P(A_2)-P(A_1)$
+```
+
+
+
+
+```{theorem ,TMA1-2}
+Para todo evento $A$
+  
+$$0 \leq P(A) \leq 1$$
+
+o sea, la probabilidad está entre $0$ y $1$
+```
+
+
+
+
+```{theorem ,TMA1-3}
+$$ P(\Phi)=0 $$
+  
+es decir, el evento imposible tiene probabilidad cero.
+```
+
+
+
+
+```{theorem ,TMA1-4}
+Si $A^{c}$ es el complemento de $A$, entonces
+
+\[P(A^{c})=1-P(A)\]
+```
+
+
+
+```{definition}
+Se dice que dos eventos $A$ y $B$ son mutumente excluyentes si no tienen resultados, o elementos comunes. En otras palabras los eventos $A$ y $B$ no pueden ocurrir al mismo tiempo.
+```
+
+
+
+```{theorem ,TMA1-5}
+Si $A=A_1\cup A_2... \cup A_n$, donde $A_1$, $A_2$, $...$, $A_n$ son mutuamente excluyentes, entonces
+
+$$P(A)=P(A_1)+P(A_2)+...+P(A_n)=\sum_{i=1}^{n}P(A_i)$$
+
+```
+
+
+
+
+```{theorem ,TMA1-6}
+Si $A$ y $B$ son dos eventos cualesquiera, entonces
+
+$$P(A \cup B)= P(A)+P(B)- P(A \cap B)$$
+
+```
+
+
+
+
+```{theorem ,TMA1-7}
+Para cualquier par de eventos $A$ y $B$,
+
+$$P(A)=P(A \cap B)+P(A \cap B^{c})$$
+
+```
+
+
+
+
+```{theorem ,TMA1-8}
+Si un evento $A$ debe dar como resultado la ocurrencia de uno de los eventos mutuamente excluyentes $A_1$, $A_2$,...,$A_n$, entonces
+
+$$P(A)=P(A \cap A_1)+P(A \cap A_2) +...+ P(A \cap A_n)$$
+
+```
+
+
+
+
+```{theorem ,TMA1-9}
+Sean $A$ y $B$ dos eventos tales que $P(A)>0$. Denótese por $P(B|A)$ la probabilidad de $B$ dado que ocurrió $A$. Puesto que sabemos que ocurrió $A$, éste se convierte en el nuevo espacio muestral reemplazando al original $S$. A partir de esto llegamos a la definción
+
+
+$$P(B|A)=\dfrac{P(A\cap B)}{P(A)}$$
+  
+$$P(A\cap B)=P(B|A)P(A)$$
+
+
+```
+
+**NOTA:** Para tres eventos cualesquiera $A_1$, $A_2$, $A_3$, tenemos
+
+$$P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2|A_1)P(A_3| A_1 \cap A_2)$$
+
+
+
+```{theorem ,TMA1-10}
+Si un evento $A$ debe originar uno de los eventos mutuamente excluyentes $A_1$, $A_2$, $...$, $A_n$, entonces
+
+$$P(A)=P(A_1)P(A|A_1)+P(A_2)P(A|A_2)+P(A_3)P(A|A_3)+...+P(A_n)P(A|A_n)$$
+
+```
+
+
+
+
+```{theorem ,TMA1-11}
+Suponga que $A_1$, $A_2$, $...$, $A_n$, son eventos mutuamente excluyentes cuya unión es el espacio muestral $S$, es decir, que debe ocurrir uno de los eventos. Entonces si $B$ es un evento cualquiera, tenemos
+
+
+$$P(A_k|B)=\dfrac{P(A_k)P(B|A_k)}{\sum_{j=1}^{n}P(A_j)P(B|A_j)}$$
+  
+Esto nos permite encontrar las probabilidades de diferentes eventos $A_1$, $A_2$, $...$, $A_n$ que pueden hacer que ocurra $B$.
+
+Este teorema se conoce como el **teorema de Bayes** (ó el teorema de la probabilidad de las causas)
+
+```
+
+
+```{r FigTeoremaBayes, fig.cap="Teorema de Bayes [Imagen tomada de [@zill2012algebra] pág $51$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, warning=FALSE,out.width="40%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TeoremaBayesUno.jpg")
+```
+
+## Demostración probabilidad del complemento
+
+
+Demostrar que $P(A^{c})=1-P(A)$
+
+Justificación (ó argumentación)
+
+
+$$
+\begin{split}
+S &= A^{c} \cup A \\
+P(S) &= P(A^{c} \cup A) \\
+&= P(A^{c})+P(A), \ \ \ \ \ \text{ya que } A^{c} \cap A = \Phi\\
+1 &= P(A^{c})+P(A), \ \ \ \ \ \text{ya que } P(S)=1\\
+1-P(A) &= P(A^{c}), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+$$
+
+
+## Demostración probabilidad de la inclusión
+
+
+Demostrar que si $A \subseteq B$, entonces $P(A) \leq P(B)$
+
+Justificación (ó argumentación)
+
+
+
+```{r FigDMtma2, fig.cap="Justificación teorema 3.1 [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="30%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/DMtma2.jpg")
+```
+
+
+
+$$
+\begin{split}
+B &= A \cup (B-A) \\
+P(B) &= P(A \cup (B-A)) \\
+&= P(A)+P(B-A), \ \ \ \ \ \text{ya que } A \cap(B-A) = \Phi\\
+\text{Luego, } P(A) &\leq  P(B), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+$$
+
+
+
+## Demostración probabilidad de la unión
+
+
+Demostrar que $P(A \cup B)=P(A)+P(B)-P(A \cap B)$
+
+Justificación (ó argumentación)
+
+
+
+```{r FigDMtma3, fig.cap="Justificación teorema 3.6 [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="30%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/DMtma3.jpg")
+```
+
+
+$$
+\begin{split}
+A \cup B &= A \cup (B-A) \\
+P(A \cup B) &= P\left( A \cup (B-A) \right) \\
+P(A \cup B) &= P(A)+P(B-A), \ \ \ \ \ \text{ya que } A \cap(B-A) = \Phi\\
+P(A \cup B) - P(A) &= P(B-A) \ \ \ \   (1)
+\end{split}
+$$
+
+De otro lado
+
+
+```{r FigDMtma3b, fig.cap="Justificación teorema 3.6 [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="30%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/DMtma3b.jpg")
+```
+
+
+$$
+\begin{split}
+B  &= (A \cap B)\cup (B-A)  \\
+P(B)  &= P(A \cap B)+P(B-A), \ \ \ \ \ \text{ya que } A\cap B) \cap(B-A) = \Phi\\  \\
+P(B) - P(A \cap B)   &= P(B-A) \ \ \ \ (2)
+\end{split}
+$$
+
+de $(1)$ y $(2)$
+
+$$
+\begin{split}
+P(A \cup B) - P(A) &= P(B-A) \\
+P(B) - P(A \cap B)   &= P(B-A) 
+\end{split}
+$$
+Igualamos los lados izquierdos, así
+
+$$
+\begin{split}
+P(A \cup B) - P(A) &= P(B) - P(A \cap B) \\
+P(A \cup B) &= P(A)+P(B) - P(A \cap B), \ \ \ \ \ \text{Q.E.D. }
+\end{split}
+$$
+
+
+
+### Ejemplo 1 
+
+Suponga que lanzamos un dado justo una vez.
+
+¿Qué probabilidad hay de obtener $7$?
+
+
+**Respuesta**
+
+Como el número $7$ no está incluido en el conjunto $S$ de todos los posibles resultados, el evento $A$ de **obtener un $7$** es un evento imposible, es decir $A=\Phi$. Entonces
+
+
+$$
+P(A)=P(\text{Obtener un 7})=\dfrac{0}{6}=0
+$$
+
+
+
+### Ejemplo 2
+
+
+Suponga que lanzamos un dado justo una vez.
+
+¿Qué probabilidad hay de obtener un número menor que $7$?
+
+
+**Respuesta**
+
+Ya que el resultado de lanzar un dado son todos enteros positivos menores que $7$, entonces el evento $A$: **obtener un número menor que $7$** es 
+
+$$
+A=\{1,2,3,4,5,6\}=S
+$$
+
+
+de donde 
+
+$$
+P(A)=\dfrac{6}{6}=1
+$$
+
+
+
+### Ejemplo 3
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_2XCNdJhKgsgRyn4eNLqOmEr0eabeUTQRw&usqp=CAU" width="300" height="150">
+
+
+El 1 de febrero de 2003 explotó el transbordador espacial Columbia. Este fue el segundo desastre en 113 misiones espaciales de la NASA. Con base en esta información, cuál es la probabilidad de que una futura misión concluya con éxito?
+
+$$
+\text{Probabilidad de un vuelo exitoso}=\dfrac{111}{113}=0.98
+$$
+
+
+### Ejemplo 4
+
+Una encuesta de 34 estudiantes en una Universidad mostró que éstos tiene las siguientes especialidades:
+
+1) Contabilidad 10
+
+2) Finanzas 5
+
+3) Economía 3
+
+4) Administración 6
+
+5) Marketing 10
+
+Suponga que elige a un estudiante y observa su especialidad.
+
+Cuál es la probabilidad de que el estudiante tenga una especialidad en Administración?
+
+Solución:
+
+$$
+\text{Probabilidad de que sea especialista en Administración}=\dfrac{6}{34}=\dfrac{3}{17}=0.18
+$$
+
+
+
+
+```{definition}
+Se dice que dos eventos $A$ y $B$ son mutumente excluyentes si no tienen resultados, o elementos comunes. En otras palabras los eventos $A$ y $B$ no pueden ocurrir al mismo tiempo.
+```
+
+En términos de conjuntos, $A$ y $B$ son conjuntos **disjuntos** o **ajenos**; es decir,
+
+$$
+A \cap B=\Phi
+$$
+
+
+
+## Regla de la adición
+
+Para aplicar la regla de la adición, los eventos deben ser mutuamente excluyentes. Es decir si tenemos dos eventos son $A$, y $B$, estos son mutuamente excluyentes si su intersección es el vacío. Es decir
+
+$$
+A\cap B =\Phi
+$$
+
+### Ejemplo3
+
+Una máquina automática llena bolsas de plástico con una combinación de frijoles, brócoli y otras verduras. La mayoría de las bolsas contiene el peso correcto, aunque, como consecuencia de la variación del tamaño del frijol y de otras verduras, un paquete podría pesar menos o más. Una versión de $4000$ paquetes que se llenaron el mes pasado arrojó los siguientes datos:
+
+Cuál es la probabilidad de que un paquete en particular pese menos o pese más?
+
+
+```{r,Tabla10, tidy=FALSE}
+Peso <- c("Menos peso","Peso satisfactorio","Más peso")
+Evento <- c("A","B","C")
+Numero_Paquetes <- c(10,3600,300)
+Probabilidad <- c(0.025,0.900,0.075)
+
+Ejemplo <- data.frame(Peso, Evento, Numero_Paquetes, Probabilidad)
+
+knitr::kable(
+Ejemplo , caption = 'Tabla en Frecuencia para Datos Agrupados',
+  booktabs = TRUE
+)
+```
+
+
+
+
+Solución: Como $A$ y $C$ son eventos excluyentes, entonces $A\cap C=\Phi$, ya que un paquete de verduras mixtas no puede pesar menos, tener el peso satisfactorio y pesar más al mismo tiempo.
+
+$$
+P(A \ \text{ó} \ C)=P(A\cup C)=P(A)+P(C)
+$$
+
+$$
+P(A\cup C)=P(A)+P(C)=0.025+0.075=0.10
+$$
+
+
+
+
+
+```{definition}
+Se dice que dos eventos $A$ y $B$ son independientes, si $P(B|A)=P(B)$. Es decir, la probabilidad de que ocurra $B$ no está afectada por la ocurrencia o no de $A$. Además esto equivale a:
+  
+  
+$$P(A \cap B)=P(A)P(B)$$
+```
+
+
+
+```{definition}
+Una tabla de contingencia es cuadro que se utiliza para clasificar observaciones de una muestraa de acuerdo con dos o más características identificables.
+```
+
+
+
+
+```{r FigEsquema2, fig.cap="Esquema de probabilidad conjunta [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="80%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/EsquemaProbabilidad2.jpg")
+```
+
+
+## Ley de los grandes números
+
+En una gran cantidad de intentos, la probabilidad empírica de un evento se aproxima a su probabilidad real.
+
+
+```{r FigTABLALeyGn1, fig.cap="Tabla ley de los grandes números [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLALeyGrandesN1.jpg")
+```
+
+
+## Tabla de contingencia
+
+
+
+```{r FigTABLA3P, fig.cap="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="40%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLA3P.jpg")
+```
+
+
+	
+
+La tabla describe la relación entre dos eventos $A$ y $B$. Para obtener $P(A_{j})$ se debe proceder como:
+
+
+$$
+	P(A_{j})=\sum_{i=1}^{2}\frac{n_{ij}}{n}
+$$
+
+
+Ejemplo
+
+La tabla de contingencia muestra la relación entre el color de cabello del pelo y el color de ojos de un grupo de $1770$ hombres alemanes.
+
+
+```{r FigTABLA2P, fig.cap="Tabla de contingencia realción del color de cabello y color de ojos [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLA2P.jpg")
+```
+
+
+\[
+j=1,j=2 \\
+p(A_j)=\sum_{i=1}^2\dfrac{n_{ij}}{n}=\dfrac{n_{1j}}{n}+\dfrac{n_{2j}}{n}=\dfrac{n_{1j}+n_{2j}}{n}\\
+p(A_1)=\sum_{i=1}^2\dfrac{n_{i1}}{n}=\dfrac{n_{11}}{n}+\dfrac{n_{21}}{n}=\dfrac{n_{11}+n_{21}}{n}\\
+p(A_2)=\sum_{i=1}^2\dfrac{n_{i2}}{n}=\dfrac{n_{12}}{n}+\dfrac{n_{22}}{n}=\dfrac{n_{12}+n_{22}}{n}\\
+p(A_3)=\sum_{i=1}^2\dfrac{n_{i3}}{n}=\dfrac{n_{13}}{n}+\dfrac{n_{23}}{n}=\dfrac{n_{13}+n_{23}}{n}
+\]
+
+
+
+```{r FigTABLA3Pa, fig.cap="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="40%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLA3P.jpg")
+```
+
+La tabla describe la relación entre dos eventos $A$ y $B$. Para obtener $P(B_{i})$ se debe proceder como:
+
+$$
+	P(B_{i})=\sum_{j=1}^{2}\frac{n_{ij}}{n}
+$$
+
+
+
+\[
+i=1,i=2\\
+p(B_i)=\sum_{j=1}^2\dfrac{n_{ij}}{n}=\dfrac{n_{i1}}{n}+\dfrac{n_{i2}}{n}=\dfrac{n_{i1}+n_{i2}}{n}\\
+p(B_1)=\sum_{j=1}^2\dfrac{n_{1j}}{n}=\dfrac{n_{11}}{n}+\dfrac{n_{12}}{n}=\dfrac{n_{11}+n_{12}}{n}\\
+p(B_2)=\sum_{j=1}^2\dfrac{n_{2j}}{n}=\dfrac{n_{21}}{n}+\dfrac{n_{22}}{n}=\dfrac{n_{21}+n_{22}}{n}\\
+p(B_3)=\sum_{j=1}^2\dfrac{n_{3j}}{n}=\dfrac{n_{31}}{n}+\dfrac{n_{32}}{n}=\dfrac{n_{31}+n_{32}}{n}\\
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+```{r FigTABLA3Pb, fig.cap="Tabla de contingencia definiciones básicas [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="40%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLA3P.jpg")
+```
+
+La tabla describe la relación entre dos eventos $A$ y $B$. Para obtener $P(A_{j}\cap B_{i})$ se debe proceder como:
+	
+$$
+	P(A_{j}\cap B_{i})=\frac{n_{ij}}{n}
+$$
+
+
+
+
+\begin{equation}
+P(A_j\cap B_i)=\dfrac{n_{ij}}{n}\\
+i=1,j=1\\
+P(A_1\cap B_1)=\dfrac{n_{11}}{n}
+\end{equation}
+
+
+
+\begin{equation}
+P(A_2\cap B_2)=\dfrac{n_{22}}{n}
+\end{equation}
+
+
+
+
+```{r}
+nal <- 400/1770
+round(nal,2)*100
+```
+
+
+	
+	
+	
+La tabla describe la relación entre dos eventos $A$ y $B$. 	Para obtener $P(B_{i} | A_{j})$ se debe proceder como:
+
+$$
+	\dfrac{P(B_{i}\cap A_{j})}{P(A_{j})}=P(B_{i} | A_{j})=\dfrac{n_{ij}}{\sum_{i=1}^{2}n_{ij}}
+$$
+
+$$
+	\dfrac{P(B_{i=1}\cap A_{j=2})}{P(A_{j=2})}=P(B_{1} | A_{2})=\dfrac{n_{ij}}{\sum_{i=1}^{2}n_{ij}}=\dfrac{n_{12}}{n_{12}+n_{22}}
+$$
+	
+
+
+\begin{equation}
+i=1,2\\
+j=1,2,3\\
+P(A_j\cap B_i)=\dfrac{n_{ij}}{n}\\
+i=1;j=1\\
+P(A_1\cap B_1)=\dfrac{n_{11}}{n}\\
+P(\text{ojos castaños y cabello castaño})=P(A_1\cap B_1)=\dfrac{n_{11}}{n}=\dfrac{400}{1770}\\
+P(\text{ojos castaños y cabello rojo})=P(A_3\cap B_1)=\dfrac{n_{13}}{n}=\dfrac{20}{1770}\\
+\end{equation}
+
+
+
+
+### Ejemplo(Encuesta de ver cine)
+
+
+Ejemplo
+
+Una encuesta de $150$ adultos clasificados según su género y la cantidad de películas que vieron cine el mes pasado.
+
+```{r FigTABLA1P, fig.cap="Tabla de contingencia de películas según el genero [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/TABLA1P.jpg")
+```
+
+
+
+Cúal es la probabilidad de que no se vió ninguna película
+
+donde:
+
+1) $B_1$: Cero películas
+
+2) $B_2$: Una sola película
+
+3) $B_3$: Dos o más películas
+
+4) $n$: Tamaño de la muestra es de $150$ personas
+
+
+5) $A_1$: Hombres
+
+6) $A_2$: Mujeres
+
+
+
+
+
+
+```{r}
+n<- 150
+numB1 <- 60
+rd1 <- round(numB1/n,2)
+```
+
+
+$$P(B_1)=\dfrac{`r numB1`}{`r n`}=`r rd1`$$
+
+
+```{r}
+n<- 150
+numB2 <- 70
+rd2 <- round(numB2/n,2)
+```
+
+
+$$P(B_2)=\dfrac{`r numB2`}{`r n`}=`r rd2`$$
+
+```{r}
+n<- 150
+numB3 <- 70
+rd3 <- round(numB3/n,2)
+```
+
+$$P(B_3)=\dfrac{`r numB3`}{`r n`}=`r rd3`$$
+
+```{r}
+n <- 150
+numA1 <- 70
+rd4 <- round(numA1/n,2)
+```
+
+
+$$
+P(A_1)=\dfrac{`r numA1`}{`r n`}= `r rd4`
+$$
+
+
+```{r}
+n <- 150
+numA2 <- 80
+rd5 <- round(numA2/n,2)
+```
+
+
+$$
+P(A_2)=\dfrac{`r numA2`}{`r n`}= `r rd5`
+$$
+
+
+
+```{r}
+n <- 150
+numB3A2 <- 10
+rd6 <- round(numB3A2/n,2)
+```
+
+
+$$
+P(A_2\cap B_3)=\dfrac{`r numB3A2`}{`r n`}= `r rd6`
+$$
+
+
+## Probabilidad condicional y tabla de contingencia
+
+
+Probabilidad condicional
+
+Si tenermos dos eventos $A$, $B$
+
+siempre que $P(A)>0$ y $P(B)>0$, entonces
+
+
+\begin{equation}
+P(A|B)=\dfrac{P(A\cap B)}{P(B)}\\
+P(B|A)=\dfrac{P(A\cap B)}{P(A)}
+\end{equation}
+
+
+\begin{equation}
+P(A\cap B)=P(A).P(A|B)
+\end{equation}
+
+\begin{equation}
+P(A\cap B)=P(B).P(B|A)
+\end{equation}
+
+
+
+### Ejemplo(Café)
+
+
+
+```{r FigTABLA4P, fig.cap="Tabla de contingencia de películas segun el genero [Imagen tomada de [@zill2012algebra] pág $188$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAtabladeContingencia3.jpg")
+```
+
+
+GRAFICAtabladeContingencia3
+
+
+1) $B_1$: Menos de 30
+
+2) $B_2$: Entre 30 a 40
+
+3) $B_3$: Entre 40 a 50
+
+4) $B_4$: 50 ó más
+
+5) $n$: Tamaño de la muestra es de $150$ personas
+
+
+6) $A_1$: Bajo
+
+7) $A_2$: Moderado
+
+8) $A_3$: Alto
+
+
+
+$$
+P(B_3|A_2)=\dfrac{P(B_3\cap A_2)}{P(A_2)}=\dfrac{\dfrac{24}{300}}{\dfrac{110}{300}}=\dfrac{24}{110}
+$$
+
+
+
+## Regla del producto
+
+Dados dos eventos $A$ y $B$, diremos que son independientes uno del otro si cumplen que
+
+$$
+P(A|B)=P(A) \ \ \ \text{ó} \ \ \ P(B|A)=P(B)
+$$
+Entonces se puede deducir la **regla del producto** para la probabilidad de la intersección entre dos eventos $A$ y $B$.
+
+$$
+P(A\cap B)=P(A).P(B|A)\\
+P(A\cap B)=P(A).P(B)
+$$
+
+
+## Teorema de Bayes
+
+
+Dado su interés en las matemáticas, intentó crear una fórmula para llegar a la probabilidad de que Dios existiera sobre la base de la evidencia de la que, se disponía en la Tierra. Más tarde, Pierre-Simon Laplace perfeccionó el trabajo de Bayes y le dio el nombre de teorema de Bayes. De una forma entendible.
+
+
+
+Ejemplo(Urnas)
+
+
+```{r FigTeoremaBayes2, fig.cap="Teorema de Bayes problema de las Urnas [Imagen tomada de [@zill2012algebra] pág $51$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Problema3UrnasV1.jpg")
+```
+
+
+
+Tenemos tres urnas:
+
+
+La urna $A$ con 3 bolas rojas y 5 negras, la urna $B$ con 2 bolas rojas y 1 negra, y la urna $C$ con 2 bolas rojas y 3 negras. Escoger una urna al azar y extraemos una bola. Si la bola ha sido roja, ¿cual es la probabilidad de haber sido extraída de la urna $A$?
+
+
+$$
+	P(A|R)=\dfrac{P(A)P(R|A)}{P(A)P(R|A)+P(B)P(R|B)+P(C)P(R|C)}
+$$
+
+$$
+	P(A|R)=\dfrac{(\frac{1}{3})(\frac{3}{8})}{(\frac{1}{3})(\frac{3}{8})+(\frac{1}{3})(\frac{2}{3})+(\frac{1}{3})(\frac{2}{5})}=\dfrac{45}{173}=0.260
+$$	
+
+
+
+
+
+
+
+Ejemplo(CIRUGIAS)
+
+Un médico cirujano se especializa en cirugías estéticas. Entre sus pacientes, el 20 por ciento se realizan correcciones faciales, un 35 por ciento implantes mamarios y el restante en otras cirugías correctivas. Se sabe además, que son de genero masculino el 25 por ciento de los que se realizan correcciones faciales, 15 por ciento implantes mamarios y 40 por ciento otras cirugías correctivas. Si se selecciona un paciente al azar, determine:
+
+
+
+* La probabilidad de que sea de género masculino.
+
+
+*Si resulta que es de genero masculino, determine la probabilidad que se haya realizado una cirugía de implantes mamarios.
+
+
+* $F$: Pacientes que realizan cirugías faciales
+
+* $M$: Pacientes que se realizan implantes mamarios
+
+* $O$: Pacientes que se realizan otras cirugías correctivas
+
+* $H$: pacientes de género masculino
+	
+
+
+
+$$
+S=F\cup M \cup O
+$$
+$$H=(H\cap F)\cup (H\cap M) \cup (H\cap O)$$
+
+
+$$
+P(H)=?\\
+P(H)=P((H\cap F)\cup (H\cap M) \cup (H\cap O))\\
+$$
+
+$$
+	P(H)=P(F)P(H|F)+P(M)P(H|M)+P(O)P(H|O)
+$$
+
+
+
+$$
+	P(H)=(0.2)(0.25)+(0.35)(0.15)+(0.45)(0.40)=0.28
+$$
+
+
+$$
+P(H)=P(H\cap F)+ P(H\cap M)+ P(H\cap O)=0.28\\
+P(H\cap F)=P(F)P(H|F)\\
+P(Mujer)=1-P(H)=1-0.28
+$$
+
+
+
+
+
+$$
+	P(M|H)=\dfrac{P(M)P(H|M)}{P(M)P(H|M)+P(F)P(H|F)+P(O)P(H|O)}
+$$
+
+
+$$
+	P(M|H)=\dfrac{(0.35)(0.15)}{(0.35)(0.15)+(0.2)(0.25)+(0.45)(0.40)}=\dfrac{0.0525}{0.2825}=0.19
+$$
+
+
+
+
+
+Ejemplo(Máquinas de productos)
+
+
+```{r FigTeoremaBayes3, fig.cap="Teorema de Bayes problema de las máquinas [Imagen tomada de [@zill2012algebra] pág $51$]", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, warning=FALSE,out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Problema3MaquinasV1.jpg")
+```
+
+Tres máquinas, $A$,$B$ y $C$, producen el $45$ porciento, $30$ porciento y $25$ porciento, respectivamente, del total de las piezas producidas en una fábrica. 	Los porcentajes de producción defectuosas de estas máquinas son del $3$ porciento, $4$ porciento y $5$ porciento. 	Tomamos, al azar, una pieza y resulta ser defectuosa; calcular la probabilidad de haber sido producida por al máquina $B$.
+
+
+$$
+	P(B|D)=\dfrac{P(B)P(D|B)}{P(A)P(D|A)+P(B)P(D|B)+P(C)P(D|C)}
+$$
+
+
+$$
+	P(B|D)=\dfrac{(0.30)(0.04)}{(0.30)(0.04)+(0.45)(0.03)+(0.25)(0.05)}=\dfrac{12}{38}=0.316
+$$
+
+
+**Enunciado Cero**
+
+
+
+En las elecciones de un país hay 2 candidatos a la presidencia, el candidato A y el candidato B, y en los resultados de las selecciones de este pais se sabe que un 75% de la población es de clase media o baja y un 25% es de clase alta, si por el candidato A votó un 90% de la clase alta y un 5% de la clase media y baja, y se elige una persona al azar de los que votaron por el candidato A ¿Cuál es la probabilidad que este sea de la clase media o baja?
+
+
+
+
+
+**Enunciado Uno**
+	
+En cierto país donde la enfermedad X es endémica, se sabe que un 12% de la población padece dicha enfermedad. Se dispone de una prueba para detectar la enfermedad, pero no es totalmente fiable, ya que ,  da positiva en el 90% de los casos de personas realmente enfermas; y da positiva en el 5% de personas sanas. ¿Cuál es la probabilidad de que esté sana una persona a la que la prueba le ha dado positiva?
+
+
+
+
+**Enunciado Dos**
+
+Un moderno edificio tiene dos ascensores para uso de los vecinos. El primero de los ascensores es usado el 45% de las ocasiones, mientras que el segundo es usado el resto de las ocasiones. El uso continuado de los ascensores provoca un 5% de fallos en el primero de los ascensores y un 8% en el segundo. Un día suena la alarma de uno de los ascensores porque ha fallado. Calcula la probabilidad de que haya sido el primero de los ascensores.
+
+
+
+**Enunciado Tres**
+
+Un envío de frutas a un supermercado consta de naranjas y manzanas que se agrupan en cajones de 500 piezas: 300 naranjas y 200 manzanas. Por experiencias anteriores se sabe que en cada envío están estropeadas un 15% de las naranjas y un 5% de las manzanas. Se extrae una pieza al azar de un cajón cualquiera. a) ¿Cuál es la probabilidad de que esté estropeada? b) Si la pieza elegida está en buenas condiciones, ¿qué es más probable, que sea naranja o que sea manzana?
+
+
+**Enunciado Cuatro**
+
+Para ir a clase, un estudiante utiliza su coche el 70 % de los días, mientras que va en autobús el resto de los días. Cuando utiliza su coche, llega tarde el 20 % de los días, mientras que si va en autobús llega a tiempo el 10 % de los días. Elegido un día al azar: a) Calcular la probabilidad de que el estudiante llegue tarde. b) Sabiendo que ha llegado a tiempo, ¿cuál es la probabilidad de que haya venido en autobús? c)  Sabiendo que ha llegado tarde ¿cuál es la probabilidad de que haya venido en coche?
+
+
+
+
+

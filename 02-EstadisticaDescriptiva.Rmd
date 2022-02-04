@@ -1,0 +1,956 @@
+# Estadística descriptiva
+
+## Qué es la Estradística descriptiva?
+
+Es el conjunto de técnicas para organizar y describir un conjunto de datos (muestra) 
+utilizando métodos numéricos y gráficos que resumen y presentan la información contenida
+en ellos.
+
+
+ <center><span style="color:blue">**Ejercicios para entrenar el manejo datos**</center>
+
+
+
+* Ejemplo3
+
+
+### 	Los aspectos importantes de los datos
+
+1. **Destribución de frecuencias**
+
+Cómo están repartidos o distribuidos los datos en el rango de valores de la variable evaluada?
+
+* Ejemplo1
+
+Se entrevistó 20 jóvenes para conocer el número de refrescos de cola que beben al día. Las respuestas obtenidas son los siguientes:
+
+\begin{equation}
+\begin{matrix}
+5 & 2 & 2 & 4 & 5\\
+1 & 1 & 4 & 2 & 1\\
+3 & 5 & 1 & 0 & 5\\ 
+0 & 3 & 2 & 3 & 4
+\end{matrix}
+\end{equation}
+
+
+
+
+
+
+
+### Frecuencia relativa
+
+
+
+```{r Tabla1, tidy=FALSE}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+Tabla1 <- as.data.frame(sort(table(TC3 =Pc),decreasing = T))
+Tabla2 <- transform(Tabla1, FreAc = cumsum(Freq))
+Tabla3 <- transform(Tabla2,Rel = round(prop.table(Freq),3))
+knitr::kable(
+Tabla3,
+caption = 'Frecuencia Relativa',
+  booktabs = TRUE
+)
+```
+
+
+
+### Frecuencia relativa y acumulada
+
+```{r Tabla2, tidy=FALSE}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+Tabla1 <- as.data.frame(sort(table(TC3 =Pc),decreasing = T))
+Tabla2 <- transform(Tabla1, FreAc = cumsum(Freq))
+Tabla3 <- transform(Tabla2,Rel = round(prop.table(Freq),3))
+Tabla4 <- transform(Tabla3,RelAc = round(cumsum(prop.table(Freq)),3))
+knitr::kable(
+Tabla4 , caption = 'Frecuencia relativa y acumulada',
+  booktabs = TRUE
+)
+```
+
+
+
+
+
+Comando para obtener el Rango de una variable: Ej obtener el rango de la variable EDAD
+```{r}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+range(Pc, na.rm=TRUE)
+# El parámetro na.rm=TRUE se usa para que ingore la presencia de valores perdidos
+```
+
+Comando para obtener el número de clases para la variable EDAD:
+  
+```{r}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+nclass.Sturges(Pc)  # Número de intervalos
+```
+
+
+
+Comando para obtener el límites extremo derecho; extremo derecho en cada una de las clases:
+  
+```{r}
+seq(0,5,length=nclass.Sturges(Pc))  # Límites de los intervalos
+```
+
+
+Comando para obtener la Tabla de frecuencias absolutas para la variable EDAD
+
+```{r}
+intervalosEDAD=cut(Pc,breaks=seq(0,5,length=nclass.Sturges(Pc)),include.lowest=TRUE)
+intervalosEDAD # Se muestran los intervalos de edad, uno correspondiente a cada edad observada
+```
+
+Comando para obtener la Tabla de frecuencias absolutas para la variable EDAD
+```{r}
+table(intervalosEDAD)
+```
+
+
+
+
+```{r Tabla3, tidy=FALSE}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+Tabla1 <- as.data.frame(sort(table(TC3 =Pc),decreasing = T))
+Tabla2 <- transform(Tabla1, FreAc = cumsum(Freq))
+knitr::kable(
+Tabla2 , caption = 'Frecuencia acumulada',
+  booktabs = TRUE
+)
+```
+
+
+
+Comando para generar la GRAFICA DE BARRAS de frecuencias absolutas relacionada a la variable Pc
+
+
+```{r Tabla4, tidy=FALSE}
+# klippy::klippy()
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+Tabla1 <- as.data.frame(sort(table(TC3 =Pc),decreasing = T))
+
+knitr::kable(
+Tabla1 , caption = 'Frecuencia Absoluta',
+  booktabs = TRUE
+)
+```
+
+### Gráfica de barras (**Frecuencia absoluta**)
+
+```{r}
+tb <- table(Pc)
+barras <- barplot(tb,col='skyblue', ylab ="Frecuencias Absolutas", ylim=c(0,5))
+text(barras,c(1,1),tb)
+grid()
+```
+
+
+
+
+
+
+Comando para generar la GRAFICA DE BARRAS de frecuencias relativas relacionada a la variable Pc
+```{r}
+tbp <- prop.table(table(Pc))
+barras2 <- barplot(tbp,col='skyblue', ylab ="Frecuencias Relativas", ylim=c(0,0.25))
+text(barras2,c(0.05,0.05),tbp*100)
+grid()
+```
+
+
+```{r Tabla5, tidy=FALSE}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+k12 <-ncol(matrix(Pc,1,20))
+k11<-round(1 + (3.322*log10(k12)),digits = 0)
+k11
+Px <- as.data.frame(table(x=factor(cut(Pc,breaks=k11))))
+
+PPx <- transform(Px,
+               FreAc =cumsum(Freq),
+               Rel=round(prop.table(Freq),4),
+               RelAc=round(cumsum(prop.table(Freq)),4))
+knitr::kable(
+PPx , caption = 'Tabla en Frecuencia para Datos Agrupados',
+  booktabs = TRUE
+)
+```
+
+
+Comando para obtener el histograma (ó GRAFICO) asociado a la tabla de frecuencias absolutas
+```{r}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+# table(intervalosEDAD)
+tbp1 <- table(Pc)
+grahis <-hist(Pc, ylab ="Frecuencias Absoluta", main ="Histograma de clases asociados a una frecuencia absoluta ", col="skyblue", xlab = "Variable Pc")
+# text(grahis,c(1,1),tbp1)
+grid()
+```
+
+
+Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD
+
+### Gráfica caja y bigotes
+
+
+```{r}
+boxplot(Pc,
+        main="Caja de bigotes Horizontal variable numéricas Pc",
+        col="skyblue",horizontal=T)
+values <- c(round(boxplot.stats(Pc)$conf, 1), boxplot.stats(Pc)$stats)
+text(x = values, labels = values, y = 1.25)
+```
+
+
+```{r}
+boxplot(Pc,
+        main="Caja de bigotes Vertical variable numéricas Pc",
+        col="skyblue",horizontal=F)
+values <- c(round(boxplot.stats(Pc)$conf, 1), boxplot.stats(Pc)$stats)
+text(y = values, labels = values, x = 1.25)
+```
+
+
+
+
+
+
+```{r}
+Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
+summary(Pc)
+```
+
+
+
+
+
+* Ejemplo2
+
+**Tecnología**: Se pregunto a 30 jóvenes cuántas horas didicaban cada día a navegar en internet (el tiempo que dedican a sesiones de chat y a las redes sociales quedan incluido). Los resultados son los siguientes:
+
+\begin{equation}
+\begin{matrix}
+2.5 & 4.5 & 5.8 & 2.2 & 5.7\\
+5.3 & 4.0 & 0.9 & 2.5 & 2.3\\
+3.2 & 4.9 & 2.7 & 3.7 & 3.8\\
+4.9 & 2.8 & 3.6 & 4.2 & 3.1\\
+7.2 & 1.9 & 5.9 & 3.3 & 2.9\\
+1.1 & 1.7 & 2.6 & 3.1 & 4.4
+\end{matrix}
+\end{equation}
+
+<br></br>
+
+## Proceso para presentar datos en forma agrupada
+
+* Obtener el tamaño de la muestra $(n)$.
+* Hallar el m\'inimo y el m\'aximo de los datos
+* Obtener el recorrido de la variable (o rango) el cual se define como:
+
+$$
+R=x_{max}-x_{min}
+$$
+
+* Calcular el número de intervalos (o clases) a utilizar.
+
+
+Estos intervalos tambión se llaman **intervalos de clase**. La **regla de Sturges** indica que el número de intervalos de clase recomendado, es:
+		$$
+		k=1+3,322log_{10}(n)
+		$$
+		donde $n$ es el tamaño de la muestra.
+		
+* Obtener la amplitud de clase. La amplitud de cada celda se calcula con la fórmula.
+		
+	$$
+	a=\dfrac{R}{k}=\dfrac{x_{max}-x_{min}}{k}
+	$$
+
+* Los intervalos seleccionados no pueden solaparse.
+
+* Contar el número de datos que caen en cada intervalo de clase. Dicho conteo se llama la **frecuencia absoluta** de clase.
+
+* Calcular la **frecuencia relativa de clase** dividiendo la **frecuencia absoluta de clase** por el número total de datos en la muestra.
+
+* El diagrama ubica la variable evaluada en el eje $x$, y sobre este eje, levanta rectángulos cuyas áreas son iguales o proporcionales a la frecuencia absoluta $(n_i)$ o relativa $(f_i)$ de cada intervalo de clase.
+
+<br></br>
+
+* Ejemplo3
+
+```{r}
+edad <- c(22, 34, 29, 25, 30, 33, 31, 27, 25, 25)
+tiempo <- c(14.21, 10.36, 11.89, 13.81, 12.03, 10.99, 12.48, 13.37, 12.29, 11.92)
+sexo <- c("M","H","H","M","M","H","M","M","H","H")
+misdeClase <- data.frame(edad,tiempo,sexo)
+boxplot(misdeClase$edad~misdeClase$sexo,horizontal = T)
+Pc <- misdeClase$edad
+values <- c(round(boxplot.stats(Pc)$conf, 1), boxplot.stats(Pc)$stats)
+text(x = values, labels = values, y = 1.5)
+```
+
+
+
+```{r}
+edad <- c(22, 34, 29, 25, 30, 33, 31, 27, 25, 25)
+tiempo <- c(14.21, 10.36, 11.89, 13.81, 12.03, 10.99, 12.48, 13.37, 12.29, 11.92)
+sexo <- c("M","H","H","M","M","H","M","M","H","H")
+misdeClase <- data.frame(edad,tiempo,sexo)
+boxplot(misdeClase$tiempo~misdeClase$sexo,horizontal = T)
+P1c <- misdeClase$tiempo
+values <- c(round(boxplot.stats(P1c)$conf, 1), boxplot.stats(P1c)$stats)
+text(x = values, labels = values, y = 1.5)
+```
+
+
+```{r}
+edad <- c(22, 34, 29, 25, 30, 33, 31, 27, 25, 25)
+tiempo <- c(14.21, 10.36, 11.89, 13.81, 12.03, 10.99, 12.48, 13.37, 12.29, 11.92)
+sexo <- c("M","H","H","M","M","H","M","M","H","H")
+misdeClase <- data.frame(edad,tiempo,sexo)
+boxplot(misdeClase$tiempo~misdeClase$sexo,horizontal = F)
+P1c <- misdeClase$tiempo
+values <- c(round(boxplot.stats(P1c)$conf, 1), boxplot.stats(P1c)$stats)
+text(y = values, labels = values, x = 1.5)
+```
+
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAdatosAGRUPADOS8.jpg){width=55%}</center>
+
+### Críterio datos **atípicos**
+
+$$
+\text{Dato atípico}>Q_{3}+1.5(Q_{3}-Q_{1})
+$$
+$$
+\text{Dato atípico}<Q_{1}-1.5(Q_{3}-Q_{1})
+$$
+
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAcajaybigotes12.jpg){width=85%}</center>
+
+
+
+
+## Datos no agrupados
+
+Las siguientes son recomendaciones en el tratamiento de datos no agrupados.
+
+* Ordenar los datos de menor a mayor.
+* Colocar una etiqueta numérica para tener clara la posición que tiene el datos en el ordenamiento.
+
+
+### Medidas de posición
+
+Todas ellas a su manera tratan de dar una idea del número alrededor del cual se centra a todo el conjunto de datos.
+
+
+### La media aritmética para datos no agrupados $(\bar{x})$
+
+$$
+		\bar{x}=\dfrac{\sum^{n}_{i=1}x_{i}}{n}
+$$	
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAlamedia12.jpg){width=55%}</center>
+
+### La mediana para datos no agrupados
+
+El número $n$ es impar
+		
+$$Me=X_{\frac{n+1}{2}}$$
+El número $n$ es par
+
+$$Me=\dfrac{X_{\frac{n}{2}}+X_{\frac{n+2}{2}}}{2}$$
+
+### La Moda $(M_{0})$
+
+Es la medida de posición  que indica la magnitud del valor que se presenta con más frecuencia en una serie de datos.
+
+
+
+
+
+### Cálculo de cuartiles en datos NO agrupados
+
+Sea el conjunto de datos no agrupados:
+
+$$
+	20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+$$
+* Proceso $Q_{1}:$
+El primer cuartil es el valor mayor que el $25 \%$ de los valores de la distribuci\'on. como N=20 resulta que
+
+$$
+\dfrac{n}{4}=5
+$$
+el primer cuartil es la media aritm\'etica de dicho valor y el siguiente:
+		
+$$
+Q_{1}=\dfrac{24+25}{2}=24.5
+$$ 
+Sea el conjunto de datos no agrupados:
+
+$$
+	20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+$$
+
+* Proceso $Q_{2}:$
+
+El segundo cuartil es, evidentemente, la medianan de la distribución, es el valor de la variable que ocupa el lugar central en un conjunto de datos ordenados. Ccomo N=20 resulta que
+
+$$
+\dfrac{n}{2}=10
+$$
+
+la mediana es la media aritm\'etica de dicho valor y el siguiente:
+
+$$
+M_{e}=Q_{2}=\dfrac{33+34}{2}=33.5
+$$ 
+Sea el conjunto de datos no agrupados:
+
+$$
+	20,23,24,24,24,25,29,31,31,33,34,36,36,37,39,39,40,40,41,45
+$$
+
+* Proceso $Q_{3}:$
+
+El tercer cuartil es, el valor que sobrepasa al $75 \%$ de los valores de la distribución. En nuestro caso, como $N=20$ resulta que
+
+$$
+\dfrac{3n}{4}=15
+$$
+		
+resulta:
+
+$$
+Q_{3}=\dfrac{39+39}{2}=39
+$$ 
+
+
+## Datos agrupados
+
+
+```{r Estadistica2, fig.cap="Medidas de tendencia central, imagen tomada de [@gutierrez2012probabilidad] pág $46$", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE, out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/MedidasDeTendenciaCentralYDispersion1.jpg")
+```
+
+
+
+### Ejemplo1 Datos agrupados
+
+Dada la siguiente distribución correspondiente al salario samanal en dòlares para un grupo de obreros en una empresa petrolera tradicional
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAdatosAGRUPADOS7.jpg){width=75%}</center>
+
+Obtener:
+
+* La media $(\bar{x}=?)$
+
+* La mediana $(Me=?)$
+
+* La moda $(Mo=?)$
+
+* El primer cuartil $(Q_1=?)$
+
+* El segundo cuartil $(Q_2=?)$
+
+* El tercer cuartil $(Q_3=?)$
+
+* La varianza $(\sigma^2=?)$
+
+* La desviación estándar $(\sqrt{\sigma^2}=\sigma=?)$
+
+
+**CODIGO PARA HALLAR LA MEDIA**
+
+```{r}
+a <- c(200,300,400,500,600,700)
+b <- c(300,400,500,600,700,800)
+fi <- c(85,90,120,70,62,36)
+Fi <- cumsum(fi)
+Sumavfi <- function(x){
+    y <- sum(x)
+    return(y)
+}
+# Sumavfi(vfi)
+MarcaC <- function(a,b){
+    yr <- (a+b)/2
+    return(yr)
+}
+#MarcaC(300,400)
+TDAG <- data.frame(a,b,fi,Fi)
+TDAG
+TDAG$a
+TDAG$b
+MarcaC(TDAG$a,TDAG$b)
+TDAG2 <- transform(TDAG,xi =MarcaC(a,b))
+TDAG2
+Media_DatosAgrupados <- function(x,y){
+    n <- sum(x)
+    p <- sum(x*y)
+    yr <- p/n
+    return(yr)
+}
+Media_DatosAgrupados(x=TDAG2$fi,y=TDAG2$xi)
+round(Media_DatosAgrupados(x=TDAG2$fi,y=TDAG2$xi),2)
+```
+
+
+
+### Ejemplo2 Datos agrupados
+
+En la distribución de frecuencias correspondiente al peso en $Kg$ para un grupo de obreros.
+
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAdatosAGRUPADOS5.jpg){width=65%}</center>
+
+Calcule:
+
+* La media $(\bar{x}=?)$
+
+* La mediana $(Me=?)$
+
+* La moda $(Mo=?)$
+
+* El primer cuartil $(Q_1=?)$
+
+* El segundo cuartil $(Q_2=?)$
+
+* El tercer cuartil $(Q_3=?)$
+
+* La varianza $(\sigma^2=?)$
+
+* La desviación estándar $(\sqrt{\sigma^2}=\sigma=?)$
+
+
+**Proceso Mediana**
+
+```{r}
+a <- c(30,40,50,60,70,80,90) 
+b <- c(40,50,60,70,80,90,100) 
+fi <- c(2,2,7,11,12,16,2) 
+tabla <- data.frame(a=a, b=b, fi=fi, Fi=cumsum(fi)) 
+tabla
+n <- sum(fi)
+Nmedios <- n/2 # posición de la clase para la Mediana
+Li <- 70
+f_act <- 12
+F_ant <- 22
+Ic <- 10
+Mediana <- function(n,Nmedios,Li,f_act,F_ant,Ic){
+    num <- Nmedios-F_ant
+    den <- f_act
+    yr <- Li+(num/den)*Ic
+    return(yr)
+}
+Mediana(n,Nmedios,Li,f_act,F_ant,Ic)
+round(Mediana(n,Nmedios,Li,f_act,F_ant,Ic),2)
+
+
+a <- c(55,60,65,70,75,80,85) 
+b <- c(60,65,70,75,80,85,90) 
+fi <- c(6,20,18,50,17,16,5) 
+tabla <- data.frame(a=a, b=b, fi=fi, Fi=cumsum(fi)) 
+tabla 
+n <- sum(fi) 
+Nmedios <- n/2 #posicion de la clase para la
+Nmedios 
+
+Li <-70 
+f_act <- 50 # es el fi de la clase donde esta la mediana, osea la actual 
+F_ant <- 44 #es el Fi aanterior (22) 
+Ic =5 #es la amplitud de la clase 
+Mediana <- function(n,Nmedios,Li,f_act,F_ant,Ic){ 
+num <- Nmedios-F_ant 
+den <- f_act 
+yr <-Li + (num/den) * Ic 
+return(yr) 
+} 
+Mediana(n,Nmedios,Li,f_act,F_ant,Ic) 
+round(Mediana(n,Nmedios,Li,f_act,F_ant,Ic),2) 
+```
+
+
+**Proceso Moda**
+
+```{r}
+a <- c(30,40,50,60,70,80,90) 
+b <- c(40,50,60,70,80,90,100) 
+fi <- c(2,2,7,11,12,16,2) 
+tabla <- data.frame(a=a, b=b, fi=fi, Fi=cumsum(fi)) 
+tabla
+n <- sum(fi)
+Li <- 80
+Ic <- 10
+delta1 <- 4
+delta2 <- 14
+Moda <- function(Li,delta1,delta2,Ic){
+    num <- delta1
+    den <- delta1+delta2
+    yr <- Li+(num/den)*Ic
+    return(yr)
+}
+Moda(Li,delta1,delta2,Ic)
+round(Moda(Li,delta1,delta2,Ic),2)
+```
+
+
+
+
+
+### Ejemplo3 Datos agrupados
+
+Para la tabla de distribución en frecuencias correspondiente a las horas extras laboradas por un grupo de obreros
+
+<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAdatosAGRUPADOS3.jpg){width=55%}</center>
+
+Realice el cálculo de:
+
+
+* La media $(\bar{x}=?)$
+
+* La mediana $(Me=?)$
+
+* La moda $(Mo=?)$
+
+* El primer cuartil $(Q_1=?)$
+
+* El segundo cuartil $(Q_2=?)$
+
+* El tercer cuartil $(Q_3=?)$
+
+* La varianza $(\sigma^2=?)$
+
+* La desviación estándar $(\sqrt{\sigma^2}=\sigma=?)$
+
+
+**Proceso para la varianza**
+
+
+```{r}
+a <- c(55,60,65,70,75,80,85)
+b <- c(60,65,70,75,80,85,90)
+fi <- c(6,20,18,50,17,16,5)
+Fi <- cumsum(fi)
+TDAG <- data.frame(a,b,fi,Fi)
+MarcaC <- function(a,b){
+    yr <- (a+b)/2
+    return(yr)
+}
+TDAG2 <- transform(TDAG,xi =MarcaC(a,b))
+TDAG2
+Xm <- function(x,y){
+    n <- sum(x)
+    p <- sum(x*y)
+    yr <- p/n
+    return(yr)
+}
+n <- sum(fi)
+Varianza <- function(n,fi,M,Media){
+    p1 <- (M-Media)^2
+    p2 <- fi*p1
+    suma <- sum(p2)
+    yr <- suma/(n-1)
+    return(yr)
+}
+Xm(x=TDAG2$fi,y=TDAG2$xi)
+Varianza(n,fi,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi))
+desvs <- (Varianza(n,fi,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi)))^(1/2)
+desvs
+
+# Desviación media (Dispersión)
+
+DM <- function(n,M,Media){
+    d <- abs(M-Media)
+    suma <- sum(d)
+    yr <- suma/n
+    return(yr)
+}
+DM(n,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi))
+
+```
+
+**Proceso para el $Q_3$**
+
+```{r}
+a <- c(55,60,65,70,75,80,85) 
+b <- c(60,65,70,75,80,85,90) 
+fi <- c(6,20,18,50,17,16,5) 
+tabla <- data.frame(a=a, b=b, fi=fi, Fi=cumsum(fi)) 
+tabla 
+n <- sum(fi)
+c <- 3
+P <- (c*n)/4
+P
+Li <- 75
+fq <- 17
+Fant <- 94
+Ic <- 5
+Q3 <- function(P,Li,fq,Fant,Ic){
+           NUM <- P-Fant
+           DEN <- fq
+           yr <- Li + (NUM/DEN)*Ic
+         return(yr)
+        }
+Q3(P,Li,fq,Fant,Ic) 
+```
+
+
+
+
+
+### Dispersión
+
+```{r Sesgo1, fig.cap="Dispersión, imagen tomada de [@gutierrez2012probabilidad] pág $51$", fig.align='center' ,echo=FALSE, message=FALSE,  warning=FALSE,out.width="70%"}
+knitr::include_graphics("/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Sesgo1.jpg")
+```
+
+
+### Aplicación Shiny para Dispersión
+
+Esta aplicación genera de manera aleatoria datos y
+compara la función de densidad con la gráfica de caja y bigotes.
+
+
+[Densidad - Caja y bigotes para obtener la conclusión de asimetría](https://septiembreestradajohnjairo2021uces.shinyapps.io/DistribucionDensity_A1/)
+
+* **Simétrica**, si la mayor concentración de datos se localiza en el centro de la distribución
+
+* **Sesgada a derecha**, si la mayor concentración de datos se localiza a la izquierda de la distribución
+
+* **Sesgada a izquierda**, si la mayor concentración de datos se localiza a la derecha de la distribución
+
+
+### La media para datos agrupados $(\bar{x})$
+
+
+$$
+\bar{x}=\dfrac{\sum_{i=1}^{n}f_{i}x_{i}}{n}
+$$
+
+
+### La mediana para datos agrupados $(Me)$
+
+Proceso:
+
+* Se elabora la tabla de frecuencias de datos con diferentes intervalos de clases, se ubican las frecuencias absolutas $n_{i}$ y se calculan las frecuencias acumuladas $F_{i}$ de la distribución.
+
+* Se determina la ubicación o posición de la mediana en el intervalo de la distribución de frecuencia, mediante la fórmula $\frac{n}{2}$. Esta clase se llamará clase de la mediana. El resultado obtenido determinarí la clase donde se encuentra ubicada $f_{i}$ sea igual o superior a este resultado. Luego se aplica la fórmula:
+
+$$Me=L_{i}+\left( \dfrac{\frac{n}{2}-F_{i-1}}{f_{i}}\right) I_c$$
+
+* $\frac{n}{2}$: Posición de la mediana.**()**
+
+Este valor de posición se comparó con las datos que se tienen en la columna (**$F_i$**), y posteriormente se selecciona el valor más proximo pero mayor que $\frac{n}{2}$. El intervalo donde se encontro dicho valor se denomina "**Intervalo de la mediana**"
+
+*	$L_{i}$: Es el limite inferior de la clase donde se ubicada la mediana.
+
+
+* $F_{(i-1)}$: Es el valor de la frecuencia acumulada anterior a la clase mediana.
+
+
+*	$f_{i}$: Es el valor de la frecuencia de clase donde se encuentra la mediana.
+
+
+*	$I_{c}$: Es el tamaño del intervalo de clase.
+
+
+*	$n$: Es el número total de datos de la distribuación en estudio.
+
+
+
+### Los cuartiles para datos agrupados $(Q_c)$
+
+$$Q_c=L_{i}+\left( \dfrac{\frac{cn}{4}-F_{(i-1)}}{f_{i}}\right) I_c$$
+
+Se inicia determinando la posición que ocupa el cuartil solicitado mediante la fórmula
+
+Posición de clase para el cuartil $c$; 
+
+$$
+P_{c}=\dfrac{cn}{4}
+$$
+$\frac{cn}{4}$: Posición que ocupa el cuartil en la distribución de frecuencia.
+
+Este valor de posición se comparó con las datos que se tienen en la columna (**$F_i$**), y posteriormente se selecciona el valor más proximo pero mayor que $\frac{n}{2}$. El intervalo donde se encontro dicho valor se denomina "**Intervalo intercuartílico $Q_c$**"
+
+$c$: Corresponde al número del cuartil solicitado: $1,2,3$.
+
+$L_{i}$: Es el limite inferior de la clase donde se encuentra ubicado el cuartil deseado.
+
+
+### La moda para datos agrupados $(Mo)$
+
+$$
+M_{o}=L_{i}+\left( \dfrac{\vartriangle_{1}}{\vartriangle_{1}+\vartriangle_{2}}\right) I_c
+$$
+
+$L_{i}$: Es el limite inferior de la clase modal.
+
+$\vartriangle_{1}$:Es la diferencia entre la frecuencia absoluta de la clase modal y la frecuencia de la clase anterior a la modal.
+
+$\vartriangle_{2}$:Es la diferencia entre la frecuencia absoluta de la clase modal y la frecuencia de la clase siguiente a la modal.
+
+$I_{c}$: Es el tamaño del intervalo de clase.
+
+
+### Cálculo de Deciles para datos agrupados.
+
+$$
+D_k=L_{i}+\left( \dfrac{\frac{kn}{10}-F_{(i-1)}}{f_{i}}\right) I_c
+$$
+
+
+
+
+
+### Percentil para datos agrupados.
+
+$$
+P_k=L_{i}+\left( \dfrac{\frac{kn}{100}-F_{(i-1)}}{f_{i}}\right) I_c
+$$
+
+
+## Medidas de dispersión
+
+La medida de dispersión es un número que nos indica el grado de separación en un conjunto de datos. Si el valor de la dispersión es pequeño (respecto de la unidad de medida)
+entonces hay una gran uniformidad entre los datos (homogénea)
+
+
+Por el contrario, un gran valor en la dispersión nos indica poca uniformidad
+(heterogénea). Cuando es cero quiere decir que todos los datos son iguales. Las medidas
+de dispersión se clasifican en dos grupos
+
+
+
+* **Dispersión absoluta**
+
+Entre ellas el rango, el rango intercuartilico, la desviación media, la varianza y la desviación típica. 
+
+$$
+\text{Para datos no agrupados}: \ \text{DM}=\dfrac{\sum\left| x_{i}-\bar{x} \right| }{n}=\dfrac{\sum\left| d_{i} \right|}{n} 
+$$
+$$
+\text{Para datos agrupados}: \ \text{DM}=\dfrac{\sum\left| x_{PM}-\bar{x} \right|f_{i} }{n}=\dfrac{\sum x_{i}\left| d_{i} \right|}{n} 
+$$
+
+* **Dispersión relativa**
+
+La que tiene mayor importancia es el coeficiente de variación.
+
+El valor numérico de la varianza es mayor cuando más dispersión tienen los valores de la
+variable en estudio, y por tanto, cuanto menos representativa es la media.
+
+
+El coeficiente de variación (ó coeficiente de Pearson) $CV$, se define por el cociente
+entre la desviación típica (ó estándar) y la media aritmética de la variable e indica,
+por tanto, el número de veces que la desviación típica contiene a la media.
+
+$$
+CV=\dfrac{S}{\bar{x}}\times 100 \%
+$$
+El inconveniente de esta medida es que si es igual a cero el denominador de la fracción;
+es decir, la media de la variable, carece de significado.
+
+El valor mínimo del coeficiente de variación es cero, que es el valor que toma cuando es
+igual a cero el numerador de la fracción; es decir, la variación típica. En tal caso,
+todos los valores de la variable son iguales a la media, de manera que la dispersión de
+los valores en torno a la media es nula y la media es la representación perfecta de la
+serie de datos.
+
+La media es tanto más representativa cuando más próximo a cero está el coeficiente de
+variación , y cuanto más elevado es el coeficiente de variación, menos representativa es
+la media.
+
+	
+**NOTA:**
+	
+La varianza es más significativa cuando se comparan dos o más conjuntos de
+observaciones.
+
+### **Varianza para datos no agrupados**
+
+
+$$
+S^{2}=\dfrac{\sum ( x_{i}-\bar{x})^{2}}{n}
+$$
+
+### **Varianza para datos agrupados**
+
+$$
+S^{2}=\dfrac{\sum f_{i}( x_{i}-\bar{x})^{2}}{n-1}
+$$
+
+
+### **Desviación típica para datos no agrupados**
+
+$$
+S=\sqrt{\dfrac{\sum ( x_{i}-\bar{x})^{2}}{n}}
+$$
+
+### **Desviación típica para datos agrupados**
+
+$$
+S=\sqrt{\dfrac{\sum f_{i}( x_{i}-\bar{x})^{2}}{n-1}}
+$$
+
+## Coeficiente para variación de Karl Pearson
+
+
+
+
+
+Este es un criterio numérico para determinar la simetría (ó sesgo) en un histograma o en
+una gráfica poligonal continua
+
+$$
+A_{p}=\dfrac{\bar{x}-M_{0}}{S}
+$$
+
+* Asimétria por la derecha (ó distribuación es asimétrica positiva) $(M_{0}<\bar{x})$, y $A_{p}>0$
+
+* Asimétria por la izquierda (ó distribución es asimétrica negativa) $(\bar{x}<M_{0})$ y $A_{p}<0$
+
+* Asimétria $A_{p}=0$
+
+
+Para cuando la moda no se encuentra bien definida se puede sustituir por la mediana
+
+$$
+A_{p}=\dfrac{\bar{x}-M_{e}}{S}
+$$
+
+## Medida cuartil de asimetría
+
+En una distribución simétrica los cuartiles quedan simétricamente colocados respecto a la mediana, pero si es asimétrica un cuartil se separa más de otro. La medida cuartil de asimetría esta dada por
+
+
+$$
+S_{k}=\dfrac{(Q_3-M_{e})-(M_{e}-Q_{1})}{Q_{3}-Q_{1}}=\dfrac{Q_{3}+Q_{1}-2M_{e}}{RI}
+$$
+
+* Si la asimetría es a la derecha $Q_{3}$ está más lejos de la mediana que $Q_{1}$.
+
+* Si la asimétria es a la izquierda $Q_{1}$ está más alejada de la mediana que $Q_{3}$.
+
+
+
+## Coeficiente de asimetría de Fisher
+
+
+Permite interpretar la forma de la distribución, respecto a ser o no simétrica.
+
+
+$$
+A_{s}=\dfrac{\dfrac{\sum{f_{i}(x_{i}-{\bar{x}})^3}}{n}}{\sigma^3}
+$$
+
+* Si $A_{s}<0$ es asimétrica a izquierda.
+
+* Si $A_{s}=0$ es simétrica.
+
+* Si $A_{s}>0$ es asimétrica a derecha
