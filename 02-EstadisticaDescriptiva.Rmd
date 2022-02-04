@@ -204,7 +204,7 @@ $$
 
 #### Ejemplo1
 
-En una clase de $30$ estudiantes, $12$ juegan baloncesto, $3$ practican natación, $9$ juegan al fútbol y el resto no practican ningun deporte.
+En una clase de $30$ estudiantes, $12$ juegan baloncesto, $3$ practican natación, $9$ juegan al fútbol y el resto no practican ningún deporte.
 
 
 $\alpha_1=\dfrac{{360}^º}{30}(12)={144}^º$
@@ -214,6 +214,26 @@ $\alpha_2=\dfrac{{360}^º}{30}(3)={36}^º$
 $\alpha_3=\dfrac{{360}^º}{30}(9)={108}^º$
 
 $\alpha_4=\dfrac{{360}^º}{30}(6)={72}^º$
+
+
+```{r}
+fi <- c(12,3,9,6)
+pie(fi)
+```
+
+
+Gráfica con etiquetas
+
+
+
+```{r}
+fi <- c(12,3,9,6)
+etiquetas <- c("baloncesto","natación","fútbol","ningún deporte")
+pie(fi,etiquetas)
+```
+
+
+
 
 
 #### Ejemplo2
