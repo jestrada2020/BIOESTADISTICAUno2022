@@ -24,7 +24,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -195,7 +195,9 @@ div.csl-indent {
 <li class="chapter" data-level="3.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-círcular"><i class="fa fa-check"></i><b>3.2</b> Gráfica círcular<span></span></a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejemplo-presentación-de-datos-en-forma-de-torta"><i class="fa fa-check"></i><b>3.2.1</b> Ejemplo presentación de datos en forma de torta<span></span></a></li>
-<li class="chapter" data-level="3.2.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-caja-y-bigotes"><i class="fa fa-check"></i><b>3.2.2</b> Gráfica caja y bigotes<span></span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cuantiles"><i class="fa fa-check"></i><b>3.2.2</b> Cuantiles<span></span></a></li>
+<li class="chapter" data-level="3.2.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#cuartiles"><i class="fa fa-check"></i><b>3.2.3</b> Cuartiles<span></span></a></li>
+<li class="chapter" data-level="3.2.4" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#gráfica-caja-y-bigotes"><i class="fa fa-check"></i><b>3.2.4</b> Gráfica caja y bigotes<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#proceso-para-presentar-datos-en-forma-agrupada"><i class="fa fa-check"></i><b>3.3</b> Proceso para presentar datos en forma agrupada<span></span></a>
 <ul>
@@ -803,11 +805,34 @@ en ellos.</p>
 <p>Un estudio hecho al conjunto de <span class="math inline">\(20\)</span> estudiantes de una clase en la universidad determino su grupo sanguíneo. tipo A <span class="math inline">\(6\)</span>, tipo B <span class="math inline">\(4\)</span>, tipo AB <span class="math inline">\(1\)</span>, y tipo O <span class="math inline">\(9\)</span>.</p>
 <p>Realizar una gráfica de torta para el resultado del estudio.</p>
 <p><br></br></p>
+</div>
+</div>
+<div id="cuantiles" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Cuantiles<a href="estadística-descriptiva.html#cuantiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los cuantiles son conjuntos de valores (ó puntos)
+que dividen el conjunto de datos en grupos de igual tamaño.
+Por ejemplo, en la figura, hay nueve valores que dividen el conjunto
+de datos . Esos nueve valores son cuantiles</p>
+<div class="figure"><span style="display:block;" id="fig:Est1"></span>
+<img src="images/GraficaCuantiles.jpg" alt="Ejemplo Cuantiles" width="60%" />
+<p class="caption">
+Figura 3.1: Ejemplo Cuantiles
+</p>
+</div>
+</div>
+<div id="cuartiles" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Cuartiles<a href="estadística-descriptiva.html#cuartiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los tres puntos de división (ó cuantiles) que dividen los datos en cuatro grupos de igual tamaño se denominan cuartiles. Por ejemplo, en la figura los tres puntos divisores Q1, Q2, Q3 son cuartiles.</p>
+<div class="figure"><span style="display:block;" id="fig:Est2"></span>
+<img src="images/FiguraCuartiles.jpg" alt="Ejemplo Caurtiles" width="60%" />
+<p class="caption">
+Figura 3.2: Ejemplo Caurtiles
+</p>
+</div>
 <p>Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD</p>
 </div>
-</div>
-<div id="gráfica-caja-y-bigotes" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Gráfica caja y bigotes<a href="estadística-descriptiva.html#gráfica-caja-y-bigotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gráfica-caja-y-bigotes" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Gráfica caja y bigotes<a href="estadística-descriptiva.html#gráfica-caja-y-bigotes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="estadística-descriptiva.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Pc,</span>
 <span id="cb24-2"><a href="estadística-descriptiva.html#cb24-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;Caja de bigotes Horizontal variable numéricas Pc&quot;</span>,</span>
 <span id="cb24-3"><a href="estadística-descriptiva.html#cb24-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="st">&quot;skyblue&quot;</span>,<span class="at">horizontal=</span>T)</span>
@@ -999,7 +1024,7 @@ Q_{3}=\dfrac{39+39}{2}=39
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Estadistica2"></span>
 <img src="/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/MedidasDeTendenciaCentralYDispersion1.jpg" alt="Medidas de tendencia central, imagen tomada de [@gutierrez2012probabilidad] pág $46$" width="60%" />
 <p class="caption">
-Figura 3.1: Medidas de tendencia central, imagen tomada de <span class="citation">(<a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">Gutierrez Banegas, Leon, et al. 2012</a>)</span> pág <span class="math inline">\(46\)</span>
+Figura 3.3: Medidas de tendencia central, imagen tomada de <span class="citation">(<a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">Gutierrez Banegas, Leon, et al. 2012</a>)</span> pág <span class="math inline">\(46\)</span>
 </p>
 </div>
 <div id="ejemplo1-datos-agrupados" class="section level3 hasAnchor" number="3.5.1">
@@ -1282,7 +1307,7 @@ Figura 3.1: Medidas de tendencia central, imagen tomada de <span class="citation
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Sesgo1"></span>
 <img src="/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/Sesgo1.jpg" alt="Dispersión, imagen tomada de [@gutierrez2012probabilidad] pág $51$" width="70%" />
 <p class="caption">
-Figura 3.2: Dispersión, imagen tomada de <span class="citation">(<a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">Gutierrez Banegas, Leon, et al. 2012</a>)</span> pág <span class="math inline">\(51\)</span>
+Figura 3.4: Dispersión, imagen tomada de <span class="citation">(<a href="#ref-gutierrez2012probabilidad" role="doc-biblioref">Gutierrez Banegas, Leon, et al. 2012</a>)</span> pág <span class="math inline">\(51\)</span>
 </p>
 </div>
 </div>

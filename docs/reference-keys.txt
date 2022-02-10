@@ -305,3 +305,7 @@ ejemplo-presentación-de-datos-en-torta
 ejemplo-presentación-de-datos-en-forma-de-torta
 ejemplo1-2
 ejemplo2-1
+cuantiles
+fig:Est1
+cuartiles
+fig:Est2

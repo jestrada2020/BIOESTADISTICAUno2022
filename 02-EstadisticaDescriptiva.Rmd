@@ -245,6 +245,34 @@ Realizar una gráfica de torta para el resultado del estudio.
 
 <br></br>
 
+
+
+### Cuantiles
+
+Los cuantiles son conjuntos de valores (ó puntos)
+que dividen el conjunto de datos en grupos de igual tamaño.
+Por ejemplo, en la figura, hay nueve valores que dividen el conjunto
+de datos . Esos nueve valores son cuantiles
+
+
+
+```{r Est1,echo=FALSE, fig.cap="Ejemplo Cuantiles", out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisticaUno2022/images/GraficaCuantiles.jpg")
+```
+
+
+
+### Cuartiles
+
+Los tres puntos de división (ó cuantiles) que dividen los datos en cuatro grupos de igual tamaño se denominan cuartiles. Por ejemplo, en la figura los tres puntos divisores Q1, Q2, Q3 son cuartiles.
+
+```{r Est2,echo=FALSE, fig.cap="Ejemplo Caurtiles", out.width="60%"}
+knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisticaUno2022/images/FiguraCuartiles.jpg")
+```
+
+
+
+
 Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD
 
 ### Gráfica caja y bigotes
