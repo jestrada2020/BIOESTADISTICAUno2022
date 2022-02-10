@@ -266,7 +266,7 @@ knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisti
 
 Los tres puntos de división (ó cuantiles) que dividen los datos en cuatro grupos de igual tamaño se denominan cuartiles. Por ejemplo, en la figura los tres puntos divisores Q1, Q2, Q3 son cuartiles.
 
-```{r Est2,echo=FALSE, fig.cap="Ejemplo Caurtiles", out.width="60%"}
+```{r Est2,echo=FALSE, fig.cap="Ejemplo Cuartiles", out.width="60%"}
 knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisticaUno2022/images/FiguraCuartiles.jpg")
 ```
 
