@@ -132,7 +132,6 @@ Comando para generar la GRAFICA DE BARRAS de frecuencias absolutas relacionada a
 # klippy::klippy()
 Pc <- c(5,1,3,0,2,1,5,3,2,4,1,2,4,2,0,3,5,1,5,4)
 Tabla1 <- as.data.frame(sort(table(TC3 =Pc),decreasing = T))
-
 knitr::kable(
 Tabla1 , caption = 'Frecuencia Absoluta',
   booktabs = TRUE
@@ -168,7 +167,6 @@ k12 <-ncol(matrix(Pc,1,20))
 k11<-round(1 + (3.322*log10(k12)),digits = 0)
 k11
 Px <- as.data.frame(table(x=factor(cut(Pc,breaks=k11))))
-
 PPx <- transform(Px,
                FreAc =cumsum(Freq),
                Rel=round(prop.table(Freq),4),
@@ -247,7 +245,7 @@ Realizar una gráfica de torta para el resultado del estudio.
 
 
 
-### Cuantiles
+## Cuantiles
 
 Los cuantiles son conjuntos de valores (ó puntos)
 que dividen el conjunto de datos en grupos de igual tamaño.
@@ -262,7 +260,7 @@ knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisti
 
 
 
-### Cuartiles
+## Cuartiles
 
 Los tres puntos de división (ó cuantiles) que dividen los datos en cuatro grupos de igual tamaño se denominan cuartiles. Por ejemplo, en la figura los tres puntos divisores Q1, Q2, Q3 son cuartiles.
 
@@ -275,7 +273,7 @@ knitr::include_graphics("/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisti
 
 Comando para obtener la caja de bigotes (ó GRAFICO) asociado a la variable EDAD
 
-### Gráfica caja y bigotes
+## Gráfica caja y bigotes
 
 
 ```{r}
@@ -294,6 +292,56 @@ boxplot(Pc,
 values <- c(round(boxplot.stats(Pc)$conf, 1), boxplot.stats(Pc)$stats)
 text(y = values, labels = values, x = 1.25)
 ```
+
+
+### Críterio datos **atípicos**
+
+
+Un dato atípico es aquella observación que está muy lejos del resto de los datos.
+Un valor se dice atípico si es mayor que $Q_{3}+1.5(Q_{3}-Q_{1})$, o es menor que
+$Q_{1}-1.5(Q_{3}-Q_{1})$
+
+
+
+$$
+\text{Dato atípico}>Q_{3}+1.5(Q_{3}-Q_{1})
+$$
+$$
+\text{Dato atípico}<Q_{1}-1.5(Q_{3}-Q_{1})
+$$
+
+
+<br></br>
+
+
+<center>![](/home/john/Documentos/DOC-RMD-CLASESUCESV1/BIOestadisticaUno2022/images/GRAFICAcajaybigotes12.jpg){width=85%}</center>
+
+<br></br>
+
+
+
+```{r Caja1}
+x <- c(8, 5, 14, -9, 19, 12, 3, 9, 7, 4,
+       4, 6, 8, 12, -8, 2, 0, -1, 5, 3)
+
+boxplot(x, horizontal = TRUE)
+```
+
+
+<br></br>
+
+
+
+```{r Caja2}
+boxplot(Pc,
+        main="Caja de bigotes Horizontal variable numéricas Pc",
+        col="skyblue",
+        horizontal = TRUE)
+stripchart(Pc, method = "jitter", pch = 19, add = TRUE, col = "blue")
+```
+
+
+<!-- Pagina de referencia - BUSCAR https://r-coder.com/boxplot-en-r/ -->
 
 
 
@@ -401,18 +449,6 @@ text(y = values, labels = values, x = 1.5)
 
 
 <center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAdatosAGRUPADOS8.jpg){width=55%}</center>
-
-### Críterio datos **atípicos**
-
-$$
-\text{Dato atípico}>Q_{3}+1.5(Q_{3}-Q_{1})
-$$
-$$
-\text{Dato atípico}<Q_{1}-1.5(Q_{3}-Q_{1})
-$$
-
-
-<center>![](/home/john/Documentos/MatematicasBioEstadisticaV1/BioestadisticaUnoUCES2021/images/GRAFICAcajaybigotes12.jpg){width=85%}</center>
 
 
 
@@ -631,8 +667,6 @@ Mediana <- function(n,Nmedios,Li,f_act,F_ant,Ic){
 }
 Mediana(n,Nmedios,Li,f_act,F_ant,Ic)
 round(Mediana(n,Nmedios,Li,f_act,F_ant,Ic),2)
-
-
 a <- c(55,60,65,70,75,80,85) 
 b <- c(60,65,70,75,80,85,90) 
 fi <- c(6,20,18,50,17,16,5) 
@@ -641,7 +675,6 @@ tabla
 n <- sum(fi) 
 Nmedios <- n/2 #posicion de la clase para la
 Nmedios 
-
 Li <-70 
 f_act <- 50 # es el fi de la clase donde esta la mediana, osea la actual 
 F_ant <- 44 #es el Fi aanterior (22) 
@@ -743,9 +776,7 @@ Xm(x=TDAG2$fi,y=TDAG2$xi)
 Varianza(n,fi,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi))
 desvs <- (Varianza(n,fi,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi)))^(1/2)
 desvs
-
 # Desviación media (Dispersión)
-
 DM <- function(n,M,Media){
     d <- abs(M-Media)
     suma <- sum(d)
@@ -753,7 +784,6 @@ DM <- function(n,M,Media){
     return(yr)
 }
 DM(n,M=TDAG2$xi,Media=Xm(x=TDAG2$fi,y=TDAG2$xi))
-
 ```
 
 **Proceso para el $Q_3$**
@@ -1036,3 +1066,4 @@ $$
 * Si $A_{s}=0$ es simétrica.
 
 * Si $A_{s}>0$ es asimétrica a derecha
+© 2022 G
