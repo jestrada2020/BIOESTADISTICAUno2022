@@ -310,3 +310,5 @@ fig:Est1
 cuartiles
 fig:Est2
 críterio-para-determinar-datos-atípicos
+fechas-de-evaluación-primer-semestre-2023
+link-de-asistencia-a-clase
