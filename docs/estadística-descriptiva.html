@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2023-02-11" />
+<meta name="date" content="2023-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1710,6 +1710,125 @@ recuperarse de una determinada enfermedad.</li>
 ## [4,]  4.9  2.8  3.6  4.2  3.1
 ## [5,]  7.2  1.9  5.9  3.3  2.9
 ## [6,]  1.1  1.7  2.6  3.1  4.4</code></pre>
+<ol start="13" style="list-style-type: decimal">
+<li>La información fue recolectada en 57 meses consecutivos en los cuales se mantuvo el mismo número de trabajadores. Número de retardos al trabajo en n = 57 meses.</li>
+</ol>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="estadística-descriptiva.html#cb111-1" aria-hidden="true" tabindex="-1"></a>retardos<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">68</span>,<span class="dv">63</span>,<span class="dv">42</span>,<span class="dv">27</span>,<span class="dv">30</span>,<span class="dv">36</span>,<span class="dv">28</span>,<span class="dv">32</span>,<span class="dv">79</span>,<span class="dv">27</span>,<span class="dv">22</span>,<span class="dv">23</span>,<span class="dv">24</span>,<span class="dv">25</span>,<span class="dv">44</span>,<span class="dv">65</span>,<span class="dv">43</span>,<span class="dv">25</span>,<span class="dv">74</span>,</span>
+<span id="cb111-2"><a href="estadística-descriptiva.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="dv">51</span>,<span class="dv">36</span>,<span class="dv">42</span>,<span class="dv">28</span>,<span class="dv">31</span>,<span class="dv">28</span>,<span class="dv">25</span>,<span class="dv">45</span>,<span class="dv">12</span>,<span class="dv">57</span>,<span class="dv">51</span>,<span class="dv">12</span>,<span class="dv">32</span>,<span class="dv">49</span>,<span class="dv">38</span>,<span class="dv">42</span>,<span class="dv">27</span>,<span class="dv">31</span>,<span class="dv">50</span>,<span class="dv">38</span>,<span class="dv">21</span>,<span class="dv">16</span>,<span class="dv">24</span>,</span>
+<span id="cb111-3"><a href="estadística-descriptiva.html#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="dv">69</span>,<span class="dv">47</span>,<span class="dv">23</span>,<span class="dv">22</span>,<span class="dv">43</span>,<span class="dv">27</span>,<span class="dv">49</span>,<span class="dv">28</span>,<span class="dv">23</span>,<span class="dv">19</span>,<span class="dv">46</span>,<span class="dv">30</span>,<span class="dv">43</span>,<span class="dv">49</span>,<span class="dv">12</span>)</span></code></pre></div>
+<ol start="14" style="list-style-type: decimal">
+<li>Se toma como referencia el estudio de la distribución del tiempo de vida de un tipo de brocas. Con la finalidad de obtener información al respecto se condujo un experimento y se registró el número de agujeros que fue posible hacer con una broca antes de romperse. Se obtuvieron los siguientes resultados sobre el número de huecos que fue posible hacer con cada broca antes de fracturarse, a saber</li>
+</ol>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="estadística-descriptiva.html#cb112-1" aria-hidden="true" tabindex="-1"></a>duracion <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">118</span>,<span class="dv">120</span>,<span class="dv">123</span>,<span class="dv">125</span>,<span class="dv">127</span>,<span class="dv">130</span>,<span class="dv">136</span>,<span class="dv">139</span>,<span class="dv">141</span>,<span class="dv">155</span>,<span class="dv">156</span>,<span class="dv">158</span>,<span class="dv">159</span>,</span>
+<span id="cb112-2"><a href="estadística-descriptiva.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="dv">160</span>,<span class="dv">160</span>,<span class="dv">161</span>,<span class="dv">168</span>,<span class="dv">170</span>,<span class="dv">171</span>,<span class="dv">172</span>,<span class="dv">174</span>,<span class="dv">175</span>,<span class="dv">178</span>,<span class="dv">178</span>,<span class="dv">177</span>,<span class="dv">184</span>,<span class="dv">185</span>,<span class="dv">187</span>,<span class="dv">191</span>,<span class="dv">191</span>,</span>
+<span id="cb112-3"><a href="estadística-descriptiva.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="dv">194</span>,<span class="dv">197</span>,<span class="dv">199</span>,<span class="dv">201</span>,<span class="dv">206</span>,<span class="dv">208</span>,<span class="dv">210</span>,<span class="dv">211</span>,<span class="dv">217</span>,<span class="dv">248</span>,<span class="dv">263</span>,<span class="dv">265</span>,<span class="dv">270</span>,<span class="dv">289</span>,<span class="dv">322</span>,<span class="dv">388</span>,<span class="dv">513</span>,</span>
+<span id="cb112-4"><a href="estadística-descriptiva.html#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="dv">520</span>)</span></code></pre></div>
+<ol start="15" style="list-style-type: decimal">
+<li>Considere los datos sobre el tiempo de gestación de 30 focas que se consignaron en la Tabla</li>
+</ol>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="estadística-descriptiva.html#cb113-1" aria-hidden="true" tabindex="-1"></a>gestacion <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">291</span>,<span class="dv">289</span>,<span class="dv">295</span>,<span class="dv">276</span>,<span class="dv">293</span>,<span class="dv">302</span>,<span class="dv">293</span>,<span class="dv">304</span>,<span class="dv">291</span>,<span class="dv">294</span>,<span class="dv">311</span>,<span class="dv">281</span>,<span class="dv">300</span>,<span class="dv">291</span>,</span>
+<span id="cb113-2"><a href="estadística-descriptiva.html#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="sc">+</span> <span class="dv">310</span>,<span class="dv">325</span>,<span class="dv">309</span>,<span class="dv">315</span>,<span class="dv">295</span>,<span class="dv">304</span>,<span class="dv">285</span>,<span class="dv">311</span>,<span class="dv">308</span>,<span class="dv">308</span>,<span class="dv">291</span>,<span class="dv">298</span>,<span class="dv">305</span>,<span class="dv">316</span>,<span class="dv">302</span>,<span class="dv">302</span>)</span></code></pre></div>
+<ol start="16" style="list-style-type: decimal">
+<li>La concentración de sólidos suspendidos en agua de río es una característica ambiental importante. El artículo “Water Quality in Agricultural Watershed: Impact of Riparian Vegetation During Base Flow” (Schlosser &amp; Karr, 1981) informó sobre la concentración (ppm) de varios ríos. Se obtuvieron las siguientes 50 concentraciones para un río en particular:</li>
+</ol>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="estadística-descriptiva.html#cb114-1" aria-hidden="true" tabindex="-1"></a>concentracion <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">55.8</span>,<span class="fl">42.3</span>,<span class="fl">45.9</span>,<span class="fl">71.7</span>,<span class="fl">83.2</span>,<span class="fl">47.3</span>,<span class="fl">75.3</span>,<span class="fl">48.0</span>,<span class="fl">60.7</span>,<span class="fl">69.8</span>,</span>
+<span id="cb114-2"><a href="estadística-descriptiva.html#cb114-2" aria-hidden="true" tabindex="-1"></a>                   <span class="fl">60.9</span>,<span class="fl">33.8</span>,<span class="fl">39.1</span>,<span class="fl">61.2</span>,<span class="fl">40.0</span>,<span class="fl">94.6</span>,<span class="fl">71.4</span>,<span class="fl">61.8</span>,<span class="fl">77.1</span>,<span class="fl">64.9</span>,</span>
+<span id="cb114-3"><a href="estadística-descriptiva.html#cb114-3" aria-hidden="true" tabindex="-1"></a>                   <span class="fl">91.3</span>,<span class="fl">76.0</span>,<span class="fl">56.0</span>,<span class="fl">47.2</span>,<span class="fl">36.7</span>,<span class="fl">30.0</span>,<span class="fl">52.6</span>,<span class="fl">39.8</span>,<span class="fl">49.5</span>,<span class="fl">87.1</span>,</span>
+<span id="cb114-4"><a href="estadística-descriptiva.html#cb114-4" aria-hidden="true" tabindex="-1"></a>                   <span class="fl">65.8</span>,<span class="fl">69.9</span>,<span class="fl">44.6</span>,<span class="fl">74.5</span>,<span class="fl">62.3</span>,<span class="fl">68.2</span>,<span class="fl">58.2</span>,<span class="fl">65.0</span>,<span class="fl">69.3</span>,<span class="fl">66.3</span>)</span></code></pre></div>
+<ol start="17" style="list-style-type: decimal">
+<li>el artículo “Time Lapse Cinematographics Analysis of Beryllium-Lung Fibroblast Interacions” (Absher, Sylwester &amp; Hart, 1983) reportó los resultados de experimentos diseñados para estudiar el comportamiento de ciertas células individuales que habían sido expuestas al berilio. Una característica importante de tal célula es su tiempo de interdivisión (TDI). Se examinaron los TID para un gran número de células en condiciones de exposición (tratamiento) y no expuestas (control). Los autores del artículo usaron la transformación y = log xi , i =1,2,…,n, en donde xi representa los datos originales de TDI, mientras que yi los transformados. Considere los siguientes datos de TDI:</li>
+</ol>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="estadística-descriptiva.html#cb115-1" aria-hidden="true" tabindex="-1"></a>TID <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">28.1</span>,<span class="fl">31.2</span>,<span class="fl">13.7</span>,<span class="fl">46.0</span>,<span class="fl">25.8</span>,<span class="fl">16.8</span>,<span class="fl">34.8</span>,<span class="fl">62.3</span>,<span class="fl">28.0</span>,<span class="fl">17.9</span>,</span>
+<span id="cb115-2"><a href="estadística-descriptiva.html#cb115-2" aria-hidden="true" tabindex="-1"></a>         <span class="fl">19.5</span>,<span class="fl">21.1</span>,<span class="fl">31.9</span>,<span class="fl">28.9</span>,<span class="fl">60.1</span>,<span class="fl">23.7</span>,<span class="fl">18.6</span>,<span class="fl">21.4</span>,<span class="fl">26.6</span>,<span class="fl">26.2</span>,</span>
+<span id="cb115-3"><a href="estadística-descriptiva.html#cb115-3" aria-hidden="true" tabindex="-1"></a>         <span class="fl">32.0</span>,<span class="fl">43.5</span>,<span class="fl">17.4</span>,<span class="fl">38.8</span>,<span class="fl">30.6</span>,<span class="fl">55.6</span>,<span class="fl">25.5</span>,<span class="fl">52.1</span>,<span class="fl">21.0</span>,<span class="fl">22.3</span>,</span>
+<span id="cb115-4"><a href="estadística-descriptiva.html#cb115-4" aria-hidden="true" tabindex="-1"></a>         <span class="fl">15.5</span>,<span class="fl">36.3</span>,<span class="fl">19.1</span>,<span class="fl">38.4</span>,<span class="fl">72.8</span>,<span class="fl">48.9</span>,<span class="fl">21.4</span>,<span class="fl">20.7</span>,<span class="fl">57.3</span>,<span class="fl">40.9</span>)</span></code></pre></div>
+<ol start="18" style="list-style-type: decimal">
+<li>La temperatura y la salinidad son importantes factores en el ciclo de vida de algunas especies de camarones, de acuerdo con estos factores es posible conocer las épocas de mayor abundancia de cada especie. Se obtuvieron los siguientes datos de salinidad (g/L) (Ramos &amp; Ramos, 2006) en diferentes momentos durante cuatro meses:</li>
+</ol>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="estadística-descriptiva.html#cb116-1" aria-hidden="true" tabindex="-1"></a>Salinidad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">38.3</span>,<span class="fl">39.7</span>,<span class="fl">35.1</span>,</span>
+<span id="cb116-2"><a href="estadística-descriptiva.html#cb116-2" aria-hidden="true" tabindex="-1"></a>               <span class="fl">34.6</span>,<span class="fl">36.3</span>,<span class="fl">43.0</span>,</span>
+<span id="cb116-3"><a href="estadística-descriptiva.html#cb116-3" aria-hidden="true" tabindex="-1"></a>               <span class="fl">42.4</span>,<span class="fl">39.4</span>,<span class="fl">35.8</span>,</span>
+<span id="cb116-4"><a href="estadística-descriptiva.html#cb116-4" aria-hidden="true" tabindex="-1"></a>               <span class="fl">37.9</span>,<span class="fl">40.6</span>,<span class="fl">39.4</span>,</span>
+<span id="cb116-5"><a href="estadística-descriptiva.html#cb116-5" aria-hidden="true" tabindex="-1"></a>               <span class="fl">39.5</span>,<span class="fl">32.8</span>,<span class="fl">41.8</span>,</span>
+<span id="cb116-6"><a href="estadística-descriptiva.html#cb116-6" aria-hidden="true" tabindex="-1"></a>               <span class="fl">44.7</span>,<span class="fl">40.9</span>,<span class="fl">38.8</span>,</span>
+<span id="cb116-7"><a href="estadística-descriptiva.html#cb116-7" aria-hidden="true" tabindex="-1"></a>               <span class="fl">44.2</span>,<span class="fl">31.4</span>,<span class="fl">38.4</span>,</span>
+<span id="cb116-8"><a href="estadística-descriptiva.html#cb116-8" aria-hidden="true" tabindex="-1"></a>               <span class="fl">44.8</span>,<span class="fl">32.1</span>,<span class="fl">34.7</span>,</span>
+<span id="cb116-9"><a href="estadística-descriptiva.html#cb116-9" aria-hidden="true" tabindex="-1"></a>               <span class="fl">43.8</span>)</span></code></pre></div>
+<ol start="19" style="list-style-type: decimal">
+<li>Los incendios de vegetación en pradera, matorral y bosque son un fenómeno común. Algunos son accidentales, pero otros son provocados con el fin de crear hábitats post-fuego que beneficien a plantas y animales. No obstante, el suelo que ha sido expuesto a un alto calentamiento puede esterilizarse. Se realizó un estudio para determinar el efecto de la esterilización en el crecimiento de plantas, en concreto rábanos. La variable medida fue el peso seco de la planta al cabo de 4 semanas. (Basado en un estudio de Joy Burcham, Departamento de Biología, Universidad de Radford, otoño de 1996).</li>
+</ol>
+<p>Suelo estéril (peso seco en gramos)</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="estadística-descriptiva.html#cb117-1" aria-hidden="true" tabindex="-1"></a>SEPS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">9</span>,<span class="dv">28</span>,<span class="dv">26</span>,</span>
+<span id="cb117-2"><a href="estadística-descriptiva.html#cb117-2" aria-hidden="true" tabindex="-1"></a>          <span class="dv">10</span>,<span class="dv">18</span>,<span class="dv">17</span>,</span>
+<span id="cb117-3"><a href="estadística-descriptiva.html#cb117-3" aria-hidden="true" tabindex="-1"></a>          <span class="dv">10</span>,<span class="dv">28</span>,<span class="dv">10</span>,</span>
+<span id="cb117-4"><a href="estadística-descriptiva.html#cb117-4" aria-hidden="true" tabindex="-1"></a>          <span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">11</span>,</span>
+<span id="cb117-5"><a href="estadística-descriptiva.html#cb117-5" aria-hidden="true" tabindex="-1"></a>          <span class="dv">25</span>,<span class="dv">35</span>,<span class="dv">34</span>,</span>
+<span id="cb117-6"><a href="estadística-descriptiva.html#cb117-6" aria-hidden="true" tabindex="-1"></a>          <span class="dv">9</span>,<span class="dv">15</span>)</span></code></pre></div>
+<p>Suelo no estéril (peso seco en gramos)</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="estadística-descriptiva.html#cb118-1" aria-hidden="true" tabindex="-1"></a>SNEPS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">16</span>,<span class="dv">19</span>,<span class="dv">13</span>,</span>
+<span id="cb118-2"><a href="estadística-descriptiva.html#cb118-2" aria-hidden="true" tabindex="-1"></a>           <span class="dv">15</span>,<span class="dv">14</span>,<span class="dv">2</span>,</span>
+<span id="cb118-3"><a href="estadística-descriptiva.html#cb118-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">6</span>,</span>
+<span id="cb118-4"><a href="estadística-descriptiva.html#cb118-4" aria-hidden="true" tabindex="-1"></a>           <span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">3</span>,</span>
+<span id="cb118-5"><a href="estadística-descriptiva.html#cb118-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">18</span>,<span class="dv">14</span>,<span class="dv">11</span>,</span>
+<span id="cb118-6"><a href="estadística-descriptiva.html#cb118-6" aria-hidden="true" tabindex="-1"></a>           <span class="dv">20</span>)</span></code></pre></div>
+<ol start="20" style="list-style-type: decimal">
+<li>En circunstancias normales, en los alimentos existen pequeñas cantidades de zinc y cobre. Estos elementos pueden ser tóxicos y causar problemas al interactuar entre sí e impedir, de esta forma, su absorción por el organismo. Se realizó un estudio sobre los niveles de estos elementos en
+preparados infantiles. Cada dato puntual representa el nivel medio, en miligramos por litro, para muestras de igual tamaño seleccionadas entre las 16 principales marcas del mercado. (Lönnerdal, 1989).</li>
+</ol>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="estadística-descriptiva.html#cb119-1" aria-hidden="true" tabindex="-1"></a>Cobre <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.40</span>,<span class="fl">0.51</span>,<span class="fl">0.47</span>,<span class="fl">0.55</span>,</span>
+<span id="cb119-2"><a href="estadística-descriptiva.html#cb119-2" aria-hidden="true" tabindex="-1"></a>           <span class="fl">0.56</span>,<span class="fl">0.41</span>,<span class="fl">0.60</span>,<span class="fl">0.46</span>,</span>
+<span id="cb119-3"><a href="estadística-descriptiva.html#cb119-3" aria-hidden="true" tabindex="-1"></a>           <span class="fl">0.60</span>,<span class="fl">0.61</span>,<span class="fl">0.48</span>,<span class="fl">0.63</span>,</span>
+<span id="cb119-4"><a href="estadística-descriptiva.html#cb119-4" aria-hidden="true" tabindex="-1"></a>           <span class="fl">0.50</span>,<span class="fl">0.45</span>,<span class="fl">0.62</span>,<span class="fl">0.57</span>)</span>
+<span id="cb119-5"><a href="estadística-descriptiva.html#cb119-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-6"><a href="estadística-descriptiva.html#cb119-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb119-7"><a href="estadística-descriptiva.html#cb119-7" aria-hidden="true" tabindex="-1"></a>Zinc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">3.0</span>,<span class="fl">5.8</span>,<span class="fl">5.6</span>,<span class="fl">4.8</span>,</span>
+<span id="cb119-8"><a href="estadística-descriptiva.html#cb119-8" aria-hidden="true" tabindex="-1"></a>          <span class="fl">5.1</span>,<span class="fl">3.6</span>,<span class="fl">5.5</span>,<span class="fl">4.7</span>,</span>
+<span id="cb119-9"><a href="estadística-descriptiva.html#cb119-9" aria-hidden="true" tabindex="-1"></a>          <span class="fl">5.7</span>,<span class="fl">5.0</span>,<span class="fl">5.9</span>,<span class="fl">5.7</span>,</span>
+<span id="cb119-10"><a href="estadística-descriptiva.html#cb119-10" aria-hidden="true" tabindex="-1"></a>          <span class="fl">4.4</span>,<span class="fl">5.4</span>,<span class="fl">4.2</span>,<span class="fl">5.3</span>)</span></code></pre></div>
+<!-- ```{r, echo=FALSE} -->
+<!-- library(shiny) -->
+<!-- library(ggplot2) -->
+<!-- shinyApp( -->
+<!--  ui <- fluidPage( -->
+<!--   titlePanel("Gráfica de Caja y Bigotes con Resumen"), -->
+<!--   sidebarLayout( -->
+<!--     sidebarPanel( -->
+<!--       textInput("datos", "Introduce tus datos separados por comas (,):", ""), -->
+<!--       actionButton("submit", "Generar Gráfica") -->
+<!--     ), -->
+<!--     mainPanel( -->
+<!--       plotOutput("boxplot"), -->
+<!--       tableOutput("summary") -->
+<!--     ) -->
+<!--   ) -->
+<!-- ), -->
+<!-- server <- function(input, output) { -->
+<!--   datos <- eventReactive(input$submit, { -->
+<!--     as.numeric(unlist(strsplit(input$datos, ","))) -->
+<!--   }) -->
+<!--   output$boxplot <- renderPlot({ -->
+<!--     ggplot(data.frame(value = datos()), aes(x = "", y = value)) + -->
+<!--       geom_boxplot() + -->
+<!--       ylab("Valor") + -->
+<!--       xlab("") + -->
+<!--       ggtitle("Gráfica de Caja y Bigotes") -->
+<!--   }) -->
+<!--   output$summary <- renderTable({ -->
+<!--     summary_data <- data.frame( -->
+<!--       Valor_Minimo = min(datos()), -->
+<!--       Valor_Maximo = max(datos()), -->
+<!--       Media = mean(datos()), -->
+<!--       Mediana = median(datos()), -->
+<!--       Primer_Cuartil = quantile(datos(), 0.25), -->
+<!--       Segundo_Cuartil = quantile(datos(), 0.5), -->
+<!--       Tercer_Cuartil = quantile(datos(), 0.75) -->
+<!--     ) -->
+<!--     summary_data -->
+<!--   }) -->
+<!-- }, -->
+<!--   options = list(height = 500) -->
+<!-- ) -->
+<!-- ``` -->
 
 </div>
 </div>
