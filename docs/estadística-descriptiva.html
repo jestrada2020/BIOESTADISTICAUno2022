@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2023-02-08" />
+<meta name="date" content="2023-02-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,6 +234,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.10" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-para-variación-de-karl-pearson"><i class="fa fa-check"></i><b>3.10</b> Coeficiente para variación de Karl Pearson</a></li>
 <li class="chapter" data-level="3.11" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#medida-cuartil-de-asimetría"><i class="fa fa-check"></i><b>3.11</b> Medida cuartil de asimetría</a></li>
 <li class="chapter" data-level="3.12" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#coeficiente-de-asimetría-de-fisher"><i class="fa fa-check"></i><b>3.12</b> Coeficiente de asimetría de Fisher</a></li>
+<li class="chapter" data-level="3.13" data-path="estadística-descriptiva.html"><a href="estadística-descriptiva.html#ejercicios-propuestos-primer-parcial"><i class="fa fa-check"></i><b>3.13</b> Ejercicios propuestos primer parcial</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="probabilidad.html"><a href="probabilidad.html"><i class="fa fa-check"></i><b>4</b> Probabilidad</a>
 <ul>
@@ -1503,9 +1504,212 @@ A_{s}=\dfrac{\dfrac{\sum{f_{i}(x_{i}-{\bar{x}})^3}}{n}}{\sigma^3}
 <ul>
 <li><p>Si <span class="math inline">\(A_{s}&lt;0\)</span> es asimétrica a izquierda.</p></li>
 <li><p>Si <span class="math inline">\(A_{s}=0\)</span> es simétrica.</p></li>
-<li><p>Si <span class="math inline">\(A_{s}&gt;0\)</span> es asimétrica a derecha
-© 2022 G</p></li>
+<li><p>Si <span class="math inline">\(A_{s}&gt;0\)</span> es asimétrica a derecha</p></li>
 </ul>
+</div>
+<div id="ejercicios-propuestos-primer-parcial" class="section level2 hasAnchor" number="3.13">
+<h2><span class="header-section-number">3.13</span> Ejercicios propuestos primer parcial<a href="estadística-descriptiva.html#ejercicios-propuestos-primer-parcial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Se midió el contenido de nicotina en una muestra aleatoria de 40 cigarrillos</li>
+</ol>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="estadística-descriptiva.html#cb83-1" aria-hidden="true" tabindex="-1"></a>Datos <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">1.09</span>,<span class="fl">1.92</span>,<span class="fl">2.31</span>,<span class="fl">1.79</span>,<span class="fl">2.28</span>,<span class="fl">1.74</span>,<span class="fl">1.47</span>,<span class="fl">1.97</span>,</span>
+<span id="cb83-2"><a href="estadística-descriptiva.html#cb83-2" aria-hidden="true" tabindex="-1"></a>           <span class="fl">0.85</span>,<span class="fl">1.24</span>,<span class="fl">1.58</span>,<span class="fl">2.03</span>,<span class="fl">1.70</span>,<span class="fl">2.17</span>,<span class="fl">2.55</span>,<span class="fl">2.11</span>,</span>
+<span id="cb83-3"><a href="estadística-descriptiva.html#cb83-3" aria-hidden="true" tabindex="-1"></a>           <span class="fl">1.86</span>,<span class="fl">1.90</span>,<span class="fl">1.68</span>,<span class="fl">1.51</span>,<span class="fl">1.64</span>,<span class="fl">0.72</span>,<span class="fl">1.69</span>,<span class="fl">1.85</span>,</span>
+<span id="cb83-4"><a href="estadística-descriptiva.html#cb83-4" aria-hidden="true" tabindex="-1"></a>           <span class="fl">1.82</span>,<span class="fl">1.79</span>,<span class="fl">2.46</span>,<span class="fl">1.88</span>,<span class="fl">2.08</span>,<span class="fl">1.67</span>,<span class="fl">1.37</span>,<span class="fl">1.93</span>,</span>
+<span id="cb83-5"><a href="estadística-descriptiva.html#cb83-5" aria-hidden="true" tabindex="-1"></a>           <span class="fl">1.40</span>,<span class="fl">1.64</span>,<span class="fl">2.09</span>,<span class="fl">1.75</span>,<span class="fl">1.63</span>,<span class="fl">2.37</span>,<span class="fl">1.75</span>,<span class="fl">1.69</span>),<span class="dv">5</span>,<span class="at">byrow =</span><span class="cn">TRUE</span>)</span>
+<span id="cb83-6"><a href="estadística-descriptiva.html#cb83-6" aria-hidden="true" tabindex="-1"></a>Datos</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,] 1.09 1.92 2.31 1.79 2.28 1.74 1.47 1.97
+## [2,] 0.85 1.24 1.58 2.03 1.70 2.17 2.55 2.11
+## [3,] 1.86 1.90 1.68 1.51 1.64 0.72 1.69 1.85
+## [4,] 1.82 1.79 2.46 1.88 2.08 1.67 1.37 1.93
+## [5,] 1.40 1.64 2.09 1.75 1.63 2.37 1.75 1.69</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Se realiza un estudio acerca de los efectos del tabaquismo sobre los patrones de sueño. La medición
+que se observa es el tiempo, en minutos, que toma quedar dormido. Se obtienen los siguientes datos:</li>
+</ol>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="estadística-descriptiva.html#cb85-1" aria-hidden="true" tabindex="-1"></a>DFumadores <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">69.3</span>,<span class="fl">56.0</span>,<span class="fl">22.1</span>,<span class="fl">47.6</span>,</span>
+<span id="cb85-2"><a href="estadística-descriptiva.html#cb85-2" aria-hidden="true" tabindex="-1"></a>             <span class="fl">53.2</span>,<span class="fl">48.1</span>,<span class="fl">52.7</span>,<span class="fl">34.4</span>,</span>
+<span id="cb85-3"><a href="estadística-descriptiva.html#cb85-3" aria-hidden="true" tabindex="-1"></a>             <span class="fl">60.2</span>,<span class="fl">43.8</span>,<span class="fl">23.2</span>,<span class="fl">13.8</span>),<span class="dv">3</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb85-4"><a href="estadística-descriptiva.html#cb85-4" aria-hidden="true" tabindex="-1"></a>DFumadores</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] 69.3 56.0 22.1 47.6
+## [2,] 53.2 48.1 52.7 34.4
+## [3,] 60.2 43.8 23.2 13.8</code></pre>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="estadística-descriptiva.html#cb87-1" aria-hidden="true" tabindex="-1"></a>DNoFumadores <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">28.6</span>,<span class="fl">25.1</span>,<span class="fl">26.4</span>,<span class="fl">34.9</span>,</span>
+<span id="cb87-2"><a href="estadística-descriptiva.html#cb87-2" aria-hidden="true" tabindex="-1"></a>                         <span class="fl">29.8</span>,<span class="fl">28.4</span>,<span class="fl">38.5</span>,<span class="fl">30.2</span>,</span>
+<span id="cb87-3"><a href="estadística-descriptiva.html#cb87-3" aria-hidden="true" tabindex="-1"></a>                         <span class="fl">30.6</span>,<span class="fl">31.8</span>,<span class="fl">41.6</span>,<span class="fl">21.1</span>,</span>
+<span id="cb87-4"><a href="estadística-descriptiva.html#cb87-4" aria-hidden="true" tabindex="-1"></a>                         <span class="fl">36.0</span>,<span class="fl">37.9</span>,<span class="fl">13.9</span>,<span class="fl">21.7</span>),<span class="dv">4</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb87-5"><a href="estadística-descriptiva.html#cb87-5" aria-hidden="true" tabindex="-1"></a>DNoFumadores</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] 28.6 25.1 26.4 34.9
+## [2,] 29.8 28.4 38.5 30.2
+## [3,] 30.6 31.8 41.6 21.1
+## [4,] 36.0 37.9 13.9 21.7</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Los siguientes datos representan la duración de la vida, en segundos, de 50 moscas de la fruta que
+se someten a un nuevo aerosol en un experimento de laboratorio controlado.</li>
+</ol>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="estadística-descriptiva.html#cb89-1" aria-hidden="true" tabindex="-1"></a>Dtiempo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">17</span>,<span class="dv">20</span>,<span class="dv">10</span>,<span class="dv">9</span>,<span class="dv">23</span>,<span class="dv">12</span>,<span class="dv">19</span>,<span class="dv">18</span>,<span class="dv">24</span>,</span>
+<span id="cb89-2"><a href="estadística-descriptiva.html#cb89-2" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">12</span>,<span class="dv">14</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">13</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">13</span>,<span class="dv">7</span>,</span>
+<span id="cb89-3"><a href="estadística-descriptiva.html#cb89-3" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">8</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">32</span>,<span class="dv">9</span>,<span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">11</span>,</span>
+<span id="cb89-4"><a href="estadística-descriptiva.html#cb89-4" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">13</span>,<span class="dv">7</span>,<span class="dv">18</span>,<span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">4</span>,<span class="dv">27</span>,<span class="dv">19</span>,<span class="dv">16</span>,<span class="dv">8</span>,</span>
+<span id="cb89-5"><a href="estadística-descriptiva.html#cb89-5" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">7</span>,<span class="dv">10</span>,<span class="dv">5</span>,<span class="dv">14</span>,<span class="dv">15</span>,<span class="dv">10</span>,<span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">15</span>),<span class="dv">5</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## Warning in matrix(c(17, 20, 10, 9, 23, 12, 19, 18, 24, 12, 14, 6, 9, 13, : la
+## longitud de los datos [49] no es un submúltiplo o múltiplo del número de filas
+## [5] en la matriz</code></pre>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="estadística-descriptiva.html#cb91-1" aria-hidden="true" tabindex="-1"></a>Dtiempo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,]   17   20   10    9   23   12   19   18   24    12
+## [2,]   14    6    9   13    6    7   10   13    7    16
+## [3,]   18    8    3    3   32    9    7   10   11    13
+## [4,]    7   18    7   10    4   27   19   16    8     7
+## [5,]   10    5   14   15   10    9    6    7   15    17</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Las siguientes puntuaciones representan la calificación en el examen final para un curso de estadística
+elemental:</li>
+</ol>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="estadística-descriptiva.html#cb93-1" aria-hidden="true" tabindex="-1"></a>DCalificacion <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">60</span>,<span class="dv">79</span>,<span class="dv">32</span>,<span class="dv">57</span>,<span class="dv">74</span>,<span class="dv">52</span>,<span class="dv">70</span>,<span class="dv">82</span>,</span>
+<span id="cb93-2"><a href="estadística-descriptiva.html#cb93-2" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">36</span>,<span class="dv">80</span>,<span class="dv">77</span>,<span class="dv">81</span>,<span class="dv">95</span>,<span class="dv">41</span>,<span class="dv">65</span>,<span class="dv">92</span>,<span class="dv">85</span>,</span>
+<span id="cb93-3"><a href="estadística-descriptiva.html#cb93-3" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">55</span>,<span class="dv">76</span>,<span class="dv">52</span>,<span class="dv">10</span>,<span class="dv">64</span>,<span class="dv">75</span>,<span class="dv">78</span>,<span class="dv">25</span>,<span class="dv">80</span>,</span>
+<span id="cb93-4"><a href="estadística-descriptiva.html#cb93-4" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">98</span>,<span class="dv">81</span>,<span class="dv">67</span>,<span class="dv">41</span>,<span class="dv">71</span>,<span class="dv">83</span>,<span class="dv">54</span>,<span class="dv">64</span>,<span class="dv">72</span>,</span>
+<span id="cb93-5"><a href="estadística-descriptiva.html#cb93-5" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">88</span>,<span class="dv">62</span>,<span class="dv">74</span>,<span class="dv">43</span>,<span class="dv">60</span>,<span class="dv">78</span>,<span class="dv">89</span>,<span class="dv">76</span>,<span class="dv">84</span>,</span>
+<span id="cb93-6"><a href="estadística-descriptiva.html#cb93-6" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">48</span>,<span class="dv">84</span>,<span class="dv">90</span>,<span class="dv">15</span>,<span class="dv">79</span>,<span class="dv">34</span>,<span class="dv">67</span>,<span class="dv">17</span>,<span class="dv">82</span>,</span>
+<span id="cb93-7"><a href="estadística-descriptiva.html#cb93-7" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">69</span>,<span class="dv">74</span>,<span class="dv">63</span>,<span class="dv">80</span>,<span class="dv">85</span>,<span class="dv">61</span>,<span class="dv">91</span>,<span class="dv">78</span>,<span class="dv">77</span>),<span class="dv">7</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb93-8"><a href="estadística-descriptiva.html#cb93-8" aria-hidden="true" tabindex="-1"></a>DCalificacion</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+## [1,]   23   60   79   32   57   74   52   70   82
+## [2,]   36   80   77   81   95   41   65   92   85
+## [3,]   55   76   52   10   64   75   78   25   80
+## [4,]   98   81   67   41   71   83   54   64   72
+## [5,]   88   62   74   43   60   78   89   76   84
+## [6,]   48   84   90   15   79   34   67   17   82
+## [7,]   69   74   63   80   85   61   91   78   77</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>La duración de fallas eléctricas, en minutos, se presenta en los siguiente datos.</li>
+</ol>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="estadística-descriptiva.html#cb95-1" aria-hidden="true" tabindex="-1"></a>Dtiempo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">22</span>,<span class="dv">18</span>,<span class="dv">135</span>,<span class="dv">15</span>,<span class="dv">90</span>,<span class="dv">78</span>,<span class="dv">69</span>,<span class="dv">98</span>,<span class="dv">102</span>,</span>
+<span id="cb95-2"><a href="estadística-descriptiva.html#cb95-2" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">83</span>,<span class="dv">55</span>,<span class="dv">28</span>,<span class="dv">121</span>,<span class="dv">120</span>,<span class="dv">13</span>,<span class="dv">22</span>,<span class="dv">124</span>,<span class="dv">112</span>,</span>
+<span id="cb95-3"><a href="estadística-descriptiva.html#cb95-3" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">70</span>,<span class="dv">66</span>,<span class="dv">74</span>,<span class="dv">89</span>,<span class="dv">103</span>,<span class="dv">24</span>,<span class="dv">21</span>,<span class="dv">112</span>,<span class="dv">21</span>,</span>
+<span id="cb95-4"><a href="estadística-descriptiva.html#cb95-4" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">40</span>,<span class="dv">98</span>,<span class="dv">87</span>,<span class="dv">132</span>,<span class="dv">115</span>,<span class="dv">21</span>,<span class="dv">28</span>,<span class="dv">43</span>,<span class="dv">37</span>,</span>
+<span id="cb95-5"><a href="estadística-descriptiva.html#cb95-5" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">50</span>,<span class="dv">96</span>,<span class="dv">118</span>,<span class="dv">158</span>,<span class="dv">74</span>,<span class="dv">78</span>,<span class="dv">83</span>,<span class="dv">93</span>,<span class="dv">95</span>),<span class="dv">5</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb95-6"><a href="estadística-descriptiva.html#cb95-6" aria-hidden="true" tabindex="-1"></a>Dtiempo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+## [1,]   22   18  135   15   90   78   69   98  102
+## [2,]   83   55   28  121  120   13   22  124  112
+## [3,]   70   66   74   89  103   24   21  112   21
+## [4,]   40   98   87  132  115   21   28   43   37
+## [5,]   50   96  118  158   74   78   83   93   95</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>En 20 automóviles elegidos aleatoriamente, se tomaron las emisiones de hidrocarburos en velocidad
+al vacío, en partes por millón (ppm), para modelos de 1980 y 1990.</li>
+</ol>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="estadística-descriptiva.html#cb97-1" aria-hidden="true" tabindex="-1"></a>Dmodelo1980 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">141</span>,<span class="dv">359</span>,<span class="dv">247</span>,<span class="dv">940</span>,</span>
+<span id="cb97-2"><a href="estadística-descriptiva.html#cb97-2" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">882</span>,<span class="dv">494</span>,<span class="dv">306</span>,<span class="dv">210</span>,</span>
+<span id="cb97-3"><a href="estadística-descriptiva.html#cb97-3" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">105</span>,<span class="dv">880</span>,<span class="dv">200</span>,<span class="dv">223</span>,</span>
+<span id="cb97-4"><a href="estadística-descriptiva.html#cb97-4" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">188</span>,<span class="dv">940</span>,<span class="dv">241</span>,<span class="dv">190</span>,</span>
+<span id="cb97-5"><a href="estadística-descriptiva.html#cb97-5" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">300</span>,<span class="dv">435</span>,<span class="dv">241</span>,<span class="dv">380</span>),<span class="dv">5</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb97-6"><a href="estadística-descriptiva.html#cb97-6" aria-hidden="true" tabindex="-1"></a>Dmodelo1980</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]  141  359  247  940
+## [2,]  882  494  306  210
+## [3,]  105  880  200  223
+## [4,]  188  940  241  190
+## [5,]  300  435  241  380</code></pre>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="estadística-descriptiva.html#cb99-1" aria-hidden="true" tabindex="-1"></a>Dmodelo1990 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">140</span>,<span class="dv">160</span>,<span class="dv">20</span>,<span class="dv">20</span>,</span>
+<span id="cb99-2"><a href="estadística-descriptiva.html#cb99-2" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">223</span>,<span class="dv">60</span>,<span class="dv">20</span>,<span class="dv">95</span>,</span>
+<span id="cb99-3"><a href="estadística-descriptiva.html#cb99-3" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">360</span>,<span class="dv">70</span>,<span class="dv">220</span>,<span class="dv">400</span>,</span>
+<span id="cb99-4"><a href="estadística-descriptiva.html#cb99-4" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">217</span>,<span class="dv">58</span>,<span class="dv">380</span>,<span class="dv">200</span>,</span>
+<span id="cb99-5"><a href="estadística-descriptiva.html#cb99-5" aria-hidden="true" tabindex="-1"></a>                        <span class="dv">175</span>,<span class="dv">85</span>,<span class="dv">65</span>,<span class="dv">235</span>),<span class="dv">5</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb99-6"><a href="estadística-descriptiva.html#cb99-6" aria-hidden="true" tabindex="-1"></a>Dmodelo1990</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]  140  160   20   20
+## [2,]  223   60   20   95
+## [3,]  360   70  220  400
+## [4,]  217   58  380  200
+## [5,]  175   85   65  235</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Los siguientes datos representan el tiempo que ha estado ingresado cada paciente (en días) para
+recuperarse de una determinada enfermedad.</li>
+</ol>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="estadística-descriptiva.html#cb101-1" aria-hidden="true" tabindex="-1"></a>Dtiempo <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">20</span>, <span class="dv">27</span>, <span class="dv">30</span>, <span class="dv">32</span>,</span>
+<span id="cb101-2"><a href="estadística-descriptiva.html#cb101-2" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">35</span>, <span class="dv">36</span>, <span class="dv">40</span>, <span class="dv">40</span>, <span class="dv">40</span>,</span>
+<span id="cb101-3"><a href="estadística-descriptiva.html#cb101-3" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">40</span>, <span class="dv">41</span>, <span class="dv">42</span>, <span class="dv">45</span>, <span class="dv">47</span>,</span>
+<span id="cb101-4"><a href="estadística-descriptiva.html#cb101-4" aria-hidden="true" tabindex="-1"></a>                    <span class="dv">50</span>, <span class="dv">52</span>, <span class="dv">61</span>, <span class="dv">89</span>, <span class="dv">108</span>),<span class="dv">4</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb101-5"><a href="estadística-descriptiva.html#cb101-5" aria-hidden="true" tabindex="-1"></a>Dtiempo</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    8   20   27   30   32
+## [2,]   35   36   40   40   40
+## [3,]   40   41   42   45   47
+## [4,]   50   52   61   89  108</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>Uno de los ejercicos de investigación a realizar en el curso de Bio-estadística consiste en reunir frecuencia del pulso de todos los estudiantes del grupo.</li>
+</ol>
+<p>Pulsos en reposo: 68, 76, 84, 80, 76, 72, 60, 68, 68, 80, 68, 80, 64, 64, 72, 76,
+72, 68, 56, 88, 80, 76, 68, 56, 64, 60, 92, 72, 84, 72</p>
+<p>Pulsos después de hacer ejercicio: 148, 136, 157, 151, 121, 139, 137, 129, 127,
+129, 155, 141, 133, 153, 161, 153, 127, 135, 144, 146, 136, 131, 133, 159, 127,
+142, 133, 150, 164, 161</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Al comenzar el curso de Bio-estadística se pasó una encuesta a los alumnos, preguntándoles, entre otras cuestiones, por el número de hermanos que tenı́an. Se obtuvieron los siguientes resultados:</li>
+</ol>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="estadística-descriptiva.html#cb103-1" aria-hidden="true" tabindex="-1"></a>Dhermanos <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">5</span>,</span>
+<span id="cb103-2"><a href="estadística-descriptiva.html#cb103-2" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">5</span>,</span>
+<span id="cb103-3"><a href="estadística-descriptiva.html#cb103-3" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>,</span>
+<span id="cb103-4"><a href="estadística-descriptiva.html#cb103-4" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">5</span>,<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>,</span>
+<span id="cb103-5"><a href="estadística-descriptiva.html#cb103-5" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>,</span>
+<span id="cb103-6"><a href="estadística-descriptiva.html#cb103-6" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>,</span>
+<span id="cb103-7"><a href="estadística-descriptiva.html#cb103-7" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>,</span>
+<span id="cb103-8"><a href="estadística-descriptiva.html#cb103-8" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>,</span>
+<span id="cb103-9"><a href="estadística-descriptiva.html#cb103-9" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>,</span>
+<span id="cb103-10"><a href="estadística-descriptiva.html#cb103-10" aria-hidden="true" tabindex="-1"></a>                      <span class="dv">2</span> ,<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">4</span>),<span class="dv">5</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb103-11"><a href="estadística-descriptiva.html#cb103-11" aria-hidden="true" tabindex="-1"></a>Dhermanos</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]
+## [1,]    3    3    2    2    8    5    2    4    3     1     4     5
+## [2,]    3    3    3    3    3    2    5    1    3     3     2     2
+## [3,]    4    3    3    2    2    4    4    3    6     3     3     2
+## [4,]    2    4    3    4    3    2    2    4    4     3     3     4
+## [5,]    2    5    4    1    2    8    2    3    3     4     5     4</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>Un nuevo hotel va abrir sus puertas en una cierta ciudad. Antes de decidir el precio de sus habitaciones, el gerente investiga los precios por habitación de 40 hoteles de la misma categoría de esta ciudad. Los datos obtenidos (en miles de pesetas) fueron:</li>
+</ol>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="estadística-descriptiva.html#cb105-1" aria-hidden="true" tabindex="-1"></a>Dprecio <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">3.3</span>,<span class="fl">4.2</span>,<span class="fl">4.5</span>,<span class="fl">5.1</span>,<span class="fl">3.3</span>,<span class="fl">4.3</span>,<span class="fl">4.7</span>,<span class="fl">5.3</span>,<span class="fl">3.7</span>,<span class="fl">4.3</span>,</span>
+<span id="cb105-2"><a href="estadística-descriptiva.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fl">4.7</span>,<span class="fl">5.3</span>,<span class="fl">3.8</span>,<span class="fl">4.3</span>,<span class="fl">4.7</span>,<span class="fl">5.4</span>,<span class="fl">3.9</span>,<span class="fl">4.3</span>,<span class="fl">4.7</span>,<span class="fl">5.6</span>,</span>
+<span id="cb105-3"><a href="estadística-descriptiva.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fl">3.9</span>,<span class="fl">4.4</span>,<span class="fl">4.8</span>,<span class="fl">5.8</span>,<span class="fl">3.9</span>,<span class="fl">4.4</span>,<span class="fl">4.9</span>,<span class="fl">5.8</span>,<span class="fl">4.0</span>,<span class="fl">4.5</span>,</span>
+<span id="cb105-4"><a href="estadística-descriptiva.html#cb105-4" aria-hidden="true" tabindex="-1"></a><span class="fl">5.0</span>,<span class="fl">6.0</span>,<span class="fl">4.1</span>,<span class="fl">4.5</span>,<span class="fl">5.0</span>,<span class="fl">6.1</span>,<span class="fl">4.2</span>,<span class="fl">4.5</span>,<span class="fl">5.1</span>,<span class="fl">6.1</span>),<span class="dv">4</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb105-5"><a href="estadística-descriptiva.html#cb105-5" aria-hidden="true" tabindex="-1"></a>Dprecio</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,]  3.3  4.2  4.5  5.1  3.3  4.3  4.7  5.3  3.7   4.3
+## [2,]  4.7  5.3  3.8  4.3  4.7  5.4  3.9  4.3  4.7   5.6
+## [3,]  3.9  4.4  4.8  5.8  3.9  4.4  4.9  5.8  4.0   4.5
+## [4,]  5.0  6.0  4.1  4.5  5.0  6.1  4.2  4.5  5.1   6.1</code></pre>
+<ol start="11" style="list-style-type: decimal">
+<li>Se entrevistó 20 jóvenes para conocer el número de refrescos de cola que beben al día. Las respuestas obtenidas son los siguientes:</li>
+</ol>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="estadística-descriptiva.html#cb107-1" aria-hidden="true" tabindex="-1"></a>Dcolas <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">4</span>),<span class="dv">4</span>,<span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb107-2"><a href="estadística-descriptiva.html#cb107-2" aria-hidden="true" tabindex="-1"></a>Dcolas</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    5    1    3    0    2
+## [2,]    1    5    3    2    4
+## [3,]    1    2    4    2    0
+## [4,]    3    5    1    5    4</code></pre>
+<ol start="12" style="list-style-type: decimal">
+<li>Se pregunto a 30 jóvenes cuántas horas didicaban cada día a navegar en internet (el tiempo que dedican a sesiones de chat y a las redes sociales quedan incluido). Los resultados son los siguientes:</li>
+</ol>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="estadística-descriptiva.html#cb109-1" aria-hidden="true" tabindex="-1"></a>Dhoras <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">2.5</span> , <span class="fl">4.5</span> , <span class="fl">5.8</span> , <span class="fl">2.2</span> , <span class="fl">5.7</span>,</span>
+<span id="cb109-2"><a href="estadística-descriptiva.html#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="fl">5.3</span> , <span class="fl">4.0</span> , <span class="fl">0.9</span> , <span class="fl">2.5</span> , <span class="fl">2.3</span>,</span>
+<span id="cb109-3"><a href="estadística-descriptiva.html#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="fl">3.2</span> , <span class="fl">4.9</span> , <span class="fl">2.7</span> , <span class="fl">3.7</span> , <span class="fl">3.8</span>,</span>
+<span id="cb109-4"><a href="estadística-descriptiva.html#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="fl">4.9</span> , <span class="fl">2.8</span> , <span class="fl">3.6</span> , <span class="fl">4.2</span> , <span class="fl">3.1</span>,</span>
+<span id="cb109-5"><a href="estadística-descriptiva.html#cb109-5" aria-hidden="true" tabindex="-1"></a><span class="fl">7.2</span> , <span class="fl">1.9</span> , <span class="fl">5.9</span> , <span class="fl">3.3</span> , <span class="fl">2.9</span>,</span>
+<span id="cb109-6"><a href="estadística-descriptiva.html#cb109-6" aria-hidden="true" tabindex="-1"></a><span class="fl">1.1</span> , <span class="fl">1.7</span> , <span class="fl">2.6</span> , <span class="fl">3.1</span> , <span class="fl">4.4</span>),<span class="dv">6</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb109-7"><a href="estadística-descriptiva.html#cb109-7" aria-hidden="true" tabindex="-1"></a>Dhoras</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]  2.5  4.5  5.8  2.2  5.7
+## [2,]  5.3  4.0  0.9  2.5  2.3
+## [3,]  3.2  4.9  2.7  3.7  3.8
+## [4,]  4.9  2.8  3.6  4.2  3.1
+## [5,]  7.2  1.9  5.9  3.3  2.9
+## [6,]  1.1  1.7  2.6  3.1  4.4</code></pre>
 
 </div>
 </div>
