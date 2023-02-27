@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2023-02-19" />
+<meta name="date" content="2023-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -968,6 +968,8 @@ donde <span class="math inline">\(n\)</span> es el tamaño de la muestra.</p>
 <div id="medidas-de-posición" class="section level3 hasAnchor" number="3.7.1">
 <h3><span class="header-section-number">3.7.1</span> Medidas de posición<a href="estadística-descriptiva.html#medidas-de-posición" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Todas ellas a su manera tratan de dar una idea del número alrededor del cual se centra a todo el conjunto de datos.</p>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 </div>
 <div id="la-media-aritmética-para-datos-no-agrupados-barx" class="section level3 hasAnchor" number="3.7.2">
 <h3><span class="header-section-number">3.7.2</span> La media aritmética para datos no agrupados <span class="math inline">\((\bar{x})\)</span><a href="estadística-descriptiva.html#la-media-aritmética-para-datos-no-agrupados-barx" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1061,6 +1063,8 @@ Figura 3.3: Medidas de tendencia central, imagen tomada de <span class="citation
 <li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
 <li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
 </ul>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 <p><strong>CODIGO PARA HALLAR LA MEDIA</strong></p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="estadística-descriptiva.html#cb33-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>,<span class="dv">500</span>,<span class="dv">600</span>,<span class="dv">700</span>)</span>
 <span id="cb33-2"><a href="estadística-descriptiva.html#cb33-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">300</span>,<span class="dv">400</span>,<span class="dv">500</span>,<span class="dv">600</span>,<span class="dv">700</span>,<span class="dv">800</span>)</span>
@@ -1128,6 +1132,8 @@ Figura 3.3: Medidas de tendencia central, imagen tomada de <span class="citation
 <li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
 <li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
 </ul>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 <p><strong>Proceso Mediana</strong></p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="estadística-descriptiva.html#cb47-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>) </span>
 <span id="cb47-2"><a href="estadística-descriptiva.html#cb47-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>,<span class="dv">100</span>) </span>
@@ -1236,6 +1242,8 @@ Figura 3.3: Medidas de tendencia central, imagen tomada de <span class="citation
 <li><p>La varianza <span class="math inline">\((\sigma^2=?)\)</span></p></li>
 <li><p>La desviación estándar <span class="math inline">\((\sqrt{\sigma^2}=\sigma=?)\)</span></p></li>
 </ul>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 <p><strong>Proceso para la varianza</strong></p>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="estadística-descriptiva.html#cb67-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">55</span>,<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>)</span>
 <span id="cb67-2"><a href="estadística-descriptiva.html#cb67-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">60</span>,<span class="dv">65</span>,<span class="dv">70</span>,<span class="dv">75</span>,<span class="dv">80</span>,<span class="dv">85</span>,<span class="dv">90</span>)</span>
@@ -1376,6 +1384,8 @@ P_{c}=\dfrac{cn}{4}
 <p>Este valor de posición se comparó con las datos que se tienen en la columna (<strong><span class="math inline">\(F_i\)</span></strong>), y posteriormente se selecciona el valor más proximo pero mayor que <span class="math inline">\(\frac{n}{2}\)</span>. El intervalo donde se encontro dicho valor se denomina “<strong>Intervalo intercuartílico <span class="math inline">\(Q_c\)</span></strong>”</p>
 <p><span class="math inline">\(c\)</span>: Corresponde al número del cuartil solicitado: <span class="math inline">\(1,2,3\)</span>.</p>
 <p><span class="math inline">\(L_{i}\)</span>: Es el limite inferior de la clase donde se encuentra ubicado el cuartil deseado.</p>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 </div>
 <div id="la-moda-para-datos-agrupados-mo" class="section level3 hasAnchor" number="3.8.9">
 <h3><span class="header-section-number">3.8.9</span> La moda para datos agrupados <span class="math inline">\((Mo)\)</span><a href="estadística-descriptiva.html#la-moda-para-datos-agrupados-mo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1506,6 +1516,8 @@ A_{s}=\dfrac{\dfrac{\sum{f_{i}(x_{i}-{\bar{x}})^3}}{n}}{\sigma^3}
 <li><p>Si <span class="math inline">\(A_{s}=0\)</span> es simétrica.</p></li>
 <li><p>Si <span class="math inline">\(A_{s}&gt;0\)</span> es asimétrica a derecha</p></li>
 </ul>
+<iframe width="760" height="740" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
 </div>
 <div id="ejercicios-propuestos-primer-parcial" class="section level2 hasAnchor" number="3.13">
 <h2><span class="header-section-number">3.13</span> Ejercicios propuestos primer parcial<a href="estadística-descriptiva.html#ejercicios-propuestos-primer-parcial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
