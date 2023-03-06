@@ -185,3 +185,5 @@ clases-semestre-02-2021
 videos-de-asesoría
 asesorías-semestre-02-2021
 ejercicios-propuestos-primer-parcial
+ejemplo-1-1
+ejemplo-5
