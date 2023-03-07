@@ -187,3 +187,4 @@ asesorías-semestre-02-2021
 ejercicios-propuestos-primer-parcial
 ejemplo-1-1
 ejemplo-5
+aplicación-shiny-para-histograma-con-caja-y-bigotes
