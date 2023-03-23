@@ -266,3 +266,16 @@ fig:FigTABLA1P
 fig:FigTABLA4P
 fig:FigTeoremaBayes2
 fig:FigTeoremaBayes3
+Probabilidad
+EstadisticaDescriptiva
+introduccion
+fig:Estadistica1
+fig:TipoVariable1
+fig:TipoDatos1
+tab:Tabla11
+tab:Tabla12
+ModelosDeProbabilidad
+TemasExtras
+ProgramacionR-RstudioYExtras
+VideosDeClase
+VideosDeAsesoria
