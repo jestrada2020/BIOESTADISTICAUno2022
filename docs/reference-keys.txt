@@ -279,3 +279,4 @@ TemasExtras
 ProgramacionR-RstudioYExtras
 VideosDeClase
 VideosDeAsesoria
+ejemplos-de-fracciones-en-los-números-reales
