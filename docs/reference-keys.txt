@@ -280,3 +280,8 @@ ProgramacionR-RstudioYExtras
 VideosDeClase
 VideosDeAsesoria
 ejemplos-de-fracciones-en-los-números-reales
+ejemplos-de-cardinalidad
+primer-ejemplo-dos-conjuntos
+segundo-ejemplo-tres-conjuntos
+tercer-ejemplo-cuatro-conjuntos
+cuarto-ejemplo-lectura-de-revistas
