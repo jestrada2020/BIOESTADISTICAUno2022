@@ -296,3 +296,4 @@ def:unnamed-chunk-18
 def:unnamed-chunk-26
 def:unnamed-chunk-31
 diferencia-simétrica-de-un-conjuntos
+diferencia-simétrica-de-dos-conjuntos
