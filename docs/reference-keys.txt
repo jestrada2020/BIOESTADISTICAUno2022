@@ -285,3 +285,14 @@ primer-ejemplo-dos-conjuntos
 segundo-ejemplo-tres-conjuntos
 tercer-ejemplo-cuatro-conjuntos
 cuarto-ejemplo-lectura-de-revistas
+fig:SubConjuntos2A
+fig:Conjuntos2A
+fig:Conjuntos2E
+fig:Conjuntos2C
+fig:Conjuntos2B
+fig:Complemento0
+fig:Conjuntos2D
+def:unnamed-chunk-18
+def:unnamed-chunk-26
+def:unnamed-chunk-31
+diferencia-simétrica-de-un-conjuntos
