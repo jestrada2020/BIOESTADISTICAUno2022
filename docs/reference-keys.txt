@@ -305,3 +305,6 @@ fig:ConjuntosDemo2
 fig:ConjuntosDemo3
 fig:ConjuntosDemo4
 fig:ConjuntosDemo5
+fig:ConjuntosDemo7
+demostración-probabilidad-total
+demostración-teorema-de-bayes
