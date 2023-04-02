@@ -308,3 +308,8 @@ fig:ConjuntosDemo5
 fig:ConjuntosDemo7
 demostración-probabilidad-total
 demostración-teorema-de-bayes
+ejercicios-propuestos-segunto-parcial
+fig:ArbolDemo0
+fig:ArbolDemo1
+fig:Ejercicio1
+fig:ConjuntosEjercicio8DemoA1
