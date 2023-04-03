@@ -313,3 +313,6 @@ fig:ArbolDemo0
 fig:ArbolDemo1
 fig:Ejercicio1
 fig:ConjuntosEjercicio8DemoA1
+fig:ConjuntosDemoB4
+fig:ConjuntosDemoA1
+fig:ConjuntosEjercicio15
