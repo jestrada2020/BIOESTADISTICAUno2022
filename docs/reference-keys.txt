@@ -318,3 +318,4 @@ fig:ConjuntosDemoA1
 fig:ConjuntosEjercicio15
 fig:ConjuntosDemoB0
 fig:FigEjConjunto12CAMISAS
+ejercicios-propuestos-segundo-parcial
