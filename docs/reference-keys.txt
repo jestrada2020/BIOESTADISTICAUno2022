@@ -316,3 +316,5 @@ fig:ConjuntosEjercicio8DemoA1
 fig:ConjuntosDemoB4
 fig:ConjuntosDemoA1
 fig:ConjuntosEjercicio15
+fig:ConjuntosDemoB0
+fig:FigEjConjunto12CAMISAS
