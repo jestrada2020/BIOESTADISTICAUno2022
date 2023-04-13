@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2023-04-08" />
+<meta name="date" content="2023-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1762,6 +1762,7 @@ Figura 3.32: Teorema de Bayes problema de las máquinas [Imagen tomada de <span 
 <p><span class="math display">\[
     P(B|D)=\dfrac{(0.30)(0.04)}{(0.30)(0.04)+(0.45)(0.03)+(0.25)(0.05)}=\dfrac{12}{38}=0.316
 \]</span></p>
+<p><br></br></p>
 </div>
 <div id="ejercicios-propuestos-segundo-parcial" class="section level2 hasAnchor" number="3.35">
 <h2><span class="header-section-number">3.35</span> Ejercicios propuestos segundo parcial<a href="Probabilidad.html#ejercicios-propuestos-segundo-parcial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1791,12 +1792,28 @@ Obtener las siguientes probabilidades</p>
 
 \end{split}
 \end{equation}\]</span></p>
-<ol style="list-style-type: decimal">
+<ol start="2" style="list-style-type: decimal">
 <li><p>Un banco local informa que <span class="math inline">\(80 \%\)</span> de sus clientes tiene cuenta de cheques; <span class="math inline">\(60 \%\)</span> tiene cuenta de ahorros y <span class="math inline">\(50 \%\)</span> cuenta con ambas. Si se elige un clienta al azar,</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Cuál es la probabilidad de que el cliente tenga ya sea una cuenta de cheques o una cuenta de ahorros?</p></li>
 <li><p>Cuál es la probabilidad de que el cliente no tenga una cuenta de cheques ni una cuenta de ahorros?</p></li>
 </ol></li>
+</ol>
+<p><strong>Solución:</strong></p>
+<p>Cheques: <span class="math inline">\(80\%\)</span> significa <span class="math inline">\(0.80\)</span></p>
+<p>Ahorro: <span class="math inline">\(60\%\)</span> significa <span class="math inline">\(0.60\)</span></p>
+<p>Ambas: <span class="math inline">\(50\%\)</span> significa <span class="math inline">\(0.50\)</span></p>
+<p>Si se selecciona un cliente al azar:</p>
+<p>¿Cuál es la probabilidad de que éste tenga una cuenta de cheques o una de ahorros?</p>
+<p><span class="math display">\[
+P(\text{A ó B}) = P(A\cup B)=0.80 + 0.60 – 0.50 = 0.90
+\]</span></p>
+<p>Existe una probabilidad del <span class="math inline">\(90\%\)</span> de que tenga una cuenta de cheques o una de ahorro.</p>
+<p>¿Cuál es la probabilidad de que el cliente no tenga ninguna de las dos?</p>
+<p><span class="math inline">\(1 – 0.90 = 0.10\)</span></p>
+<p>Existe una probabilidad del <span class="math inline">\(10\%\)</span> de que no tenga ni cuenta cheques ni de ahorro.</p>
+<p><br></br></p>
+<ol start="3" style="list-style-type: decimal">
 <li><p>Suponga que <span class="math inline">\(P(A)=0.75\)</span> y <span class="math inline">\(P(B|A)=0.40\)</span>. Cuál es la probabilidad de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>?</p></li>
 <li><p>Suponga que <span class="math inline">\(P(A)=0.40\)</span> y <span class="math inline">\(P(B|A)=0.30\)</span>. Cuál es la probabilidad de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>?</p></li>
 </ol>
@@ -1806,7 +1823,8 @@ Obtener las siguientes probabilidades</p>
 Figura 3.33: Ejercicio de 12 camisas [Imagen tomada de <span class="citation">(<a href="#ref-lind2005estadistica" role="doc-biblioref">Lind, Marchal, and Wathen 2005</a>)</span> pág <span class="math inline">\(161\)</span>]
 </p>
 </div>
-<ol start="3" style="list-style-type: decimal">
+<p><br></br></p>
+<ol start="5" style="list-style-type: decimal">
 <li>Un estudiante tiene 12 camisas en su clóset, observar la figura <a href="Probabilidad.html#fig:FigEjConjunto12CAMISAS">3.33</a>. Suponga que 9 son blancas y las demás son azules. Como se viste de noche, simplemente toma una camisa y se la pone. Juega golf dos veces seguidas y no las lava.¿Cuál es la probabilidad de que las dos camisas elegidas sean blancas?</li>
 </ol>
 <p>Sugerencia: Llamar <span class="math inline">\(W_{1}\)</span> el evento que hace referencia al hecho de seleccionar la primera camisa blanca, cuya probabilidad es:
@@ -1822,17 +1840,18 @@ P(W_{2}|W_{1})=\dfrac{8}{11}
 <span class="math display">\[
 P(W_{1}\cap W_{2})= ?
 \]</span></p>
+<p><br></br></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosDemoB0"></span>
 <img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosDemoB0-1.png" alt="Gráfica para el planteo " width="36%" />
 <p class="caption">
 Figura 3.34: Gráfica para el planteo
 </p>
 </div>
-<ol start="4" style="list-style-type: decimal">
+<ol start="6" style="list-style-type: decimal">
 <li>Un Doctor dispone de tres equipos electrónicos para realizar ecosonogramas. El uso que le da a cada equipo es de <span class="math inline">\(25\%\)</span> al primero, <span class="math inline">\(35\%\)</span> el segundo en y <span class="math inline">\(40\%\)</span> el tercero. Se sabe que los aparatos tienen probabilidades de error de <span class="math inline">\(1\%\)</span>, <span class="math inline">\(2\%\)</span> y <span class="math inline">\(3\%\)</span> respectivamente. Un paciente busca el resultado de una ecografía y observa que tiene un error. Determine la probabilidad de que se ha usado el primer aparato.</li>
 </ol>
 <p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosDemoB0">3.34</a>, y el teorema de Bayes.</p>
-<ol start="5" style="list-style-type: decimal">
+<ol start="7" style="list-style-type: decimal">
 <li><p>Suponga que <span class="math inline">\(P(A)=0.20\)</span>, <span class="math inline">\(P(B)=0.59\)</span>, y <span class="math inline">\(P(B|A)=0.45\)</span>. Encontrar la probabilidad de <span class="math inline">\(A\)</span> dado que <span class="math inline">\(B\)</span> complemento ocurre.</p></li>
 <li><p>El <span class="math inline">\(60\%\)</span> de los individuos de una población estan vacunados tontra cierta enfermedad. Durante una epidemia se sabe que el <span class="math inline">\(20\%\)</span> la ha contraído, y que <span class="math inline">\(2\)</span> de cada 100 individuos están vacunados y están enfermos. Calcular</p>
 <ol style="list-style-type: lower-alpha">
@@ -1844,7 +1863,7 @@ Figura 3.34: Gráfica para el planteo
 <p><span class="math display">\[E=\{\text{tener la enfermedad en cuestión}\}\]</span>
 <span class="math display">\[V=\{\text{estar vacunado para la enfermedad en cuestión}\}\]</span>
 con <span class="math inline">\(P(V)=0.6\)</span>, <span class="math inline">\(P(E)=0.2\)</span> y además <span class="math inline">\(P(E \cap V)=0.02\)</span>. Obtener <span class="math inline">\(P(E|V)=?\)</span></p>
-<ol start="8" style="list-style-type: decimal">
+<ol start="9" style="list-style-type: decimal">
 <li>Se estima que el <span class="math inline">\(30\%\)</span> de los habitantes de Estados Unidos son obesos <span class="math inline">\((A_1)\)</span> y que el <span class="math inline">\(3\%\)</span> sufren diabetes <span class="math inline">\((A_2)\)</span>. El <span class="math inline">\(2\%\)</span> es obeso y padece de diabetes. ¿Cuál es la probabilidad de que un sujeto elegido al azar sea obeso o sufra diabetes?</li>
 </ol>
 <p>Sugerencia:</p>
@@ -1852,57 +1871,156 @@ con <span class="math inline">\(P(V)=0.6\)</span>, <span class="math inline">\(P
 <p>Que el <span class="math inline">\(30\%\)</span> son obesos se interpreta matemáticamente como <span class="math inline">\(P(A_1)=0.30\)</span>.</p>
 <p>Que el <span class="math inline">\(3\%\)</span> es diabetico se interpreta matemáticamete como <span class="math inline">\(P(A_2)=0.03\)</span>.</p>
 <p>Que un sujeto sea elegido al azar en dicha población y cumpla ser obeso o sufra diabetes se interpreta matemáticamente como cálcular <span class="math inline">\(P(A_1 \cup A_2)\)</span>:</p>
+<p><br></br></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosEjercicio8DemoA1"></span>
 <img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosEjercicio8DemoA1-1.png" alt="Gráfica de conjuntos para el planteo " width="36%" />
 <p class="caption">
 Figura 3.35: Gráfica de conjuntos para el planteo
 </p>
 </div>
-<ol start="9" style="list-style-type: decimal">
-<li><p>Demostrar que <span class="math inline">\(P(A-B)=P(A)-P(B)\)</span> usando como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a>.</p></li>
-<li><p>Demostrar que <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span> usando como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a>.</p></li>
-<li><p>Demostrar que <span class="math inline">\(P(\Phi)=0\)</span>.</p></li>
-<li><p>Suponga una población donde el <span class="math inline">\(60\%\)</span> son mujeres y el <span class="math inline">\(40\%\)</span> hombres. En las mujeres, la probabilidad de tener una mano con tamaño menor a <span class="math inline">\(100 cm^2\)</span> es <span class="math inline">\(0.31\)</span>, mientras que en hombres, esta probabilidad es <span class="math inline">\(0.08\)</span>. ¿cuál es la probabilidad de que una persona seleccionada al azar de esta población tenga una mano con tamaño menor a <span class="math inline">\(100 cm^2\)</span>?</p></li>
+<p><br></br></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Demostrar que <span class="math inline">\(P(A-B)=P(A)-P(B)\)</span> simpre que <span class="math inline">\(B \subset A\)</span></li>
+</ol>
+<p><!-- usando como apoyo la geometría de conjuntos que muestra la figura \@ref(fig:ConjuntosEjercicio8DemoA1). --></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjDemA01"></span>
+<img src="BioestadisticaUnoUCES2021_files/figure-html/ConjDemA01-1.png" alt="Gráfica de apoya en la demostración del ejercicio 10 " width="36%" />
+<p class="caption">
+Figura 3.36: Gráfica de apoya en la demostración del ejercicio 10
+</p>
+</div>
+<p><strong>Demostración:</strong></p>
+<p>A partir de la figura <a href="Probabilidad.html#fig:ConjDemA01">3.36</a> se puede ver y confirmar que <span class="math inline">\(A \cap B^{c}=A-B\)</span>. Además <span class="math inline">\(B\)</span> y <span class="math inline">\(A-B\)</span> son mutuamente excluyentes ya que:</p>
+<p><span class="math display">\[
+  B \cap (A-B) = B \cap (A \cap B^{c}) = (B \cap B^{c}) \cap A = \Phi \cap A = \Phi
+  \]</span></p>
+<p>Es decir <span class="math inline">\(B \cap (A-B)=\Phi\)</span></p>
+<p>Entonces <span class="math inline">\(A= B \cup (A-B)\)</span>. Por lo tanto <span class="math inline">\(P(A)=P(B \cup (A-B))=P(B)+P(A-B)\)</span></p>
+<p>Es decir <span class="math inline">\(P(A)=P(B)+P(A-B)\)</span></p>
+<p>Entonces pasando al lado izquierdo de la igualdad anterior <span class="math inline">\(P(B)\)</span>, podemos concluir que <span class="math inline">\(P(A)-P(B)=P(A-B)\)</span> Q.E.D.</p>
+<p><br></br></p>
+<ol start="11" style="list-style-type: decimal">
+<li>Demostrar que <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span> usando como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a>.</li>
+</ol>
+<p><strong>Demostración:</strong></p>
+<p>A partir de la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a> se puede ver que:</p>
+<p><span class="math display">\[
+  A \cup B = A \cup (B-(A\cap B))
+  \]</span></p>
+<p>También es claro viendo la geometría de la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a> que <span class="math inline">\(A\)</span> y <span class="math inline">\(B - (A\cap B)\)</span> son mutuamente excluyentes.</p>
+<p>Entonces</p>
+<p><span class="math display">\[
+  P(A\cup B)=P(A)+P(B-(A\cap B )), \ \ \ \ \ (I)
+  \]</span></p>
+<p>Como se puede ver de la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio8DemoA1">3.35</a> <span class="math inline">\((A\cap B) \subset B\)</span>. Entonces podemos aplicar el ejercicio 10 a la diferencia <span class="math inline">\(B-(A\cap B)\)</span> así:</p>
+<p><span class="math display">\[
+P(B-(A\cap B)) = P(B)-P(A\cap B), \ \ \ \ \ (II)
+\]</span></p>
+<p>Sustituyendo <span class="math inline">\((II)\)</span> en <span class="math inline">\((I)\)</span>, se concluye que <span class="math inline">\(P(A \cup B) = P(A)+P(B)-P(A\cap B)\)</span> Q.E.D.</p>
+<p><br></br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>Demostrar que <span class="math inline">\(P(\Phi)=0\)</span>.</li>
+</ol>
+<p><strong>Demostración:</strong></p>
+<p>Sabemos que <span class="math inline">\(S=S \cup \Phi\)</span>, y que <span class="math inline">\(P(S)=1\)</span>. Además que ambos <span class="math inline">\(S\)</span> y <span class="math inline">\(\Phi\)</span> son mutuamente excluyentes. Entonces</p>
+<p><span class="math display">\[
+P(S) = P(S \cup \Phi) = P(S) + P(\Phi)
+\]</span></p>
+<p>Es decir <span class="math inline">\(1 = 1 + P(\Phi)\)</span></p>
+<p>Por lo tanto <span class="math inline">\(1-1 = 0 = P(\Phi).\)</span></p>
+<p>Finalmente <span class="math inline">\(P(\Phi) = 0\)</span> Q.E.D.</p>
+<p><br></br></p>
+<ol start="13" style="list-style-type: decimal">
+<li>Suponga una población donde el <span class="math inline">\(60\%\)</span> son mujeres y el <span class="math inline">\(40\%\)</span> hombres. En las mujeres, la probabilidad de tener una mano con tamaño menor a <span class="math inline">\(100 cm^2\)</span> es <span class="math inline">\(0.31\)</span>, mientras que en hombres, esta probabilidad es <span class="math inline">\(0.08\)</span>. ¿cuál es la probabilidad de que una persona seleccionada al azar de esta población tenga una mano con tamaño menor a <span class="math inline">\(100 cm^2\)</span>?</li>
 </ol>
 <p>Sugerencia: Aplicar el teorema de la probabilidad total al conjunto <span class="math inline">\(A\)</span>. Sea <span class="math inline">\(H=\{\text{Hombre}\}\)</span>, <span class="math inline">\(M=\{\text{Mujer}\}\)</span>, <span class="math inline">\(A=\{\text{Área de la mano } &lt; 100 \ \ \text{cm}^2\}\)</span>, <span class="math inline">\(P(H)=0.40\)</span>, <span class="math inline">\(P(M)=0.60\)</span>, <span class="math inline">\(P(A|H)=0.08\)</span>, <span class="math inline">\(P(A|M)=0.31\)</span>, y sabemos que en teoría de conjuntos es valido expresar <span class="math inline">\(A=A \cap (H \cup M)=(A\cap H) \cup (A \cap M)\)</span>.</p>
-<ol start="13" style="list-style-type: decimal">
-<li>Todas las noches el señor Herrera llega tarde a su casa. Su buena esposa le deja encendida la luz de la entrada de la casa. La probabilidad de que el señor Herrera llegue borracho es del <span class="math inline">\(60\%\)</span>. Si llega borracho, hay una probabilidad de <span class="math inline">\(10\%\)</span> de apagar la luz, en tanto que si llega sobrio, la probabilidad de que olvide apagar la luz es de <span class="math inline">\(5\%\)</span>. Dado que el señor Herrera olvido apagar la luz una noche cualquiera ¿cuál es la probabilidad de que haya llegado borracho?</li>
-</ol>
-<p>Sugerencia: Usar el teorema de Bayes.</p>
+<p><br></br></p>
 <ol start="14" style="list-style-type: decimal">
+<li>Todas las noches el Señor Herrera llega tarde a su casa. La Señora Herrera que es una buena esposa, le deja encendida la luz de la entrada. La probabilidad de que el Señor Herrera llegue borracho es del <span class="math inline">\(60\%\)</span>. Si llega borracho hay una probabilidad del <span class="math inline">\(90\%\)</span> de que se le olvide apagar la luz, en tanto que esta es solo del <span class="math inline">\(5\%\)</span> si llega sobrio. ¿Cuál es la probabilidad que el Señor Herrera apague la luz en una noche cualquiera? Si el Señor Herrera apagó la luz, ¿cuál es la probabilidad que haya llegado borracho?</li>
+</ol>
+<p><!-- Todas las noches el señor Herrera llega tarde a su casa. Su buena esposa le deja encendida la luz de la entrada de la casa. La probabilidad de que el señor Herrera llegue borracho es del $60\%$. Si llega borracho, hay una probabilidad de $10\%$ de apagar la luz, en tanto que si llega sobrio, la probabilidad de que olvide apagar la luz es de $5\%$. Dado que el señor Herrera olvido apagar la luz una noche cualquiera ¿cuál es la probabilidad de que haya llegado borracho? --></p>
+<p>Sugerencia: Usar el teorema de Bayes.</p>
+<p><strong>Solución:</strong></p>
+<p>Sean los sucesos</p>
+<p><span class="math inline">\(A\)</span>: El sr llega borracho</p>
+<p><span class="math inline">\(B\)</span>: El sr NO apaga la luz</p>
+<p>Espacio muestral</p>
+<p><span class="math display">\[
+S={(A,B);(A^{c},B);(A,B^{c});(A^{c},B^{c})}
+\]</span></p>
+<p>Datos</p>
+<p><span class="math inline">\(P(A)=0.6\)</span> Probabilidad de que el sr Herrera llegue borracho</p>
+<p><span class="math inline">\(P(B|A)=0.9\)</span> Probabilidad de que se le olvide apagar la luz dado que llega borracho</p>
+<p><span class="math inline">\(P(B|A^{c})=0.05\)</span> Probabilidad de que se se le olvide apagar la luz dado que llega sobrio</p>
+<p><strong>Solución</strong></p>
+<p><span class="math inline">\(P(B^{c})=?\)</span> Lo que significa: Probabilidad de que el señor Herrera apague la luz en una noche cualquiera</p>
+<p><span class="math display">\[
+P(B^{c})=P(B^{c} \cap A)+P(B^{c} \cap A^{c})
+\]</span></p>
+<p><span class="math display">\[
+P(B^{c})= P(B^{c}|A).P(A) + P(B^{c}|A^{c}).P(A^{c})
+\]</span></p>
+<p><span class="math inline">\(P(A^{c})=1-P(A)=1-0.6=0.4\)</span></p>
+<p><span class="math inline">\(P(B^{c}|A^{c})=1-P(B|A^{c})=1-0.05=0.95\)</span></p>
+<p><span class="math inline">\(P(B^{c}|A)=1-P(B|A)=1-0.9=0.1\)</span></p>
+<p><span class="math display">\[
+P(B^{c})= (0.1).(0.6) + (0.95).(0.4)=0.44
+\]</span></p>
+<p><span class="math inline">\(P(A|B^{c})=?\)</span> Lo que significa que: Si el Señor Herrera apagó la luz, ¿cuál es la probabilidad que haya llegado borracho?</p>
+<p><span class="math display">\[
+P(A|B^{c})= \dfrac{P(A\cap B^{c})}{P(B^{c})}=\dfrac{P(B^{c}|A).P(A)}{P(B^{c})}=\dfrac{(0.1).(0.6)}{0.44}=0.136
+\]</span></p>
+<p><br></br></p>
+<ol start="15" style="list-style-type: decimal">
 <li>Algunos de los individuos de una comunidad de avispas en un bosque, comparten cierto rasgo morfológico <span class="math inline">\(B\)</span> en las alas. En particular, una fracción <span class="math inline">\(0.7\)</span> de los individuos de la especie <span class="math inline">\(A\)</span> tienen este rasgo <span class="math inline">\(B\)</span>, mientras que en otras especies, el rasgo <span class="math inline">\(B\)</span> esta presente en una fracción de <span class="math inline">\(0.34\)</span>. La especie <span class="math inline">\(A\)</span> tiene una abundadncia en la comunidad del <span class="math inline">\(0.4\)</span>. Suponga que se colecta una avispa de esta comunidad y dicho individuo tiene presente el rasgo <span class="math inline">\(B\)</span>; ¿cuál es la probabilidad de que este individuo sea de la especie <span class="math inline">\(A\)</span>?</li>
 </ol>
 <p>Sugerencia: Usar el teorema de Bayes.</p>
+<p><br></br></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosEjercicio15"></span>
 <img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosEjercicio15-1.png" alt="Gráfica para el planteo " width="36%" />
-<p class="caption">
-Figura 3.36: Gráfica para el planteo
-</p>
-</div>
-<ol start="15" style="list-style-type: decimal">
-<li>Un moderno edificio tiene dos ascensores para uso de los vecinos. El primero de los ascensores es usado el 45% de las ocasiones, mientras que el segundo es usado el resto de las ocasiones. El uso continuado de los ascensores provoca un 5% de fallos en el primero de los ascensores y un 8% en el segundo. Un día suena la alarma de uno de los ascensores porque ha fallado. Calcula la probabilidad de que haya sido el primero de los ascensores.</li>
-</ol>
-<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio15">3.36</a>, y el teorema de Bayes.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosDemoA1"></span>
-<img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosDemoA1-1.png" alt="Gráfica para el planteo " width="36%" />
 <p class="caption">
 Figura 3.37: Gráfica para el planteo
 </p>
 </div>
 <ol start="16" style="list-style-type: decimal">
-<li>Un envío de frutas a un supermercado consta de naranjas y manzanas que se agrupan en cajones de 500 piezas: 300 naranjas y 200 manzanas. Por experiencias anteriores se sabe que en cada envío están estropeadas un 15% de las naranjas y un 5% de las manzanas. Se extrae una pieza al azar de un cajón cualquiera. a) ¿Cuál es la probabilidad de que esté estropeada? b) Si la pieza elegida está en buenas condiciones, ¿qué es más probable, que sea naranja o que sea manzana?</li>
+<li>Un moderno edificio tiene dos ascensores para uso de los vecinos. El primero de los ascensores es usado el 45% de las ocasiones, mientras que el segundo es usado el resto de las ocasiones. El uso continuado de los ascensores provoca un 5% de fallos en el primero de los ascensores y un 8% en el segundo. Un día suena la alarma de uno de los ascensores porque ha fallado. Calcula la probabilidad de que haya sido el primero de los ascensores.</li>
 </ol>
-<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosDemoA1">3.37</a>, y el teorema de Bayes.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosDemoB4"></span>
-<img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosDemoB4-1.png" alt="Gráfica Ir a clase para el planteo " width="36%" />
+<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosEjercicio15">3.37</a>, y el teorema de Bayes.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosDemoA1"></span>
+<img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosDemoA1-1.png" alt="Gráfica para el planteo " width="36%" />
 <p class="caption">
-Figura 3.38: Gráfica Ir a clase para el planteo
+Figura 3.38: Gráfica para el planteo
 </p>
 </div>
 <ol start="17" style="list-style-type: decimal">
+<li>Un envío de frutas a un supermercado consta de naranjas y manzanas que se agrupan en cajones de 500 piezas: 300 naranjas y 200 manzanas. Por experiencias anteriores se sabe que en cada envío están estropeadas un 15% de las naranjas y un 5% de las manzanas. Se extrae una pieza al azar de un cajón cualquiera. a) ¿Cuál es la probabilidad de que esté estropeada? b) Si la pieza elegida está en buenas condiciones, ¿qué es más probable, que sea naranja o que sea manzana?</li>
+</ol>
+<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosDemoA1">3.38</a>, y el teorema de Bayes.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ConjuntosDemoB4"></span>
+<img src="BioestadisticaUnoUCES2021_files/figure-html/ConjuntosDemoB4-1.png" alt="Gráfica Ir a clase para el planteo " width="36%" />
+<p class="caption">
+Figura 3.39: Gráfica Ir a clase para el planteo
+</p>
+</div>
+<ol start="18" style="list-style-type: decimal">
 <li>Para ir a clase, un estudiante utiliza su coche el 70 % de los días, mientras que va en autobús el resto de los días. Cuando utiliza su coche, llega tarde el 20 % de los días, mientras que si va en autobús llega a tiempo el 10 % de los días. Elegido un día al azar: a) Calcular la probabilidad de que el estudiante llegue tarde. b) Sabiendo que ha llegado a tiempo, ¿cuál es la probabilidad de que haya venido en autobús? c) Sabiendo que ha llegado tarde ¿cuál es la probabilidad de que haya venido en coche?</li>
 </ol>
-<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosDemoB4">3.38</a>, y el teorema de Bayes.</p>
+<p>Sugerencia: Usar como apoyo la geometría de conjuntos que muestra la figura <a href="Probabilidad.html#fig:ConjuntosDemoB4">3.39</a>, y el teorema de Bayes.</p>
+<!-- \def\firstcircle{(90:1.75cm) circle (2.5cm)} -->
+<!-- \def\secondcircle{(210:1.75cm) circle (2.5cm)} -->
+<!--     \begin{tikzpicture} -->
+<!--       \draw[black, fill=blue!25] (-5,-4) rectangle (5,5); -->
+<!--       \begin{scope} -->
+<!--           \clip \firstcircle; -->
+<!--           \fill[white] \firstcircle; -->
+<!--       \end{scope} -->
+<!--       \draw \firstcircle ; -->
+<!--       \draw \secondcircle ; -->
+<!--     \node at (-4,5.5) {\LARGE\textbf{U}}; -->
+<!--     \node at (-4,1) {\LARGE\textbf{A}}; -->
+<!--     \node at (2.1,4) {\LARGE\textbf{B}}; -->
+<!--     \node at (2.5,-3) {\LARGE\textbf{$ B^{c}$}}; -->
+<!-- \end{tikzpicture} -->
 <!-- **Enunciado Cero** -->
 <!-- En las elecciones de un país hay 2 candidatos a la presidencia, el candidato A y el candidato B, y en los resultados de las selecciones de este pais se sabe que un 75% de la población es de clase media o baja y un 25% es de clase alta, si por el candidato A votó un 90% de la clase alta y un 5% de la clase media y baja, y se elige una persona al azar de los que votaron por el candidato A ¿Cuál es la probabilidad que este sea de la clase media o baja? -->
 <!-- **Enunciado Uno** -->
