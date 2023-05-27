@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 4 Modelos de probabilidad | Bioestadística Uno</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 4 Modelos de probabilidad | Bioestadística Uno" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2023-05-06" />
+<meta name="date" content="2023-05-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -385,16 +389,9 @@ div.csl-indent {
 <li class="chapter" data-level="4.19.13" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo12"><i class="fa fa-check"></i><b>4.19.13</b> Ejemplo12</a></li>
 <li class="chapter" data-level="4.19.14" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#solución-ejemplo12"><i class="fa fa-check"></i><b>4.19.14</b> Solución (ejemplo12)</a></li>
 <li class="chapter" data-level="4.19.15" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo13"><i class="fa fa-check"></i><b>4.19.15</b> Ejemplo13</a></li>
-<li class="chapter" data-level="4.19.16" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo14"><i class="fa fa-check"></i><b>4.19.16</b> Ejemplo14</a></li>
-<li class="chapter" data-level="4.19.17" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo15"><i class="fa fa-check"></i><b>4.19.17</b> Ejemplo15</a></li>
-<li class="chapter" data-level="4.19.18" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo16"><i class="fa fa-check"></i><b>4.19.18</b> Ejemplo16</a></li>
-<li class="chapter" data-level="4.19.19" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo17"><i class="fa fa-check"></i><b>4.19.19</b> Ejemplo17</a></li>
-<li class="chapter" data-level="4.19.20" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo18"><i class="fa fa-check"></i><b>4.19.20</b> Ejemplo18</a></li>
-<li class="chapter" data-level="4.19.21" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo19"><i class="fa fa-check"></i><b>4.19.21</b> Ejemplo19</a></li>
-<li class="chapter" data-level="4.19.22" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo20"><i class="fa fa-check"></i><b>4.19.22</b> Ejemplo20</a></li>
-<li class="chapter" data-level="4.19.23" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejemplo21"><i class="fa fa-check"></i><b>4.19.23</b> Ejemplo21</a></li>
 </ul></li>
 <li class="chapter" data-level="4.20" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejercicios-propuestos-tercer-parcial"><i class="fa fa-check"></i><b>4.20</b> Ejercicios propuestos tercer parcial</a></li>
+<li class="chapter" data-level="4.21" data-path="ModelosDeProbabilidad.html"><a href="ModelosDeProbabilidad.html#ejercicios-propuestos-cuarto-parcial"><i class="fa fa-check"></i><b>4.21</b> Ejercicios propuestos cuarto parcial</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="TemasExtras.html"><a href="TemasExtras.html"><i class="fa fa-check"></i><b>5</b> Temas Extras</a></li>
 <li class="chapter" data-level="6" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html"><i class="fa fa-check"></i><b>6</b> Programación R_Rstudio</a>
@@ -1177,14 +1174,14 @@ P(X&lt;x)=0.90
 \]</span></p>
 <p>Como es lo único que conocemos para calcular probabilidades, debemos estandarizar:</p>
 <p><span class="math display">\[
-P(X&lt;x)=0.90=P\left(Z\leq \dfrac{x-1250}{350}\right)=1.2815516
+P(X&lt;x)=0.90=P\left(Z\leq \dfrac{x-1250}{350}\right)=0.9000
 \]</span></p>
-<p>donde se acumula el <span class="math inline">\(90 \%\)</span> es en <span class="math inline">\(Z = 1.28\)</span> (buscamos en las probabilidades lo más cercano a <span class="math inline">\(0.90\)</span> y vemos el valor de <span class="math inline">\(Z\)</span>)</p>
+<p>donde se acumula el <span class="math inline">\(90 \%\)</span> es en <span class="math inline">\(Z = 1.29\)</span> (buscamos en las probabilidades lo más cercano a <span class="math inline">\(0.9000\)</span> y vemos el valor de <span class="math inline">\(Z\)</span>)</p>
 <p>Así,
 <span class="math display">\[
-\dfrac{x-1250}{350}=1.282 \ \ \ \ \ \text{entonces} \ \ \ \ \ x=1.282(350)+1250=1698.7
+\dfrac{x-1250}{350}=1.29 \ \ \ \ \ \text{entonces} \ \ \ \ \ x=1.29(350)+1250=1701.5
 \]</span></p>
-<p>es decir, a partir de <span class="math inline">\(1689\)</span> se encuentra el <span class="math inline">\(10 \%\)</span> superior de sus ingresos semanales.</p>
+<p>es decir, a partir de <span class="math inline">\(1702\)</span> se encuentra el <span class="math inline">\(10 \%\)</span> superior de sus ingresos semanales.</p>
 <iframe width="100%" height="300" src="https://rdrr.io/snippets/embed/" frameborder="0">
 </iframe>
 </div>
@@ -1196,67 +1193,6 @@ P(X&lt;x)=0.90=P\left(Z\leq \dfrac{x-1250}{350}\right)=1.2815516
 <li><p>¿Qué porcentaje (probabilidad) de la población tiene niveles de colesterol entre <span class="math inline">\(170\)</span> y <span class="math inline">\(180 mg/dL\)</span> ?</p></li>
 <li><p>Suponga que se quiere seleccionar el <span class="math inline">\(5 \%\)</span> de los niños que tengan los niveles más bajos de colesterol. ¿Cuáles niños seleccionaría?</p></li>
 </ul>
-</div>
-<div id="ejemplo14" class="section level3 hasAnchor" number="4.19.16">
-<h3><span class="header-section-number">4.19.16</span> Ejemplo14<a href="ModelosDeProbabilidad.html#ejemplo14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Dos estudiantes fueron informados de que habian recibido referencias tipificadas de <span class="math inline">\(0.8\)</span> y <span class="math inline">\(-0.4\)</span>, respectivamente en un examen de inglés. Si sus puntuaciones fueron <span class="math inline">\(88\)</span> y <span class="math inline">\(64\)</span>, respectivamente, hallar la media y desviación típica de las puntuaciones del examen.</p>
-<p><strong>Respuesta: <span class="math inline">\(\mu =72\)</span>; <span class="math inline">\(\sigma =20\)</span></strong></p>
-</div>
-<div id="ejemplo15" class="section level3 hasAnchor" number="4.19.17">
-<h3><span class="header-section-number">4.19.17</span> Ejemplo15<a href="ModelosDeProbabilidad.html#ejemplo15" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El peso medio de las frutas de un gran cargamento es de <span class="math inline">\(15\)</span> onzas, con una desviación estándar de <span class="math inline">\(1,62\)</span> onzas; si sus pesos están
-distribuidos normalmente, ¿ qué porcentaje de frutas tendrá un peso entre <span class="math inline">\(15\)</span> y <span class="math inline">\(18\)</span> onzas?</p>
-<p><strong>Respuesta: <span class="math inline">\(P=46.78 \%\)</span></strong></p>
-</div>
-<div id="ejemplo16" class="section level3 hasAnchor" number="4.19.18">
-<h3><span class="header-section-number">4.19.18</span> Ejemplo16<a href="ModelosDeProbabilidad.html#ejemplo16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Si la vida media de cierta marca de batería es de <span class="math inline">\(30\)</span> meses, con una desviación estándar de <span class="math inline">\(6\)</span> meses, ¿qué porcentaje de estas baterías puede esperarse que tengan una duración de <span class="math inline">\(24\)</span> a <span class="math inline">\(36\)</span> meses?. Se supone que la duración tiene una distribución normal.</p>
-<p><strong>Respuesta: <span class="math inline">\(P=68.26 \%\)</span></strong></p>
-</div>
-<div id="ejemplo17" class="section level3 hasAnchor" number="4.19.19">
-<h3><span class="header-section-number">4.19.19</span> Ejemplo17<a href="ModelosDeProbabilidad.html#ejemplo17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Si las estaturas de <span class="math inline">\(10000\)</span> alumnos universitarios tiene una distribución normal, con media de <span class="math inline">\(169 cm\)</span> y desviación estándar de <span class="math inline">\(2.5 cm\)</span></p>
-<ul>
-<li>¿Cuántos alumnos tendrán <strong>por lo menos</strong> <span class="math inline">\(172 cm\)</span>?</li>
-</ul>
-<p><strong>Respuesta: <span class="math inline">\(1151\)</span> alumnos</strong></p>
-<ul>
-<li>¿Cuál es el intervalo que incluye al <span class="math inline">\(75 \%\)</span> central de alumnos?</li>
-</ul>
-<p><strong>Respuesta: La variable aletoria <span class="math inline">\(X\)</span> entre <span class="math inline">\(166.12\)</span> y <span class="math inline">\(171.87\)</span></strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="ModelosDeProbabilidad.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">4</span>,<span class="dv">80</span>,<span class="fl">0.05</span>)</span></code></pre></div>
-<pre><code>## [1] 0.2004311</code></pre>
-</div>
-<div id="ejemplo18" class="section level3 hasAnchor" number="4.19.20">
-<h3><span class="header-section-number">4.19.20</span> Ejemplo18<a href="ModelosDeProbabilidad.html#ejemplo18" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Se supone que los resultados de un examen siguen una distribución normal con media <span class="math inline">\(78\)</span> y desviación típica <span class="math inline">\(36\)</span>.
-¿ cual es la probabilidad de que una persona que se presenta al examen obtenga una calificación superior a <span class="math inline">\(72\)</span>?</p>
-<p><strong>Respuesta: 0.5636</strong></p>
-</div>
-<div id="ejemplo19" class="section level3 hasAnchor" number="4.19.21">
-<h3><span class="header-section-number">4.19.21</span> Ejemplo19<a href="ModelosDeProbabilidad.html#ejemplo19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>La duración media de un televisor es de ocho años y su desviación típica es 0.5 años. Sabiendo que su vida útil se distribuye normalmente, hallar la probabilidad de que al adquirir un televisor dure más de nueve años.</p>
-<p><span class="math display">\[
-P(X&gt;9)=?
-\]</span></p>
-</div>
-<div id="ejemplo20" class="section level3 hasAnchor" number="4.19.22">
-<h3><span class="header-section-number">4.19.22</span> Ejemplo20<a href="ModelosDeProbabilidad.html#ejemplo20" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Se supone que la estadia de los enfermos en un hospital sigue una distribución normal de media 8 días y desviación típica de 3. Calcular la probabilidad de que la estadia de un enfermo:</p>
-<ol style="list-style-type: decimal">
-<li><p>Sea inferior a 7 días, es decir <span class="math inline">\(P(X&lt;7)=?\)</span></p></li>
-<li><p>Sea superior a 3 días, es decir <span class="math inline">\(P(X&gt;3)=?\)</span></p></li>
-<li><p>Este comprendidad entre 10 y 12 días, es decir <span class="math inline">\(P(10 \leq X \leq 12)=?\)</span></p></li>
-</ol>
-</div>
-<div id="ejemplo21" class="section level3 hasAnchor" number="4.19.23">
-<h3><span class="header-section-number">4.19.23</span> Ejemplo21<a href="ModelosDeProbabilidad.html#ejemplo21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El peso de los toros de una determinada ganadería se distribuye normalmente con una media de 500kg y 45 kg de desviación estándar. Si la ganadería tiene 2000 toros calcular:</p>
-<ol style="list-style-type: decimal">
-<li><p>Cuantos pesarán más de 540 kg, significa primero <span class="math inline">\(P(X&gt;540kg)=?\)</span></p></li>
-<li><p>Cuántos pesarán menos de 480 kg, significa primero <span class="math inline">\(P(X&lt;480kg)=?\)</span></p></li>
-<li><p>Cuántos pesarán entre 490 y 510 kg, significa primero <span class="math inline">\(P(490kg \leq X \leq 510kg)=?\)</span></p></li>
-</ol>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta charset="utf-8"/>
 <script src="https://www.geogebra.org/apps/deployggb.js"></script>
@@ -1546,6 +1482,44 @@ d) Cuál es la imagen de la función en $x=4$?
 e) Cuál es el valor de la media si es modelo de probabilidad?
 f) Cuál es el valor de la varianza si es modelo de probabilidad?
 g) Cuál es el valor de la desviación estándar si es modelo de probabilidad?</code></pre>
+</div>
+<div id="ejercicios-propuestos-cuarto-parcial" class="section level2 hasAnchor" number="4.21">
+<h2><span class="header-section-number">4.21</span> Ejercicios propuestos cuarto parcial<a href="ModelosDeProbabilidad.html#ejercicios-propuestos-cuarto-parcial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Dos estudiantes fueron informados de que habian recibido referencias tipificadas de <span class="math inline">\(0.8\)</span> y <span class="math inline">\(-0.4\)</span>, respectivamente en un examen de inglés. Si sus puntuaciones fueron <span class="math inline">\(88\)</span> y <span class="math inline">\(64\)</span>, respectivamente, hallar la media y desviación típica de las puntuaciones del examen.</p></li>
+<li><p>El peso medio de las frutas de un gran cargamento es de <span class="math inline">\(15\)</span> onzas, con una desviación estándar de <span class="math inline">\(1,62\)</span> onzas; si sus pesos están
+distribuidos normalmente, ¿ qué porcentaje de frutas tendrá un peso entre <span class="math inline">\(15\)</span> y <span class="math inline">\(18\)</span> onzas?</p></li>
+<li><p>Si la vida media de cierta marca de batería es de <span class="math inline">\(30\)</span> meses, con una desviación estándar de <span class="math inline">\(6\)</span> meses, ¿qué porcentaje de estas baterías puede esperarse que tengan una duración de <span class="math inline">\(24\)</span> a <span class="math inline">\(36\)</span> meses?. Se supone que la duración tiene una distribución normal.</p></li>
+<li><p>Si las estaturas de <span class="math inline">\(10000\)</span> alumnos universitarios tiene una distribución normal, con media de <span class="math inline">\(169 cm\)</span> y desviación estándar de <span class="math inline">\(2.5 cm\)</span></p></li>
+</ol>
+<ul>
+<li><p>¿Cuántos alumnos tendrán <strong>por lo menos</strong> <span class="math inline">\(172 cm\)</span>?</p></li>
+<li><p>¿Cuál es el intervalo que incluye al <span class="math inline">\(75 \%\)</span> central de alumnos?</p></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Se supone que los resultados de un examen siguen una distribución normal con media <span class="math inline">\(78\)</span> y desviación típica <span class="math inline">\(36\)</span>.
+¿ cual es la probabilidad de que una persona que se presenta al examen obtenga una calificación superior a <span class="math inline">\(72\)</span>?</p></li>
+<li><p>La duración media de un televisor es de ocho años y su desviación típica es 0.5 años. Sabiendo que su vida útil se distribuye normalmente, hallar la probabilidad de que al adquirir un televisor dure más de nueve años.</p></li>
+</ol>
+<p><span class="math display">\[
+  P(X&gt;9)=?
+\]</span></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Se supone que la estadia de los enfermos en un hospital sigue una distribución normal de media 8 días y desviación típica de 3. Calcular la probabilidad de que la estadia de un enfermo:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Sea inferior a 7 días, es decir <span class="math inline">\(P(X&lt;7)=?\)</span></p></li>
+<li><p>Sea superior a 3 días, es decir <span class="math inline">\(P(X&gt;3)=?\)</span></p></li>
+<li><p>Este comprendidad entre 10 y 12 días, es decir <span class="math inline">\(P(10 \leq X \leq 12)=?\)</span></p></li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>El peso de los toros de una determinada ganadería se distribuye normalmente con una media de 500kg y 45 kg de desviación estándar. Si la ganadería tiene 2000 toros calcular:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Cuantos pesarán más de 540 kg, significa primero <span class="math inline">\(P(X&gt;540kg)=?\)</span></p></li>
+<li><p>Cuántos pesarán menos de 480 kg, significa primero <span class="math inline">\(P(X&lt;480kg)=?\)</span></p></li>
+<li><p>Cuántos pesarán entre 490 y 510 kg, significa primero <span class="math inline">\(P(490kg \leq X \leq 510kg)=?\)</span></p></li>
+</ol>
 
 </div>
 </div>
