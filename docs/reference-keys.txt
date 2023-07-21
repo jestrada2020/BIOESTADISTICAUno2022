@@ -328,3 +328,4 @@ fig:ModeloProbV4
 ejercicios-propuestos-cuarto-parcial
 video-motivacional
 entrevista-perdida-a-steven-jobs-en-español
+páginas-donde-se-puede-trabajar-python-en-línea
