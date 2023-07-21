@@ -326,3 +326,5 @@ fig:ModeloProbV2
 fig:ModeloProbV3
 fig:ModeloProbV4
 ejercicios-propuestos-cuarto-parcial
+video-motivacional
+entrevista-perdida-a-steven-jobs-en-español
