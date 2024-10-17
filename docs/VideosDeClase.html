@@ -630,7 +630,7 @@ function updateChart(rowValue, colValue) {
 chartSvg.innerHTML = '';
 
 // Dibujar el eje X
-              const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");
+              const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");CambioJueves2
                 xAxis.setAttribute("x1", "50");
                 xAxis.setAttribute("y1", "550");
                 xAxis.setAttribute("x2", "950");
@@ -706,7 +706,7 @@ highlightCells();
 <h2><span class="header-section-number">7.2</span> Aplicación de la distribucion Binomial<a href="VideosDeClase.html#aplicación-de-la-distribucion-binomial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
 Calculadora de Distribución Binomial
 </title>
@@ -812,7 +812,7 @@ if (isNaN(n) || isNaN(p) || isNaN(k) || n < 1 || p < 0 || p > 1 || k < 0 || k > 
 document.getElementById('formula').innerHTML = '';
 document.getElementById('resultado').innerHTML = 'Por favor, ingrese valores válidos.';
 document.getElementById('tablaDistribucion').innerHTML = '';
-                return;
+return;
  }
 
 const probabilidad = calcularDistribucionBinomial(n, p, k);
