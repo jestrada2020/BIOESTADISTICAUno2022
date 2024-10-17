@@ -335,3 +335,4 @@ tabla-normal-estándar---02072024
 calculadora-02072024
 calculadora
 aplicación-de-la-distribucion-binomial
+TablaNormalEstandar
