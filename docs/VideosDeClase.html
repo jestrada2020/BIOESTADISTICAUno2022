@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 7 Manejo de Tablas y Videos de Clase | Bioestadística Uno</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 7 Manejo de Tablas y Videos de Clase | Bioestadística Uno" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="John Jairo Estrada Álvarez" />
 
 
-<meta name="date" content="2024-10-12" />
+<meta name="date" content="2024-10-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -323,14 +323,16 @@
 <li class="chapter" data-level="6.1" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>6.1</b> Repaso de R y Rstudio</a></li>
 <li class="chapter" data-level="6.2" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>6.2</b> Páginas donde se puede trabajar R en línea</a></li>
 <li class="chapter" data-level="6.3" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-python-en-línea"><i class="fa fa-check"></i><b>6.3</b> Páginas donde se puede trabajar Python en línea</a></li>
+<li class="chapter" data-level="6.4" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#calculadora"><i class="fa fa-check"></i><b>6.4</b> Calculadora</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="VideosDeClase.html"><a href="VideosDeClase.html"><i class="fa fa-check"></i><b>7</b> Manejo de Tablas y Videos de Clase</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="VideosDeClase.html"><a href="VideosDeClase.html#tabla-normal-estándar---02072024"><i class="fa fa-check"></i><b>7.1</b> Tabla normal estándar - 02/07/2024</a></li>
+<li class="chapter" data-level="7.2" data-path="VideosDeClase.html"><a href="VideosDeClase.html#aplicación-de-la-distribucion-binomial"><i class="fa fa-check"></i><b>7.2</b> Aplicación de la distribucion Binomial</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html"><i class="fa fa-check"></i><b>8</b> Videos de Asesoría</a>
+<li class="chapter" data-level="8" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html"><i class="fa fa-check"></i><b>8</b> Calculadora de arítmetica</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html#asesorías-semestre-02-2021"><i class="fa fa-check"></i><b>8.1</b> Asesorías semestre 02-2021</a></li>
+<li class="chapter" data-level="8.1" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html#calculadora-02072024"><i class="fa fa-check"></i><b>8.1</b> Calculadora 02/07/2024</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -698,6 +700,192 @@ generateTable();
 highlightCells();
         });
     </script>
+</script>
+</div>
+<div id="aplicación-de-la-distribucion-binomial" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Aplicación de la distribucion Binomial<a href="VideosDeClase.html#aplicación-de-la-distribucion-binomial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+Calculadora de Distribución Binomial
+</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f0f0f0;
+}
+h1, h2 {
+color: #333;
+text-align: center;
+}
+.input-group {
+margin-bottom: 15px;
+}
+label {
+display: block;
+margin-bottom: 5px;
+}
+input {
+width: 100%;
+padding: 5px;
+border: 1px solid #ddd;
+border-radius: 4px;
+}
+button {
+background-color: #4CAF50;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+display: block;
+margin: 20px auto;
+}
+button:hover {
+background-color: #45a049;
+}
+ #formula, #resultado, #tablaDistribucion {
+ margin-top: 20px;
+ padding: 10px;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ }
+ .math {
+ font-family: "Times New Roman", Times, serif;
+ font-style: italic;
+ }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 20px;
+ }
+ th, td {
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: center;
+ }
+ th {
+ background-color: #f2f2f2;
+        }
+ </style>
+</head>
+<body>
+<h1>
+Calculadora de Distribución Binomial
+</h1>
+<div class="input-group">
+<label for="n">Número de ensayos (n):</label>
+<input type="number" id="n" min="1" required>
+</div>
+<div class="input-group">
+<label for="p">Probabilidad de éxito (p):</label>
+<input type="number" id="p" min="0" max="1" step="0.01" required>
+</div>
+<div class="input-group">
+<label for="k">Número de éxitos (k):</label>
+<input type="number" id="k" min="0" required>
+</div>
+<button onclick="calcularProbabilidad()">
+Calcular Probabilidad
+</button>
+<div id="formula">
+
+</div>
+<div id="resultado">
+
+</div>
+<div id="tablaDistribucion">
+
+</div>
+<script>
+function calcularProbabilidad() {
+const n = parseInt(document.getElementById('n').value);
+const p = parseFloat(document.getElementById('p').value);
+const k = parseInt(document.getElementById('k').value);
+            
+if (isNaN(n) || isNaN(p) || isNaN(k) || n < 1 || p < 0 || p > 1 || k < 0 || k > n) {
+document.getElementById('formula').innerHTML = '';
+document.getElementById('resultado').innerHTML = 'Por favor, ingrese valores válidos.';
+document.getElementById('tablaDistribucion').innerHTML = '';
+                return;
+ }
+
+const probabilidad = calcularDistribucionBinomial(n, p, k);
+            
+// Mostrar la fórmula con los valores
+const formulaHTML = `
+<h2>Fórmula de la Distribución Binomial:</h2>
+<p class="math">P(X = k) = C(n,k) * p<sup>k</sup> * (1-p)<sup>n-k</sup></p>
+<p>Donde:</p>
+<ul>
+<li>n = ${n} (número de ensayos)</li>
+<li>k = ${k} (número de éxitos)</li>
+<li>p = ${p} (probabilidad de éxito)</li>
+<li>C(n,k) = ${combinacion(n, k)} (coeficiente binomial)</li>
+</ul>
+<p>Sustituyendo los valores:</p>
+<p class="math">P(X = ${k}) = ${combinacion(n, k)} * ${p}<sup>${k}</sup> * (1-${p})<sup>${n-k}</sup></p>
+`;
+document.getElementById('formula').innerHTML = formulaHTML;
+
+// Mostrar el resultado
+document.getElementById('resultado').innerHTML = `<h2>Resultado:</h2>La probabilidad de obtener exactamente ${k} éxitos en ${n} ensayos con una probabilidad de éxito de ${p} es: ${probabilidad.toFixed(6)}`;
+
+// Generar y mostrar la tabla de distribución
+generarTablaDistribucion(n, p);
+        }
+
+function calcularDistribucionBinomial(n, p, k) {
+            return (combinacion(n, k) * Math.pow(p, k) * Math.pow(1 - p, n - k));
+}
+
+function combinacion(n, k) {
+            return factorial(n) / (factorial(k) * factorial(n - k));
+}
+
+function factorial(num) {
+if (num === 0 || num === 1) return 1;
+let resultado = 1;
+for (let i = 2; i <= num; i++) {
+resultado *= i;
+}
+return resultado;
+}
+
+function generarTablaDistribucion(n, p) {
+let tablaHTML = `
+<h2>Tabla de Distribución Binomial</h2>
+<table>
+<tr>
+<th>k</th>
+<th>P(X = k)</th>
+<th>P(X ≤ k)</th>
+</tr>
+`;
+
+let probabilidadAcumulada = 0;
+for (let k = 0; k <= n; k++) {
+const probabilidad = calcularDistribucionBinomial(n, p, k);
+probabilidadAcumulada += probabilidad;
+tablaHTML += `
+<tr>
+<td>${k}</td>
+<td>${probabilidad.toFixed(6)}</td>
+<td>${probabilidadAcumulada.toFixed(6)}</td>
+</tr>
+`;
+}
+
+tablaHTML += '</table>';
+document.getElementById('tablaDistribucion').innerHTML = tablaHTML;
+}
+</script>
 </script>
 
 </div>
