@@ -362,16 +362,16 @@
 <h1><span class="header-section-number">Capítulo 9</span> Tabla normal estándar<a href="TablaNormalEstandar.html#TablaNormalEstandar" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="tabla-normal-estándar---02072024" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Tabla normal estándar - 02/07/2024<a href="TablaNormalEstandar.html#tabla-normal-estándar---02072024" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<meta name=viewport content="width=device-width,initial-scale=1">
+<!-- <meta name=viewport content="width=device-width,initial-scale=1">  -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.3"> -->
 <title>
 Distribuciones Normales
 </title>
 <style>
 body {
 font-family: Arial, sans-serif;
-max-width: 1200px;
+max-width: 1300px;
 margin: 0 auto;
 padding: 10px;
 }
@@ -479,11 +479,11 @@ Z
 </table>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-            const tableBody = document.querySelector('#distributionTable tbody');
-            const rowInput = document.getElementById('rowInput');
-            const colInput = document.getElementById('colInput');
-            const chartSvg = document.getElementById('chart');
-            const probabilityInfo = document.getElementById('probabilityInfo');
+const tableBody = document.querySelector('#distributionTable tbody');
+const rowInput = document.getElementById('rowInput');
+const colInput = document.getElementById('colInput');
+const chartSvg = document.getElementById('chart');
+const probabilityInfo = document.getElementById('probabilityInfo');
 
 const normalTable = {
                 "-3.0": [0.0013, 0.0013, 0.0013, 0.0012, 0.0012, 0.0011, 0.0011, 0.0011, 0.0010, 0.0010],
@@ -550,82 +550,82 @@ const normalTable = {
        };
 
 function generateTable() {
-                tableBody.innerHTML = '';
-                for (const [z, values] of Object.entries(normalTable)) {
-                    const row = document.createElement('tr');
-                    const zCell = document.createElement('td');
-                    zCell.textContent = parseFloat(z).toFixed(1);
-                    row.appendChild(zCell);
-                    values.forEach(value => {
-                        const valueCell = document.createElement('td');
-                        valueCell.textContent = value.toFixed(4);
-                        row.appendChild(valueCell);
-                    });
-                    tableBody.appendChild(row);
-                }
-            }
+tableBody.innerHTML = '';
+for (const [z, values] of Object.entries(normalTable)) {
+const row = document.createElement('tr');
+const zCell = document.createElement('td');
+zCell.textContent = parseFloat(z).toFixed(1);
+row.appendChild(zCell);
+values.forEach(value => {
+const valueCell = document.createElement('td');
+valueCell.textContent = value.toFixed(4);
+row.appendChild(valueCell);
+});
+tableBody.appendChild(row);
+}
+}
 
 function calculateZValue(rowValue, colValue) {
-                const rowNum = parseFloat(rowValue);
-                const colNum = parseFloat(colValue);
-                return rowNum >= 0 ? rowNum + colNum : rowNum - colNum;
-            }
+const rowNum = parseFloat(rowValue);
+const colNum = parseFloat(colValue);
+return rowNum >= 0 ? rowNum + colNum : rowNum - colNum;
+}
 
 function highlightCells() {
-                const rows = tableBody.querySelectorAll('tr');
-                rows.forEach(row => {
-                    row.classList.remove('highlight-row');
-                    row.querySelectorAll('td').forEach(cell => {
-                        cell.classList.remove('highlight-column');
-                        cell.classList.remove('highlight-cell');
-                    });
-                });
+const rows = tableBody.querySelectorAll('tr');
+rows.forEach(row => {
+row.classList.remove('highlight-row');
+row.querySelectorAll('td').forEach(cell => {
+cell.classList.remove('highlight-column');
+cell.classList.remove('highlight-cell');
+});
+});
 
 const rowValue = rowInput.value;
 const colValue = colInput.value;
 
 const rowIndex = Array.from(rows).findIndex(row => row.firstChild.textContent === rowValue);
-                if (rowIndex !== -1) {
-                    rows[rowIndex].classList.add('highlight-row');
+if (rowIndex !== -1) {
+rows[rowIndex].classList.add('highlight-row');
                 }
 
 const colIndex = Math.round(parseFloat(colValue) * 100) % 10 + 1;
-                rows.forEach(row => {
-                    const cell = row.children[colIndex];
-                    if (cell) {
-                        cell.classList.add('highlight-column');
-                    }
-                });
+rows.forEach(row => {
+const cell = row.children[colIndex];
+if (cell) {
+cell.classList.add('highlight-column');
+}
+});
 
 if (rowIndex !== -1) {
-                    const intersectionCell = rows[rowIndex].children[colIndex];
-                    if (intersectionCell) {
-                        intersectionCell.classList.add('highlight-cell');
-                    }
-                }
+const intersectionCell = rows[rowIndex].children[colIndex];
+if (intersectionCell) {
+intersectionCell.classList.add('highlight-cell');
+}
+}
 
 updateProbabilityInfo(rowValue, colValue);
 updateChart(rowValue, colValue);
             }
 
 function updateProbabilityInfo(rowValue, colValue) {
-                const zValue = calculateZValue(rowValue, colValue);
-                let probability;
+const zValue = calculateZValue(rowValue, colValue);
+let probability;
                 
 if (normalTable.hasOwnProperty(rowValue)) {
-                    probability = normalTable[rowValue][Math.round(parseFloat(colValue) * 100) % 10];
-                } else {
+probability = normalTable[rowValue][Math.round(parseFloat(colValue) * 100) % 10];
+} else {
 // Si el valor exacto no está en la tabla, usar interpolación lineal
-                    const keys = Object.keys(normalTable).map(Number);
-                    const lowerKey = Math.max(...keys.filter(k => k <= zValue));
-                    const upperKey = Math.min(...keys.filter(k => k > zValue));
-                    const lowerProb = normalTable[lowerKey.toFixed(1)][Math.round(parseFloat(colValue) * 100) % 10];
-                    const upperProb = normalTable[upperKey.toFixed(1)][Math.round(parseFloat(colValue) * 100) % 10];
-                    probability = lowerProb + (upperProb - lowerProb) * (zValue - lowerKey) / (upperKey - lowerKey);
+const keys = Object.keys(normalTable).map(Number);
+const lowerKey = Math.max(...keys.filter(k => k <= zValue));
+const upperKey = Math.min(...keys.filter(k => k > zValue));
+const lowerProb = normalTable[lowerKey.toFixed(1)][Math.round(parseFloat(colValue) * 100) % 10];
+const upperProb = normalTable[upperKey.toFixed(1)][Math.round(parseFloat(colValue) * 100) % 10];
+probability = lowerProb + (upperProb - lowerProb) * (zValue - lowerKey) / (upperKey - lowerKey);
                 }
 
 probabilityInfo.textContent = `P(Z ≤ ${zValue.toFixed(2)}) = ${probability.toFixed(4)}`;
-            }
+}
 
 function updateChart(rowValue, colValue) {
                 const zValue = calculateZValue(rowValue, colValue);
@@ -633,76 +633,76 @@ function updateChart(rowValue, colValue) {
 chartSvg.innerHTML = '';
 
 // Dibujar el eje X
-              const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");CambioJueves2
-                xAxis.setAttribute("x1", "50");
-                xAxis.setAttribute("y1", "550");
-                xAxis.setAttribute("x2", "950");
-                xAxis.setAttribute("y2", "550");
-                xAxis.setAttribute("stroke", "black");
-                chartSvg.appendChild(xAxis);
+ const xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");CambioJueves2
+ xAxis.setAttribute("x1", "50");
+ xAxis.setAttribute("y1", "550");
+ xAxis.setAttribute("x2", "950");
+ xAxis.setAttribute("y2", "550");
+ xAxis.setAttribute("stroke", "black");
+ chartSvg.appendChild(xAxis);
 
 // Dibujar el eje Y
-                const yAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                yAxis.setAttribute("x1", "50");
-                yAxis.setAttribute("y1", "50");
-                yAxis.setAttribute("x2", "50");
-                yAxis.setAttribute("y2", "550");
-                yAxis.setAttribute("stroke", "black");
-                chartSvg.appendChild(yAxis);
+const yAxis = document.createElementNS("http://www.w3.org/2000/svg", "line");
+yAxis.setAttribute("x1", "50");
+yAxis.setAttribute("y1", "50");
+yAxis.setAttribute("x2", "50");
+yAxis.setAttribute("y2", "550");
+yAxis.setAttribute("stroke", "black");
+chartSvg.appendChild(yAxis);
 
 // Dibujar la curva normal
-                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                let d = "M50 550";
-                for (let x = -4; x <= 4; x += 0.1) {
-                    const y = Math.exp(-0.5 * x * x) / Math.sqrt(2 * Math.PI);
-                    const svgX = 500 + x * 100;
-                    const svgY = 550 - y * 1000;
-                    d += ` L${svgX} ${svgY}`;
-                }
-                path.setAttribute("d", d);
-                path.setAttribute("stroke", "blue");
-                path.setAttribute("fill", "none");
-                chartSvg.appendChild(path);
+const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+let d = "M50 550";
+for (let x = -4; x <= 4; x += 0.1) {
+const y = Math.exp(-0.5 * x * x) / Math.sqrt(2 * Math.PI);
+const svgX = 500 + x * 100;
+const svgY = 550 - y * 1000;
+d += ` L${svgX} ${svgY}`;
+}
+path.setAttribute("d", d);
+path.setAttribute("stroke", "blue");
+path.setAttribute("fill", "none");
+chartSvg.appendChild(path);
 
 // Sombrear el área bajo la curva
-                const shadedPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                let shadedD = `M50 550 `;
-                for (let x = -4; x <= zValue; x += 0.1) {
-                    const y = Math.exp(-0.5 * x * x) / Math.sqrt(2 * Math.PI);
-                    const svgX = 500 + x * 100;
-                    const svgY = 550 - y * 1000;
-                    shadedD += ` L${svgX} ${svgY}`;
-                }
-                shadedD += ` L${500 + zValue * 100} 550 Z`;
-                shadedPath.setAttribute("d", shadedD);
-                shadedPath.setAttribute("fill", "rgba(255, 0, 0, 0.3)");
-                chartSvg.appendChild(shadedPath);
+const shadedPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+let shadedD = `M50 550 `;
+for (let x = -4; x <= zValue; x += 0.1) {
+const y = Math.exp(-0.5 * x * x) / Math.sqrt(2 * Math.PI);
+const svgX = 500 + x * 100;
+const svgY = 550 - y * 1000;
+shadedD += ` L${svgX} ${svgY}`;
+}
+shadedD += ` L${500 + zValue * 100} 550 Z`;
+shadedPath.setAttribute("d", shadedD);
+shadedPath.setAttribute("fill", "rgba(255, 0, 0, 0.3)");
+chartSvg.appendChild(shadedPath);
 
  // Añadir línea vertical para el valor de Z
-                const zLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                zLine.setAttribute("x1", `${500 + zValue * 100}`);
-                zLine.setAttribute("y1", "50");
-                zLine.setAttribute("x2", `${500 + zValue * 100}`);
-                zLine.setAttribute("y2", "550");
-                zLine.setAttribute("stroke", "red");
-                zLine.setAttribute("stroke-dasharray", "5,5");
-                chartSvg.appendChild(zLine);
+const zLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+zLine.setAttribute("x1", `${500 + zValue * 100}`);
+zLine.setAttribute("y1", "50");
+zLine.setAttribute("x2", `${500 + zValue * 100}`);
+zLine.setAttribute("y2", "550");
+zLine.setAttribute("stroke", "red");
+zLine.setAttribute("stroke-dasharray", "5,5");
+chartSvg.appendChild(zLine);
 
 // Añadir etiqueta para el valor de Z
-                const zLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                zLabel.setAttribute("x", `${500 + zValue * 100 + 5}`);
-                zLabel.setAttribute("y", "40");
-                zLabel.textContent = `Z = ${zValue.toFixed(2)}`;
-                chartSvg.appendChild(zLabel);
-            }
+const zLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+zLabel.setAttribute("x", `${500 + zValue * 100 + 5}`);
+zLabel.setAttribute("y", "40");
+zLabel.textContent = `Z = ${zValue.toFixed(2)}`;
+chartSvg.appendChild(zLabel);
+}
 
 rowInput.addEventListener('input', highlightCells);
 colInput.addEventListener('input', highlightCells);
 
 generateTable();
 highlightCells();
-        });
-    </script>
+});
+</script>
 </script>
 
 </div>
