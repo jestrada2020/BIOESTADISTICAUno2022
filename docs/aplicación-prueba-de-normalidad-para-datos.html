@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Prerrequisitos | Bioestadística Uno</title>
+  <title>Capítulo 5 Aplicación prueba de normalidad para datos | Bioestadística Uno</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Prerrequisitos | Bioestadística Uno" />
+  <meta property="og:title" content="Capítulo 5 Aplicación prueba de normalidad para datos | Bioestadística Uno" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="/images/PortadaBioEstUno.png" />
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Prerrequisitos | Bioestadística Uno" />
+  <meta name="twitter:title" content="Capítulo 5 Aplicación prueba de normalidad para datos | Bioestadística Uno" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="twitter:image" content="/images/PortadaBioEstUno.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="introduccion.html"/>
+<link rel="prev" href="modelos-de-probabilidad.html"/>
+<link rel="next" href="TemasExtras.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -76,19 +140,18 @@
 <li><a href="./">Curso de Bioestadísca Uno</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
-<li class="chapter" data-level="" data-path="prerrequisitos.html"><a href="prerrequisitos.html"><i class="fa fa-check"></i>Prerrequisitos</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a>
 <ul>
-<li class="chapter" data-level="0.1" data-path="prerrequisitos.html"><a href="prerrequisitos.html#comportamentales"><i class="fa fa-check"></i><b>0.1</b> Comportamentales</a></li>
-<li class="chapter" data-level="0.2" data-path="prerrequisitos.html"><a href="prerrequisitos.html#evaluativos"><i class="fa fa-check"></i><b>0.2</b> Evaluativos</a></li>
-<li class="chapter" data-level="0.3" data-path="prerrequisitos.html"><a href="prerrequisitos.html#objetivos-específicos"><i class="fa fa-check"></i><b>0.3</b> Objetivos específicos</a></li>
-<li class="chapter" data-level="0.4" data-path="prerrequisitos.html"><a href="prerrequisitos.html#fechas-de-evaluación-primer-semestre-2023"><i class="fa fa-check"></i><b>0.4</b> Fechas de Evaluación primer semestre 2023</a></li>
-<li class="chapter" data-level="0.5" data-path="prerrequisitos.html"><a href="prerrequisitos.html#video-motivacional"><i class="fa fa-check"></i><b>0.5</b> Video motivacional</a>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#comportamentales"><i class="fa fa-check"></i><b>0.1</b> Comportamentales</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#evaluativos"><i class="fa fa-check"></i><b>0.2</b> Evaluativos</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#objetivos-específicos"><i class="fa fa-check"></i><b>0.3</b> Objetivos específicos</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#fechas-de-evaluación-primer-semestre-2023"><i class="fa fa-check"></i><b>0.4</b> Fechas de Evaluación primer semestre 2023</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#video-motivacional"><i class="fa fa-check"></i><b>0.5</b> Video motivacional</a>
 <ul>
-<li class="chapter" data-level="0.5.1" data-path="prerrequisitos.html"><a href="prerrequisitos.html#entrevista-perdida-a-steven-jobs-en-español"><i class="fa fa-check"></i><b>0.5.1</b> Entrevista perdida a Steven Jobs en español</a></li>
-<li class="chapter" data-level="0.5.2" data-path="prerrequisitos.html"><a href="prerrequisitos.html#marte-the-martian-misión-rescate---audio-latino"><i class="fa fa-check"></i><b>0.5.2</b> Marte (The Martian) Misión Rescate - Audio Latino</a></li>
+<li class="chapter" data-level="0.5.1" data-path="index.html"><a href="index.html#entrevista-perdida-a-steven-jobs-en-español"><i class="fa fa-check"></i><b>0.5.1</b> Entrevista perdida a Steven Jobs en español</a></li>
+<li class="chapter" data-level="0.5.2" data-path="index.html"><a href="index.html#marte-the-martian-misión-rescate---audio-latino"><i class="fa fa-check"></i><b>0.5.2</b> Marte (The Martian) Misión Rescate - Audio Latino</a></li>
 </ul></li>
-<li class="chapter" data-level="0.6" data-path="prerrequisitos.html"><a href="prerrequisitos.html#bibliografía-del-curso"><i class="fa fa-check"></i><b>0.6</b> Bibliografía del curso</a></li>
+<li class="chapter" data-level="0.6" data-path="index.html"><a href="index.html#bibliografía-del-curso"><i class="fa fa-check"></i><b>0.6</b> Bibliografía del curso</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
@@ -317,27 +380,27 @@
 <li class="chapter" data-level="4.19.22" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo20"><i class="fa fa-check"></i><b>4.19.22</b> Ejemplo20</a></li>
 <li class="chapter" data-level="4.19.23" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#ejemplo21"><i class="fa fa-check"></i><b>4.19.23</b> Ejemplo21</a></li>
 </ul></li>
-<li class="chapter" data-level="4.20" data-path="modelos-de-probabilidad.html"><a href="modelos-de-probabilidad.html#aplicación-prueba-de-normalidad-para-datos"><i class="fa fa-check"></i><b>4.20</b> Aplicación prueba de normalidad para datos</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="TemasExtras.html"><a href="TemasExtras.html"><i class="fa fa-check"></i><b>5</b> Temas Extras</a></li>
-<li class="chapter" data-level="6" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html"><i class="fa fa-check"></i><b>6</b> Programación R_Rstudio</a>
+<li class="chapter" data-level="5" data-path="aplicación-prueba-de-normalidad-para-datos.html"><a href="aplicación-prueba-de-normalidad-para-datos.html"><i class="fa fa-check"></i><b>5</b> Aplicación prueba de normalidad para datos</a></li>
+<li class="chapter" data-level="6" data-path="TemasExtras.html"><a href="TemasExtras.html"><i class="fa fa-check"></i><b>6</b> Temas Extras</a></li>
+<li class="chapter" data-level="7" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html"><i class="fa fa-check"></i><b>7</b> Programación R_Rstudio</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>6.1</b> Repaso de R y Rstudio</a></li>
-<li class="chapter" data-level="6.2" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>6.2</b> Páginas donde se puede trabajar R en línea</a></li>
-<li class="chapter" data-level="6.3" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-python-en-línea"><i class="fa fa-check"></i><b>6.3</b> Páginas donde se puede trabajar Python en línea</a></li>
-<li class="chapter" data-level="6.4" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#calculadora"><i class="fa fa-check"></i><b>6.4</b> Calculadora</a></li>
+<li class="chapter" data-level="7.1" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#repaso-de-r-y-rstudio"><i class="fa fa-check"></i><b>7.1</b> Repaso de R y Rstudio</a></li>
+<li class="chapter" data-level="7.2" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-r-en-línea"><i class="fa fa-check"></i><b>7.2</b> Páginas donde se puede trabajar R en línea</a></li>
+<li class="chapter" data-level="7.3" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#páginas-donde-se-puede-trabajar-python-en-línea"><i class="fa fa-check"></i><b>7.3</b> Páginas donde se puede trabajar Python en línea</a></li>
+<li class="chapter" data-level="7.4" data-path="ProgramacionR-RstudioYExtras.html"><a href="ProgramacionR-RstudioYExtras.html#calculadora"><i class="fa fa-check"></i><b>7.4</b> Calculadora</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="VideosDeClase.html"><a href="VideosDeClase.html"><i class="fa fa-check"></i><b>7</b> Manejo de Tablas y Videos de Clase</a>
+<li class="chapter" data-level="8" data-path="VideosDeClase.html"><a href="VideosDeClase.html"><i class="fa fa-check"></i><b>8</b> Manejo de Tablas y Videos de Clase</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="VideosDeClase.html"><a href="VideosDeClase.html#aplicación-de-la-distribucion-binomial"><i class="fa fa-check"></i><b>7.1</b> Aplicación de la distribucion Binomial</a></li>
+<li class="chapter" data-level="8.1" data-path="VideosDeClase.html"><a href="VideosDeClase.html#aplicación-de-la-distribucion-binomial"><i class="fa fa-check"></i><b>8.1</b> Aplicación de la distribucion Binomial</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html"><i class="fa fa-check"></i><b>8</b> Calculadora de arítmetica</a>
+<li class="chapter" data-level="9" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html"><i class="fa fa-check"></i><b>9</b> Calculadora de arítmetica</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html#calculadora-02072024"><i class="fa fa-check"></i><b>8.1</b> Calculadora 02/07/2024</a></li>
+<li class="chapter" data-level="9.1" data-path="VideosDeAsesoria.html"><a href="VideosDeAsesoria.html#calculadora-02072024"><i class="fa fa-check"></i><b>9.1</b> Calculadora 02/07/2024</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="TablaNormalEstandar.html"><a href="TablaNormalEstandar.html"><i class="fa fa-check"></i><b>9</b> Tabla normal estándar</a>
+<li class="chapter" data-level="10" data-path="TablaNormalEstandar.html"><a href="TablaNormalEstandar.html"><i class="fa fa-check"></i><b>10</b> Tabla normal estándar</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="TablaNormalEstandar.html"><a href="TablaNormalEstandar.html#tabla-normal-estándar---02072024"><i class="fa fa-check"></i><b>9.1</b> Tabla normal estándar - 02/07/2024</a></li>
+<li class="chapter" data-level="10.1" data-path="TablaNormalEstandar.html"><a href="TablaNormalEstandar.html#tabla-normal-estándar---02072024"><i class="fa fa-check"></i><b>10.1</b> Tabla normal estándar - 02/07/2024</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -360,153 +423,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="prerrequisitos" class="section level1 unnumbered hasAnchor">
-<h1>Prerrequisitos<a href="prerrequisitos.html#prerrequisitos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="BioestadisticaUnoUCES2021_files/figure-html/Mate2A0-1.png" width="36%" style="display: block; margin: auto;" /></p>
-<!-- ## Link de asistencia a clase -->
-<!-- Este link es para realizar la asistencia y contribuir al medio ambiente. Recordar que debes generar tu asistencia entre las 1:00pm y 3:00pm -->
-<!-- cada día que tenemos clase. -->
-<!--  1. Link [Grupo Miércoles-Viernes ](https://forms.gle/MAkZ6BeSArnct811A) -->
-<!-- https://www.geogebra.org/classic/p6jdgafk -->
-<!-- <meta name=viewport content="width=device-width,initial-scale=1"> -->
-<!-- <meta charset="utf-8"/> -->
-<!-- <script src="https://www.geogebra.org/apps/deployggb.js"></script> -->
-<!-- <div id="ggb-elementProbJJA01"></div> -->
-<!-- <script> -->
-<!--        var ggbAppProbJJA01 = new GGBApplet({"material_id":"p6jdgafk", -->
-<!--        "width": 600, -->
-<!--        "height": 400, -->
-<!--        "showToolBar": false, -->
-<!--        "showAlgebraInput": false, -->
-<!--        "showMenuBar": false }, -->
-<!--        true); -->
-<!--          window.addEventListener("load", function() { -->
-<!--            ggbAppProbJJA01.inject('ggb-elementProbJJA01'); -->
-<!--       }); -->
-<!-- </script> -->
-<p>El curso de bioestadística uno sólo tiene los siguientes prerrequisitios</p>
-<div id="comportamentales" class="section level2 hasAnchor" number="0.1">
-<h2><span class="header-section-number">0.1</span> Comportamentales<a href="prerrequisitos.html#comportamentales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Tener disposición para hacer silencio y generar un buen ambiente de escucha en el aula de clase.</p></li>
-<li><p>Tener la capacidad de acatar sugerencias para mejorar las técnicas de estudio ya adquiridas en procesos educativos pasados.</p></li>
-<li><p>Saber tomar nota mientras el profesor explica los temas de ese día.</p></li>
-<li><p>Repasar las notas de clase y complementar con la lectura del texto guía
-según se avanza en el desarrollo temático del curso.</p></li>
-</ul>
-</div>
-<div id="evaluativos" class="section level2 hasAnchor" number="0.2">
-<h2><span class="header-section-number">0.2</span> Evaluativos<a href="prerrequisitos.html#evaluativos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Tener los implementos básicos para una evaluación:</p>
-<ul>
-<li><p>Lapicero.</p></li>
-<li><p>Lapiz.</p></li>
-<li><p>Borrador.</p></li>
-<li><p>Calculadora.</p></li>
-<li><p>Todos los celulares apagados.</p></li>
-<li><p>Ir al baño antes de iniciar la evalualción.</p></li>
-<li><p>No hay preguntas en el desarrollo de la evaluación.</p></li>
-<li><p>Todas la maletas deben estar adelante.</p></li>
-</ul>
-</div>
-<div id="objetivos-específicos" class="section level2 hasAnchor" number="0.3">
-<h2><span class="header-section-number">0.3</span> Objetivos específicos<a href="prerrequisitos.html#objetivos-específicos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Describir los conceptos de población, muestra, variables y datos, así como también,
-discriminar entre los diversos tipos de variables.</li>
-<li>Producir una descripción tabular y gráfica de los datos de la muestra y resumir tales datos
-mediante estadísticos de tendencia central, dispersión y distribución, todo esto apoyado en
-un programa computacional de estadística.</li>
-<li>Aprender el concepto de probabilidad considerando la misma como una estrategia para
-cuantificar fenómenos aleatorios y aplicar la teoría matemática básica sobre el cálculo de
-probabilidades.</li>
-<li>Explicar el concepto de variable aleatoria y de modelo de distribución de probabilidad, así
-como también, discriminar entre diversos tipos de variables aleatorias y sus modelos
-asociados (por ejemplo, Binomial, Normal, Poisson, etc.)</li>
-</ul>
-</div>
-<div id="fechas-de-evaluación-primer-semestre-2023" class="section level2 hasAnchor" number="0.4">
-<h2><span class="header-section-number">0.4</span> Fechas de Evaluación primer semestre 2023<a href="prerrequisitos.html#fechas-de-evaluación-primer-semestre-2023" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Primer parcial <strong>Presencial</strong> (20 <span class="math inline">\(\%\)</span>) - <strong>Fecha: Miércoles <span class="math inline">\(30\)</span> de Agosto</strong></p></li>
-<li><p>Segundo Parcial <strong>Presencial</strong> (20 <span class="math inline">\(\%\)</span>) - <strong>Fecha: Miércoles <span class="math inline">\(27\)</span> de Septiembre</strong></p></li>
-<li><p>Tercer Parcial <strong>Presencial</strong> (20 <span class="math inline">\(\%\)</span>) - <strong>Fecha: Miércoles <span class="math inline">\(25\)</span> de Octubre</strong></p></li>
-<li><p>Cuarto Parcial <strong>Presencial</strong> (Parcial Final) (20 <span class="math inline">\(\%\)</span>) - <strong>Fecha: Viernes <span class="math inline">\(17\)</span> de Noviembre</strong></p></li>
-</ul>
-<!-- ```{r echo=FALSE,message=FALSE} -->
-<!-- library(calendR) -->
-<!-- calendR(year = 2023, month = 02,        # Año y mes -->
-<!--         start = "M",                   # Empezar la semana en lunes -->
-<!--         text = c("Parical-01"), -->
-<!--         text.pos = c(24),       # Días en los que poner los textos -->
-<!--         text.size = 3.5,               # Tamaño de fuente de los textos -->
-<!--         text.col = 1, -->
-<!--         special.days = c(24), -->
-<!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
-<!-- ``` -->
-<!-- ```{r echo=FALSE,message=FALSE} -->
-<!-- library(calendR) -->
-<!-- calendR(year = 2023, month = 03,        # Año y mes -->
-<!--         start = "M",                   # Empezar la semana en lunes -->
-<!--         text = c("Parical-02"), -->
-<!--         text.pos = c(31),       # Días en los que poner los textos -->
-<!--         text.size = 3.5,               # Tamaño de fuente de los textos -->
-<!--         text.col = 1, -->
-<!--         special.days = c(31), -->
-<!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
-<!-- ``` -->
-<!-- ```{r echo=FALSE,message=FALSE} -->
-<!-- library(calendR) -->
-<!-- calendR(year = 2023, month = 04,        # Año y mes -->
-<!--         start = "M",                   # Empezar la semana en lunes -->
-<!--         text = c("Parical-03"), -->
-<!--         text.pos = c(28),       # Días en los que poner los textos -->
-<!--         text.size = 3.5,               # Tamaño de fuente de los textos -->
-<!--         text.col = 1, -->
-<!--         special.days = c(28), -->
-<!--         special.col = rgb(0, 0, 1,  alpha = 0.25),) -->
-<!-- ``` -->
-</div>
-<div id="video-motivacional" class="section level2 hasAnchor" number="0.5">
-<h2><span class="header-section-number">0.5</span> Video motivacional<a href="prerrequisitos.html#video-motivacional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="entrevista-perdida-a-steven-jobs-en-español" class="section level3 hasAnchor" number="0.5.1">
-<h3><span class="header-section-number">0.5.1</span> Entrevista perdida a Steven Jobs en español<a href="prerrequisitos.html#entrevista-perdida-a-steven-jobs-en-español" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5GAlxfY_YLo?si=IqqGJQCbTojSBATh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
-</div>
-<div id="marte-the-martian-misión-rescate---audio-latino" class="section level3 hasAnchor" number="0.5.2">
-<h3><span class="header-section-number">0.5.2</span> Marte (The Martian) Misión Rescate - Audio Latino<a href="prerrequisitos.html#marte-the-martian-misión-rescate---audio-latino" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://www.youtube.com/watch?v=BVvgKrBzskM&amp;t=2418s">Link Marte (The Martian) Misión Rescate - Audio Latino</a></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BVvgKrBzskM?si=V5e4Ecs4i4vMj-c8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
-<p><br></br></p>
-<p><br></br></p>
-</div>
-</div>
-<div id="bibliografía-del-curso" class="section level2 hasAnchor" number="0.6">
-<h2><span class="header-section-number">0.6</span> Bibliografía del curso<a href="prerrequisitos.html#bibliografía-del-curso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li><p>Samuels, M., Witmer, J., &amp; Schaffner, A. (2012). Statistics for the life sciences (4 ed.).
-Boston: Pearson Education.</p></li>
-<li><p>Milton, J. S. (2001). Estadística para la biología y ciencias de la salud (3 ed.). Madrid:
-McGraw- Hill/Interamericana.</p></li>
-<li><p>Daniel, W. W. 2004. Bioestadística. Base para el análisis de las ciencias de la salud. 4era. Ed.
-Limusa Wiley Noriega Editores. México.</p></li>
-<li><p>Johnson, R. A. &amp; Bhattacharyya, G. K. (2010). Statistics. Principles and Methods (6 ed.). New
-York: John Wiley and Sons, Inc</p></li>
-<li><p>Zar, J. (1999). Biostatistical analysis (5 ed.). Prentice hall Upper Saddle River, NJ.</p></li>
-<li><p>Zuur, A., Ieno, E., &amp; Meesters, E. (2009). A Beginner’s Guide to R. Springer.</p></li>
-</ul>
+<div id="aplicación-prueba-de-normalidad-para-datos" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Capítulo 5</span> Aplicación prueba de normalidad para datos<a href="aplicación-prueba-de-normalidad-para-datos.html#aplicación-prueba-de-normalidad-para-datos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><a href="https://jestrada2020.github.io/DatosPruebasDeNormalidad/">Prueba de normalidad para datos</a></p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduccion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modelos-de-probabilidad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="TemasExtras.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
